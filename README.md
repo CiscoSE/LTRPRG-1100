@@ -4,5 +4,5 @@
 
 * [Abstract](ABSTRACT.md)
 * [Agenda](AGENDA.md)
-* [Speaker Bios](BIO.MD)
+* [Speaker Bios](BIO.md)
 * [Register on CiscoLive.com](https://www.ciscolive.com/us/learn/sessions/session-catalog/?search=LTRDEV-1100&showEnrolled=false)
