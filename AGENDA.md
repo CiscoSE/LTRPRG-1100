@@ -4,9 +4,10 @@
    * What is Network Programmability
 2. Tools of the Ninja
    * Python for Network Programmability
+   * Ansible for Network Programmability
    * Vagrant Up for Network Engineers
    * Git and GitHub
-    * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Spark)
+   * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Spark)
 3. Hone Your Ninja Skills
    * Using APIs
    * Using NETCONF/YANG
