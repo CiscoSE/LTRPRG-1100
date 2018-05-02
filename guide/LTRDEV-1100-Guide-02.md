@@ -4,13 +4,38 @@ TODO:
 
 - [ ] Write all the things
 
-## Python for Network Programmability
+## Git and GitHub
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit.
+TODO:
+
+- [ ] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
+- [ ] Proofread
+- [ ] Add example output
+
+### Introducing Git and GitHub
+
+loreum ipsum
+
+### Exercise 1: Foo
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Foo
+* Bar
+
+#### Step 1: Foo
+
+Lorem ipsum
+
+#### Step 2: Bar
+
+Lorem ipsum
 
 ## Ansible for Network Programmability
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit. for  for 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit.
 
 ## Vagrant Up for Network Engineers
 
@@ -333,7 +358,7 @@ Vagrantfile is comments.
         
     All other configuration of the environment uses the defaults from Vagrant and VirtualBox.
 
-## Git and GitHub
+## Python for Network Programmability
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit.
 
