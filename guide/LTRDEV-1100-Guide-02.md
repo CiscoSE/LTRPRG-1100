@@ -325,11 +325,11 @@ Vagrantfile is comments.
     
     In fact, these three lines are all that are really required to bring up a virtual machine environment.
     
-        1. `Vagrant.configure("2") do |config|` is the syntax to indicate that this is a configuration for Vagrant 
+     1. `Vagrant.configure("2") do |config|` is the syntax to indicate that this is a configuration for Vagrant 
         version 2.  
-        2. `config.vm.box = "hashicorp/precise64"` is the syntax to specify the Vagrant box used to clone and boot 
+     2. `config.vm.box = "hashicorp/precise64"` is the syntax to specify the Vagrant box used to clone and boot 
         the virtual machine.  The box descriptor would be changed based on the box you choose.
-        3. `end` indicates the end of the configuration.
+     3. `end` indicates the end of the configuration.
         
     All other configuration of the environment uses the defaults from Vagrant and VirtualBox.````
 
