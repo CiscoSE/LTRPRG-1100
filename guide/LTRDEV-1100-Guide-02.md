@@ -14,24 +14,103 @@ TODO:
 
 ### Introducing Git and GitHub
 
-loreum ipsum
+[Git](https://git-scm.com/) is a free and open source distributed version control system.  It was designed to be 
+lightweight, easy to learn, and capable to handle projects large and small alike.  Git has a small footprint and is 
+very fast.
 
-### Exercise 1: Foo
+A version control system records and manages changes to files over time.  A version control system will have 
+mechnisms that allow you to see the differences between versions and revert back to earlier versions of files being 
+managed.  Generally speaking, most people's idea of version control is to create copies of files and archive them in 
+a series of directories on their file system.  This is very error prone as one file copy mistake and you could 
+overwrite a file by mistake.  Also, this method rarely works when multiple people are modifying the same files at the
+ same time.
+ 
+A Git repository, or repo for short, is a group of files that are tracked as a project.  A Git repo can reside on your 
+computer, but the repository must be hosted on a server if two or more people are going to access the repository.  
+[GitHub](https://github.com/) is the largest online host of Git repositories on the Internet.  GitHub also serves as 
+a community for developers.  GitHub is free, but any repositories you create and host on GitHub must be public.  
+Private repositories are supported with a [paid subscription account upgrade](https://github.com/account/upgrade).
+
+### Exercise 1: Creating a GitHub Account
 
 #### Objectives
 
 The objectives for this exercise are to:
 
-* Foo
-* Bar
+* Create a GitHub account
+* Explore GitHub
 
-#### Step 1: Foo
+#### Step 1: Creating a GitHub Account
 
-Lorem ipsum
+Although creating a GitHub account is not required to clone Git repositories hosted on GitHub, why not join and 
+participate in one of the largest developer communities on the Internet?  Doing so gives you the opportunity to see 
+what other people are working on or are interested in, learn how software is built by following projects, and share 
+your work - no matter how small - with the community.
 
-#### Step 2: Bar
+1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`.
+2. On the GitHub homepage, fill out the form to [Sign up](https://github.com/join?source=header-home), choosing a 
+unique username, entering your email adress, and creating a password.  Click the `Sign up for GitHub` button.
+3. Choose the personal plan `Unlimited public repositories for free.`  Optionally click to select `Send me updates on
+GitHub news, offers, and events`.  Click the `Continue` button.
+4. Tailor your GitHub experience by answering the questions.  Click the `Submit` button.
 
-Lorem ipsum
+Congratulations, you have joined the GitHub community!
+
+#### Step 2: Exploring GitHub
+
+1. Take a few minutes to [explore GitHub](https://github.com/explore).
+2. Take a few minutes to follow new and interesting people:
+    1. Search for and follow your Cisco Live lab proctors: [Curtis Smith](https://github.com/curtissmith) 
+(`curtissmith`) and [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`).
+    2. Search for and follow your fellow Cisco Live lab participants.
+3. Take a few minutes to discover new repositories:
+    1. Search for and star the Cisco Live [LTRDEV-1100 session](https://github.com/curtissmith/LTRDEV-1100) repository.
+    2. Search for the [Cisco DevNet](https://github.com/CiscoDevNet) repositories.
+
+### Exercise 2: Introducing Git Concepts
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Understand key Git version control system concepts
+* Introduce the basic Git commands
+
+#### Step 1: Understanding Git Version Control Concepts
+
+There is a simple flow to using Git for version control:
+
+```
++----------------+      +---------+       +----------+
+| Initialize or  |      |  Stage  |       |  Commit  |
+|     Clone      +----->| Changes +------>|  Changes |
+| Git Repository |      |         |       |          |
++----------------+      +---------+       +----------+
+```
+
+You start by either creating a new Git repository or cloning an existing Git repository hosted on a remote server.  In 
+doing so, you create the Git directory (also called the repository), a working directory, and a staging area (also 
+called the index).  The Git directory contains the metadata and object database and is copied from the server when 
+a repository is cloned.  The working directory contains one version of the project and are copied to the file system 
+from the compressed object database in the Git directory.  The staging area is a file inside the Git directory 
+contains an index of changes that are waiting to be committed.
+
+Files that are changed but not staged are considered modified.  Files that are changed and added to the staging 
+area are considered staged.  Files in the Git directory are considered committed.  In the next step, we will learn 
+how to initialize and clone repositories, and modify, stage, and commit changes, and push those changes to GitHub.
+
+#### Step 2: Learning Git Commands
+
+Git has command line commands for managing Git repositories.
+
+1. git help and git <command> -h
+2. git config --global user.name "First Last" and git config --global user.email <email address>
+3. git init
+4. git add
+5. git status
+6. git commit
+7. git clone
+8. git pull and git push
 
 ## Ansible for Network Programmability
 
