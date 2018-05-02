@@ -331,7 +331,7 @@ Vagrantfile is comments.
         the virtual machine.  The box descriptor would be changed based on the box you choose.
      3. `end` indicates the end of the configuration.
         
-    All other configuration of the environment uses the defaults from Vagrant and VirtualBox.````
+    All other configuration of the environment uses the defaults from Vagrant and VirtualBox.
 
 ## Git and GitHub
 
