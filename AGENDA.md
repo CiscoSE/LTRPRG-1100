@@ -1,15 +1,15 @@
 # Agenda
 
 1. The Network Programmability Dojo
-   * What is Network Programmability
+    * What is Network Programmability
 2. Tools of the Ninja
-   * Python for Network Programmability
-   * Vagrant Up for Network Engineers
-   * Git and GitHub
+    * Git and GitHub
+    * Vagrant Up for Network Engineers
+    * Python for Network Programmability
     * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Spark)
 3. Hone Your Ninja Skills
-   * Using APIs
-   * Using NETCONF/YANG
-   * Guest Shell
+    * Using APIs
+    * Using NETCONF/YANG
+    * Guest Shell
 4. Test Your Ninja Skills
-   * Script a Network Programmability Assistant for Cisco Spark
+    * Script a Network Programmability Assistant for Cisco Spark
