@@ -5,6 +5,7 @@
 2. Tools of the Ninja
     * Git and GitHub
     * Vagrant Up for Network Engineers
+    * Ansible for Network Programmability
     * Python for Network Programmability
     * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Spark)
 3. Hone Your Ninja Skills
