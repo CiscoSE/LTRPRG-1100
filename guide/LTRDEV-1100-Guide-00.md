@@ -1,5 +1,10 @@
 # Introduction
 
+TODO:
+
+- [x] @curtissmith Draft Lab Introduction
+- [ ] Proofread
+
 The title of this lab is "So, You want to be a Network Programmability Ninja, Now What?"  In this lab, we will help 
 get you started with network programmability and arm you with the concepts and tools and real-world use cases needed to 
 take use network programmability in your day-to-day work and play.
@@ -11,6 +16,11 @@ cases at the end of this lab.
 We hope you have fun and learn valuable new skills!
 
 # Learning Objectives
+
+TODO:
+
+- [x] @curtissmith Draft Lab Learning Objectives
+- [ ] Proofread
 
 Upon completion of this lab, you will be able to:
 
