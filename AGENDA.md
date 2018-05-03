@@ -7,10 +7,10 @@
     * Vagrant Up for Network Engineers
     * Ansible for Network Programmability
     * Python for Network Programmability
-    * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Spark)
+    * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Webex Teams)
 3. Hone Your Ninja Skills
     * Using APIs
     * Using NETCONF/YANG
     * Guest Shell
 4. Test Your Ninja Skills
-    * Script a Network Programmability Assistant for Cisco Spark
+    * Script a Network Programmability Assistant for Cisco Webex Teams
