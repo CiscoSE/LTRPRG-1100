@@ -8,9 +8,9 @@ TODO:
 
 TODO:
 
-- [ ] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
+- [x] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
 - [ ] Proofread
-- [ ] Add example output
+- [ ] Add example output and screenshots
 
 ### Introducing Git and GitHub
 
@@ -101,16 +101,251 @@ how to initialize and clone repositories, and modify, stage, and commit changes,
 
 #### Step 2: Learning Git Commands
 
-Git has command line commands for managing Git repositories.
+Git has command line commands for managing Git repositories.  Here are the key commands and their usage you will need
+ to get started to participate in projects or manage your own projects.
 
-1. git help and git <command> -h
-2. git config --global user.name "First Last" and git config --global user.email <email address>
-3. git init
-4. git add
-5. git status
-6. git commit
-7. git clone
-8. git pull and git push
+1. For a complete list of Git commands, type `git help` (output truncated for brevity):
+    
+    ```
+    $ git help
+    
+    foo
+    
+    $
+    ```
+    
+    For more help with a specific Git command, type `git <command> -h`, for example:
+    
+    ```
+    $ git clone -h
+     
+    foo
+     
+    $
+    ```
+    
+2. For first time setup, you should set your name and email address with the `git config` command.  Every commit you 
+make includes this information, so it is important to set this after installing Git.  This should match the name and 
+email address you used to register on GitHub, for example:
+    
+    ```
+    $ git config --global user.name "Curtis Smith"
+    
+    foo
+    
+    $ git config --global user.email <curtissm@cisco.com>
+    
+    foo
+    
+    $
+    ```
+    
+3. To create your very first Git repository, create a Git working directory and initialize the repository with the 
+command `git init`, for example:
+    ```
+    $ mkdir -p ~/coding/ciscolive/helloworld
+    $ cd ~/coding/ciscolive/hellowworld
+    $ git init
+    
+    foo
+    
+    $
+    ```
+    
+    Now take a look at the contents of the directory.  You find a hidden directory named `.git`:
+    
+    ```
+    $ ls -al
+    .		..		.git
+    $
+    ```
+    
+    The directory `~/coding/ciscolive/helloworld` is your new Git working directory and 
+    `~/coding/ciscolive/helloworld/.git` is your Git directory.  Your working directory (and consequently your Git 
+    directory) are empty as you've not staged or committed anything to the repository yet.
+    
+4. Let's confirm this is the case with the command `git status`:
+    
+    ```
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    nothing to commit (create/copy files and use "git add" to track)
+    ```
+    
+    At any time you can invoke the `git status` command from inside your Git repository working directory to see 
+    whether there are any staged changes or whether your copy of the repository is in sync with the remote server if 
+    it is hosted online.
+    
+5. Let's create a new file to track:
+    ```
+    $ echo "# Hello World" >> README.md
+    $
+    ```
+    
+    and check the status:
+    
+    ```
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+    
+	        README.md
+    
+    nothing added to commit but untracked files present (use "git add" to track)
+    ```
+    
+    You can see that there is an unstaged file in your working directory.  Let's stage the file with the `git add` 
+    command:
+    
+    ```
+    $ git add README.md
+    $
+    ```
+    
+    and the check the status again:
+    
+    ```
+    $ git status
+    On branch master
+    
+    No commits yet
+    
+    Changes to be committed:
+        (use "git rm --cached <file>..." to unstage)
+    
+	        new file:   README.md
+    
+    $
+    ```
+    
+    You can see there is a staged file in your working directory that is uncommitted.
+    
+6. Let's make your first commit to your first Git repository!  Use the `git commit` to commit your staged changes:
+    
+    ```
+    $ git commit -m "My first Git commit"
+    [master (root-commit) a2c0a25] My first Git commit
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     create mode 100644 README.md
+    $
+    ```
+    
+    and check the status:
+    
+    ```
+    $ git status
+    On branch master
+    nothing to commit, working tree clean
+    $
+    ```
+    
+    Congratulations, you've created your first Git repository and made your first commit to that repository!
+    
+7. Let's create a remote repository on GitHub and push our repository locally to the server.
+    
+    1. First, navigate to [Github](https://github.com/) `https://github.com/` and ensure you've logged in with the 
+    account you created earlier.
+    
+    2. At the top right of the page, click the `+` and click `New Repository`.
+    
+    3. In the box labeled `Repository name` type `helloworld`.
+    
+    4. You may add an optional `Description`, for example `My first Git repository`.
+    
+    5. Click the `Create repository` button.
+    
+    6. Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, 
+    use the `git remote add` command to add the local repository to the remote repository (replace the URL in the 
+    example below with the URL of your new remote repository):
+    
+    ```
+    $ git remote add origin https://github.com/curtissmith/helloworld.git
+    $
+    ```
+    
+    Second, push your local changes to the remote repository with the `git push` command:
+    
+    ```
+    $ git push -u origin master
+    Counting objects: 6, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (6/6), 455 bytes | 455.00 KiB/s, done.
+    Total 6 (delta 0), reused 0 (delta 0)
+    To https://github.com/curtissmith/helloworld.git
+     * [new branch]      master -> master
+    Branch 'master' set up to track remote branch 'master' from 'origin'.
+    $
+    ```
+    
+    and check the status:
+    
+    ```$ git status
+    On branch master
+    Your branch is up to date with 'origin/master'.
+    
+    nothing to commit, working tree clean
+    $
+    ```
+    
+    You can further confirm that your local repository is in sync with your remote repository and chdeck for changes 
+    with the `git pull` command:
+    
+    ```
+    $ git pull
+    Already up to date.
+    $
+    ```
+    
+    If there had been any remote changes that were not in your local Git directory, then those changes would have 
+    been synchronized in your Git directory and copied to your working directory.
+    
+    Navigate to your remote repository on GitHub and you should see the results of your labor!
+
+8. The `git pull` will only work from inside a working directory that contains a Git repository in the first place.
+    1. Try this by moving to a directory that doesn't contain a `.git` Git directory, for example:
+        
+        ```
+        $ cd ~/coding/ciscolive
+        $ ls -a
+        .		..		helloworld
+        $ git pull
+        fatal: Not a git repository (or any of the parent directories): .git
+        $
+        ```
+        
+    2. To download a fresh copy of a remote repository to your local workstation, use the `git clone` command.  For 
+    example, you can access this lab guide and all of the code and content for this session from [GitHub]
+    (https://github.com/curtissmith/LTRDEV-1100) at `https://github.com/curtissmith/LTRDEV-1100`:
+        
+        ```
+        $ git clone https://github.com/curtissmith/LTRDEV-1100
+        Cloning into 'LTRDEV-1100'...
+        remote: Counting objects: 117, done.
+        remote: Compressing objects: 100% (84/84), done.
+        remote: Total 117 (delta 51), reused 80 (delta 24), pack-reused 0
+        Receiving objects: 100% (117/117), 86.75 KiB | 488.00 KiB/s, done.
+        Resolving deltas: 100% (51/51), done.
+        $ ls
+        LTRDEV-1100	helloworld
+        $ cd LTRDEV-1100/
+        $ ls -a
+        .		.git		AGENDA.md	README.md
+        ..		ABSTRACT.md	BIO.md
+        $ git status
+        On branch master
+        Your branch is up to date with 'origin/master'.
+        
+        nothing to commit, working tree clean
+        $
+        ```
 
 ## Ansible for Network Programmability
 
