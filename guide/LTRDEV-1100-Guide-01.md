@@ -2,7 +2,7 @@
 
 TODO: 
 
-- [ ] Write all the things
+- [ ] @curtissmith Draft "The Network Programmability Dojo"
 
 ## What is Network Programmability
 
