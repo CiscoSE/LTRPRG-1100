@@ -1,9 +1,5 @@
 # Tools of the Ninja
 
-TODO: 
-
-- [ ] Write all the things
-
 ## Git and GitHub
 
 TODO:
@@ -712,8 +708,18 @@ Vagrantfile is comments.
 
 ## Python for Network Programmability
 
+TODO:
+
+- [ ] @mgalazka Draft "Tools of the Ninja - Python for Network Programmability"
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit.
 
 ## Other Desktop Network Programmability Tools
+
+TODO:
+
+- [ ] @mgalazka Draft "Tools of the Ninja - Other...Postman"
+- [ ] @mgalazka Draft "Tools of the Ninja - Other...Webex Teams"
+- [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit.
