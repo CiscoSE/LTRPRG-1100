@@ -728,7 +728,6 @@ flexibility to create reusable code to solve a particular problem, or perhaps au
 modules, Python can be used to communicate with networking devices in many ways, including SSH, NETCONF, 
 and REST API's. With so many uses, it is one of the most powerful tools a Network Programmability Ninja can have.
 
-
 ### Understanding Python Versions
 
 When it comes to programming in Python, it's critical to understand which Python interpreter is installed in the 
@@ -739,7 +738,6 @@ most projects are now written for use with Python 3. In this lab, Python 3 is th
 While the two versions are different, it is entirely possible to have both Python 2 and Python 3 on the same computer. 
 It's also possible to have several different versions of each installed at the same time (i.e. Python 3.4, 3.5, 3.6). 
 For these reasons, it is important to understand which version of Python you are running.
-
 
 ### Setting up Virtual Environments
 
@@ -755,7 +753,6 @@ Virtualenv allows isolating python environments to specific directories, as oppo
 virtualenv can run its own Python executable in the correct version, and install its own packages and modules. 
 By creating separate virtual environments per project, a developer can manage these dependencies of each project 
 without inadvertently causing harm to other projects.
-
 
 ### Exercise 1: Setting Up a Python Environment
 
@@ -973,6 +970,18 @@ Python interpreter.
     By putting your Python instructions into a file, it can be called at any time by the Python interpreter. This is 
     key to reusing code.
 
+### Execise 4: Python Ninjutsu 
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Know your target: Identify data types
+* Learn discipline: Proper use of operators
+* Adapt quickly: Conditional statements
+* Select your equipment: Working with functions
+* Forging metal: Writing your own functions
+* Surround your enemy: Executing loops
 
 
 ## Other Desktop Network Programmability Tools
