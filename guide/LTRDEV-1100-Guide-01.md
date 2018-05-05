@@ -142,8 +142,8 @@ peers at DevNet Express events.  It is a focused event where you listen, learn, 
 
 ##### Connect
 
-Join communities of interest and participatein on-going discussions around technologies; participate in trending 
-forums on variousCisco technologies; get your questions answered; meet and greet at events around the world.
+Join communities of interest and participate in on-going discussions around technologies; participate in trending 
+forums on various Cisco technologies; get your questions answered; meet and greet at events around the world.
 
 Here are a few DevNet connect resources:
 
