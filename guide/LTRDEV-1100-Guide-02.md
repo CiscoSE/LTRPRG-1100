@@ -710,7 +710,7 @@ Vagrantfile is comments.
 
 TODO:
 
-- [ ] @mgalazka Draft "Tools of the Ninja - Python for Network Programmability"
+- [x] @mgalazka Draft "Tools of the Ninja - Python for Network Programmability"
 - [ ] Proofread
 - [ ] Other stuff?
 
