@@ -992,4 +992,70 @@ TODO:
 - [ ] @mgalazka Draft "Tools of the Ninja - Other...Webex Teams"
 - [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit.
+There are a number of other desktop applications you will find useful.  We've chosen to highlight apps that are 
+cross-platform, supporting Microsoft Windows, Apple macOS, and Linux alike, have full-featured free versions, and 
+are generally popular in the community.  We've included applications for testing and exploring APIs, collaborating 
+with peers and teams, and devleoping in an integrated environment.  These are GUI applications that 
+help simplify development and collaboration and keep you productive.
+
+### Introducing PyCharm
+
+[PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
+[JetBrains](https://www.jetbrains.com/).  There is a [free community version](https://www.jetbrains
+.com/pycharm/download) available for download, but you can support the application and obtain addtional features with
+ the purchase of the [professional version](https://www.jetbrains.com/pycharm/buy/).  JetBrains describes PyCharm as 
+ an "intelligent coding assistant".
+ 
+ Key features of PyCharm include, but are not limited to:
+ 
+ * A smart code editor with syntax formating, highlighting, completion and error detection
+ * Built-in terminal and integrated debugger
+ * Integrated support for version control systems, including Git
+ * Integrated support for Vagrant
+ 
+ An IDE like PyCharm is much more than a text editor, although it is that, too.  Let's take a look at what is key to 
+ get started with PyCharm. 
+
+### Exercise 1: Getting Started with PyCharm
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Familiarize you with PyCharm
+* How to create a project in PyCharm
+* Write a Python application with PyCharm
+* Run and debug a Python application with PyCharm
+
+#### Step 1: Getting Familiar with PyCharm
+
+lorem ipsum
+
+#### Step 2: Creating a New Project with PyCharm
+
+lorem ipsum
+
+#### Step 3: Writing Python Code with PyCharm
+
+lorem ipsum
+
+#### Step 4: Running and Debugging Python Code with PyCharm
+
+lorem ipsum
+
+### Exercise 2: Getting Advanced with PyCharm
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Learn how to keep your project under version control in Git with PyCharm
+* Learn how to integrate Vagrant with PyCharm
+
+#### Step 1: Managing a Project's Git Repository in PyCharm
+
+lorem ipsum
+
+#### Step 2: Vagrant Up with PyCharm
+
+lorem ipsum
