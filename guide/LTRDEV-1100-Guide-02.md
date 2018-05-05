@@ -900,7 +900,8 @@ particular function acts, or as a quick way to execute a couple of one-time use 
 2.  Notice that once the Python interpreter is running, the prompt changes to `>>>`. This is where you can input Python 
     code. Start with printing `Hello World!` to the screen, as shown below.
 
-    ```>>> print("Hello World!")
+    ```
+    >>> print("Hello World!")
     Hello World
     >>>
     ```
