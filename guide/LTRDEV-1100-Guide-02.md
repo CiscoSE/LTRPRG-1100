@@ -1076,7 +1076,83 @@ messages.
 
 #### Step 3: Writing Code with PyCharm
 
-lorem ipsum
+In PyCharm, with your `helloworld` project open, double click the project in the project view to expand the tree.  
+You will the Python virtual environment we discussed earlier in this lab.  This was automatically created for you by 
+PyCharm when you created this project.  Let's create a new file and write some Python code.
+
+1. Right click on `helloworld` and select `New` and click `Python File`.
+    
+    ![PyCharm New Python File](assets/PyCharm-04.png)
+    
+2. Type `helloworld.py` in the `Name:` box and select `Python file` from the `Kind:` drop down box.  Click the `OK` 
+button.
+    
+    ![PyCharm New File Dialogue Box](assets/PyCharm-05.png)
+    
+3. Now you have a new file names `helloworld.py` in your the root of your PyCharm `helloworld` project directory.  Go
+ahead and start writing a bit of Python code in the PyCharm editor:
+    
+    ```
+    print
+    ```
+    
+    Did you notice that when you typed the word `print`, PyCharm popped up a tool tip with suggested Python syntax 
+    and its usage?
+    
+    ![PyCharm Syntax Help](assets/PyCharm-06.png)
+    
+    Continue by typing more:
+    
+    ```
+    print("")
+    ```
+    
+    PyCharm automatically closed the `()` and `""""` when you typed the opening `(` and '"'.  Additional tool tips 
+    showed you more contextual Python syntax help.
+    
+    ![PyCharm Syntx Help](assets/PyCharm-07.png)
+    
+    Continue by typing more:
+    
+    ```
+    print("Hello World!")
+    
+    ```
+    
+    Now you have you first line of Python code written in PyCharm.  In the right column of the editor there 
+    is a green checkmark.  Hover over the checkmark and PyCharm will pop up a tool tip indicating that its code 
+    analysis is complete and no errors were found.
+    
+    ![PyCharm Code Analysis](assets/PyCharm-08.png)
+    
+    Let's add a mistake intentionally to illustrate how this helps you write error-free code.  Type the following:
+    
+    ```
+    print("Hello World!")
+    
+    asdfg
+    
+    ```
+
+    PyCharm will display a warning symbol.  Hover over the warning symbol:
+    
+    ![Python Code Analysis Error](assets/PyCharm-09.png)
+    
+    PyCharm will include an indicator with the analysis of the error at the exact point in the code the error occurs.
+      Hover over the red line:
+    
+    ![Python Code Analysis Error](assets/PyCharm-10.png)
+    
+    This is part of the wonder and charm (no pun intended) of PyCharm!
+    
+    Go ahead and remove the error, which should leave you with the following code:
+    
+    ```
+    print("Hello World!")
+    
+    ```
+    
+    Save your changes by clicking the `File` menu and clicking `Save All`.
 
 #### Step 4: Running and Debugging Python Code with PyCharm
 
