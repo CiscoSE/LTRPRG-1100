@@ -983,14 +983,199 @@ The objectives for this exercise are to:
 * Forging metal: Writing your own functions
 * Surround your enemy: Executing loops
 
-
 ## Other Desktop Network Programmability Tools
 
 TODO:
 
 - [ ] @mgalazka Draft "Tools of the Ninja - Other...Postman"
 - [ ] @mgalazka Draft "Tools of the Ninja - Other...Webex Teams"
+
+There are a number of other desktop applications you will find useful.  We've chosen to highlight apps that are 
+cross-platform, supporting Microsoft Windows, Apple macOS, and Linux alike, have full-featured free versions, and 
+are generally popular in the community.  We've included applications for testing and exploring APIs, collaborating 
+with peers and teams, and devleoping in an integrated environment.  These are GUI applications that 
+help simplify development and collaboration and keep you productive.
+
+### Introducing PyCharm
+
+TODO:
+
 - [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
+
+<<<<<<< HEAD
+=======
+[PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
+[JetBrains](https://www.jetbrains.com/).  There is a [free community version](https://www.jetbrains
+.com/pycharm/download) available for download, but you can support the application and obtain addtional features with
+ the purchase of the [professional version](https://www.jetbrains.com/pycharm/buy/).  JetBrains describes PyCharm as 
+ an "intelligent coding assistant".
+ 
+ Key features of PyCharm include, but are not limited to:
+ 
+ * A smart code editor with syntax formatting, highlighting, completion and error detection
+ * Built-in terminal and integrated debugger
+ * Integrated support for version control systems, including Git
+ * Integrated support for Vagrant
+ 
+An IDE like PyCharm is much more than a text editor, although it is that, too.  Let's take a look at what is key to 
+getting started with PyCharm. 
+
+### Exercise 1: Getting Started with PyCharm
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* How to create a project in PyCharm
+* Learn to navigate the PyCharm application GUI
+* Write a Python application with PyCharm
+* Run and debug a Python application with PyCharm
+
+#### Step 1: Creating a New Project with PyCharm
+
+When you run PyCharm for the first time, you are presented with the welcome screen and prompted to create a new 
+project, open an existing project, or check out a project from version control.  First, let's create a new project.
+
+1. Click `Create New Project`.
+    
+    ![PyCharm New Project Screen](assets/PyCharm-01.png)
+    
+2. Choose a location for your new project, for example `PyCharmProjects/helloworld`.
+    
+    ![PyCharm Create Network Project](assets/PyCharm-02.png)
+    
+    1. Click to expand `Project Interpreter: New Virtualenv environment`.
+    2. Click the radio button to select `New environment using` and click the drop down menu to select `Virtualenv`.
+    3. Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
+    4. Click the drop down box to select a Python version 3 interpreter.
+    6. Accept the remaining default optoins and click the `Create` button.
+    
+Congratulations, you now have a new PyCharm project complete with a Python version 3 virtual environment ready to
+write some code.  So far, we haven't touched the command line or had to manually create any directories for 
+Python virtual environment by hand.  PyCharm performed the heavy lifting for us.  Next, let's take a look at the 
+PyCharm GUI.
+
+#### Step 2: Navigating PyCharm
+
+When a project is opened, you see the PyCharm window divided into different tool bars, window areas, and a 
+status bar.
+
+![PyCharm Project Window](assets/PyCharm-03.png)
+
+1. The project view is on the left side of the main window.  This lists your project files.
+2. The editor is on the right side of the main window.  This is where you write your code.  The editor has tabs so 
+that you can open and navigate between multiple files at one time.
+    1. The editor has a left and right column surrounding it.  In the left column, you will see line numbers which 
+    lets you navigate the code more easily.  In the right column, you will see the result of PyCharm code inspection.
+3. The navigation bar is above the project view and editor.  Within the navigation bar, there are buttons for quick 
+access to run and debug your code and version control actions.
+4. At the bottom of the main window is the tool windows.  These windows can be toggled to be displayed or not.  This 
+is where your code will run if invoked from within PyCharm, you can manage project TODOs, access the Python 
+interpreter console, and access a command line terminal.  These tool windows are designed to give you access to most 
+everything you might need without having to leave PyCharm and open multiple windows or applications.
+5. The status bar is at the bottom of the main window and displays project and application status and informational 
+messages.
+
+#### Step 3: Writing Code with PyCharm
+
+In PyCharm, with your `helloworld` project open, double click the project in the project view to expand the tree.  
+You will the Python virtual environment we discussed earlier in this lab.  This was automatically created for you by 
+PyCharm when you created this project.  Let's create a new file and write some Python code.
+
+1. Right click on `helloworld` and select `New` and click `Python File`.
+    
+    ![PyCharm New Python File](assets/PyCharm-04.png)
+    
+2. Type `helloworld.py` in the `Name:` box and select `Python file` from the `Kind:` drop down box.  Click the `OK` 
+button.
+    
+    ![PyCharm New File Dialogue Box](assets/PyCharm-05.png)
+    
+3. Now you have a new file names `helloworld.py` in your the root of your PyCharm `helloworld` project directory.  Go
+ahead and start writing a bit of Python code in the PyCharm editor:
+    
+    ```
+    print
+    ```
+    
+    Did you notice that when you typed the word `print`, PyCharm popped up a tool tip with suggested Python syntax 
+    and its usage?
+    
+    ![PyCharm Syntax Help](assets/PyCharm-06.png)
+    
+    Continue by typing more:
+    
+    ```
+    print("")
+    ```
+    
+    PyCharm automatically closed the `()` and `""""` when you typed the opening `(` and '"'.  Additional tool tips 
+    showed you more contextual Python syntax help.
+    
+    ![PyCharm Syntx Help](assets/PyCharm-07.png)
+    
+    Continue by typing more:
+    
+    ```
+    print("Hello World!")
+    
+    ```
+    
+    Now you have you first line of Python code written in PyCharm.  In the right column of the editor there 
+    is a green checkmark.  Hover over the checkmark and PyCharm will pop up a tool tip indicating that its code 
+    analysis is complete and no errors were found.
+    
+    ![PyCharm Code Analysis](assets/PyCharm-08.png)
+    
+    Let's add a mistake intentionally to illustrate how this helps you write error-free code.  Type the following:
+    
+    ```
+    print("Hello World!")
+    
+    asdfg
+    
+    ```
+
+    PyCharm will display a warning symbol.  Hover over the warning symbol:
+    
+    ![Python Code Analysis Error](assets/PyCharm-09.png)
+    
+    PyCharm will include an indicator with the analysis of the error at the exact point in the code the error occurs.
+      Hover over the red line:
+    
+    ![Python Code Analysis Error](assets/PyCharm-10.png)
+    
+    This is part of the wonder and charm (no pun intended) of PyCharm!
+    
+    Go ahead and remove the error, which should leave you with the following code:
+    
+    ```
+    print("Hello World!")
+    
+    ```
+    
+    Save your changes by clicking the `File` menu and clicking `Save All`.
+
+#### Step 4: Running and Debugging Python Code with PyCharm
+
+lorem ipsum
+
+### Exercise 2: Getting Advanced with PyCharm
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Learn how to keep your project under version control in Git with PyCharm
+* Learn how to integrate Vagrant with PyCharm
+
+#### Step 1: Managing a Project's Git Repository in PyCharm
+
+lorem ipsum
+
+#### Step 2: Vagrant Up with PyCharm
+
+lorem ipsum
 
 ### Introducing Postman
 
