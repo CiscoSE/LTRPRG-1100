@@ -983,14 +983,12 @@ The objectives for this exercise are to:
 * Forging metal: Writing your own functions
 * Surround your enemy: Executing loops
 
-
 ## Other Desktop Network Programmability Tools
 
 TODO:
 
 - [ ] @mgalazka Draft "Tools of the Ninja - Other...Postman"
 - [ ] @mgalazka Draft "Tools of the Ninja - Other...Webex Teams"
-- [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
 
 There are a number of other desktop applications you will find useful.  We've chosen to highlight apps that are 
 cross-platform, supporting Microsoft Windows, Apple macOS, and Linux alike, have full-featured free versions, and 
@@ -1000,6 +998,10 @@ help simplify development and collaboration and keep you productive.
 
 ### Introducing PyCharm
 
+TODO:
+
+- [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
+
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
 [JetBrains](https://www.jetbrains.com/).  There is a [free community version](https://www.jetbrains
 .com/pycharm/download) available for download, but you can support the application and obtain addtional features with
@@ -1008,13 +1010,13 @@ help simplify development and collaboration and keep you productive.
  
  Key features of PyCharm include, but are not limited to:
  
- * A smart code editor with syntax formating, highlighting, completion and error detection
+ * A smart code editor with syntax formatting, highlighting, completion and error detection
  * Built-in terminal and integrated debugger
  * Integrated support for version control systems, including Git
  * Integrated support for Vagrant
  
- An IDE like PyCharm is much more than a text editor, although it is that, too.  Let's take a look at what is key to 
- get started with PyCharm. 
+An IDE like PyCharm is much more than a text editor, although it is that, too.  Let's take a look at what is key to 
+getting started with PyCharm. 
 
 ### Exercise 1: Getting Started with PyCharm
 
@@ -1022,20 +1024,57 @@ help simplify development and collaboration and keep you productive.
 
 The objectives for this exercise are to:
 
-* Familiarize you with PyCharm
 * How to create a project in PyCharm
+* Learn to navigate the PyCharm application GUI
 * Write a Python application with PyCharm
 * Run and debug a Python application with PyCharm
 
-#### Step 1: Getting Familiar with PyCharm
+#### Step 1: Creating a New Project with PyCharm
 
-lorem ipsum
+When you run PyCharm for the first time, you are presented with the welcome screen and prompted to create a new 
+project, open an existing project, or check out a project from version control.  First, let's create a new project.
 
-#### Step 2: Creating a New Project with PyCharm
+1. Click `Create New Project`.
+    
+    ![PyCharm New Project Screen](assets/PyCharm-01.png)
+    
+2. Choose a location for your new project, for example `PyCharmProjects/helloworld`.
+    
+    ![PyCharm Create Network Project](assets/PyCharm-02.png)
+    
+    1. Click to expand `Project Interpreter: New Virtualenv environment`.
+    2. Click the radio button to select `New environment using` and click the drop down menu to select `Virtualenv`.
+    3. Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
+    4. Click the drop down box to select a Python version 3 interpreter.
+    6. Accept the remaining default optoins and click the `Create` button.
+    
+Congratulations, you now have a new PyCharm project complete with a Python version 3 virtual environment ready to
+write some code.  So far, we haven't touched the command line or had to manually create any directories for 
+Python virtual environment by hand.  PyCharm performed the heavy lifting for us.  Next, let's take a look at the 
+PyCharm GUI.
 
-lorem ipsum
+#### Step 2: Navigating PyCharm
 
-#### Step 3: Writing Python Code with PyCharm
+When a project is opened, you see the PyCharm window divided into different tool bars, window areas, and a 
+status bar.
+
+![PyCharm Project Window](assets/PyCharm-03.png)
+
+1. The project view is on the left side of the main window.  This lists your project files.
+2. The editor is on the right side of the main window.  This is where you write your code.  The editor has tabs so 
+that you can open and navigate between multiple files at one time.
+    1. The editor has a left and right column surrounding it.  In the left column, you will see line numbers which 
+    lets you navigate the code more easily.  In the right column, you will see the result of PyCharm code inspection.
+3. The navigation bar is above the project view and editor.  Within the navigation bar, there are buttons for quick 
+access to run and debug your code and version control actions.
+4. At the bottom of the main window is the tool windows.  These windows can be toggled to be displayed or not.  This 
+is where your code will run if invoked from within PyCharm, you can manage project TODOs, access the Python 
+interpreter console, and access a command line terminal.  These tool windows are designed to give you access to most 
+everything you might need without having to leave PyCharm and open multiple windows or applications.
+5. The status bar is at the bottom of the main window and displays project and application status and informational 
+messages.
+
+#### Step 3: Writing Code with PyCharm
 
 lorem ipsum
 
