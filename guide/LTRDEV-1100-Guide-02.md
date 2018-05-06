@@ -1000,7 +1000,9 @@ help simplify development and collaboration and keep you productive.
 
 TODO:
 
-- [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
+- [x] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
+- [ ] Proofread
+- [x] Add screenshots
 
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
 [JetBrains](https://www.jetbrains.com/).  There is a [free community version](https://www.jetbrains
