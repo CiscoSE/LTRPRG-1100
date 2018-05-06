@@ -1002,8 +1002,6 @@ TODO:
 
 - [ ] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
 
-<<<<<<< HEAD
-=======
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
 [JetBrains](https://www.jetbrains.com/).  There is a [free community version](https://www.jetbrains
 .com/pycharm/download) available for download, but you can support the application and obtain addtional features with
