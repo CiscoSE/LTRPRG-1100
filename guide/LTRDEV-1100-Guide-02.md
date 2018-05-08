@@ -1387,9 +1387,9 @@ Postman is organized in three main sections: the header bar, the side bar, and t
 
 1. In order to make an API call, we first have to select the HTTP method. 
 
-Three of the most common methods used in API calls are `GET`, `POST`, and `PUT`. `GET` is used when getting information from an API. A `GET` request specifies the information in which it is interested via the URL, parameters, and headers. A `POST` request is one that is sending information to the API. This is often in the form of creating a new data entry of some sort through the API. Lastly, the `PUT` is often used to update existing information through the API.
-
-In our example, we will be making a `GET` request, so please make sure this is the method selected.
+    Three of the most common methods used in API calls are `GET`, `POST`, and `PUT`. `GET` is used when getting information from an API. A `GET` request specifies the information in which it is interested via the URL, parameters, and headers. A `POST` request is one that is sending information to the API. This is often in the form of creating a new data entry of some sort through the API. Lastly, the `PUT` is often used to update existing information through the API.
+    
+    In our example, we will be making a `GET` request, so please make sure this is the method selected.
 
 2. Now that we know we will be making a request for information, we need a location to find the API we are querying. Please specify the URL as `https://postman-echo.com/get` in the URL field. We do not require any parameters for this API.
 
@@ -1469,10 +1469,10 @@ Postman makes this process easy, as it can auto-generate code to use in a script
 
 1. In Postman, open the request from your LTRDEV-1100 collection. Then click on `Code` just underneath the `Send` and `Save` buttons.
 
-![Postman code select](assets/python-10.png)
+![Postman code select](assets/postman-10.png)
 
 2. Ensure that the language in the upper left dropdown is set to `Python Requests`. In this window, it shows Python code necessary to execute this API call directly from a Python script. As a matter of fact, you can `Copy to Clipboard` and paste this into PyCharm to test it out.
 
-![Postman code gen](assets/python-11.png)
+![Postman code gen](assets/postman-11.png)
 
 
