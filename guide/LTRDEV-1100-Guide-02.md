@@ -1415,5 +1415,25 @@ The objectives for this exercise are to:
 * Save variables in an Environment
 * Use Postman to generate a Python script
 
+#### Step 1: Creating a Collection
 
+In Postman, Collections allow you to save similar requests together for easy access. Imagine a situation where you are learning how to use a particular product or service API. More often than not, there may be more than one request necessary.
+
+For instance, if you are working with the Cisco Meraki dashboard API, you may need to save several different API calls in order to replicate the work later, or reference them to use in a script. The Cisco Meraki dashboard API first call may be to list the organizations of which you are a member. Next, another GET request may be to list the networks available in an organization. After this, you may make another call to list the devices that belong to a particular network.
+
+As you can see, utilizing multiple tabs in the build area becomes important, and furthermore, saving the requests to reference later is very helpful. Let's look at how to make a Collection in Postman to save related requests.
+
+1. Ensure that you still have the `postman-echo.com` GET request tab open. If you previously closed it without saving it, please revisit the last exercise to re-create it.
+
+2. On the far right side of the build area, click the dropdown icon next to `Save` and then click `Save As...`
+
+![Postman Save](assets/postman-04.png)
+
+3. In the `Save Request` box that pops up, note that the lower portion of the screen allows you to search for, select, or create a new collection. Click `+Create Collection` and then type in `LTRDEV-1100` as the new collection name. Click the checkbox to fully create the collection, and then click on the newly created collection to select it. Now, click `Save to LTRDEV-1100` to save this request.
+
+![Postman Create Collection](assets/postman-05.png)
+
+You can use this technique in the future to save API requests as you are working on them. When managing network infrastructure that has fully featured API's, a collection could even be the ordered list of requests necessary to complete a controlled change during a maintenance window. 
+
+#### Step 2: Saving variables using Environments
 
