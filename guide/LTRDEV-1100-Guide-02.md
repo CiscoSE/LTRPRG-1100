@@ -1403,7 +1403,7 @@ Postman is organized in three main sections: the header bar, the side bar, and t
 
 2. Aside from the body of the response, there are also headers that give information about the response. For instance, the header `Content-Type` specifies `application/json` as its value. This data is important if working with API's programmatically, as JSON formatted data would be parsed differently than, say, XML formatted data.
 
-![Postman result headers](assets/postman-03.png)
+    ![Postman result headers](assets/postman-03.png)
 
 ### Exercise 2: Working in Postman
 
@@ -1427,13 +1427,13 @@ As you can see, utilizing multiple tabs in the build area becomes important, and
 
 2. On the far right side of the build area, click the dropdown icon next to `Save` and then click `Save As...`
 
-![Postman Save](assets/postman-04.png)
+    ![Postman Save](assets/postman-04.png)
 
 3. In the `Save Request` box that pops up, note that the lower portion of the screen allows you to search for, select, or create a new collection. Click `+Create Collection` and then type in `LTRDEV-1100` as the new collection name. Click the checkbox to fully create the collection, and then click on the newly created collection to select it. Now, click `Save to LTRDEV-1100` to save this request.
 
-![Postman Create Collection](assets/postman-05.png)
+    ![Postman Create Collection](assets/postman-05.png)
 
-You can use this technique in the future to save API requests as you are working on them. When managing network infrastructure that has fully featured API's, a collection could even be the ordered list of requests necessary to complete a controlled change during a maintenance window. 
+    You can use this technique in the future to save API requests as you are working on them. When managing network infrastructure that has fully featured API's, a collection could even be the ordered list of requests necessary to complete a controlled change during a maintenance window. 
 
 #### Step 2: Saving variables using Environments
 
@@ -1445,19 +1445,19 @@ While variables can be created and saved in multiple scopes within Postman, we w
 
 1. First, create a new environment. To do this, click the dropdown for `+ New` in the upper left corner of Postman, and then select `Environment`.
 
-![Postman new menu](assets/postman-06.png)
+    ![Postman new menu](assets/postman-06.png)
 
 2. In this new dialog box, we can name the environment `LTRDEV-1100` and define a variable. Using our basic API request example from before, create a variable named `domain` and define the value as `postman-echo.com`. Click Add to save the environment.
 
-![Postman new environment](assets/postman-07.png)
+    ![Postman new environment](assets/postman-07.png)
 
 3. Now that our environment is defined, let's enable it for use with a new request. near the upper right portion of the app, there is a dropdown selection box that shows the active environment. This will likely read `No Environment` at this point. Click the drop-down and select `LTRDEV-1100` as the environment to use.
 
-![Postman select environment](assets/postman-08.png)
+    ![Postman select environment](assets/postman-08.png)
 
 4. Let's create an API request using the variable defined in this environment (tip: if you need a quick reference to a variable name or value, click the "eye" icon immediately to the right of the active environment drop-down menu). In a new request tab, ensure the method is set to `GET` and enter the URL: `https://{{domain}}/get` and then click `Send`.
 
-![Postman request with variable](assets/postman-09.png)
+    ![Postman request with variable](assets/postman-09.png)
 
 5. Notice that the request completed with a status of `200 OK` to the API at postman-echo.com. Also notice that if you mouseover the variable in the request URL, Postman will popup a box showing the variable is an environment variable as well as its value.
 
@@ -1469,11 +1469,11 @@ Postman makes this process easy, as it can auto-generate code to use in a script
 
 1. In Postman, open the request from your LTRDEV-1100 collection. Then click on `Code` just underneath the `Send` and `Save` buttons.
 
-![Postman code select](assets/postman-10.png)
+    ![Postman code select](assets/postman-10.png)
 
 2. Ensure that the language in the upper left dropdown is set to `Python Requests`. In this window, it shows Python code necessary to execute this API call directly from a Python script. As a matter of fact, you can `Copy to Clipboard` and paste this into PyCharm to test it out.
 
-![Postman code gen](assets/postman-11.png)
+    ![Postman code gen](assets/postman-11.png)
 
 
 ### Introducing Cisco Webex Teams
@@ -1494,13 +1494,13 @@ The objectives for this exercise are to:
 
 #### Step 1: Sign up for a Webex Teams account
 
-If you don't already have a Webex Teams (formerly Cisco Spark) account - then the first thing to do si sign up for one. If you already have an account and are confident in your ability to log in to it, please skip to Step 2.
+If you don't already have a Webex Teams (formerly Cisco Spark) account - then the first thing to do is sign up for one. If you already have an account and are confident in your ability to log in to it, please skip to Step 2.
 
 1. Head on over to [Cisco Spark Web Login](https://web.ciscospark.com) to create your account.
 
 2. Go ahead and type in your email address. If you have yet to activate an account, it will send an email to this address with a link to activate the account. Go ahead and input your email and hit `Next`.
 
-![Spark login](assets/spark-01.png)
+    ![Spark login](assets/spark-01.png)
 
 3. If you do not yet have an account, it will tell you to check your email. Please do so, and click on the activation link that is there waiting for you.
 
@@ -1508,7 +1508,41 @@ If you don't already have a Webex Teams (formerly Cisco Spark) account - then th
 
 #### Step 2: Obtain an API token
 
+Once you have an account with Webex Teams, you can use it to access the platform API's. Webex Teams has a really well-documented set of API's, so it's important to spend some time learning about them.
 
+1. Head over to [Cisco Webex for Developers](https://developer.webex.com/getting-started.html#authentication) to grab your access token to use with the API. Save this token in a notepad window for future use.
 
+2. Check out the rest of this "Getting Started" web page for some more info on Webex Teams API. Read through the use-cases and such. How can you see this useful for you as you embark on network programmability?
 
+#### Step 3: Understand Webex Teams API's
+
+Later in this lab, we will spend more time deep-diving into the logic and details of API's. For now, it is important to understand what kinds of API's are available and how they can help. Let's run through an overview of some important uses of the API.
+
+1. Navigate to the [Cisco Webex Teams API Quick Reference](https://developer.webex.com/quick-reference.html) page for a high-level overview of what interactions you can take using the API. Scroll through the page and look at the different functions that are available for the different categories.
+
+2. Let's understand what type of info can be gathered through the API. For instance, in the `People` section of the quick reference, click on the `Get My Own Details` request.
+
+3. This site allows for interactive use of the API's directly from the web interface, which is really helpful to understand how the API's work. To utilize this, flip the switch next to `Test Mode` to `ON`.
+
+    ![Spark get my own details](assets/spark-02.png)
+
+4. Go ahead and click `Run` to see the response on the right-side column. Without worrying too much about the details of the structure, notice the information that comes back. With the API call, we are able to pull the user details.
+
+5. Let's use this site to create a room that we can use during this lab. Click on `Rooms` on the left-hand column under the `Webex Teams API` section (alternatively, you can click [here](https://developer.webex.com/resource-rooms.html) to get there). Select the `Create a room` method.
+
+    ![Spark create room](assets/spark-03.png)
+
+6. Ensure that the `Test Mode` is turned on, and then it is time to create a room. A room in Webex Teams (referred to as a Space in the app) is a gathering place where team messaging, sharing, and collaboration can take place. Name your room something interesting like `LTRDEV-1100`. We can leave the `teamId` blank. The right-hand column should update in real-time with the request structure, shown below. When you are ready, click `Run` and monitor the right-hand column for results. If you see a `200 / Success` then the room was created!
+
+    ![Spark room created](assets/spark-04.png)
+
+#### Step 4: Discover Webex Teams Integrations
+
+Everything that we've looked at so far allow you to interact as yourself with Webex Teams via the API. While this can be effective and helpful depending on the task, Webex Teams also allows for integrations and bots, which expand the functionality and use even further. An integration is software that can act on your behalf to interact with other systems. Bots are separate 'users' that can send messages into spaces or read messages directed to them.
+
+1. Check out the available integrations already developed and publicly available. Go to the [Cisco Webex App Hub](https://apphub.webex.com/categories) to see a list of different integrations available for use. For instance, you can add an integration with Github to receive notifications in Webex Teams for when updates are made to a repository. Spend a few minutes looking through the available bots and integrations.
+
+2. If all of these available integrations and bots is inspirational, it is important to know that you can create these as well! Check out the documentation for [integrations](https://developer.webex.com/authentication.html) and [bots](https://developer.webex.com/bots.html) to learn more, but here is a quick reminder of the differences between integrations and bots.
+    * Integrations utilize the Webex Teams API on behalf of other users, via OAuth.
+    * Bots are effectively their own users and can post their own content.
 
