@@ -19,6 +19,36 @@ TODO:
 Model Driven Programmability...SNMP isn't good enough anymore...RFC-3535 and model driven programmability stack..
 .Client/Server model...Transport Protocol/Data Model...NETCONF/YANG developed to address RFC-3535.
 
+Traditional network device management techniques, for example command line interface (CLI) and web user interface 
+(UI), were designed for human to machine interaction for configuring and accessing operational details.  They by 
+definition are not programmable.  Although attempts at automation through screen scraping or imitating interactive 
+sessions are possible, they are error prone, unrealiable, and do not scale.
+
+The need for reliable and scalable ways to manage network devices is not a new one.  Simple Network Management Protocol 
+(SNMP) was first introduced as a IETF Internet Standard in 1988 as a standard interface configure and retrieve 
+operational information from network devices.  SNMP was revised over the years, chiefly to improve performance and 
+security of the protocol.  However, SNMP still isn't adequate for the job today, relegated to polling statistics and 
+status.
+
+In 2003, the IETF published [RFC3535](https://tools.ietf.org/html/rfc3535) *Overview of the 2002 IAB Network 
+Management Workshop*, stating
+
+> SNMP works reasonably well for device monitoring.
+
+and found to be lacking in the following ways:
+
+* Applications are necessary for SNMP to useful
+* Lack of writeable MIBs in general and writeable MIBs for configuration more specifically
+* Does not scale
+* Too difficult to implement
+* Lack of support for configuration retrieval or playback
+* Mismatch between SNMP data-centric view of the world versus an operator's task-oriented view of the world 
+
+"Model driven programmability inherits the power of models, making it easier to configure routers. It overcomes 
+drawbacks posed by traditional router management techniques.
+
+The solution lies in using data models – a programmatic and standards-based way of writing configurations to any network device. Use it to replace the process of manual configuration and implement YANG as the de-facto data modeling language."
+
 ### Exercise 1: Introducing NETCONF
 
 #### Objectives
