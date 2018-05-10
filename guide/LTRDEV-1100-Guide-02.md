@@ -1476,3 +1476,39 @@ Postman makes this process easy, as it can auto-generate code to use in a script
 ![Postman code gen](assets/postman-11.png)
 
 
+### Introducing Cisco Webex Teams
+
+[Cisco Webex Teams](https://www.webex.com/products/teams/index.html) (formerly Cisco Spark) is a platform for teamwork, communication, and collaboration. It allows individuals and teams to communicate via messaging, video meetings, whiteboarding, and more. On the surface, it has a lot of use and functionality; though with its well-developed API, it can become a favorite tool for network automation.
+
+Using its API's, Webex Teams can act as a bidirectional human interfacing tool with network automation.Webex teams supports the concept of 'bots' (automated users that provide some sort of interaction within the platform), which could be a way for network devices to communicate alerts, status changes, or other information. It could also provide a way for a network operator to query a network device for interface statistics using human language. This level of extensibility brings much to the table for a network programmability ninja.
+
+### Exercise 1: Getting to Know Webex Teams
+
+#### Objectives
+
+The objectives for this exercise are to:
+* Sign up for a Webex Teams account
+* Learn how to obtain an API token
+* Discover Webex Teams Integrations
+* Understand Webex Teams API Calls
+
+#### Step 1: Sign up for a Webex Teams account
+
+If you don't already have a Webex Teams (formerly Cisco Spark) account - then the first thing to do si sign up for one. If you already have an account and are confident in your ability to log in to it, please skip to Step 2.
+
+1. Head on over to [Cisco Spark Web Login](https://web.ciscospark.com) to create your account.
+
+2. Go ahead and type in your email address. If you have yet to activate an account, it will send an email to this address with a link to activate the account. Go ahead and input your email and hit `Next`.
+
+![Spark login](assets/spark-01.png)
+
+3. If you do not yet have an account, it will tell you to check your email. Please do so, and click on the activation link that is there waiting for you.
+
+4. Follow the instructions to complete your signup.
+
+#### Step 2: Obtain an API token
+
+
+
+
+
