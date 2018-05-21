@@ -13,6 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a 
 TODO:
 
 - [x] @curtissmith Draft "Hone Your Ninja Skills - Using NETCONF/YANG"
+- [ ] Proofread
 
 ### Introducing Model Driven Programmability
 
@@ -634,20 +635,20 @@ platform software yang-management process` command, for example:
         
     2. Now return to the window with the original SSH session to your IOS XE device.  Use the `show netconf-yang 
         sessions` to view the active NETCONF session you've just established, for example:
-            ```
-            csr1kv#show netconf-yang sessions                    
-            R: Global-lock on running datastore
-            C: Global-lock on candidate datastore
-            S: Global-lock on startup datastore
-            
-            Number of sessions : 1
-            
-            session-id  transport    username             source-host           global-lock  
-            -------------------------------------------------------------------------------
-            40          netconf-ssh  netconf              10.0.2.2              None         
-            
-            csr1kv#
-            ```
+        ```
+        csr1kv#show netconf-yang sessions                    
+        R: Global-lock on running datastore
+        C: Global-lock on candidate datastore
+        S: Global-lock on startup datastore
+        
+        Number of sessions : 1
+        
+        session-id  transport    username             source-host           global-lock  
+        -------------------------------------------------------------------------------
+        40          netconf-ssh  netconf              10.0.2.2              None         
+        
+        csr1kv#
+        ```
     3. Return to the NETCONF session window and type `^c` to terminate the session.  Let's take a look at the screen 
         output from our first NETCONF session.
         
@@ -682,6 +683,7 @@ programmatically.
     Python 3.6.5 (default, Mar 30 2018, 06:41:53) 
     [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
+    >>>
     ```
 3. Import the `ncclient` Python library with the code snippet `from ncclient import manager`:
     ```
