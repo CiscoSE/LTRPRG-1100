@@ -1162,13 +1162,16 @@ repository we created earlier in this lab.  From the terminal:
 
 4. In the `URL:` box, type the URL for your Git repository you created earlier in this lab.  For example, 
 `https://github.com/curtissmith/helloworld`, replacing `curtissmith` with your Git username.    
-    1. Click the `Test` button to test the Git repository URL you've typed.
-        
-        ![PyCharm Clone Repository Test](assets/PyCharm-17.png)
-        
-    2. If the test was successful, click the `Clone` button.
-    3. Click the `Yes` button when prompted to open the directory.
-        ![PyCharm Project Cloned from Git](assets/PyCharm-18.png)
+    
+    Click the `Test` button to test the Git repository URL you've typed.
+    
+    ![PyCharm Clone Repository Test](assets/PyCharm-17.png)
+    
+    If the test was successful, click the `Clone` button.
+    
+    Click the `Yes` button when prompted to open the directory.
+    
+    ![PyCharm Project Cloned from Git](assets/PyCharm-18.png)
     
 5. Now you have a new PyCharm project cloned from your Git repository.  Double click to expand the `helloworld` 
 project directory in the PyCharm project view.  You will find the `README.md` file we created earlier in the lab.
@@ -1183,19 +1186,25 @@ project directory in the PyCharm project view.  You will find the `README.md` fi
 6.  You will notice there is no `venv` directory in your project.  That is because PyCharm did not create one when it
 cloned the Git repository.  However, we can configure and create one easily.
     
-    1. Click the `File` menu and click `Settings`.
-    2. Double click `Project: helloworld` to expand the tree and click `Project Interpreter`.  You will notice that 
+    Click the `File` menu and click `Settings`.
+    
+    Double click `Project: helloworld` to expand the tree and click `Project Interpreter`.  You will notice that 
     this is empty or has an error.
-    3. Click the gear button next to the drop downbox labeled `Project Interpreter` and click `Add...`.
-        1. Click to select `Virtual Environment`.
-        2. Click the radio button to select `New environment`
-        3. Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
-        4. Click the drop down box to select a Python version 3 interpreter.
-        5. Accept the remaining default options and click the `OK` button.
-        
-        ![PyCharm Add Python Interpreter Dialogue](assets/PyCharm-20.png)
-        
-        A new Python virtual environment will be created for you.  Click the `OK` button.
+    
+    Click the gear button next to the drop downbox labeled `Project Interpreter` and click `Add...`.
+    
+    Click to select `Virtual Environment`.
+    
+    Click the radio button to select `New environment`
+    
+    Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
+    
+    Click the drop down box to select a Python version 3 interpreter.
+    Accept the remaining default options and click the `OK` button.
+    
+    ![PyCharm Add Python Interpreter Dialogue](assets/PyCharm-20.png)
+    
+    A new Python virtual environment will be created for you.  Click the `OK` button.
     
 7. Let's re-create our "Hello World!" Python code.  Right click on `helloworld` and select `New` and click `Python
 File`.
