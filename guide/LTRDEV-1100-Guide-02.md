@@ -343,48 +343,6 @@ command `git init`, for example:
         $
         ```
 
-## Ansible for Network Programmability
-
-TODO:
-
-- [ ] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
-- [ ] Proofread
-- [ ] Add example output and screenshots
-
-### Introducing Ansible
-
-Easy button for network programmability...configuration management...
-
-"Configuration management tools help manage infrastructure at scale. Consider the challenges of managing large data 
-centers:
-
-* Updating packages on thousands of virtual machines.
-* Changing configuration files on hundreds of servers.
-* Orchestrating a workflow such as the deployment of a new application to production across different data centers.
-* Running multiple CLI commands on dozens of servers to retrieve operational data.
-
-All of this is prone to various human error. As such, configuration management tools provide features that are useful
-to solve problems such as these."
-
-ad hoc across multiple hosts...simple task flow automation...workflow automation...
-
-### Exercise 1: Foo
-
-#### Objectives
-
-The objectives for this exercise are to:
-
-* Foo
-* Bar
-
-#### Step 1: Foo
-
-loreum ipsum
-
-#### Step 2: Bar
-
-lorem ipsum
-
 ## Vagrant Up for Network Engineers
 
 TODO:
