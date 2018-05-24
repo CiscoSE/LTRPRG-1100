@@ -6,7 +6,11 @@ TODO:
 
 - [ ] @mgalazka Draft "Hone Your Ninja Skills - Using APIs"
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit. Nam venenatis metus quis risus aliquam mattis. Ut vitae elementum libero. Nam malesuada felis in tincidunt luctus. Aliquam ut magna orci. Nulla a elementum erat. Aenean facilisis, nibh at blandit feugiat, odio est tincidunt sem, eu pretium sem lorem vel libero. Nullam felis nisl, eleifend interdum congue aliquam, dictum sit amet augue. Maecenas vel augue justo. Quisque scelerisque tempus sapien, eu elementum nibh venenatis ac. In vel purus eu arcu elementum volutpat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit. Nam venenatis 
+metus quis risus aliquam mattis. Ut vitae elementum libero. Nam malesuada felis in tincidunt luctus. Aliquam ut magna
+orci. Nulla a elementum erat. Aenean facilisis, nibh at blandit feugiat, odio est tincidunt sem, eu pretium sem 
+lorem vel libero. Nullam felis nisl, eleifend interdum congue aliquam, dictum sit amet augue. Maecenas vel augue 
+justo. Quisque scelerisque tempus sapien, eu elementum nibh venenatis ac. In vel purus eu arcu elementum volutpat.
 
 ## Using NETCONF/YANG
 
@@ -14,6 +18,7 @@ TODO:
 
 - [x] @curtissmith Draft "Hone Your Ninja Skills - Using NETCONF/YANG"
 - [ ] Proofread
+- [ ] Edit for directory, example output, and style consistency
 
 ### Introducing Model Driven Programmability
 
@@ -235,21 +240,21 @@ important constructs used in YANG.
 1. Every YANG data model contains a `module` which contains the name of the model, describes the data, and 
 documents the revision history of the model itself.
 2. YANG defines four types of nodes for data modeling:
-    1. A `leaf` node contains a single, simple value like an integer or string, for example:
+    * A `leaf` node contains a single, simple value like an integer or string, for example:
         ```
         leaf host-name {
            type string;
            description "Hostname for this system";
        }
        ```
-    2. A `leaf-list` node is a sequence of one or more `leaf` nodes, for example:
+    * A `leaf-list` node is a sequence of one or more `leaf` nodes, for example:
         ```
         leaf-list domain-search {
          type string;
          description "List of domain names to search";
         }
         ```
-    3. A `list` node is a sequence of  entries identified by a key value of each key leaf.  A `list` node
+    * A `list` node is a sequence of  entries identified by a key value of each key leaf.  A `list` node
     can contain `leaf`, `leaf-list`, `list`, or `container` nodes.  For example,
         ```
         list user {
@@ -265,7 +270,7 @@ documents the revision history of the model itself.
             }
         }
         ```
-    4. A `container` node is a group of related nodes as child nodes and no value itself.  There is no
+    * A `container` node is a group of related nodes as child nodes and no value itself.  There is no
      limit to the number of child nodes within a `container` node.  A `container` node can include `leaf`, 
      `leaf-list`, `list`, or other `container` child nodes.  For example,
         ```
@@ -301,106 +306,116 @@ the IETF and OpenConfig YANG data models from GitHub.
     ```
 2. Open PyCharm and the IETF YANG Git repository you just cloned by clicking the `File` menu, click `Open...`, 
 navigate to the directory `ietf`, and click the `Open` button.
-    1. In PyCharm, navigate through the project explorer to find a YANG data model, for example click to expand 
+    
+    In PyCharm, navigate through the project explorer to find a YANG data model, for example click to expand 
     `standard`, `ietf`, and `RFC`.  Double click to open `ietf-interfaces.yang`.
-    2. As you scroll through this file representing the `module ietf-interface` data model, you will find the 
+    
+    As you scroll through this file representing the `module ietf-interface` data model, you will find the 
     elements we discussed earlier in this lab.  You can see the structure and nodes.  Each node should be documented 
     with a description.  You can get a sense for what operational state and configuration details you this YANG data 
     model describes.
+    
 3. I think we can agree browsing a directory full of files written in the YANG modeling language can get tedious.  A 
 data format that is good for programming is not necessarily good for human readability.  Fortunately, we have a tool
 that can help you called [pyang](https://github.com/mbj4668/pyang) that is a quick `pip install` away.
-    1. From the command line terminal, ensure that pyang is installed:
-        ```
-        $ pip3 install pyang
-        ```
-    2. Now navigate to the directory that contains the `ietf-interfaces.yang` YANG data model file, for example:
-        ```
-        $ cd ~/coding/ciscolive/ietf/yang/standard/ietf/RFC
-        ```
-    3. Use pyang to display the data model in a human readable tree format:
-        ```
-        $ pyang -f tree ietf-interfaces.yang
-        module: ietf-interfaces
-        +--rw interfaces
-        |  +--rw interface* [name]
-        |     +--rw name                        string
-        |     +--rw description?                string
-        |     +--rw type                        identityref
-        |     +--rw enabled?                    boolean
-        |     +--rw link-up-down-trap-enable?   enumeration {if-mib}?
-        |     +--ro admin-status                enumeration {if-mib}?
-        |     +--ro oper-status                 enumeration
-        |     +--ro last-change?                yang:date-and-time
-        |     +--ro if-index                    int32 {if-mib}?
-        |     +--ro phys-address?               yang:phys-address
-        |     +--ro higher-layer-if*            interface-ref
-        |     +--ro lower-layer-if*             interface-ref
-        |     +--ro speed?                      yang:gauge64
-        |     +--ro statistics
-        |        +--ro discontinuity-time    yang:date-and-time
-        |        +--ro in-octets?            yang:counter64
-        |        +--ro in-unicast-pkts?      yang:counter64
-        |        +--ro in-broadcast-pkts?    yang:counter64
-        |        +--ro in-multicast-pkts?    yang:counter64
-        |        +--ro in-discards?          yang:counter32
-        |        +--ro in-errors?            yang:counter32
-        |        +--ro in-unknown-protos?    yang:counter32
-        |        +--ro out-octets?           yang:counter64
-        |        +--ro out-unicast-pkts?     yang:counter64
-        |        +--ro out-broadcast-pkts?   yang:counter64
-        |        +--ro out-multicast-pkts?   yang:counter64
-        |        +--ro out-discards?         yang:counter32
-        |        +--ro out-errors?           yang:counter32
-        x--ro interfaces-state
-             x--ro interface* [name]
-                x--ro name               string
-                x--ro type               identityref
-                x--ro admin-status       enumeration {if-mib}?
-                x--ro oper-status        enumeration
-                x--ro last-change?       yang:date-and-time
-                x--ro if-index           int32 {if-mib}?
-                x--ro phys-address?      yang:phys-address
-                x--ro higher-layer-if*   interface-state-ref
-                x--ro lower-layer-if*    interface-state-ref
-                x--ro speed?             yang:gauge64
-                x--ro statistics
-                   x--ro discontinuity-time    yang:date-and-time
-                   x--ro in-octets?            yang:counter64
-                   x--ro in-unicast-pkts?      yang:counter64
-                   x--ro in-broadcast-pkts?    yang:counter64
-                   x--ro in-multicast-pkts?    yang:counter64
-                   x--ro in-discards?          yang:counter32
-                   x--ro in-errors?            yang:counter32
-                   x--ro in-unknown-protos?    yang:counter32
-                   x--ro out-octets?           yang:counter64
-                   x--ro out-unicast-pkts?     yang:counter64
-                   x--ro out-broadcast-pkts?   yang:counter64
-                   x--ro out-multicast-pkts?   yang:counter64
-                   x--ro out-discards?         yang:counter32
-                   x--ro out-errors?           yang:counter32
-        $
-        ```
-        1. The first thing you should notice is how much easier this is to read and understand.
-            1. The line `module: ietf-interfaces` contains the module name.
-            2. The line beginning `+--rw interfaces` is a container node, which contains a list node:
-                1. The line beginning `|  +--rw interface* [name]` is a list node with the key `[name]`, which
-                contains several leaf nodes, for example:
-                    1. The line `+--rw description?                string` is a leaf node that describes a string
-                    value.  You can see the data model itself is very detailed and well structured but difficult to 
-                    read if you're looking for pertinent data for your application.  With the use of pyang, on the 
-                    other hand, you are given just the right amount of information needed to find the data you need 
-                    for your application.
+    
+    From the command line terminal, ensure that pyang is installed:
+    ```
+    $ pip3 install pyang
+    ```
+    
+    Now navigate to the directory that contains the `ietf-interfaces.yang` YANG data model file, for example:
+    
+    ```
+    $ cd ~/coding/ciscolive/ietf/yang/standard/ietf/RFC
+    ```
+    
+    Use pyang to display the data model in a human readable tree format:
+    
+    ```
+    $ pyang -f tree ietf-interfaces.yang
+    module: ietf-interfaces
+    +--rw interfaces
+    |  +--rw interface* [name]
+    |     +--rw name                        string
+    |     +--rw description?                string
+    |     +--rw type                        identityref
+    |     +--rw enabled?                    boolean
+    |     +--rw link-up-down-trap-enable?   enumeration {if-mib}?
+    |     +--ro admin-status                enumeration {if-mib}?
+    |     +--ro oper-status                 enumeration
+    |     +--ro last-change?                yang:date-and-time
+    |     +--ro if-index                    int32 {if-mib}?
+    |     +--ro phys-address?               yang:phys-address
+    |     +--ro higher-layer-if*            interface-ref
+    |     +--ro lower-layer-if*             interface-ref
+    |     +--ro speed?                      yang:gauge64
+    |     +--ro statistics
+    |        +--ro discontinuity-time    yang:date-and-time
+    |        +--ro in-octets?            yang:counter64
+    |        +--ro in-unicast-pkts?      yang:counter64
+    |        +--ro in-broadcast-pkts?    yang:counter64
+    |        +--ro in-multicast-pkts?    yang:counter64
+    |        +--ro in-discards?          yang:counter32
+    |        +--ro in-errors?            yang:counter32
+    |        +--ro in-unknown-protos?    yang:counter32
+    |        +--ro out-octets?           yang:counter64
+    |        +--ro out-unicast-pkts?     yang:counter64
+    |        +--ro out-broadcast-pkts?   yang:counter64
+    |        +--ro out-multicast-pkts?   yang:counter64
+    |        +--ro out-discards?         yang:counter32
+    |        +--ro out-errors?           yang:counter32
+    x--ro interfaces-state
+         x--ro interface* [name]
+            x--ro name               string
+            x--ro type               identityref
+            x--ro admin-status       enumeration {if-mib}?
+            x--ro oper-status        enumeration
+            x--ro last-change?       yang:date-and-time
+            x--ro if-index           int32 {if-mib}?
+            x--ro phys-address?      yang:phys-address
+            x--ro higher-layer-if*   interface-state-ref
+            x--ro lower-layer-if*    interface-state-ref
+            x--ro speed?             yang:gauge64
+            x--ro statistics
+               x--ro discontinuity-time    yang:date-and-time
+               x--ro in-octets?            yang:counter64
+               x--ro in-unicast-pkts?      yang:counter64
+               x--ro in-broadcast-pkts?    yang:counter64
+               x--ro in-multicast-pkts?    yang:counter64
+               x--ro in-discards?          yang:counter32
+               x--ro in-errors?            yang:counter32
+               x--ro in-unknown-protos?    yang:counter32
+               x--ro out-octets?           yang:counter64
+               x--ro out-unicast-pkts?     yang:counter64
+               x--ro out-broadcast-pkts?   yang:counter64
+               x--ro out-multicast-pkts?   yang:counter64
+               x--ro out-discards?         yang:counter32
+               x--ro out-errors?           yang:counter32
+    $
+    ```
+    
+    The first thing you should notice is how much easier this is to read and understand.
+    
+    The line `module: ietf-interfaces` contains the module name.
+    
+    The line beginning `+--rw interfaces` is a container node, which contains a list node:
+    
+    The line beginning `|  +--rw interface* [name]` is a list node with the key `[name]`, which contains several leaf
+    nodes.  For example, the line `+--rw description?                string` is a leaf node that describes a string
+    value.  You can see the data model itself is very detailed and well structured but difficult to read if you're 
+    looking for pertinent data for your application.  With the use of pyang, on the other hand, you are given just 
+    the right amount of information needed to find the data you need for your application.
             
-            The `ro` or `rw` next to the node name indicates whether the data is non-configuration data (`ro`) or 
-            configuration data (`rw`).  A `?` after the node name indicates that the data is optional and may not be 
-            present on the network device.  A `*` after the node name indicates that the node is a leaf or leaf-list.
-            For more information about the symbols and conventions used by pyang in the tree format, use the command 
-            `pyang --tree-help`.
+    The `ro` or `rw` next to the node name indicates whether the data is non-configuration data (`ro`) or 
+    configuration data (`rw`).  A `?` after the node name indicates that the data is optional and may not be 
+    present on the network device.  A `*` after the node name indicates that the node is a leaf or leaf-list.
+    For more information about the symbols and conventions used by pyang in the tree format, use the command 
+    `pyang --tree-help`.
             
-        2. The second thing that you should notice is the lack of data. Remember, we are only viewing the YANG data 
-        model, not YANG data from a network device. We will explore actual YANG data from an IOS XE device later in 
-        this lab after we introduce NETCONF.
+    The second thing that you should notice is the lack of data. Remember, we are only viewing the YANG data 
+    model, not YANG data from a network device. We will explore actual YANG data from an IOS XE device later in 
+    this lab after we introduce NETCONF.
 
 ### Exercise 2: Introducing NETCONF
 
@@ -491,19 +506,26 @@ with to get started:
 
 * The `<get>` NETCONF operation is used to retrieve the running configuration and operation state from a network 
 device.  
+
 * The `<get-config>` NETCONF operation is used to retrieve all or a subset of a specific configuration from a network 
 device.
+
 * The `<edit-config>` NETCONF operation is used to load or a subset of specific configuration to the target datastore
 on a network device.  The device will analyze the source and target configuration and make only the necessary 
 changes to the target configuration.  The target configuration is not necessarily replaced, allowing you to make 
 configuration changes without deleting the configuration first.
+
 * The `<copy-config>` NETCONF operation is used to create or replace the entire target configuration datastore with a
 specific source datastore.  If the target datastore exists, then the target datastore will be overwritten.
+
 * The `<delete-config>` NETCONF operation is used to delete the entire target configuration datastore (the 
 `<running>` datastore cannot be deleted).
+
 * The `lock` and `unlock` NETCONF operations are used to lock or unlock a configuration datastore, preventing other 
 CLI, SNMP, or NETCONF sessions from making configuration changes while locked.
+
 * The `<close-session>` NETCONF operation is used to terminate a NETCONF session gracefully.
+
 * The `<kill-session>` NETCONF operation is used to terminate a NETCONF session forcefully.  All active operations 
 are aborted, all locks are resources are released, and the NETCONF session is closed.
 
@@ -533,6 +555,7 @@ To work with NETCONF on IOS XE, you must be a user with privilage level 15 and e
 network device.  To do so, open a command line terminal and complete the following steps:
 
 1. Establish an SSH connection to the IOS XE device.
+
 2. From the IOS XE device, create a new user for NETCONF sessions and configure the IOS XE NETCONF interface:
     ```
     csr1kv>enable
@@ -552,25 +575,30 @@ You can use the following commands to verify the NETCONF configuration in IOS XE
 
 1. To display information about the IOS XE device NETCONF datastores, use the `show netconf-yang datastores` command,
 for example:
+    
     ```
     csr1kv#show netconf-yang datastores
     Datastore Name             : running
     
     csr1kv#
     ```
+    
     You can see the default, manadatory `<running>` datastore is present.
 
 2. To display information about active NETCONF sessions, use the `show netconf-yang sessions` command, for example:
+    
     ```
     csr1kv#show netconf-yang sessions
     There are no active sessions
     
     csr1kv#
     ```
+    
     You can see there are currently no active sessions, but we will change that soon!
 
 3. To display information about NETCONF statistic on your IOS XE device, use the `show netconf-yang statistics` 
 command, for example:
+    
     ```
     csr1kv#show netconf-yang statistics
     netconf-start-time  : 2018-05-21T02:27:35+00:00
@@ -584,10 +612,12 @@ command, for example:
     
     csr1kv#
     ```
+    
     Again, not much to see until we start using NETCONF later in this lab.
 
 4. To display the status of the software processes required to support model driven programmability, use the `show 
 platform software yang-management process` command, for example:
+    
     ```
     csr1kv#show platform software yang-management process
     confd            : Running 
@@ -601,64 +631,72 @@ platform software yang-management process` command, for example:
     
     csr1kv#
     ```
+    
     Note that the `nginx` process is running if `ip http server` or `ip http secure-server` is configured in IOS XE.  
     This process is not required to be in the `Running` state for NETCONF to function correctly.
 
 5. Let's make your first NETCONF connection to your IOS XE network device.
-    1. We will establish a NETCONF connection manually using the `ssh` command from the command line terminal on your
-        lab workstation (output truncated for brevity):
-        ```
-        $ ssh -p 2223 netconf@127.0.0.1 -s netconf
-        netconf@127.0.0.1's password: 
-        <?xml version="1.0" encoding="UTF-8"?>
-        <hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-        <capabilities>
-        <capability>urn:ietf:params:netconf:base:1.0</capability>
-        <capability>urn:ietf:params:netconf:base:1.1</capability>
-        <capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
-        <capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
-        <capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
-        <capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
-        <capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
-        <capability>urn:ietf:params:netconf:capability:notification:1.0</capability>
-        <capability>urn:ietf:params:netconf:capability:interleave:1.0</capability>
-        <capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
-        <capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=88c694c75e847aba17e8ab19254ad090</capability>
-        <capability>http://tail-f.com/ns/netconf/actions/1.0</capability>
-        <capability>http://tail-f.com/ns/netconf/extensions</capability>
-        <capability>http://cisco.com/ns/cisco-xe-ietf-ip-deviation?module=cisco-xe-ietf-ip-deviation&amp;revision=2016-08-10</capability>
-        <capability>http://cisco.com/ns/cisco-xe-ietf-ipv4-unicast-routing-deviation?module=cisco-xe-ietf-ipv4-unicast-routing-deviation&amp;revision=2015-09-11</capability>
-        </capabilities>
-        <session-id>40</session-id></hello>]]>]]> 
-        ```
-        Leave this session in this terminal window open.
+    
+    We will establish a NETCONF connection manually using the `ssh` command from the command line terminal on your 
+    lab workstation (output truncated for brevity):
+    
+    ```
+    $ ssh -p 2223 netconf@127.0.0.1 -s netconf
+    netconf@127.0.0.1's password: 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+    <capability>urn:ietf:params:netconf:base:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:notification:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:interleave:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&amp;also-supported=report-all-tagged</capability>
+    <capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&amp;module-set-id=88c694c75e847aba17e8ab19254ad090</capability>
+    <capability>http://tail-f.com/ns/netconf/actions/1.0</capability>
+    <capability>http://tail-f.com/ns/netconf/extensions</capability>
+    <capability>http://cisco.com/ns/cisco-xe-ietf-ip-deviation?module=cisco-xe-ietf-ip-deviation&amp;revision=2016-08-10</capability>
+    <capability>http://cisco.com/ns/cisco-xe-ietf-ipv4-unicast-routing-deviation?module=cisco-xe-ietf-ipv4-unicast-routing-deviation&amp;revision=2015-09-11</capability>
+    </capabilities>
+    <session-id>40</session-id></hello>]]>]]> 
+    ```
+    
+    Leave this session in this terminal window open.
+    
+    Now return to the window with the original SSH session to your IOS XE device.  Use the `show netconf-yang 
+    sessions` to view the active NETCONF session you've just established, for example:
+    
+    ```
+    csr1kv#show netconf-yang sessions                    
+    R: Global-lock on running datastore
+    C: Global-lock on candidate datastore
+    S: Global-lock on startup datastore
+    
+    Number of sessions : 1
+    
+    session-id  transport    username             source-host           global-lock  
+    -------------------------------------------------------------------------------
+    40          netconf-ssh  netconf              10.0.2.2              None         
+    
+    csr1kv#
+    ```
+    
+    Return to the NETCONF session window and type `^c` to terminate the session.  Let's take a look at the screen 
+    output from our first NETCONF session.
         
-    2. Now return to the window with the original SSH session to your IOS XE device.  Use the `show netconf-yang 
-        sessions` to view the active NETCONF session you've just established, for example:
-        ```
-        csr1kv#show netconf-yang sessions                    
-        R: Global-lock on running datastore
-        C: Global-lock on candidate datastore
-        S: Global-lock on startup datastore
-        
-        Number of sessions : 1
-        
-        session-id  transport    username             source-host           global-lock  
-        -------------------------------------------------------------------------------
-        40          netconf-ssh  netconf              10.0.2.2              None         
-        
-        csr1kv#
-        ```
-    3. Return to the NETCONF session window and type `^c` to terminate the session.  Let's take a look at the screen 
-        output from our first NETCONF session.
-        
-        1. When you established a secure NETCONF over SSH as a NETCONF manager (client), the IOS XE network device 
-            as the agent (server) sent  a list of its NETCONF capabilities in an XML encoded data format.
-        2. Note the list of capabilities should look somewhat familiar: they are YANG data models!  In fact, this 
-            demonstrates that Cisco IOS XE supports industry standard YANG data models from the IETF and OpenConfig and 
-            vendor specific YANG data models from Tail-F (acquired by Cisco in 2014) and Cisco.
-        3. Note the `<session-id>40</session-id>` corresponds with the session ID from the IOS XE CLI command `show 
-        netconf-yang sessions` output.
+    When you established a secure NETCONF over SSH as a NETCONF manager (client), the IOS XE network device as the 
+    agent (server) sent  a list of its NETCONF capabilities in an XML encoded data format.
+    
+    Note the list of capabilities should look somewhat familiar: they are YANG data models!  In fact, this 
+    demonstrates that Cisco IOS XE supports industry standard YANG data models from the IETF and OpenConfig and 
+    vendor specific YANG data models from Tail-F (acquired by Cisco in 2014) and Cisco.
+    
+    Note the `<session-id>40</session-id>` corresponds with the session ID from the IOS XE CLI command
+    `show netconf-yang sessions` output.
 
 Using SSH to establish a NETCONF connection manually is not recommended and was only shown here for illustrative 
 purposes.  Doing so would require that you copy-and-paste XML encoded RPC commands by hand to manage and configure 
@@ -674,10 +712,13 @@ flow, it is not the most user friendly method for using NETCONF.  Alternatively,
 programmatically.
 
 1. From the command line terminal, ensure that ncclient is installed:
+    
     ```
     $ pip3 install ncclient
     ```
+
 2. Invoke the Python interpreter with the `python3` command:
+    
     ```
     $ python3
     Python 3.6.5 (default, Mar 30 2018, 06:41:53) 
@@ -685,20 +726,28 @@ programmatically.
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
     ```
+
 3. Import the `ncclient` Python library with the code snippet `from ncclient import manager`:
+    
     ```
     >>> from ncclient import manager
     ```
+    
     Import the `sys` Python library with the code snippet `import sys`:
+    
     ```
     >>> import sys
     ```
+    
     Establish a NETCONF connection and say "Hello" with the code snippet `m = manager.connect(host='127.0.0.1', 
     port=2223, username='netconf', password='C1sco12345', hostkey_verify=False)`:
+    
     ```
     >>> m = manager.connect(host='127.0.0.1', port=2223, username='netconf', password='C1sco12345', hostkey_verify=False)
     ```
+    
     Print the capabilities returned by the IOS XE network device with the code snippet `for capability in m.server_capabilities: print(capability.split('?')[0])` (output truncated for brevity)
+    
     ```
     >>> for capability in m.server_capabilities:
     ...     print(capability.split('?')[0])
@@ -722,7 +771,9 @@ programmatically.
     >>> 
   
     ```
+    
     Close the NETCONF session and exit the Python interpreter with the code snippet `quit()`:
+    
     ```
     >>> quit()
     $
