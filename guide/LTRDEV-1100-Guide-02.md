@@ -336,7 +336,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
 TODO:
 
 - [x] @curtissmith Draft "Tools of the Ninja - Vagrant Up for Network Engineers"
-- [ ] Proofread
+- [x] Proofread
 - [ ] Add example output
 
 ### Introducing Vagrant Up for Network Engineers
@@ -426,37 +426,38 @@ never modified; boxes are cloned from the base image provided by the box.  If yo
 Vagrant projects that use the same Vagrant box, modifying a guest virtual machine in one environment will not affect 
 a guest virtual machine in other environments.
     
-    1. To list the locally stored boxes on your system, type `vagrant box list`, for example:
-        
-        ```
-        $ vagrant box list
-        
-        foo
-        
-        $
-        ```
+    To list the locally stored boxes on your system, type `vagrant box list`, for example:
     
-    2. To download and install a Vagrant box from [HashiCorp's Vagrant Cloud box catalog](https://app.vagrantup
+    ```
+    $ vagrant box list
+    
+    foo
+    
+    $
+    ```
+    
+    To download and install a Vagrant box from [HashiCorp's Vagrant Cloud box catalog](https://app.vagrantup
     .com/boxes/search), type `vagrant box add <box descriptor>`.  For example, to install the box named 
     `hashicorp/precise64`:
-        
-        ```
-        $ vagrant box add hashicorp/precise64
-        
-        foo
-        
-        $
-        ```
-    3. To remove a Vagrant box altogether from your system, type `vagrant box remove <box descriptor>`.  For example,
-     to uninstall the box downloaded in the previous example:
-        
-        ```
-        $vagrant box remove hashicorp/precise64
-        
-        foo
-        
-        $
-        ```
+    
+    ```
+    $ vagrant box add hashicorp/precise64
+    
+    foo
+    
+    $
+    ```
+    
+    To remove a Vagrant box altogether from your system, type `vagrant box remove <box descriptor>`.  For example,
+    to uninstall the box downloaded in the previous example:
+    
+    ```
+    $vagrant box remove hashicorp/precise64
+    
+    foo
+    
+    $
+    ```
     
 4. Every Vagrant environment needs initialized.  To initialize a new Vagrant environment, type `vagrant init`.  This 
 will establish the current working directory as the environment root directory and create a Vagrantfile (more on 
@@ -520,26 +521,18 @@ by the virtual machine cloned from the Vagrant box:
      
 8. There are several Vagrant commands to manage the state of a Vagrant environment:
     
-    1. To suspend the Vagrant environment, type `vagrant suspend`.
-    2. To resume the Vagrant environment, type `vagrant resume`.
-    3. To shutdown the Vagrant environment, type `vagrant halt`.
-    4. To restart the Vagrant environment and force Vagrant to re-load the Vagrantfile, type `vagrant reload`.
-    5. When you are done with the Vagrant environment, you can delete everything and clean up the working directory 
+    * To suspend the Vagrant environment, type `vagrant suspend`.
+    * To resume the Vagrant environment, type `vagrant resume`.
+    * To shutdown the Vagrant environment, type `vagrant halt`.
+    * To restart the Vagrant environment and force Vagrant to re-load the Vagrantfile, type `vagrant reload`.
+    * When you are done with the Vagrant environment, you can delete everything and clean up the working directory 
     (leaving the Vagrantfile).  Be aware that you will lose changes to the virtual machine and environment.  To 
-    delete the Vagrant environment, type `vagrant destroy`, for example:
-        
-        ```
-        $ vagrant destroy
-        
-        foo
-        
-        $
-        ```
+    delete the Vagrant environment, type `vagrant destroy`.
     
     Each of these commands can take the virtual machine ID or name as listed in the output of the command `vagrant 
     global-status` as an argument to specify a specific virtual machine if you have multiple machines running on your 
     system.  For example, if you want to destroy a specific virtual machine with machine ID `1a2b3c4d`, then type the
-     command `vagrant destroy 1a2b3c4d`.
+    command `vagrant destroy 1a2b3c4d`.
 
 #### Step 3: Exploring a Vagrantfile
 
@@ -625,7 +618,7 @@ for you when you run the command `vagrant init hashicorp/precise64`:
       # SHELL
     end
 
-Let's break this down; it is acutally much simpler than it might appear.
+Let's break this down; it is actually much simpler than it might appear.
 
 1. The line `# -*- mode: ruby -*-` simply indicates that the Vagrantfile is written in the Ruby language syntax.  
 This line is required and should always be the first line of the Vagrantfile.
@@ -644,11 +637,11 @@ Vagrantfile is comments.
     
     In fact, these three lines are all that are really required to bring up a virtual machine environment.
     
-     1. `Vagrant.configure("2") do |config|` is the syntax to indicate that this is a configuration for Vagrant 
-        version 2.  
-     2. `config.vm.box = "hashicorp/precise64"` is the syntax to specify the Vagrant box used to clone and boot 
-        the virtual machine.  The box descriptor would be changed based on the box you choose.
-     3. `end` indicates the end of the configuration.
+    * `Vagrant.configure("2") do |config|` is the syntax to indicate that this is a configuration for Vagrant 
+    version 2.  
+    * `config.vm.box = "hashicorp/precise64"` is the syntax to specify the Vagrant box used to clone and boot the 
+    virtual machine.  The box descriptor would be changed based on the box you choose.
+    * `end` indicates the end of the configuration.
         
     All other configuration of the environment uses the defaults from Vagrant and VirtualBox.
 
