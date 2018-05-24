@@ -650,8 +650,8 @@ Vagrantfile is comments.
 TODO:
 
 - [x] @mgalazka Draft "Tools of the Ninja - Python for Network Programmability"
+- [ ] Edit for directory, example output, and style consistency
 - [ ] Proofread
-- [ ] Other stuff?
 
 ### Introducing Python
 
@@ -909,19 +909,6 @@ Python interpreter.
     By putting your Python instructions into a file, it can be called at any time by the Python interpreter. This is 
     key to reusing code.
 
-### Execise 4: Python Ninjutsu 
-
-#### Objectives
-
-The objectives for this exercise are to:
-
-* Know your target: Identify data types
-* Learn discipline: Proper use of operators
-* Adapt quickly: Conditional statements
-* Select your equipment: Working with functions
-* Forging metal: Writing your own functions
-* Surround your enemy: Executing loops
-
 ## Other Desktop Network Programmability Tools
 
 TODO:
@@ -940,7 +927,7 @@ help simplify development and collaboration and keep you productive.
 TODO:
 
 - [x] @curtissmith Draft "Tools of the Ninja - Other...PyCharm"
-- [ ] Proofread
+- [x] Proofread
 - [x] Add screenshots
 
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
@@ -983,11 +970,15 @@ project, open an existing project, or check out a project from version control. 
     
     ![PyCharm Create Network Project](assets/PyCharm-02.png)
     
-    1. Click to expand `Project Interpreter: New Virtualenv environment`.
-    2. Click the radio button to select `New environment using` and click the drop down menu to select `Virtualenv`.
-    3. Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
-    4. Click the drop down box to select a Python version 3 interpreter.
-    6. Accept the remaining default optoins and click the `Create` button.
+    Click to expand `Project Interpreter: New Virtualenv environment`.
+    
+    Click the radio button to select `New environment using` and click the drop down menu to select `Virtualenv`.
+    
+    Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
+    
+    Click the drop down box to select a Python version 3 interpreter.
+    
+    Accept the remaining default optoins and click the `Create` button.
     
 Congratulations, you now have a new PyCharm project complete with a Python version 3 virtual environment ready to
 write some code.  So far, we haven't touched the command line or had to manually create any directories for 
@@ -1002,16 +993,21 @@ status bar.
 ![PyCharm Project Window](assets/PyCharm-03.png)
 
 1. The project view is on the left side of the main window.  This lists your project files.
+
 2. The editor is on the right side of the main window.  This is where you write your code.  The editor has tabs so 
 that you can open and navigate between multiple files at one time.
-    1. The editor has a left and right column surrounding it.  In the left column, you will see line numbers which 
+    
+    The editor has a left and right column surrounding it.  In the left column, you will see line numbers which 
     lets you navigate the code more easily.  In the right column, you will see the result of PyCharm code inspection.
+    
 3. The navigation bar is above the project view and editor.  Within the navigation bar, there are buttons for quick 
 access to run and debug your code and version control actions.
+
 4. At the bottom of the main window is the tool windows.  These windows can be toggled to be displayed or not.  This 
 is where your code will run if invoked from within PyCharm, you can manage project TODOs, access the Python 
 interpreter console, and access a command line terminal.  These tool windows are designed to give you access to most 
 everything you might need without having to leave PyCharm and open multiple windows or applications.
+
 5. The status bar is at the bottom of the main window and displays project and application status and informational 
 messages.
 
@@ -1189,7 +1185,7 @@ cloned the Git repository.  However, we can configure and create one easily.
     
     1. Click the `File` menu and click `Settings`.
     2. Double click `Project: helloworld` to expand the tree and click `Project Interpreter`.  You will notice that 
-        this is empty or has an error.
+    this is empty or has an error.
     3. Click the gear button next to the drop downbox labeled `Project Interpreter` and click `Add...`.
         1. Click to select `Virtual Environment`.
         2. Click the radio button to select `New environment`
@@ -1206,87 +1202,93 @@ File`.
     
     ![PyCharm New Python File](assets/PyCharm-04.png)
     
-    1. Type `helloworld.py` in the `Name:` box and select `Python file` from the `Kind:` drop down box.  Click the 
-        `OK` button.
+    Type `helloworld.py` in the `Name:` box and select `Python file` from the `Kind:` drop down box.  Click the 
+    `OK` button.
     
-        ![PyCharm New File Dialogue Box](assets/PyCharm-05.png)
+    ![PyCharm New File Dialogue Box](assets/PyCharm-05.png)
     
-    2. This time, PyCharm knows that this project is under revision control with Git and prompts you to add the new 
-        file to Git:
+    This time, PyCharm knows that this project is under revision control with Git and prompts you to add the new 
+    file to Git:
         
-        For now, ignore the PyCharm project `.idea` directory and all its file contents.  Click the checkbox next to 
-        `.idea` to unselect the directory and all files under that directory.  Ensure that `helloworld.py` is checked.
+    For now, ignore the PyCharm project `.idea` directory and all its file contents.  Click the checkbox next to 
+    `.idea` to unselect the directory and all files under that directory.  Ensure that `helloworld.py` is checked.
         
-        ![PyCharm Add Files to Git](assets/PyCharm-21.png)
+    ![PyCharm Add Files to Git](assets/PyCharm-21.png)
     
-    3. Now you have a new file names `helloworld.py` in your the root of your PyCharm `helloworld` project directory.
-        Go ahead and re-write Python code in the PyCharm editor:
-        
-        ```
-        print("Hello World!")
-        
-        ```
-        
-        and save your changes by clicking the `File` menu and clicking `Save All`.
+    Now you have a new file names `helloworld.py` in your the root of your PyCharm `helloworld` project directory.
+    Go ahead and re-write Python code in the PyCharm editor:
+    
+    ```
+    print("Hello World!")
+    
+    ```
+    
+    and save your changes by clicking the `File` menu and clicking `Save All`.
 
 8. You will also notice new buttons in the naviation bar at the top of the PyCharm window and a new tool window in the 
 tool window tab at the bottom of the PyCharm window: `Version Control`.  Click the `Version Control` tab.
     
     ![PyCharm Version Control](assets/PyCharm-22.png)
     
-    1. First, you will get a status of all local changes.  Double click `Default` and you see your Python file 
+    First, you will get a status of all local changes.  Double click `Default` and you see your Python file 
     `helloworld.py`.
-    2. Second, you will see `Unversioned Files` - too numerous to list, so click the `browse` button.
+    
+    Second, you will see `Unversioned Files` - too numerous to list, so click the `browse` button.
+    
+    ![PyCharm Unversioned Files](assets/PyCharm-23.png)
+    
+    Double click to expand the tree and you notice you have two directories each with files that are 
+    unversioned.  These include the PyCharm project `.idea` directory and Python virtual environment `venv` 
+    directory.
+    
+    Click to select the `.idea` directory.
+    
+    Click the fourth button from the left `Ignore`.
+    
+    Click the radio buton labeled `Ignore all files under`.
+    
+    ![PyCharm Ignore Unversioned Files](assets/PyCharm-24.png)
         
-        ![PyCharm Unversioned Files](assets/PyCharm-23.png)
+    Click the `OK` button.
+    Repeat the previous step to ignore the `venv` directory.
+    
+    Click the `Close` button.
+    
+    Now it is time to commit your changes.  Click the `VCS` menu and click `Commit...`
+    
+    Add an entry such as `Initial commit` in the `Commit Message` box.
+    
+    Click the `Commit` button.
+    
+    ![PyCharm Commit Changes](assets/PyCharm-25.png)
+    
+    If PyCharm doesn't know your Git username, then it will prompt your for it.
+    Fill out your name in the boxed labeled `Name` and email address in the boxed labeled `E-mail`.  
+    Ensure that the checkbox labeled `Set properties globally` is checked.
+    
+    ![PyCharm Git User Name is not Defined](assets/PyCharm-26.png)
+    
+    Click the `Set and Commit` button.
+    
+    Once all your changes are committed, don't forget to push your committed changed to the remote repository.
+    
+    Click the `VCS` menu, click `Git`, and click `Push`.
+    
+    ![PyCharm Git Push](assets/PyCharm-27.png)
+    
+    Click the `Push` button.
         
-        1. Double click to expand the tree and you notice you have two directories each with files that are 
-        unversioned.  These include the PyCharm project `.idea` directory and Python virtual environment `venv` 
-        directory.
-        2. Click to select the `.idea` directory.
-            1. Click the fourth button from the left `Ignore`.
-            2. Click the radio buton labeled `Ignore all files under`.
-                
-                ![PyCharm Ignore Unversioned Files](assets/PyCharm-24.png)
-            
-            3. Click the `OK` button.
-        3. Repeat the previous step to ignore the `venv` directory.
-        4. Click the `Close` button.
-    3. Now it is time to commit your changes.  Click the `VCS` menu and click `Commit...`
-        1. Add an entry such as `Initial commit` in the `Commit Message` box.
-        3. Click the `Commit` button.
-            
-            ![PyCharm Commit Changes](assets/PyCharm-25.png)
-            
-        4. If PyCharm doesn't know your Git username, then it will prompt your for it.
-            1. Fill out your name in the boxed labeled `Name` and email address in the boxed labeled `E-mail`.  
-            2. Ensure that the checkbox labeled `Set properties globally` is checked.
-                
-                ![PyCharm Git User Name is not Defined](assets/PyCharm-26.png)
-            
-            3. Click the `Set and Commit` button.
-    4. Once all your changes are committed, don't forget to push your committed changed to the remote repository.
-        1. Click the `VCS` menu, click `Git`, and click `Push`.
-            
-            ![PyCharm Git Push](assets/PyCharm-27.png)
-            
-        2. Click the `Push` button.
-        
-    7. PyCharm will show you the status of your Git push and tell you when the action has been completed successfully.
-        
-        ![PyCharm Successful Git Push](assets/PyCharm-28.png)
-        
-        Check your handiwork by opening a web browser and navigating to your Git repository in GitHub, for 
-        example `https://github.com/curtissmith/helloworld`, replacing `curtissmith` with your own GitHub username.
-        
+    PyCharm will show you the status of your Git push and tell you when the action has been completed successfully.
+    
+    ![PyCharm Successful Git Push](assets/PyCharm-28.png)
+    
+    Check your handiwork by opening a web browser and navigating to your Git repository in GitHub, for 
+    example `https://github.com/curtissmith/helloworld`, replacing `curtissmith` with your own GitHub username.
+    
 Congratulations, you've cloned a remote Git repository, staged a new Python file, committed those changes, and pushed
 your changes into the remote Git repository - All without leaving the PyCharm application or having to go back and 
 forth between PyCharm and the command line.  PyCharm makes managing the whole project easy, including with version 
 control.
-
-#### Step 2: Vagrant Up with PyCharm
-
-lorem ipsum
 
 ### Introducing Postman
 
