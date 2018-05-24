@@ -5,7 +5,7 @@
 TODO:
 
 - [x] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
-- [ ] Proofread
+- [x] Proofread
 - [ ] Add example output and screenshots
 
 ### Introducing Git and GitHub
@@ -15,17 +15,17 @@ lightweight, easy to learn, and capable to handle projects large and small alike
 very fast.
 
 A version control system records and manages changes to files over time.  A version control system will have 
-mechnisms that allow you to see the differences between versions and revert back to earlier versions of files being 
+mechanisms that allow you to see the differences between versions and revert back to earlier versions of files being 
 managed.  Generally speaking, most people's idea of version control is to create copies of files and archive them in 
-a series of directories on their file system.  This is very error prone as one file copy mistake and you could 
-overwrite a file by mistake.  Also, this method rarely works when multiple people are modifying the same files at the
- same time.
+a series of directories on their file system.  This is prone to error as one file copy mistake and you could 
+lose a lot of work by mistake.  Also, this method rarely works when multiple people are modifying the same files at the
+same time.
  
-A Git repository, or repo for short, is a group of files that are tracked as a project.  A Git repo can reside on your 
-computer, but the repository must be hosted on a server if two or more people are going to access the repository.  
+A Git repository, or repo for short, is a group of files that are tracked as a project.  A Git repository can reside on 
+your computer, but the repository must be hosted on a server if two or more people are going to access the repository.  
 [GitHub](https://github.com/) is the largest online host of Git repositories on the Internet.  GitHub also serves as 
-a community for developers.  GitHub is free, but any repositories you create and host on GitHub must be public.  
-Private repositories are supported with a [paid subscription account upgrade](https://github.com/account/upgrade).
+a community for developers.  GitHub is free, but any repositories you create and host on GitHub with a free account must
+be public.  Private repositories are supported with a [paid subscription account upgrade](https://github.com/account/upgrade).
 
 ### Exercise 1: Creating a GitHub Account
 
@@ -41,7 +41,8 @@ The objectives for this exercise are to:
 Although creating a GitHub account is not required to clone Git repositories hosted on GitHub, why not join and 
 participate in one of the largest developer communities on the Internet?  Doing so gives you the opportunity to see 
 what other people are working on or are interested in, learn how software is built by following projects, and share 
-your work - no matter how small - with the community.
+your work - no matter how small - with the community.  Cisco product teams, Cisco DevNet, and Cisco SEs all share and
+collaborate through GitHub.
 
 1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`.
 2. On the GitHub homepage, fill out the form to [Sign up](https://github.com/join?source=header-home), choosing a 
@@ -54,14 +55,17 @@ Congratulations, you have joined the GitHub community!
 
 #### Step 2: Exploring GitHub
 
-1. Take a few minutes to [explore GitHub](https://github.com/explore).
-2. Take a few minutes to follow new and interesting people:
-    1. Search for and follow your Cisco Live lab proctors: [Curtis Smith](https://github.com/curtissmith) 
-(`curtissmith`) and [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`).
+1. Take a few minutes to follow new and interesting people:
+    1. Search for and follow your Cisco Live lab proctors:
+    [Curtis Smith](https://github.com/curtissmith) (`curtissmith`) and
+    [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`).
     2. Search for and follow your fellow Cisco Live lab participants.
-3. Take a few minutes to discover new repositories:
+2. Take a few minutes to discover new repositories:
     1. Search for and star the Cisco Live [LTRDEV-1100 session](https://github.com/curtissmith/LTRDEV-1100) repository.
-    2. Search for the [Cisco DevNet](https://github.com/CiscoDevNet) repositories.
+    2. Search for and bookmark the [Cisco DevNet](https://github.com/CiscoDevNet) organization where sample code from
+    Cisco DevNet is shared.
+    3. Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
+    code from Cisco SE community is shared.
 
 ### Exercise 2: Introducing Git Concepts
 
@@ -87,9 +91,9 @@ There is a simple flow to using Git for version control:
 You start by either creating a new Git repository or cloning an existing Git repository hosted on a remote server.  In 
 doing so, you create the Git directory (also called the repository), a working directory, and a staging area (also 
 called the index).  The Git directory contains the metadata and object database and is copied from the server when 
-a repository is cloned.  The working directory contains one version of the project and are copied to the file system 
+a repository is cloned.  The working directory contains one version of the project copied to the file system 
 from the compressed object database in the Git directory.  The staging area is a file inside the Git directory 
-contains an index of changes that are waiting to be committed.
+that contains an index of changes that are waiting to be committed.
 
 Files that are changed but not staged are considered modified.  Files that are changed and added to the staging 
 area are considered staged.  Files in the Git directory are considered committed.  In the next step, we will learn 
@@ -98,54 +102,36 @@ how to initialize and clone repositories, and modify, stage, and commit changes,
 #### Step 2: Learning Git Commands
 
 Git has command line commands for managing Git repositories.  Here are the key commands and their usage you will need
- to get started to participate in projects or manage your own projects.
+to get started to participate in projects or manage your own projects.
 
 1. For a complete list of Git commands, type `git help` (output truncated for brevity):
     
     ```
-    $ git help
-    
-    foo
-    
-    $
+    $ git help    
     ```
     
-    For more help with a specific Git command, type `git <command> -h`, for example:
+    For more help with a specific Git command, type `git <command> -h`, for example `git clone -h` (output truncated 
+    for brevity):
     
     ```
-    $ git clone -h
-     
-    foo
-     
-    $
+    $ git clone -h     
     ```
     
-2. For first time setup, you should set your name and email address with the `git config` command.  Every commit you 
-make includes this information, so it is important to set this after installing Git.  This should match the name and 
-email address you used to register on GitHub, for example:
+2. For first time Git setup, you should set your name and email address with the `git config` command.  Every commit 
+you make includes this information, so it is important to set this after installing Git.  This should match the name 
+and  email address you used to register on GitHub, for example:
     
     ```
-    $ git config --global user.name "Curtis Smith"
-    
-    foo
-    
+    $ git config --global user.name "Curtis Smith"    
     $ git config --global user.email <curtissm@cisco.com>
-    
-    foo
-    
-    $
     ```
     
 3. To create your very first Git repository, create a Git working directory and initialize the repository with the 
 command `git init`, for example:
     ```
-    $ mkdir -p ~/coding/ciscolive/helloworld
-    $ cd ~/coding/ciscolive/hellowworld
+    $ mkdir -p ~/lab/clus18
+    $ cd ~/lab/clus18
     $ git init
-    
-    foo
-    
-    $
     ```
     
     Now take a look at the contents of the directory.  You find a hidden directory named `.git`:
@@ -156,8 +142,8 @@ command `git init`, for example:
     $
     ```
     
-    The directory `~/coding/ciscolive/helloworld` is your new Git working directory and 
-    `~/coding/ciscolive/helloworld/.git` is your Git directory.  Your working directory (and consequently your Git 
+    The directory `~/lab/clus18` is your new Git working directory and `~/lab/clus18/.git` is your Git directory.  
+    Your working directory (and consequently your Git 
     directory) are empty as you've not staged or committed anything to the repository yet.
     
 4. Let's confirm this is the case with the command `git status`:
@@ -202,7 +188,6 @@ command `git init`, for example:
     
     ```
     $ git add README.md
-    $
     ```
     
     and the check the status again:
@@ -223,7 +208,8 @@ command `git init`, for example:
     
     You can see there is a staged file in your working directory that is uncommitted.
     
-6. Let's make your first commit to your first Git repository!  Use the `git commit` to commit your staged changes:
+6. Let's make your first commit to your first Git repository!  Use the `git commit` command to commit your staged 
+changes:
     
     ```
     $ git commit -m "My first Git commit"
@@ -251,7 +237,7 @@ command `git init`, for example:
     
     2. At the top right of the page, click the `+` and click `New Repository`.
     
-    3. In the box labeled `Repository name` type `helloworld`.
+    3. In the box labeled `Repository name` type `clus18`.
     
     4. You may add an optional `Description`, for example `My first Git repository`.
     
@@ -262,7 +248,7 @@ command `git init`, for example:
     example below with the URL of your new remote repository):
     
     ```
-    $ git remote add origin https://github.com/curtissmith/helloworld.git
+    $ git remote add origin https://github.com/curtissmith/clus18.git
     $
     ```
     
@@ -275,7 +261,7 @@ command `git init`, for example:
     Compressing objects: 100% (2/2), done.
     Writing objects: 100% (6/6), 455 bytes | 455.00 KiB/s, done.
     Total 6 (delta 0), reused 0 (delta 0)
-    To https://github.com/curtissmith/helloworld.git
+    To https://github.com/curtissmith/clus18.git
      * [new branch]      master -> master
     Branch 'master' set up to track remote branch 'master' from 'origin'.
     $
@@ -305,43 +291,45 @@ command `git init`, for example:
     
     Navigate to your remote repository on GitHub and you should see the results of your labor!
 
-8. The `git pull` will only work from inside a working directory that contains a Git repository in the first place.
-    1. Try this by moving to a directory that doesn't contain a `.git` Git directory, for example:
+8. The `git pull` will only work from inside a working directory that contains a Git repository in the first place.  
+Try this by moving to a directory that doesn't contain a `.git` Git directory, for example:
         
-        ```
-        $ cd ~/coding/ciscolive
-        $ ls -a
-        .		..		helloworld
-        $ git pull
-        fatal: Not a git repository (or any of the parent directories): .git
-        $
-        ```
+    ```
+    $ cd ~/lab
+    $ ls -a
+    .		..		clus18
+    $ git pull
+    fatal: Not a git repository (or any of the parent directories): .git
+    $
+    ```
         
-    2. To download a fresh copy of a remote repository to your local workstation, use the `git clone` command.  For 
-    example, you can access this lab guide and all of the code and content for this session from [GitHub]
-    (https://github.com/curtissmith/LTRDEV-1100) at `https://github.com/curtissmith/LTRDEV-1100`:
+    To download a fresh copy of a remote repository to your local workstation, use the `git clone` command.  For 
+    example, you can access this lab guide and all of the code and content for this session from
+    [GitHub](https://github.com/curtissmith/LTRDEV-1100) at `https://github.com/curtissmith/LTRDEV-1100`:
         
-        ```
-        $ git clone https://github.com/curtissmith/LTRDEV-1100
-        Cloning into 'LTRDEV-1100'...
-        remote: Counting objects: 117, done.
-        remote: Compressing objects: 100% (84/84), done.
-        remote: Total 117 (delta 51), reused 80 (delta 24), pack-reused 0
-        Receiving objects: 100% (117/117), 86.75 KiB | 488.00 KiB/s, done.
-        Resolving deltas: 100% (51/51), done.
-        $ ls
-        LTRDEV-1100	helloworld
-        $ cd LTRDEV-1100/
-        $ ls -a
-        .		.git		AGENDA.md	README.md
-        ..		ABSTRACT.md	BIO.md
-        $ git status
-        On branch master
-        Your branch is up to date with 'origin/master'.
-        
-        nothing to commit, working tree clean
-        $
-        ```
+    ```
+    $ cd ~/lab
+    $ git clone https://github.com/curtissmith/LTRDEV-1100
+    Cloning into 'LTRDEV-1100'...
+    remote: Counting objects: 117, done.
+    remote: Compressing objects: 100% (84/84), done.
+    remote: Total 117 (delta 51), reused 80 (delta 24), pack-reused 0
+    Receiving objects: 100% (117/117), 86.75 KiB | 488.00 KiB/s, done.
+    Resolving deltas: 100% (51/51), done.
+    $ ls
+    LTRDEV-1100	helloworld clus18
+    $ cd LTRDEV-1100
+    $ ls -a
+    .		.git		AGENDA.md	README.md
+    ..		ABSTRACT.md	BIO.md
+    $ git status
+    On branch master
+    Your branch is up to date with 'origin/master'.
+    
+    nothing to commit, working tree clean
+    $
+    ```
+    Congratulations, you've cloned a Git repository hosted on GitHub.
 
 ## Vagrant Up for Network Engineers
 
