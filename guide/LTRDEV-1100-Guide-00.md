@@ -41,6 +41,6 @@ Upon completion of this lab, you will be able to:
 
 TODO:
 
-- [ ] Update lab topology
+- [x] Update lab topology
 
 ![Lab Topology](assets/LTRDEV-1100-Topology.png)
