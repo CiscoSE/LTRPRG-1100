@@ -1138,7 +1138,6 @@ directory listing with the `dir` or `ls` command, based on whether you are on a 
 The objectives for this exercise are to:
 
 * Learn how to keep your project under version control in Git with PyCharm
-* Learn how to integrate Vagrant with PyCharm
 
 #### Step 1: Managing a Project's Git Repository in PyCharm
 
