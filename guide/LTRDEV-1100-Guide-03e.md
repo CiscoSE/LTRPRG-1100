@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-03d.md)
+
+---
+
 ### Exercise 3: Exploring IOS XE YANG Data Models with NETCONF
 
 #### Objectives
@@ -241,3 +245,7 @@ programmatically.
     >>> quit()
     $
     ```
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-03f.md)

@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-03.md)
+
+---
+
 ## Using APIs
 
 TODO:
@@ -41,3 +45,7 @@ Content to be inserted from previous guide / Postman / Webex Teams
 #### Step 3: Automate with a script
 
 Should we keep this section?
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-03b.md)

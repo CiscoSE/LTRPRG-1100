@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-02d.md)
+
+---
+
 ### Introducing PyCharm
 
 TODO:
@@ -373,3 +377,7 @@ Congratulations, you've cloned a remote Git repository, staged a new Python file
 your changes into the remote Git repository - All without leaving the PyCharm application or having to go back and 
 forth between PyCharm and the command line.  PyCharm makes managing the whole project easy, including with version 
 control.
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-02d.md)

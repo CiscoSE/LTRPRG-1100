@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-02.md)
+
+---
+
 ## Git and GitHub
 
 TODO:
@@ -328,3 +332,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     $
     ```
     Congratulations, you've cloned a Git repository hosted on GitHub.
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-02b.md)

@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-03e.md)
+
+---
+
 ## Guest Shell
 
 TODO:
@@ -189,3 +193,7 @@ lorem ipsum
 ### Step 3: Accessing the IOS XE CLI from Guest Shell
 
 lorem ipsum
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-04.md)

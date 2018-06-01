@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-03b.md)
+
+---
+
 ### Exercise 1: Introducing YANG
 
 #### Objectives
@@ -333,3 +337,7 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     The second thing that you should notice is the lack of data. Remember, we are only viewing the YANG data 
     model, not YANG data from a network device. We will explore actual YANG data from an IOS XE device later in 
     this lab after we introduce NETCONF.
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-03d.md)

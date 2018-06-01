@@ -1,3 +1,7 @@
+Navigation - [Previous Page](LTRDEV-1100-Guide-03c.md)
+
+---
+
 ### Exercise 2: Introducing NETCONF
 
 #### Objectives
@@ -115,3 +119,7 @@ operational state data.  A NETCONF `configuration datastore` is a datastore that
 to make the network device operational.  Every NETCONF operation must specify a target datastore.  The `<running>` 
 configuration datastore is the only mandatory datastore specified by the NETCONF Internet Standard.  However, other 
 datastores may be supported by the network device vendor.
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-Guide-03e.md)
