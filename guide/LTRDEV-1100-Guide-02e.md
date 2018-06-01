@@ -151,7 +151,7 @@ directory.  Go ahead and start writing a bit of Python code in the PyCharm edito
     print("")
     ```
     
-    PyCharm automatically closed the `()` and `""""` when you typed the opening `(` and '"'.  Additional tool tips 
+    PyCharm automatically closed the `()` and `""` when you typed the opening `(` and `"`.  Additional tool tips 
     showed you more contextual Python syntax help.
     
     ![PyCharm Syntax Help](assets/PyCharm-11.png)
