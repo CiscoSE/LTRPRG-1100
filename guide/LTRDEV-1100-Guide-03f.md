@@ -31,7 +31,10 @@ Here is a brief reference for the platforms that support Guest Shell today:
 | --- | --- | --- | --- |
 | Operating System | IOS XE 16.5.1a | IOS 16.5 | NX-OS 7.x |
 | Platform | Catalyst 3650/3850 | Catalyst 9000, ISR 4000 | Nexus 3000, 9000 |
-| Foo | bar | bar | bar |
+| Guest Shell Environment | MontaVista CGE7 | CentOS 7 | CentOS 7 |
+| Python | v2.7 | v2.7, v3.0 | v2.7, v3.0 |
+| RPM Install | No | Yes | Yes |
+
 
 ### Exercise 1: Unleashing Network Programmability at the Edge with IOS XE
 
@@ -48,24 +51,24 @@ The objectives for this exercise are to:
 1. Establish an SSH connection to the IOS XE device.
 2. From the IOS XE device CLI, enter privileged EXEC mode, for example:
     ```
-    csr1kv>enable
-    csr1kv#
+    csr1>enable
+    csr1#
     ```
 3. Enter confugure mode, for example:
     ```
-    csr1kv# configure terminal
+    csr1# configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
-    csr1kv(config)#
+    csr1(config)#
     ```
 4. IOx is a prerequisite for Guest Shell, so we need to turn on IOx, for example:
     ```
-    csr1kv#iox
-    csr1kv#end
+    csr1#iox
+    csr1#end
     ```
  5. It can take a few minutes for the IOx subsystem and process to start.  Before continuing on, check to ensure 
  IOx is running with the `show iox-service` command, for example:
     ```
-    csr1kv#show iox-service 
+    csr1#show iox-service 
     Virtual Service Global State and Virtualization Limits:
     
     Infrastructure version : 1.7
@@ -91,7 +94,7 @@ The objectives for this exercise are to:
     IOx service (IOxman) : Running 
     Libvirtd             : Running 
     
-    csr1kv#
+    csr1#
 
     ```
     
@@ -106,42 +109,42 @@ The objectives for this exercise are to:
     platforms, Guest Shell connectivity is bridged from the `Mgmt0` <cjs - need to validate interfance name> management 
     interface.  Create and configure a Virtual Port Group, for example:
         ```
-        csr1kv#configure terminal 
+        csr1#configure terminal 
         Enter configuration commands, one per line.  End with CNTL/Z.
-        csr1kv(config)#inter
-        csr1kv(config)#interface VirtualPortGroup 0
-        csr1kv(config-if)#ip address 192.168.35.1 255.255.255.0
-        csr1kv(config-if)#no shutdown 
-        csr1kv(config-if)#exit
-        csr1kv(config)#
+        csr1(config)#inter
+        csr1(config)#interface VirtualPortGroup 0
+        csr1(config-if)#ip address 192.168.35.1 255.255.255.0
+        csr1(config-if)#no shutdown 
+        csr1(config-if)#exit
+        csr1(config)#
 
         ```
     2. Configure Network Address Translation (required on all routing and switching platforms), for example:
         ```
-        csr1kv(config)#interface VirtualPortGroup 0
-        csr1kv(config-if)#ip nat inside
-        csr1kv(config-if)#interface GigabitEthernet 1
-        csr1kv(config-if)#ip nat outside
-        csr1kv(config-if)#exit
-        csr1kv(config)#ip access-list standard NAT_ACL
-        csr1kv(config-std-nacl)#permit 192.168.0.0 0.0.255.255
-        csr1kv(config-std-nacl)#exit
-        csr1kv(config)#ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
-        csr1kv(config)#
+        csr1(config)#interface VirtualPortGroup 0
+        csr1(config-if)#ip nat inside
+        csr1(config-if)#interface GigabitEthernet 1
+        csr1(config-if)#ip nat outside
+        csr1(config-if)#exit
+        csr1(config)#ip access-list standard NAT_ACL
+        csr1(config-std-nacl)#permit 192.168.0.0 0.0.255.255
+        csr1(config-std-nacl)#exit
+        csr1(config)#ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
+        csr1(config)#
         ```
 7.  To enable Guest Shell itself, first run the following commands in config mode:
     ```
-    csr1kv(config)#app-hosting appid guestshell
-    csr1kv(config-app-hosting)#vnic gateway1 virtualportgroup 0 guest-interface 0 guest-ipaddress 192.168.35.2 netmask 255.255.255.0 gateway 192.168.35.1 name-server 8.8.8.8 default
-    csr1kv(config-app-hosting)#resource profile custom cpu 1500 memory 512
-    csr1kv(config-app-hosting)#
+    csr1(config)#app-hosting appid guestshell
+    csr1(config-app-hosting)#vnic gateway1 virtualportgroup 0 guest-interface 0 guest-ipaddress 192.168.35.2 netmask 255.255.255.0 gateway 192.168.35.1 name-server 8.8.8.8 default
+    csr1(config-app-hosting)#resource profile custom cpu 1500 memory 512
+    csr1(config-app-hosting)#
     ```
     
     Exit from config mode, and run the `guestshell enable` command in EXEC mode:
     
     ```
-    csr1kv(config-app-hosting)#end
-    csr1kv#guestshell enable
+    csr1(config-app-hosting)#end
+    csr1#guestshell enable
     Interface will be selected if configured in app-hosting
     Please wait for completion
     guestshell activated successfully
@@ -150,40 +153,40 @@ The objectives for this exercise are to:
     Current state is: RUNNING
     Guestshell enabled successfully
     
-    csr1kv#
+    csr1#
     ```
     
     You can confirm Guest Shell is enabled and active with the `show app-hosting list` command, for example:
     
     ```
-    csr1kv#show app-hosting list
+    csr1#show app-hosting list
     App id                           State
     ------------------------------------------------------
     guestshell                       RUNNING
     
-    csr1kv#
+    csr1#
     ```
     
     Confirm the `VirtualPortGroup0` interface is present and configured with the `show ip interface brief` command, for 
     example:
     
     ``` 
-    csr1kv#show ip interface brief
+    csr1#show ip interface brief
     Interface              IP-Address      OK? Method Status                Protocol
     GigabitEthernet1       10.0.2.15       YES DHCP   up                    up      
     VirtualPortGroup0      192.168.35.1    YES manual up                    up      
-    csr1kv#
+    csr1#
     ```
     
     Test to confirm the Guest Shell vnic is active and reachable with the `ping` command, for exaple:
     
     ```
-    csr1kv#ping 192.168.35.2
+    csr1#ping 192.168.35.2
     Type escape sequence to abort.
     Sending 5, 100-byte ICMP Echos to 192.168.35.2, timeout is 2 seconds:
     !!!!!
     Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
-    csr1kv#
+    csr1#
     ```
 
 #### Step 2: Installing and Running Applications On-Box with Guest Shell on IOS XE
