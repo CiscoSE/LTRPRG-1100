@@ -184,10 +184,11 @@ For macOS and Linux, the `activate` command can be found in the `bin` directory,
     environment project name. This means that any packages that you install or remove in this terminal window will 
     be specific to this project unless you deactivate the virtual environment or close the terminal window session.
  
-4. To deactivate the Python virtual environment, simply use the `deactivate` command regardless of the platform you 
-are running, for example:
+4. To deactivate the Python virtual environment, simply use the `deactivate` command (do not use the `source` command)
+regardless of the platform you are running, for example:
     
-    ```(pythonenv) $ deactivate
+    ```
+    (pythonenv) $ deactivate
     $
     ```
 
