@@ -8,7 +8,7 @@ TODO:
 
 - [x] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
 - [x] Proofread
-- [ ] Add example output and screenshots
+- [x] Add example output and screenshots
 
 ### Introducing Git and GitHub
 
