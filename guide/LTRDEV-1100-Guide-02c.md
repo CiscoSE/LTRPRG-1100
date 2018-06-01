@@ -8,7 +8,7 @@ TODO:
 
 - [x] @mgalazka Draft "Tools of the Ninja - Python for Network Programmability"
 - [x] Edit for directory, example output, and style consistency
-- [x] Proofread
+- [ ] Proofread
 
 ### Introducing Python
 
