@@ -125,7 +125,7 @@ and  email address you used to register on GitHub, for example:
     
     ```
     $ git config --global user.name "Curtis Smith"    
-    $ git config --global user.email <curtissm@cisco.com>
+    $ git config --global user.email "curtissm@cisco.com"
     ```
     
 3. To create your very first Git repository, create a Git working directory and initialize the repository with the 
@@ -134,19 +134,25 @@ command `git init`, for example:
     $ mkdir -p ~/lab/clus18
     $ cd ~/lab/clus18
     $ git init
+    Initialized empty Git repository in C:/Users/Administrator/lab/clus18/.git/
+    $
     ```
     
-    Now take a look at the contents of the directory.  You find a hidden directory named `.git`:
+    Now take a look at the contents of the directory.  You will find a hidden directory named `.git`:
     
     ```
     $ ls -al
-    .		..		.git
+    $ ls -al
+    total 4
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 .git/
     $
     ```
     
     The directory `~/lab/clus18` is your new Git working directory and `~/lab/clus18/.git` is your Git directory.  
-    Your working directory (and consequently your Git 
-    directory) are empty as you've not staged or committed anything to the repository yet.
+    Your working directory (and consequently your Git directory) are empty as you've not staged or committed anything
+    to the repository yet.
     
 4. Let's confirm this is the case with the command `git status`:
     
@@ -164,9 +170,9 @@ command `git init`, for example:
     it is hosted online.
     
 5. Let's create a new file to track:
+    
     ```
     $ echo "# Hello World!" >> README.md
-    $
     ```
     
     and check the status:
@@ -190,6 +196,9 @@ command `git init`, for example:
     
     ```
     $ git add README.md
+    warning: LF will be replaced by CRLF in README.md.
+    The file will have its original line endings in your working directory.
+    $
     ```
     
     and the check the status again:
@@ -214,9 +223,11 @@ command `git init`, for example:
 changes:
     
     ```
-    $ git commit -m "My first Git commit"
-    [master (root-commit) a2c0a25] My first Git commit
-     1 file changed, 0 insertions(+), 0 deletions(-)
+    $ git commit -m "My first Git commit" README.md
+    warning: LF will be replaced by CRLF in README.md.
+    The file will have its original line endings in your working directory.
+    [master (root-commit) d6cbb59] My first Git commit
+     1 file changed, 1 insertion(+)
      create mode 100644 README.md
     $
     ```
@@ -241,7 +252,7 @@ changes:
     
     3. In the box labeled `Repository name` type `clus18`.
     
-    4. You may add an optional `Description`, for example `My first Git repository`.
+    4. You may add an optional `Description`, for example `My Cisco Live US 2018 Git repository`.
     
     5. Click the `Create repository` button.
     
@@ -251,18 +262,15 @@ changes:
     
     ```
     $ git remote add origin https://github.com/curtissmith/clus18.git
-    $
     ```
     
     Second, push your local changes to the remote repository with the `git push` command:
     
     ```
     $ git push -u origin master
-    Counting objects: 6, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (2/2), done.
-    Writing objects: 100% (6/6), 455 bytes | 455.00 KiB/s, done.
-    Total 6 (delta 0), reused 0 (delta 0)
+    Counting objects: 3, done.
+    Writing objects: 100% (3/3), 234 bytes | 234.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
     To https://github.com/curtissmith/clus18.git
      * [new branch]      master -> master
     Branch 'master' set up to track remote branch 'master' from 'origin'.
@@ -271,7 +279,8 @@ changes:
     
     and check the status:
     
-    ```$ git status
+    ```
+    $ git status
     On branch master
     Your branch is up to date with 'origin/master'.
     
@@ -298,8 +307,11 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
         
     ```
     $ cd ~/lab
-    $ ls -a
-    .		..		clus18
+    $ ls -al
+    total 16
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus18/
     $ git pull
     fatal: Not a git repository (or any of the parent directories): .git
     $
@@ -318,12 +330,22 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     remote: Total 117 (delta 51), reused 80 (delta 24), pack-reused 0
     Receiving objects: 100% (117/117), 86.75 KiB | 488.00 KiB/s, done.
     Resolving deltas: 100% (51/51), done.
-    $ ls
-    LTRDEV-1100	helloworld clus18
+    $ ls -al
+    total 20
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 ./
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus18/
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 LTRDEV-1100/
     $ cd LTRDEV-1100
     $ ls -a
-    .		.git		AGENDA.md	README.md
-    ..		ABSTRACT.md	BIO.md
+   total 18
+    drwxr-xr-x 1 Administrator 197121    0 Jun  1 01:28 ./
+    drwxr-xr-x 1 Administrator 197121    0 Jun  1 01:28 ../
+    drwxr-xr-x 1 Administrator 197121    0 Jun  1 01:28 .git/
+    -rw-r--r-- 1 Administrator 197121  848 Jun  1 01:28 ABSTRACT.md
+    -rw-r--r-- 1 Administrator 197121  525 Jun  1 01:28 AGENDA.md
+    -rw-r--r-- 1 Administrator 197121 1157 Jun  1 01:28 BIO.md
+    -rw-r--r-- 1 Administrator 197121  325 Jun  1 01:28 README.md
     $ git status
     On branch master
     Your branch is up to date with 'origin/master'.
@@ -331,6 +353,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     nothing to commit, working tree clean
     $
     ```
+    
     Congratulations, you've cloned a Git repository hosted on GitHub.
 
 ---
