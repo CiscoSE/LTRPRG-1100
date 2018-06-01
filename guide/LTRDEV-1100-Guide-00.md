@@ -30,6 +30,14 @@ Upon completion of this lab, you will be able to:
 * Put the concepts and tools to practice with real-world use cases
 * Put your new skills to the test
 
+# Lab Topology
+
+TODO:
+
+- [x] Update lab topology
+
+![Lab Topology](assets/LTRDEV-1100-Topology.png)
+
 # Table of Contents
 
 1. [The Network Programmability Dojo](LTRDEV-1100-Guide-01.md)
@@ -50,14 +58,6 @@ Upon completion of this lab, you will be able to:
     5. [Using NETCONF/YANG (Continued)](LTRDEV-1100-Guide-03e.md)
     6. [Guest Shell](LTRDEV-1100-Guide-03f.md)
 4. [Test Your Ninja Skills](LTRDEV-1100-Guide-04.md)
-
-# Lab Topology
-
-TODO:
-
-- [x] Update lab topology
-
-![Lab Topology](assets/LTRDEV-1100-Topology.png)
 
 ---
 
