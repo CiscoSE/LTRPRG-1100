@@ -11,8 +11,9 @@ TODO:
 - [x] Add screenshots
 
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
-[JetBrains](https://www.jetbrains.com/).  There is a [free community version](https://www.jetbrains.com/pycharm/download)
-available for download, but you can support the application and obtain addtional features with the purchase of the 
+[JetBrains](https://www.jetbrains.com/).  There is a
+[free community version](https://www.jetbrains.com/pycharm/download) available for download, but you can support the 
+application and obtain addtional features with the purchase of the 
 [professional version](https://www.jetbrains.com/pycharm/buy/).  JetBrains describes PyCharm as 
 an "intelligent coding assistant".
  
@@ -42,72 +43,98 @@ The objectives for this exercise are to:
 When you run PyCharm for the first time, you are presented with the welcome screen and prompted to create a new 
 project, open an existing project, or check out a project from version control.  First, let's create a new project.
 
-1. Click `Create New Project`.
+1. Double click the `PyCharm Community Edition` icon on the Desktop.
+    
+    ![PyCharm Desktop Icon](assets/PyCharm-00.png)
+
+2. Click `Create New Project`.
     
     ![PyCharm New Project Screen](assets/PyCharm-01.png)
     
-2. Choose a location for your new project, for example `PyCharmProjects/helloworld`.
-    
-    ![PyCharm Create Network Project](assets/PyCharm-02.png)
+2. Choose a location for your new project, for example `C:\Users\Adminstrator\lab\PyCharmProject`.
     
     Click to expand `Project Interpreter: New Virtualenv environment`.
     
-    Click the radio button to select `New environment using` and click the drop down menu to select `Virtualenv`.
+    Click the radio button labeled `New environment using` and click the drop down menu to select `Virtualenv`.
     
-    Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
+    Accept the default `Location:`, for example `C:\Users\Adminstrator\lab\PyCharmProject\venv`.
     
-    Click the drop down box to select a Python version 3 interpreter.
+    Click the drop down box labeled `Base interpreter:` to select the Python version 3 interpreter, for example 
+    `C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\python.exe`.
     
-    Accept the remaining default optoins and click the `Create` button.
+    Accept the remaining default options and click the `Create` button.
+    
+    ![PyCharm Create Network Project](assets/PyCharm-02.png)
+
     
 Congratulations, you now have a new PyCharm project complete with a Python version 3 virtual environment ready to
 write some code.  So far, we haven't touched the command line or had to manually create any directories for 
-Python virtual environment by hand.  PyCharm performed the heavy lifting for us.  Next, let's take a look at the 
+the Python virtual environment by hand.  PyCharm performed the heavy lifting for us.  Next, let's take a look at the 
 PyCharm GUI.
 
 #### Step 2: Navigating PyCharm
 
-When a project is opened, you see the PyCharm window divided into different tool bars, window areas, and a 
-status bar.
+When a project is opened, you see the PyCharm window divided into different tool bars, window areas, a status bar, 
+and Tip of the Day window.
 
 ![PyCharm Project Window](assets/PyCharm-03.png)
 
-1. The project view is on the left side of the main window.  This lists your project files.
+Click the `Close` button on the `Tips of the Day` window to close tips window.
 
-2. The editor is on the right side of the main window.  This is where you write your code.  The editor has tabs so 
-that you can open and navigate between multiple files at one time.
+1. The project view is on the left side of the main window.  This lists your project files.  Double click to expand 
+`PyCharmProject` and you will see the Python virtual environment PyCharm created for this project in the `venv` 
+directory.
     
-    The editor has a left and right column surrounding it.  In the left column, you will see line numbers which 
-    lets you navigate the code more easily.  In the right column, you will see the result of PyCharm code inspection.
+    ![PyCharm Project View](assets/PyCharm-04.png)
+
+2. The editor is on the right side of the main window.  This is where you write your code and edit files.  Let's create
+a new file so that we can explore the editor in more detail.
+    
+    Navigate to the `File` menu and click `New...` menu item.
+    
+    Click `Python File` in the pop up window.
+    
+    ![PyCharm Project View](assets/PyCharm-05.png)
+    
+    In the box labeled `Name:`, type `helloworld.py`.  Click the drop down box labeled `Kind:` and select `Python 
+    file`.
+    
+    ![PyCharm Project View](assets/PyCharm-06.png)
+    
+    Click the `OK` button.
+    
+    The editor has tabs so that you can open and navigate between multiple files at one time.
+    
+    The editor has a left and right column surrounding it.  In the left column, you will see line numbers as you 
+    type in the file you are editing, allowing you to navigate code more easily.  In the right column, you will see the
+    result of PyCharm code inspection, which we will explore later in this lab.
+    
+    ![PyCharm Project View](assets/PyCharm-07.png)
     
 3. The navigation bar is above the project view and editor.  Within the navigation bar, there are buttons for quick 
 access to run and debug your code and version control actions.
+    
+    ![PyCharm Project View](assets/PyCharm-08.png)
 
-4. At the bottom of the main window is the tool windows.  These windows can be toggled to be displayed or not.  This 
-is where your code will run if invoked from within PyCharm, you can manage project TODOs, access the Python 
-interpreter console, and access a command line terminal.  These tool windows are designed to give you access to most 
-everything you might need without having to leave PyCharm and open multiple windows or applications.
+4. At the bottom left corner of the main application window is a button to toggle showing/hiding the tool window bars.  
+These windows can be toggled to be displayed or not.  This is where your code will run if invoked from within PyCharm,
+you can manage project TODOs, access the Python interpreter console, and access a command line terminal.  These tool 
+windows are designed to give you access tasks and tools you might need to manage your project without having to leave 
+PyCharm and open multiple windows or applications.
+    
+    Click the icon to show the tool window bars.  We will explore the tool window bars later in this lab.
+    
+    ![PyCharm Project View](assets/PyCharm-09.png)
 
-5. The status bar is at the bottom of the main window and displays project and application status and informational 
-messages.
+5. The status bar is at the bottom of the main application window and displays project and application status and 
+informational messages.
 
 #### Step 3: Writing Code with PyCharm
 
-In PyCharm, with your `helloworld` project open, double click the project in the project view to expand the tree.  
-You will the Python virtual environment we discussed earlier in this lab.  This was automatically created for you by 
-PyCharm when you created this project.  Let's create a new file and write some Python code.
-
-1. Right click on `helloworld` and select `New` and click `Python File`.
+Let's write some Python code with PyCharm.
     
-    ![PyCharm New Python File](assets/PyCharm-04.png)
-    
-2. Type `helloworld.py` in the `Name:` box and select `Python file` from the `Kind:` drop down box.  Click the `OK` 
-button.
-    
-    ![PyCharm New File Dialogue Box](assets/PyCharm-05.png)
-    
-3. Now you have a new file names `helloworld.py` in your the root of your PyCharm `helloworld` project directory.  Go
-ahead and start writing a bit of Python code in the PyCharm editor:
+1. You created a new Python file named `helloworld.py` in the root of your PyCharm `PyCharmProject` project 
+directory.  Go ahead and start writing a bit of Python code in the PyCharm editor:
     
     ```
     print
@@ -116,7 +143,7 @@ ahead and start writing a bit of Python code in the PyCharm editor:
     Did you notice that when you typed the word `print`, PyCharm popped up a tool tip with suggested Python syntax 
     and its usage?
     
-    ![PyCharm Syntax Help](assets/PyCharm-06.png)
+    ![PyCharm Syntax Help](assets/PyCharm-10.png)
     
     Continue by typing more:
     
@@ -127,22 +154,27 @@ ahead and start writing a bit of Python code in the PyCharm editor:
     PyCharm automatically closed the `()` and `""""` when you typed the opening `(` and '"'.  Additional tool tips 
     showed you more contextual Python syntax help.
     
-    ![PyCharm Syntax Help](assets/PyCharm-07.png)
+    ![PyCharm Syntax Help](assets/PyCharm-11.png)
     
-    Continue by typing more:
+    Continue by typing more (type the `Enter`/`Return` key at the end of the first line to create an empty second line):
     
     ```
     print("Hello World!")
     
     ```
     
-    Now you have you first line of Python code written in PyCharm.  In the right column of the editor there 
-    is a green checkmark.  Hover over the checkmark and PyCharm will pop up a tool tip indicating that its code 
-    analysis is complete and no errors were found.
+    Now you have your first line of Python code written in PyCharm.  In the right column of the editor there 
+    is a green check mark.
     
-    ![PyCharm Code Analysis](assets/PyCharm-08.png)
+    ![PyCharm Syntax Help](assets/PyCharm-12.png)
     
-    Let's add a mistake intentionally to illustrate how this helps you write error-free code.  Type the following:
+    Hover over the check mark and PyCharm will pop up a tool tip indicating that its code analysis is complete and no
+    errors were found.
+    
+    ![PyCharm Code Analysis](assets/PyCharm-13.png)
+    
+    Let's add a mistake intentionally to illustrate how this helps you write error-free code.  Type some gibberish on
+    line 2:
     
     ```
     print("Hello World!")
@@ -153,12 +185,12 @@ ahead and start writing a bit of Python code in the PyCharm editor:
 
     PyCharm will display a warning symbol.  Hover over the warning symbol:
     
-    ![Python Code Analysis Error](assets/PyCharm-09.png)
+    ![Python Code Analysis Error](assets/PyCharm-14.png)
     
     PyCharm will include an indicator with the analysis of the error at the exact point in the code the error occurs.
-      Hover over the red line:
+    Hover over the red line indicator on line 2 to see the result of the code analysis:
     
-    ![Python Code Analysis Error](assets/PyCharm-10.png)
+    ![Python Code Analysis Error](assets/PyCharm-15.png)
     
     This is part of the wonder and charm (no pun intended) of PyCharm!
     
@@ -169,47 +201,59 @@ ahead and start writing a bit of Python code in the PyCharm editor:
     
     ```
     
-    Save your changes by clicking the `File` menu and clicking `Save All`.
+    Save your changes by navigating to the `File` menu and clicking `Save All` menu item.
 
 #### Step 4: Running Python Code with PyCharm
 
 So far, you've seen how you can create a project, add a Python file, write Python code, and correct Python syntax 
-errors with ease with PyCharm.  All without leaving PyCharm.  Now you will learn how to run and debug a Python 
-application with PyCharm.
+errors with ease with without leaving PyCharm.  Now you will learn how to run Python code with PyCharm.
 
-1.  With a project active and a Python file open in the editor, you can run the Python code from within 
-PyCharm using the Python interpreter and virtual environment setup with the PyCharm project.  To run your `helloworld
-.py` Python code, click on the green play button in the navigation bar on the top right side of the PyCharm 
-application window:
+1.  With your `PyCharmProject` project open and the Python file `helloworld.py` open in the editor, you can run the 
+Python code from within PyCharm using the Python interpreter and virtual environment setup with the PyCharm project.
     
-    ![PyCharm Run Code](assets/PyCharm-11.png)
+    Navigate to the `Run` menu and click the `Run...` menu item.
     
-    When you run a Python code in PyCharm, the main window will split and open the tool window on the bottom. 
-    This will invoke the Python interpreter and run the Python code in the interpreter for you.  This is the 
-    same as opening a terminal, creating and initializing the Python virtual environment with `virtualenv`, and 
+    ![Python Code Analysis Error](assets/PyCharm-16.png)
+    
+    Click on `2. helloworld`.
+    
+    When you run Python code in PyCharm, the main window will split and open the tool window bar on the bottom of the
+    application window.  This will invoke the Python interpreter and run the Python code in the interpreter for you.  
+    This is the same as opening a terminal, creating and initializing the Python virtual environment, and 
     running the Python interpreter by hand as we did earlier in this lab.  Here is an example:
     
-    ![PyCharm Python Interpreter](assets/PyCharm-12.png)
+    ![PyCharm Python Interpreter](assets/PyCharm-17.png)
     
-    You can leave the tools window open or close the window by clicking the `Run` tab at the bottom of the window.  
-    You can bring the tools window back by clicking the `Run` tab again.
+    You can leave the tools window open or close the window by clicking the `Run Dashboard` tab at the bottom of the 
+    tool window bar.  You can bring the tools window back by clicking the `Run Dashboard` tab again.
     
     You might have noticed there are other tabs in the tools window.  Let's explore those as well and see how they 
     are useful.
     
-2.  Click the `Python Console` tab.   This should look familiar as it is the Python interpreter we used earlier in 
-this lab.  This gives you place to test code snippets or interact with the Python interpretor directly why writing 
-your Python code.  For example, type the simple "Hello World!" code in the Python Console:
+2.  Click the `Python Console` tab at the bottom of the tool window bar.  If you get a Windows Security Alert message 
+window, click the `Allow Access` button.
     
-    ![PyCharm Python Console](assets/PyCharm-13.png)
+    ![PyCharm Python Interpreter](assets/PyCharm-18.png)
     
-3.  Click the `Terminal` tab.  This will open a command line interface terminal invoked from within the Python 
-virtual environment created with this PyCharm project.  This would be the same thing as opening a terminal, changing 
-to the project directory, and running `virtualenv` manually.  From here, you can run Python code directly, 
-manipulate the file system directory and files, and run utilities from the command line.  Give it a try, perform a 
-directory listing with the `dir` or `ls` command, based on whether you are on a Windows or macOS/Linux workstation:
+    This should look familiar as it is the Python interpreter we used earlier in this lab.  This gives you place to 
+    test code snippets or interact with the Python interpreter directly while writing your Python code.
     
-    ![PyCharm Terminal](assets/PyCharm-14.png)
+    For example, type the simple "Hello World!" code in the Python Console:
+    
+    ![PyCharm Python Console](assets/PyCharm-19.png)
+    
+3.  Click the `Terminal` tab at the bottom of the tool window bar.  This will open a command line interface terminal 
+invoked from within the Python virtual environment created with this PyCharm project.  This would be the same thing 
+as opening a terminal, changing to the project directory, and running the Python virtual environment manually.
+    
+    ![PyCharm Python Console](assets/PyCharm-19.png)
+    
+    From here, you can run Python code directly, manipulate the file system directory and files, and run utilities 
+    from the command line.
+    
+    For example, perform a directory listing with the `dir` command:
+    
+    ![PyCharm Terminal](assets/PyCharm-21.png)
 
 ### Exercise 2: Getting Advanced with PyCharm
 
@@ -222,88 +266,109 @@ The objectives for this exercise are to:
 #### Step 1: Managing a Project's Git Repository in PyCharm
 
 Earlier in this lab, we created a new PyCharm project from scratch.  Now, let's explore creating a PyCharm project by
-cloning from a Git repository and how to keep our project under revision control.
+cloning a Git repository and keeping your project under revision control.
 
-1.  First, close the current PyCharm project by clicking on the `File` menu and clicking `Close Project`.
+1.  Close the current PyCharm project by navigating to the `File` menu and clicking the `Close Project` menu 
+item.
 
-2.  You need to move the original PyCharm project since the name of the project matches the name of the Git 
-repository we created earlier in this lab.  From the terminal:
+2. Click `Check out from Version Control` from the `Welcome to PyCharm` window and click `Git`.
     
-    ```
-    $ cd ~/PyCharmProjects
-    $ mv helloworld helloworld.old
-    $
-    ```
-
-3. Next, click `Check out from Version Control` from the `Welcome to PyCharm` window and click `Git`.
-    
-    ![PyCharm Check out from Git](assets/PyCharm-16.png)
+    ![PyCharm Check out from Git](assets/PyCharm-22.png)
 
 4. In the `URL:` box, type the URL for your Git repository you created earlier in this lab.  For example, 
-`https://github.com/curtissmith/helloworld`, replacing `curtissmith` with your Git username.    
+`https://github.com/curtissmith/clus18`, replacing `curtissmith` with your Git username.
     
-    Click the `Test` button to test the Git repository URL you've typed.
+    In the `Directory:` box, type the path to a PyCharm project directory that does not already exist, for example 
+    `C:\Users\Administrator\lab\PyCharmGit`.
     
-    ![PyCharm Clone Repository Test](assets/PyCharm-17.png)
+    ![PyCharm Check out from Git](assets/PyCharm-23.png)
+    
+    Click the `Test` button to test the Git repository URL you've typed.  When prompted, enter your GitHub 
+    credentials to login.
+    
+    ![PyCharm Clone Repository Test](assets/PyCharm-24.png)
     
     If the test was successful, click the `Clone` button.
     
+    ![PyCharm Clone Repository Test](assets/PyCharm-25.png)
+    
     Click the `Yes` button when prompted to open the directory.
     
-    ![PyCharm Project Cloned from Git](assets/PyCharm-18.png)
+    ![PyCharm Project Cloned from Git](assets/PyCharm-26.png)
     
-5. Now you have a new PyCharm project cloned from your Git repository.  Double click to expand the `helloworld` 
-project directory in the PyCharm project view.  You will find the `README.md` file we created earlier in the lab.
+5. Now you have a new PyCharm project cloned from your Git repository.  Double click to expand the `PyCharmGit` 
+project directory in the PyCharm project view.
+    
+    You will find the `README.md` file we created earlier in the lab.  Double click the `README.md` file to open the 
+    file in the PyCharm editor.
+    
+    ![PyCharm Project Cloned from Git](assets/PyCharm-26.png)
 
     When you double click to open the `README.md` file, you'll notice the editor will open and you have many of the 
     same editing features with a Markdown file as you do with a Python file.  There is an additional feature where 
     PyCharm will preview the Markdown file live for you.  Click the buttons in editor window to toggle to show the 
     editor only, show the editor and a preview, or show a preview only.
     
-    ![PyCharm Project Cloned from Git](assets/PyCharm-19.png)
+    ![PyCharm Project Cloned from Git](assets/PyCharm-27.png)
     
-6.  You will notice there is no `venv` directory in your project.  That is because PyCharm did not create one when it
-cloned the Git repository.  However, we can configure and create one easily.
+    Click the `No` button when prompted to add the file to Git.  We will take care of this later in the lab.
+
+6. When you open the Markdown file `README.md`, PyCharm recognizes this file type and provides many of the syntax 
+help and analysis as a Python file.  An additional split window is also available in the PyCharm editor that displays 
+a preview of the Markdown!  You can toggle this split view by clicking the buttons below the navigation bar.
+    
+    ![PyCharm Project Cloned from Git](assets/PyCharm-28.png)
+
+6.  You will notice there is no `venv` directory in your PyCharm project.  That is because PyCharm did not create one 
+when it cloned the Git repository.  However, we can configure and create one easily.
     
     Click the `File` menu and click `Settings`.
     
-    Double click `Project: helloworld` to expand the tree and click `Project Interpreter`.  You will notice that 
-    this is empty or has an error.
+    Double click `Project: PyCharmGit` to expand the tree and click `Project Interpreter`.
     
-    Click the gear button next to the drop downbox labeled `Project Interpreter` and click `Add...`.
+    Click the gear button next to the drop down box labeled `Project Interpreter:`.
     
-    Click to select `Virtual Environment`.
+    ![PyCharm Project Cloned from Git](assets/PyCharm-29.png)
     
-    Click the radio button to select `New environment`
+    Click to select `Virtualenv Environment`.
     
-    Accept the default `Location`, for example `PyCharmProjects/helloworld/venv`.
+    Click the radio button to select `New environment`.
     
-    Click the drop down box to select a Python version 3 interpreter.
+    Accept the default `Location:`, for example `C:\Users\Administrator\lab\PyCharmGit\venv`.
+    
+    Click the drop down box labeled `Base interpreter:` to select a Python version 3 interpreter.
+    
     Accept the remaining default options and click the `OK` button.
     
-    ![PyCharm Add Python Interpreter Dialogue](assets/PyCharm-20.png)
+    ![PyCharm Add Python Interpreter Dialogue](assets/PyCharm-30.png)
     
-    A new Python virtual environment will be created for you.  Click the `OK` button.
+    A new Python virtual environment will be created for you.  In the drop down box labeled `Project Interpreter:`, 
+    click to select `Python 3.6 (PyCharmGit)`.  Click the `OK` button.
+    
+    ![PyCharm Add Python Interpreter Dialogue](assets/PyCharm-31.png)
     
 7. Let's re-create our "Hello World!" Python code.  Right click on `helloworld` and select `New` and click `Python
 File`.
     
-    ![PyCharm New Python File](assets/PyCharm-04.png)
+    Navigate to the `File` menu and click `New...` menu item.
     
-    Type `helloworld.py` in the `Name:` box and select `Python file` from the `Kind:` drop down box.  Click the 
-    `OK` button.
+    Click `Python File` in the pop up window.
     
-    ![PyCharm New File Dialogue Box](assets/PyCharm-05.png)
+    ![PyCharm Project View](assets/PyCharm-32.png)
     
-    This time, PyCharm knows that this project is under revision control with Git and prompts you to add the new 
-    file to Git:
+    In the box labeled `Name:`, type `helloworld.py`.  Click the drop down box labeled `Kind:` and select `Python 
+    file`.
+    
+    ![PyCharm Project View](assets/PyCharm-33.png)
+    
+    Click the `OK` button.
+    
+    PyCharm knows that this project is under revision control with Git and prompts you to add the new 
+    file to Git.  Click the `Yes` button.
         
-    For now, ignore the PyCharm project `.idea` directory and all its file contents.  Click the checkbox next to 
-    `.idea` to unselect the directory and all files under that directory.  Ensure that `helloworld.py` is checked.
-        
-    ![PyCharm Add Files to Git](assets/PyCharm-21.png)
+    ![PyCharm Add Files to Git](assets/PyCharm-34.png)
     
-    Now you have a new file names `helloworld.py` in your the root of your PyCharm `helloworld` project directory.
+    Now you have a new file named `helloworld.py` in the the root of your PyCharm `PyCharmGit` project directory.
     Go ahead and re-write Python code in the PyCharm editor:
     
     ```
@@ -312,18 +377,19 @@ File`.
     ```
     
     and save your changes by clicking the `File` menu and clicking `Save All`.
-
-8. You will also notice new buttons in the naviation bar at the top of the PyCharm window and a new tool window in the 
-tool window tab at the bottom of the PyCharm window: `Version Control`.  Click the `Version Control` tab.
     
-    ![PyCharm Version Control](assets/PyCharm-22.png)
+    ![PyCharm Add Files to Git](assets/PyCharm-35.png)
+
+8. You will also notice new buttons in the navigation bar at the top of the application window and a new tool window bar
+in the tool window tab at the bottom of the application window window: `Version Control`.  Click the `Version 
+Control` tab.
+    
+    ![PyCharm Version Control](assets/PyCharm-36.png)
     
     First, you will get a status of all local changes.  Double click `Default` and you see your Python file 
     `helloworld.py`.
     
     Second, you will see `Unversioned Files` - too numerous to list, so click the `browse` button.
-    
-    ![PyCharm Unversioned Files](assets/PyCharm-23.png)
     
     Double click to expand the tree and you notice you have two directories each with files that are 
     unversioned.  These include the PyCharm project `.idea` directory and Python virtual environment `venv` 
@@ -333,48 +399,46 @@ tool window tab at the bottom of the PyCharm window: `Version Control`.  Click t
     
     Click the fourth button from the left `Ignore`.
     
-    Click the radio buton labeled `Ignore all files under`.
+    Click the radio button labeled `Ignore all files under`.
     
-    ![PyCharm Ignore Unversioned Files](assets/PyCharm-24.png)
+    ![PyCharm Ignore Unversioned Files](assets/PyCharm-37.png)
         
     Click the `OK` button.
-    Repeat the previous step to ignore the `venv` directory.
+    
+    Click to select the `venv` directory.
+    
+    Click the fourth button from the left `Ignore`.
+    
+    Click the radio button labeled `Ignore all files under`.
+    
+    ![PyCharm Ignore Unversioned Files](assets/PyCharm-38.png)
     
     Click the `Close` button.
     
-    Now it is time to commit your changes.  Click the `VCS` menu and click `Commit...`
+    Now it is time to commit your changes.  Navigate to the `VCS` menu and click the `Commit...` menu item.
     
-    Add an entry such as `Initial commit` in the `Commit Message` box.
+    In the box labeled `Commit Message`, add an entry such as `My first Git commit from PyCharm`.
+    
+    ![PyCharm Commit Changes](assets/PyCharm-39.png)
     
     Click the `Commit` button.
     
-    ![PyCharm Commit Changes](assets/PyCharm-25.png)
+    Now push your commited changes to the remote GitHub repository.  Navigate to the `VCS` menu, `Git` submenu, and 
+    click the `Push...` menu item.
     
-    If PyCharm doesn't know your Git username, then it will prompt your for it.
-    Fill out your name in the boxed labeled `Name` and email address in the boxed labeled `E-mail`.  
-    Ensure that the checkbox labeled `Set properties globally` is checked.
-    
-    ![PyCharm Git User Name is not Defined](assets/PyCharm-26.png)
-    
-    Click the `Set and Commit` button.
-    
-    Once all your changes are committed, don't forget to push your committed changed to the remote repository.
-    
-    Click the `VCS` menu, click `Git`, and click `Push`.
-    
-    ![PyCharm Git Push](assets/PyCharm-27.png)
+    ![PyCharm Git User Name is not Defined](assets/PyCharm-40.png)
     
     Click the `Push` button.
         
     PyCharm will show you the status of your Git push and tell you when the action has been completed successfully.
     
-    ![PyCharm Successful Git Push](assets/PyCharm-28.png)
+    ![PyCharm Successful Git Push](assets/PyCharm-41.png)
     
     Check your handiwork by opening a web browser and navigating to your Git repository in GitHub, for 
     example `https://github.com/curtissmith/helloworld`, replacing `curtissmith` with your own GitHub username.
     
 Congratulations, you've cloned a remote Git repository, staged a new Python file, committed those changes, and pushed
-your changes into the remote Git repository - All without leaving the PyCharm application or having to go back and 
+your changes into the remote Git repository without leaving the PyCharm application or having to go back and 
 forth between PyCharm and the command line.  PyCharm makes managing the whole project easy, including with version 
 control.
 
