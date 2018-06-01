@@ -302,8 +302,6 @@ project directory in the PyCharm project view.
     You will find the `README.md` file we created earlier in the lab.  Double click the `README.md` file to open the 
     file in the PyCharm editor.
     
-    ![PyCharm Project Cloned from Git](assets/PyCharm-26.png)
-
     When you double click to open the `README.md` file, you'll notice the editor will open and you have many of the 
     same editing features with a Markdown file as you do with a Python file.  There is an additional feature where 
     PyCharm will preview the Markdown file live for you.  Click the buttons in editor window to toggle to show the 
