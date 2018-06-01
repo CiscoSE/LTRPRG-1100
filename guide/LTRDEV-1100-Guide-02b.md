@@ -63,8 +63,8 @@ This is not limited to commonly virtualized operating systems like Microsoft  Wi
 Vagrant supports many guest and host operating systems.  Anything that can be run as a virtual machine in a supported  
 Vagrant provider can be supported, including Cisco IOS XE, NX-OS, and IOS XR!
 
-Take a brief moment to discover the publicly available [catalog of Vagrant boxes](https://app.vagrantup
-.com/boxes/search).
+Take a brief moment to discover the publicly available
+[catalog of Vagrant boxes](https://app.vagrantup.com/boxes/search).
 
 #### Step 2: Learning Vagrant Commands
 
