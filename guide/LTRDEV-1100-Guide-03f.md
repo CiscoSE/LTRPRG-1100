@@ -50,23 +50,31 @@ The objectives for this exercise are to:
 
 1. Establish an SSH connection to the IOS XE device.
 2. From the IOS XE device CLI, enter privileged EXEC mode, for example:
+   
     ```
     csr1>enable
     csr1#
     ```
-3. Enter confugure mode, for example:
+
+3. Enter configure mode, for example:
+   
     ```
     csr1# configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
     csr1(config)#
     ```
-4. IOx is a prerequisite for Guest Shell, so we need to turn on IOx, for example:
+
+4. IOx is a prerequisite for Guest Shell, so we need to turn on IOx with the `iox` command, for example:
+   
     ```
-    csr1#iox
-    csr1#end
+    csr1(config)#iox
+    csr1(config)#end
+    csr1#
     ```
+
  5. It can take a few minutes for the IOx subsystem and process to start.  Before continuing on, check to ensure 
  IOx is running with the `show iox-service` command, for example:
+    
     ```
     csr1#show iox-service 
     Virtual Service Global State and Virtualization Limits:
@@ -100,14 +108,22 @@ The objectives for this exercise are to:
     
     Once you've verified the `IOx service (CAF)`, `IOx service (IOxman)`, and `Libvirtd` services are in the 
     `Running` state, continue to the next step.
-6. Enabling Guest Shell requires a bit of configuration first.  We must:
+
+6. Before enabling Guest Shell, we have a bit of prerequisite configuration to complete first.  We 
+must:
+
     * Configure a Virtual Port Group - The Virtual Port Group is the interface the IOS XE network device uses to 
-        communicate with guest shell.
+    communicate with guest shell.
+    
     * Configure Network Address Translation - The IOS XE network device provides access to off-box resources through 
-        NAT.
-    1. A Virtual Port Group is only required on ISR and CSR IOS XE routing platforms.  On Catalyst IOS XE switching 
+    NAT.
+    
+    A Virtual Port Group is only required on ISR and CSR IOS XE routing platforms.  On Catalyst IOS XE switching 
     platforms, Guest Shell connectivity is bridged from the `Mgmt0` <cjs - need to validate interfance name> management 
-    interface.  Create and configure a Virtual Port Group, for example:
+    interface.
+    
+    Since our lab uses the CSR 1000v, create and configure a Virtual Port Group, for example:
+        
         ```
         csr1#configure terminal 
         Enter configuration commands, one per line.  End with CNTL/Z.
@@ -119,7 +135,9 @@ The objectives for this exercise are to:
         csr1(config)#
 
         ```
-    2. Configure Network Address Translation (required on all routing and switching platforms), for example:
+    
+    Configure Network Address Translation (required on all routing and switching platforms), for example:
+        
         ```
         csr1(config)#interface VirtualPortGroup 0
         csr1(config-if)#ip nat inside
@@ -132,6 +150,7 @@ The objectives for this exercise are to:
         csr1(config)#ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
         csr1(config)#
         ```
+        
 7.  To enable Guest Shell itself, first run the following commands in config mode:
     ```
     csr1(config)#app-hosting appid guestshell
@@ -140,10 +159,15 @@ The objectives for this exercise are to:
     csr1(config-app-hosting)#
     ```
     
-    Exit from config mode, and run the `guestshell enable` command in EXEC mode:
+    Exit from config mode:
     
     ```
     csr1(config-app-hosting)#end
+    ```
+    
+    Run the `guestshell enable` command in privileged EXEC mode:
+    
+    ```
     csr1#guestshell enable
     Interface will be selected if configured in app-hosting
     Please wait for completion
@@ -178,7 +202,7 @@ The objectives for this exercise are to:
     csr1#
     ```
     
-    Test to confirm the Guest Shell vnic is active and reachable with the `ping` command, for exaple:
+    Test to confirm the Guest Shell vnic is active and reachable with the `ping` command, for example:
     
     ```
     csr1#ping 192.168.35.2
@@ -188,10 +212,44 @@ The objectives for this exercise are to:
     Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
     csr1#
     ```
+    
+    Congratulations, you now have a working Guest Shell running.  Let's explore how to leverage Guest Shell 
+    effectively in the next steps.
 
-#### Step 2: Installing and Running Applications On-Box with Guest Shell on IOS XE
+#### Step 2: Running Guest Shell Commands from IOS XE
 
-lorem ipsum
+1. You can run Guest Shell Linux commands from the IOS XE CLI.  Simply precede the Linux command with the IOS XE command
+`guestshell run`.  For example, to run the Guest Shell Linux command `foo`, run the command `guestshell run foo` from 
+the IOS XE CLI:
+    
+    ```
+    csr1#guestshell run foo
+    ```
+    
+    This is valid for any Linux binary in the Guest Shell `/bin` and `/sbin` directories.
+
+2. To run Guest Shell with an interactive shell CLI from IOS XE, run the IOS XE command `guestshell run bash`, for 
+example:
+    
+    ```
+    csr1#guestshell run bash
+    [guestshell@guestshell ~]$
+    ```
+    
+    Now you are operating from within a BASH shell CLI within the Guest Shell virtual environment.  Everything you do
+    from here is native Linux commands.  However, once within a Guest Shell BASH CLI session, you can access the IOS 
+    XE CLI.
+
+### Step 3: Running IOS XE Commands from Guest Shell
+
+1. You can run IOS XE commands from the Guest Shell CLI.  Simply precede the IOS XE command with the Guest Shell 
+command `dohost`.  For example, to run the IOS XE command `foo`, run the command `dohost foo`, for example:
+    
+    ```
+    [guestshell@guestshell ~]$ dohost foo
+    ```
+    
+    This is limited to IOS XE privileged EXEC mode commands only; access to IOS XE config mode commands is not possible.
 
 ### Step 3: Accessing the IOS XE CLI from Guest Shell
 
