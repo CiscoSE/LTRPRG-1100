@@ -21,9 +21,23 @@ environment, decoupled from the host network device, in which you can install an
 So far in this lab, we have been focussing on so-called off-box network programmability.  That is to say, we've been 
 running applications on a workstation and interfacing with network devices.  The applications reside on a workstation
 and connect to a network device.  With on-box network programmability, we have the ability to host and run 
-applications directly on the network device itself.  Guest Shell makes this very easy, but with Application Hosting, 
-entire Linux Containers (LXCs) can be installed for custom, purpose-built applications as well on platforms that 
-support it.  This lab will focus on Guest Shell for script and utility hosting on IOS XE.
+applications directly on the network device itself.
+
+Off-Box network programmability is ideal for:
+
+* configuration management and automation
+* telemetry and operational data
+* SDN controller functionality, e.g. Cisco DNA Center
+
+On-Box network programmability is ideal for:
+
+* network device provisioning automation
+* IOS XE Embedded Event Manager (EEM) response automation
+* edge compute for network applications and Internet of Things (IoT)
+
+Guest Shell facilitates on-box network programmability, but with Application Hosting, Linux Containers (LXCs) can be 
+installed for custom, purpose-built applications as well on network device platforms that support it.  This lab will 
+focus on Guest Shell for script and utility hosting on IOS XE.
 
 Here is a brief reference for the platforms that support Guest Shell today:
 
@@ -573,23 +587,6 @@ command `dohost`: `dohost 'foo'`.  For example, to display the IOS XE device int
     
     [guestshell@guestshell ~]$
     ```
-
-### Exercise 2: Unleashing Network Programmability at the Edge with IOS XE
-
-#### Objectives
-
-The objectives for this exercise are to:
-
-* Explore additional Guest Shell use cases
-* Explore Python in Guest Shell on IOS XE
-
-#### Step 1: Exploring Additional Guest Shell Use Cases
-
-lorem ipsum
-
-#### Step 2: Explore Python in Guest Shell on IOS XE
-
-lorem ipsum
 
 ---
 
