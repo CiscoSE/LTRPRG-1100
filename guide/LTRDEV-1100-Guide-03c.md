@@ -251,7 +251,7 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     (pythonenv) $
     ```
     
-    From the command line terminal, ensure that pyang is installed:
+    From the command line terminal, ensure that pyang is installed with the `pip install pyang` command, for example:
     
     ```
     (pythonenv) $ pip install pyang

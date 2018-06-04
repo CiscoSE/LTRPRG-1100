@@ -18,20 +18,49 @@ Performance series switches in IOS XE 16.8.1a...
 
 #### Step 1: Configuring NETCONF in IOS XE
 
-To work with NETCONF on IOS XE, you must be a user with privilage level 15 and enable the NETCONF interface on your 
-network device.  To do so, open a command line terminal and complete the following steps:
+To work with NETCONF on IOS XE, you must be a user with privilege level 15 and enable the NETCONF interface on your 
+network device.  To do so, complete the following steps:
 
-1. Establish an SSH connection to the IOS XE device.
+1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
+    
+    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
 
-2. From the IOS XE device, create a new user for NETCONF sessions and configure the IOS XE NETCONF interface:
+2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you 
+are in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, 
+for example:
+   
     ```
-    csr1kv>enable
-    csr1kv# configure terminal
+    csr1>enable
+    csr1#
+    ```
+3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
+   
+    ```
+    csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
-    csr1kv(config)#username netconf privilege 15 password C1sco12345
-    csr1kv(config)#netconf-yang
-    csr1kv(config)#end
-    csr1kv#
+    csr1(config)#
+    ```
+    
+    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
+    ```
+
+4. Create an account with privilege level 15 access with the `username` command:
+    
+    ```
+    csr1(config)#username netconf privilege 15 password C1sco12345
+    ```
+    
+5. Enable NETCONF with the `netconf-yang` command:
+    
+    ```
+    csr1(config)#netconf-yang
+    ```
+    
+    End the global configuration mode session with the `end` command or typing `CTRL-Z`, for example:
+    
+    ```
+    csr1(config)#end
+    csr1#
     ```
 
 That's all there is to it!  Let's test and verify NETCONF on your IOS XE device.
@@ -44,21 +73,21 @@ You can use the following commands to verify the NETCONF configuration in IOS XE
 for example:
     
     ```
-    csr1kv#show netconf-yang datastores
+    csr1#show netconf-yang datastores
     Datastore Name             : running
     
-    csr1kv#
+    csr1#
     ```
     
-    You can see the default, manadatory `<running>` datastore is present.
+    You can see the default, mandatory `<running>` datastore is present.
 
 2. To display information about active NETCONF sessions, use the `show netconf-yang sessions` command, for example:
     
     ```
-    csr1kv#show netconf-yang sessions
+    csr1#show netconf-yang sessions
     There are no active sessions
     
-    csr1kv#
+    csr1#
     ```
     
     You can see there are currently no active sessions, but we will change that soon!
@@ -67,7 +96,7 @@ for example:
 command, for example:
     
     ```
-    csr1kv#show netconf-yang statistics
+    csr1#show netconf-yang statistics
     netconf-start-time  : 2018-05-21T02:27:35+00:00
     in-rpcs             : 0
     in-bad-rpcs         : 0
@@ -77,16 +106,16 @@ command, for example:
     dropped-sessions    : 0
     in-bad-hellos       : 0
     
-    csr1kv#
+    csr1#
     ```
     
     Again, not much to see until we start using NETCONF later in this lab.
 
-4. To display the status of the software processes required to support model driven programmability, use the `show 
-platform software yang-management process` command, for example:
+4. To display the status of the software processes required to support model driven programmability, use the
+`show platform software yang-management process` command, for example:
     
     ```
-    csr1kv#show platform software yang-management process
+    csr1#show platform software yang-management process
     confd            : Running 
     nesd             : Running 
     syncfd           : Running 
@@ -96,7 +125,7 @@ platform software yang-management process` command, for example:
     ndbmand          : Running 
     pubd             : Running 
     
-    csr1kv#
+    csr1#
     ```
     
     Note that the `nginx` process is running if `ip http server` or `ip http secure-server` is configured in IOS XE.  
@@ -108,8 +137,8 @@ platform software yang-management process` command, for example:
     lab workstation (output truncated for brevity):
     
     ```
-    $ ssh -p 2223 netconf@127.0.0.1 -s netconf
-    netconf@127.0.0.1's password: 
+    (pythonenv) $ ssh -p 830 netconf@198.18.134.11 -s netconf
+    netconf@198.18.134.11's password: C1sco12345
     <?xml version="1.0" encoding="UTF-8"?>
     <hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
     <capabilities>
@@ -129,34 +158,34 @@ platform software yang-management process` command, for example:
     <capability>http://cisco.com/ns/cisco-xe-ietf-ip-deviation?module=cisco-xe-ietf-ip-deviation&amp;revision=2016-08-10</capability>
     <capability>http://cisco.com/ns/cisco-xe-ietf-ipv4-unicast-routing-deviation?module=cisco-xe-ietf-ipv4-unicast-routing-deviation&amp;revision=2015-09-11</capability>
     </capabilities>
-    <session-id>40</session-id></hello>]]>]]> 
+    <session-id>34</session-id></hello>]]>]]> 
     ```
     
     Leave this session in this terminal window open.
     
-    Now return to the window with the original SSH session to your IOS XE device.  Use the `show netconf-yang 
-    sessions` to view the active NETCONF session you've just established, for example:
+    Now return to the window with the original SSH session to your IOS XE device.  Use the
+    `show netconf-yang sessions` to view the active NETCONF session you've just established, for example:
     
     ```
-    csr1kv#show netconf-yang sessions                    
+    csr1#show netconf-yang sessions
     R: Global-lock on running datastore
     C: Global-lock on candidate datastore
     S: Global-lock on startup datastore
     
     Number of sessions : 1
     
-    session-id  transport    username             source-host           global-lock  
+    session-id  transport    username             source-host           global-lock 
     -------------------------------------------------------------------------------
-    40          netconf-ssh  netconf              10.0.2.2              None         
+    34          netconf-ssh  netconf              198.18.133.252        None        
     
-    csr1kv#
+    csr1#
     ```
     
-    Return to the NETCONF session window and type `^c` to terminate the session.  Let's take a look at the screen 
+    Return to the NETCONF session window and type `CTL-C` to terminate the session.  Let's take a look at the screen 
     output from our first NETCONF session.
         
     When you established a secure NETCONF over SSH as a NETCONF manager (client), the IOS XE network device as the 
-    agent (server) sent  a list of its NETCONF capabilities in an XML encoded data format.
+    agent (server) sent a list of its NETCONF capabilities in an XML encoded data format.
     
     Note the list of capabilities should look somewhat familiar: they are YANG data models!  In fact, this 
     demonstrates that Cisco IOS XE supports industry standard YANG data models from the IETF and OpenConfig and 
@@ -178,18 +207,29 @@ flow, it is not the most user friendly method for using NETCONF.  Alternatively,
 [ncclient](https://github.com/ncclient/ncclient) to communicate via NETCONF with an IOS XE network device 
 programmatically.
 
-1. From the command line terminal, ensure that ncclient is installed:
+1. First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
+then change to your lab working directory and activate the Python virtual environment you created earlier in this 
+lab, for example:
     
     ```
-    $ pip3 install ncclient
+    $ cd ~/lab
+    $ source pythonenv/Scripts/activate
+    (pythonenv) $
     ```
 
-2. Invoke the Python interpreter with the `python3` command:
+2. From the command line terminal, ensure that ncclient is installed using the `pip install ncclient` command (output
+ truncated for brevity):
     
     ```
-    $ python3
-    Python 3.6.5 (default, Mar 30 2018, 06:41:53) 
-    [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)] on darwin
+    (pythonenv) $ pip install ncclient
+    ```
+
+2. Invoke the Python interpreter with the `python` command:
+    
+    ```
+    (pythonenv) $ python
+    Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
+    l)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
     ```
@@ -206,14 +246,16 @@ programmatically.
     >>> import sys
     ```
     
-    Establish a NETCONF connection and say "Hello" with the code snippet `m = manager.connect(host='127.0.0.1', 
-    port=2223, username='netconf', password='C1sco12345', hostkey_verify=False)`:
+    Establish a NETCONF connection and say "Hello" with the code snippet `m = manager.connect(host='198.18.134.11', 
+    port=830, username='netconf', password='C1sco12345', hostkey_verify=False)`:
     
     ```
-    >>> m = manager.connect(host='127.0.0.1', port=2223, username='netconf', password='C1sco12345', hostkey_verify=False)
+    >>> m = manager.connect(host='198.18.134.11', port=830, username='netconf', password='C1sco12345', hostkey_verify=False)
     ```
     
-    Print the capabilities returned by the IOS XE network device with the code snippet `for capability in m.server_capabilities: print(capability.split('?')[0])` (output truncated for brevity)
+    Print the capabilities returned by the IOS XE network device with the code snippet
+    `for capability in m.server_capabilities: print(capability.split('?')[0])` (the second line of code should be 
+    preceded with a TAB, type the `Enter`/`Return` key on the third line of code; output truncated for brevity):
     
     ```
     >>> for capability in m.server_capabilities:
@@ -243,7 +285,7 @@ programmatically.
     
     ```
     >>> quit()
-    $
+    (pythonenv) $
     ```
 
 ---
