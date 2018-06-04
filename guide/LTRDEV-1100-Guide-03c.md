@@ -214,8 +214,8 @@ the IETF and OpenConfig YANG data models from GitHub.
 1. Create a working directory and clone the IETF YANG repository:
     
     ```
-    $ mkdir ~/coding/ciscolive/ietf
-    $ cd ~/coding/ciscolive/ietf
+    $ mkdir ~/lab/ietf
+    $ cd ~/lab/ietf
     $ git clone https://github.com/YangModels/yang
     Cloning into 'yang'...
     remote: Counting objects: 13445, done.
@@ -225,6 +225,7 @@ the IETF and OpenConfig YANG data models from GitHub.
     Resolving deltas: 100% (9076/9076), done.
     $
     ```
+
 2. Open PyCharm and the IETF YANG Git repository you just cloned by clicking the `File` menu, click `Open...`, 
 navigate to the directory `ietf`, and click the `Open` button.
     
@@ -240,21 +241,38 @@ navigate to the directory `ietf`, and click the `Open` button.
 data format that is good for programming is not necessarily good for human readability.  Fortunately, we have a tool
 that can help you called [pyang](https://github.com/mbj4668/pyang) that is a quick `pip install` away.
     
+    First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
+    then change to your lab working directory and activate the Python virtual environment you created earlier in this 
+    lab, for example:
+    
+    ```
+    $ cd ~/lab
+    $ source pythonenv/Scripts/activate
+    (pythonenv) $
+    ```
+    
     From the command line terminal, ensure that pyang is installed:
-    ```
-    $ pip3 install pyang
-    ```
-    
-    Now navigate to the directory that contains the `ietf-interfaces.yang` YANG data model file, for example:
     
     ```
-    $ cd ~/coding/ciscolive/ietf/yang/standard/ietf/RFC
+    (pythonenv) $ pip install pyang
+    Collecting pyang
+        Using cached https://files.pythonhosted.org/packages/d5/5d/248a83662d8ea7f1594be022e1c7017f2fa83c7e5949e9500290302aae95/pyang-1.7.5-py2.py3-none-any.whl
+    Requirement already satisfied: lxml in c:\users\administrator\lab\pythonenv\lib\site-packages (from pyang) (4.2.1)
+    Installing collected packages: pyang
+    Successfully installed pyang-1.7.5
+    (pythonenv) $
+    ```
+    
+    Now navigate to the directory that contains the `ietf-interfaces.yang` YANG data model file:
+    
+    ```
+    (pythonenv) $ cd ~/lab/ietf/yang/standard/ietf/RFC
     ```
     
     Use pyang to display the data model in a human readable tree format:
     
     ```
-    $ pyang -f tree ietf-interfaces.yang
+    (pythonenv) $ pyang -f tree ietf-interfaces.yang
     module: ietf-interfaces
     +--rw interfaces
     |  +--rw interface* [name]
@@ -313,7 +331,7 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
                x--ro out-multicast-pkts?   yang:counter64
                x--ro out-discards?         yang:counter32
                x--ro out-errors?           yang:counter32
-    $
+    (pythonenv) $
     ```
     
     The first thing you should notice is how much easier this is to read and understand.
