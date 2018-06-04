@@ -28,7 +28,9 @@ print (output)
 
 print "\n\n *** Configuring interface %s with 'cli' function *** \n\n"
 
-cli.cli('config terminal; interface %s; spanning-tree portfast edge default' %intf)
+## The following from the original fails on CSR1000V, so changed to something more generic.
+#cli.cli('config terminal; interface %s; spanning-tree portfast edge default' %intf)
+cli.cli('config terminal; interface %s; description Configured with a Python script from Guest Shell' %intf)
 
 print "\n\n *** Printing show cmd with 'clip' function *** \n\n"
 
