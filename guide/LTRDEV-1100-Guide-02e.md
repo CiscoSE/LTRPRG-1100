@@ -433,7 +433,7 @@ Control` tab.
     ![PyCharm Successful Git Push](assets/PyCharm-41.png)
     
     Check your handiwork by opening a web browser and navigating to your Git repository in GitHub, for 
-    example `https://github.com/curtissmith/helloworld`, replacing `curtissmith` with your own GitHub username.
+    example `https://github.com/curtissmith/clus18`, replacing `curtissmith` with your own GitHub username.
     
 Congratulations, you've cloned a remote Git repository, staged a new Python file, committed those changes, and pushed
 your changes into the remote Git repository without leaving the PyCharm application or having to go back and 
