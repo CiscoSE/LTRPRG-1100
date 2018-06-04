@@ -35,7 +35,6 @@ Here is a brief reference for the platforms that support Guest Shell today:
 | Python | v2.7 | v2.7, v3.0 | v2.7, v3.0 |
 | RPM Install | No | Yes | Yes |
 
-
 ### Exercise 1: Introducing IOS XE Guest Shell
 
 #### Objectives
@@ -352,8 +351,116 @@ IOS XE device CLI.
     
     [guestshell@guestshell ~]$
     ```
+
+2. Check out the directory structure of the Guest Shell Linux file system with the `ls` command, for example:
     
-    Once within a Guest Shell Bash CLI session, you can access the IOS XE device CLI.
+    ```
+    [guestshell@guestshell ~]$ cd /
+    [guestshell@guestshell /]$ ls -la
+    total 50222
+    drwxr-xr-x  23 root  root              1024 Jun  3 20:04 .
+    drwxr-xr-x  23 root  root              1024 Jun  3 20:04 ..
+    -rw-r--r--   1 root  root                 0 Jun  3 18:27 .autorelabel
+    drwxr-xr-x   2 root  root              1024 Jun  3 18:27 .oldroot
+    lrwxrwxrwx   1 root  root                 7 Feb 15 20:53 bin -> usr/bin
+    dr-xr-xr-x   2 root  root              1024 Jun 10  2014 boot
+    drwxrwxr-x  13 65534 network-admin     4096 May 24 05:01 bootflash
+    drwxr-xr-x   6 root  root              1024 Jun  3 18:27 cisco
+    drwxr-xr-x   5 root  root              1024 Jun  3 18:27 data
+    drwxr-xr-x   4 root  root               540 Jun  3 20:04 dev
+    drwxr-xr-x  57 root  root              3072 Jun  3 20:04 etc
+    -rwxr-xr-x   1 65534         65534      457 Jun  3 20:04 fix_sshd.sh
+    lrwxrwxrwx   1 root  root                10 Feb 15 20:57 flash -> /bootflash
+    drwxr-xr-x   3 root  root              1024 Feb 15 20:53 home
+    lrwxrwxrwx   1 root  root                 7 Feb 15 20:53 lib -> usr/lib
+    lrwxrwxrwx   1 root  root                 9 Feb 15 20:53 lib64 -> usr/lib64
+    drwxr-xr-x   3 root  root              1024 Jun  3 18:27 local
+    drwx------   2 root  root          51200000 Feb 15 20:57 lost+found
+    drwxr-xr-x   2 root  root              1024 Jun 10  2014 media
+    drwxr-xr-x   2 root  root              1024 Jun 10  2014 mnt
+    drwxr-xr-x   2 root  root              1024 Jun 10  2014 opt
+    dr-xr-xr-x 378 65534         65534        0 Jun  3 20:04 proc
+    dr-xr-x---   2 root  root              1024 Jun  3 20:35 root
+    drwxr-xr-x   6 root  root               120 Jun  3 20:04 run
+    lrwxrwxrwx   1 root  root                 8 Feb 15 20:53 sbin -> usr/sbin
+    drwxr-xr-x   2 root  root              1024 Feb 15 20:53 selinux
+    drwxr-xr-x   2 root  root              1024 Jun 10  2014 srv
+    drwxr-xr-x  13 65534         65534        0 Jun  3 19:59 sys
+    lrwxrwxrwx   1 root  root                17 Feb 15 20:53 tmp -> /var/volatile/tmp
+    -rwxr-xr-x   1 65534         65534      238 Jun  3 20:04 unfix_sshd.sh
+    drwxr-xr-x  13 root  root              1024 Feb 15 20:53 usr
+    drwxr-xr-x  18 root  root              1024 Jun  3 18:27 var
+    [guestshell@guestshell /]$
+    ```
+    
+    There are a couple of directories of particular interest:
+    
+    * `/bin` - A symlink to `/usr/bin`, containing all user commands
+    * `/sbin` - A symlink to `/usr/sbin`, containing all root commands
+    * `/flash` - A symlink to `/bootflash`, which is equivalent to the `bootflash:` file system on the IOS XE device 
+    Guest Shell is running on.  This is particular handy for sharing files and between IOS XE and Guest Shell.
+    
+    Confirm the contents of `/botoflash` in Guest Shell and `bootflash:` are identical with the `ls -la /bootflash` 
+    and `dir bootflaash:` commands, from the Guest Shell `[guestshell@guestshell /]$` and IOS XE device privieleged 
+    EXEC `csr1#` command prompt respectively, for example:
+    
+    ```
+    [guestshell@guestshell /]$ ls -la /bootflash
+    total 409929
+    drwxrwxr-x 13 65534 network-admin      4096 May 24 05:01 .
+    drwxr-xr-x 23 root  root               1024 Jun  3 20:04 ..
+    -rw-r--r--  1 65534         65534        16 Mar 30 17:12 .cvac_skip_once
+    drwxr-xr-x  3 65534         65534      4096 Mar 30 17:15 .dbpersist
+    drwxr-xr-x  3 65534         65534      4096 Jun  3 19:59 .installer
+    drwxrwxrwx  2 65534         65534      4096 Mar 30 17:10 .prst_sync
+    drwxr-xr-x  2 65534         65534      4096 Mar 30 17:10 .rollback_timer
+    drwxr-xr-x  3 65534         65534      4096 Mar 30 17:10 core
+    -rw-r--r--  1 65534         65534 380933080 Mar 30 17:09 csr1000v-mono-universalk9.16.08.01.SPA.pkg
+    -rw-r--r--  1 65534         65534  38304805 Mar 30 17:09 csr1000v-rpboot.16.08.01.SPA.pkg
+    -rw-rw-r--  1 65534 network-admin      3870 Apr  6 18:28 csr1_initial_config.txt
+    -rw-r--r--  1 65534         65534       157 Jun  3 20:02 csrlxc-cfg.log
+    -rw-r--r--  1 65534         65534         0 Jun  3 20:02 cvac.log
+    drwxr-xr-x 22 65534         65534      4096 Jun  3 20:04 iox
+    drwx------  2 65534         65534     16384 Mar 30 17:08 lost+found
+    drwxr-xr-x  3 65534         65534      4096 Mar 30 17:12 onep
+    -rw-r--r--  1 65534         65534        16 Mar 30 17:12 ovf-env.xml.md5
+    -rw-r--r--  1 65534         65534      1941 Mar 30 17:09 packages.conf
+    -rw-r--r--  1 65534         65534        30 Jun  3 20:02 throughput_monitor_params
+    drwxrwxrwx  2 65534         65534     20480 Jun  4 03:40 tracelogs
+    drwxrwxrwx  2 65534         65534      4096 Mar 30 17:11 virtual-instance
+    drwxrwx---  2 65534         65534      4096 Mar 30 17:11 vman_fdb
+    ```
+    
+    ```
+    csr1#dir bootflash:
+    Directory of bootflash:/
+    
+       11  drwx            16384  Mar 30 2018 17:08:36 +00:00  lost+found
+    284481  drwx             4096   Jun 3 2018 19:59:46 +00:00  .installer
+       12  -rw-        380933080  Mar 30 2018 17:09:33 +00:00  csr1000v-mono-universalk9.16.08.01.SPA.pkg
+    24385  -rw-         38304805  Mar 30 2018 17:09:33 +00:00  csr1000v-rpboot.16.08.01.SPA.pkg
+    24386  -rw-             1941  Mar 30 2018 17:09:33 +00:00  packages.conf
+    308865  drwx             4096  Mar 30 2018 17:10:41 +00:00  core
+    113793  drwx             4096  Mar 30 2018 17:10:32 +00:00  .prst_sync
+    32513  drwx             4096  Mar 30 2018 17:10:42 +00:00  .rollback_timer
+    203201  drwx            20480   Jun 4 2018 03:40:50 +00:00  tracelogs
+    382017  drwx             4096  Mar 30 2018 17:15:16 +00:00  .dbpersist
+    195073  drwx             4096  Mar 30 2018 17:11:20 +00:00  virtual-instance
+    24387  -rw-               30   Jun 3 2018 20:02:02 +00:00  throughput_monitor_params
+    24388  -rw-                0   Jun 3 2018 20:02:01 +00:00  cvac.log
+    24389  -rw-               16  Mar 30 2018 17:12:41 +00:00  ovf-env.xml.md5
+    24390  -rw-               16  Mar 30 2018 17:12:41 +00:00  .cvac_skip_once
+    24391  -rw-              157   Jun 3 2018 20:02:18 +00:00  csrlxc-cfg.log
+    211329  drwx             4096  Mar 30 2018 17:12:44 +00:00  onep
+    24392  -rw-             3870   Apr 6 2018 18:28:43 +00:00  csr1_initial_config.txt
+    325121  drwx             4096   Jun 3 2018 20:04:04 +00:00  iox
+    
+    7897796608 bytes total (5937340416 bytes free)
+    csr1#
+    ```
+    
+    Once within a Guest Shell Bash CLI session, you can access the IOS XE device CLI.  Let's explore how in the next 
+    step of this lab.
 
 #### Step 4: Running IOS XE Commands from Guest Shell
 
@@ -467,23 +574,23 @@ command `dohost`: `dohost 'foo'`.  For example, to display the IOS XE device int
     [guestshell@guestshell ~]$
     ```
 
----
-
-Navigation - [Next Page](LTRDEV-1100-Guide-04.md)
-
 ### Exercise 2: Unleashing Network Programmability at the Edge with IOS XE
 
 #### Objectives
 
 The objectives for this exercise are to:
 
-* Foo
-* Bar
+* Explore additional Guest Shell use cases
+* Explore Python in Guest Shell on IOS XE
 
-#### Step 1: Foo
+#### Step 1: Exploring Additional Guest Shell Use Cases
+
+lorem ipsum
+
+#### Step 2: Explore Python in Guest Shell on IOS XE
 
 lorem ipsum
 
-#### Step 2: Bar
+---
 
-lorem ipsum
+Navigation - [Next Page](LTRDEV-1100-Guide-04.md)
