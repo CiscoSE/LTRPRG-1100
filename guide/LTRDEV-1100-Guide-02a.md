@@ -141,8 +141,8 @@ command `git init`, for example:
     Now take a look at the contents of the directory.  You will find a hidden directory named `.git`:
     
     ```
-    $ ls -al
-    $ ls -al
+    $ ls -la
+    $ ls -la
     total 4
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
@@ -307,7 +307,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
         
     ```
     $ cd ~/lab
-    $ ls -al
+    $ ls -la
     total 16
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
@@ -330,14 +330,14 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     remote: Total 117 (delta 51), reused 80 (delta 24), pack-reused 0
     Receiving objects: 100% (117/117), 86.75 KiB | 488.00 KiB/s, done.
     Resolving deltas: 100% (51/51), done.
-    $ ls -al
+    $ ls -la
     total 20
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 ./
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus18/
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 LTRDEV-1100/
     $ cd LTRDEV-1100
-    $ ls -a
+    $ ls -la
    total 18
     drwxr-xr-x 1 Administrator 197121    0 Jun  1 01:28 ./
     drwxr-xr-x 1 Administrator 197121    0 Jun  1 01:28 ../
