@@ -4,12 +4,6 @@ Navigation - [Previous Page](LTRDEV-1100-Guide-02.md)
 
 ## Git and GitHub
 
-TODO:
-
-- [x] @curtissmith Draft "Tools of the Ninja - Git and GitHub"
-- [x] Proofread
-- [x] Add example output and screenshots
-
 ### Introducing Git and GitHub
 
 [Git](https://git-scm.com/) is a free and open source distributed version control system.  It was designed to be 
@@ -27,7 +21,8 @@ A Git repository, or repo for short, is a group of files that are tracked as a p
 your computer, but the repository must be hosted on a server if two or more people are going to access the repository.  
 [GitHub](https://github.com/) is the largest online host of Git repositories on the Internet.  GitHub also serves as 
 a community for developers.  GitHub is free, but any repositories you create and host on GitHub with a free account must
-be public.  Private repositories are supported with a [paid subscription account upgrade](https://github.com/account/upgrade).
+be public.  Private repositories are supported with a
+[paid subscription account upgrade](https://github.com/account/upgrade).
 
 ### Exercise 1: Creating a GitHub Account
 
