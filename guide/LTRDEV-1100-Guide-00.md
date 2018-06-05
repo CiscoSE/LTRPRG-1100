@@ -1,10 +1,5 @@
 # Introduction
 
-TODO:
-
-- [x] @curtissmith Draft Lab Introduction
-- [x] @curtissmith Proofread
-
 The title of this lab is "So, You want to be a Network Programmability Ninja, Now What?"  In this lab, we will help 
 you get started with network programmability and arm you with the concepts and tools and real-world use cases needed to 
 make use of network programmability in your day-to-day work and play.
@@ -17,11 +12,6 @@ We hope you have fun and learn valuable new skills!
 
 # Learning Objectives
 
-TODO:
-
-- [x] @curtissmith Draft Lab Learning Objectives
-- [x] @curtissmith Proofread
-
 Upon completion of this lab, you will be able to:
 
 * Understand what are the basic network programmability concepts
@@ -31,10 +21,6 @@ Upon completion of this lab, you will be able to:
 * Put your new skills to the test
 
 # Lab Topology
-
-TODO:
-
-- [x] Update lab topology
 
 ![Lab Topology](assets/LTRDEV-1100-Topology.png)
 
@@ -61,4 +47,4 @@ TODO:
 
 ---
 
-**Navigation** - [Next Page](LTRDEV-1100-Guide-01.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-01.md)

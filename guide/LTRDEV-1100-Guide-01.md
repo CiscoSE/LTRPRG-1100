@@ -1,13 +1,8 @@
-**Navigation** - [Previous Page](LTRDEV-1100-Guide-00.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-00.md)
 
 ---
 
 # The Network Programmability Dojo
-
-TODO: 
-
-- [x] @curtissmith Draft "The Network Programmability Dojo"
-- [x] @curtissmith Proofread
 
 ## What is Network Programmability
 
@@ -55,4 +50,4 @@ armed with the Ninja training necessary to go and practice the fine art of netwo
 
 ---
 
-**Navigation** - [Next Page](LTRDEV-1100-Guide-01a.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-01a.md)
