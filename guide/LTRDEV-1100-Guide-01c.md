@@ -29,7 +29,7 @@ on GitHub (we'll learn more about Git and GitHub later in the lab).
 * DevNet [Application Developer Resources](https://developer.cisco.com/appdev/) - Discover the new kinds of 
 applications that can be built when combined with the world's leading networking, collaboration, and IoT company.
 
-#### Step 2: Exploring DevNet Inspire Resources
+#### Step 3: Exploring DevNet Inspire Resources
 
 Here are a few DevNet inspiration resources:
 
@@ -37,7 +37,7 @@ Here are a few DevNet inspiration resources:
 * DevNet [Express Events](https://developer.cisco.com/site/devnet/events-contests/events/) - Join Cisco and your 
 peers at DevNet Express events.  It is a focused event where you listen, learn, and put what you learn into practice.
 
-#### Step 2: Exploring DevNet Connect Resources
+#### Step 4: Exploring DevNet Connect Resources
 
 Here are a few DevNet connect resources:
 
