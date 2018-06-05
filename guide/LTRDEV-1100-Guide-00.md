@@ -28,6 +28,8 @@ Upon completion of this lab, you will be able to:
 
 1. [The Network Programmability Dojo](LTRDEV-1100-Guide-01.md)
     1. [Cisco DevNet](LTRDEV-1100-Guide-01a.md)
+    2. [Cisco DevNet (Continued)](LTRDEV-1100-Guide-01b.md)
+    2. [Cisco DevNet (Continued)](LTRDEV-1100-Guide-01c.md)
 2. [Tools of the Ninja](LTRDEV-1100-Guide-02.md)
     1. [Git and GitHub](LTRDEV-1100-Guide-02a.md)
     2. [Vagrant Up for Network Engineers](LTRDEV-1100-Guide-02b.md)
