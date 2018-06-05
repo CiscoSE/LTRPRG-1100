@@ -4,58 +4,15 @@ Navigation - [Previous Page](LTRDEV-1100-Guide-01.md)
 
 ## Cisco DevNet
 
-TODO:
-
-- [x] @curtissmith Add screen shots
-- [x] @curtissmith Proofread
-
 ### Introducing Cisco DevNet
 
-DevNet is your Network Programmability Dojo.  DevNet is where you can Learn, Code, Inspire, and Connect.  We'll 
-explore what that means in the next step, but first, let's create a DevNet account.
-
-### Exercise 1: Joining Cisco DevNet
+DevNet is your Network Programmability Dojo.  DevNet is where you can Learn, Code, Inspire, and Connect.  It is the 
+place to create and find inspiring applications, learn about Cisco APIs, and connect with other developers in Cisco 
+communities.  DevNet is the single largest resource for everything "developer" at Cisco.
 
 ![Cisco DevNet by the Numbers](assets/DevNetByTheNumbers.png)
 
-#### Objectives
-
-The objectives for this exercise are to:
-
-* Create a DevNet account
-* Explore DevNet
-
-#### Step 1: Creating a Cisco DevNet Account
-
-The first step is joining [Cisco DevNet](https://developer.cisco.com/).
-
-1. Let's create your DevNet account.
-    1. Navigate to [DevNet](https://developer.cisco.com): `https://developer.cisco.com/`.
-        
-        ![DevNet Website](assets/DevNet-01.png)
-        
-    2. Click the `Login` link at the top right of the web page.
-        
-        ![DevNet Login](assets/DevNet-02.png)
-        
-        You are given the choice of several single sign-on options.  We recommend using your Cisco ID, but you may 
-        choose whichever you feel is appropriate.
-    
-    3. Once you've logged in, complete your DevNet account profile if this is your first time logging in.  Click 
-    the `Complete setup` button.
-        
-        ![DevNet Profile 1](assets/DevNet-03.png)
-        
-    4. Congratulations, you've successfully joined Cisco DevNet!  Click the `Take me to my dashboard` button and you 
-    are ready to explore DevNet.
-        
-        ![DevNet Profile 2](assets/DevNet-04.png)
-
-#### Step 2: Exploring Cisco DevNet
-
-DevNet is where you can Learn, Code, Inspire, and Connect.  It is the place to create and find inspiring applications,
-learn about Cisco APIs, and connect with other developers in Cisco communities.  DevNet is the single largest resource 
-for everything "developer" at Cisco.  DevNet answers these questions:
+DevNet answers these questions:
 
 * What is it and do I want to use it?
 * How do I get started?
@@ -66,10 +23,69 @@ for everything "developer" at Cisco.  DevNet answers these questions:
 
 ![DevNet: Learn, Code, Inspire, Connect](assets/DevNetLearnCodeInspireConnect.png)
 
-##### Learn
+#### Learn
 
 Access pre-release content; carry out coding tutorials and learning labs; and get paid case-based support and free 
 online forum support.
+
+#### Code
+
+Download API client libraries, reference guides, sample apps and sample code; access cloud-based development 
+platforms; warm up on API use with pre-configured demos; and test your code in the Sandbox Labs.
+
+#### Inspire
+
+Share what you're building; submit your creations and be recognized for your efforts; and meet one-on-one at DevNet 
+events.
+
+#### Connect
+
+Join communities of interest and participate in on-going discussions around technologies; participate in trending 
+forums on various Cisco technologies; get your questions answered; meet and greet at events around the world.
+
+### Exercise 1: Joining Cisco DevNet
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Create a DevNet account
+
+#### Step 1: Creating a Cisco DevNet Account
+
+The first step is your network programmability training is joining [Cisco DevNet](https://developer.cisco.com/).  Let's 
+create your DevNet account, if you don't already have one.
+
+1. Navigate to [DevNet](https://developer.cisco.com): `https://developer.cisco.com/`.
+    
+    ![DevNet Website](assets/DevNet-01.png)
+
+2. Click the `Login` link at the top right of the web page.
+    
+    ![DevNet Login](assets/DevNet-02.png)
+    
+    You are given the choice of several single sign-on options.  We recommend using your Cisco ID, but you may 
+    choose whichever you feel is appropriate.
+
+3. Once you've logged in, complete your DevNet account profile if this is your first time logging in and click 
+the `Complete setup` button.
+    
+    ![DevNet Profile 1](assets/DevNet-03.png)
+    
+4. Congratulations, you've successfully joined Cisco DevNet!  Click the `Take me to my dashboard` button and you 
+are ready to explore DevNet.
+        
+    ![DevNet Profile 2](assets/DevNet-04.png)
+
+### Exercise 2: Exploring Cisco DevNet
+
+#### Objectives
+
+The objectives for this exercise are to:
+
+* Explore DevNet
+
+#### Step 1: Exploring DevNet Learn Resources
 
 Here are a few DevNet learning resources:
 
@@ -77,10 +93,7 @@ Here are a few DevNet learning resources:
 * DevNet [Video Course](https://developer.cisco.com/video/net-prog-basics/) - Jumpstart your journey into network 
 programmability with expert-led videos.
 
-##### Code
-
-Download API client libraries, reference guides, sample apps and sample code; access cloud-based development 
-platforms; warm up on API use with pre-configured demos; and test your code in the Sandbox Labs.
+#### Step 2: Exploring DevNet Code Resources
 
 Here are a few DevNet code resources:
 
@@ -91,10 +104,7 @@ on GitHub (we'll learn more about Git and GitHub later in the lab).
 * DevNet [Application Developer Resources](https://developer.cisco.com/appdev/) - Discover the new kinds of 
 applications that can be built when combined with the world's leading networking, collaboration, and IoT company.
 
-##### Inspire
-
-Share what you're building; submit your creations and be recognized for your efforts; and meet one-on-one at DevNet 
-events.
+#### Step 2: Exploring DevNet Inspire Resources
 
 Here are a few DevNet inspiration resources:
 
@@ -102,10 +112,7 @@ Here are a few DevNet inspiration resources:
 * DevNet [Express Events](https://developer.cisco.com/site/devnet/events-contests/events/) - Join Cisco and your 
 peers at DevNet Express events.  It is a focused event where you listen, learn, and put what you learn into practice.
 
-##### Connect
-
-Join communities of interest and participate in on-going discussions around technologies; participate in trending 
-forums on various Cisco technologies; get your questions answered; meet and greet at events around the world.
+#### Step 2: Exploring DevNet Connect Resources
 
 Here are a few DevNet connect resources:
 
