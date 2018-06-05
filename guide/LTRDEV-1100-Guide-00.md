@@ -10,6 +10,8 @@ cases at the end of this lab.
 
 We hope you have fun and learn valuable new skills!
 
+![Network Programmability Ninja Star](assets/NetworkProgrammabilityStar.jpg)
+
 # Learning Objectives
 
 Upon completion of this lab, you will be able to:
