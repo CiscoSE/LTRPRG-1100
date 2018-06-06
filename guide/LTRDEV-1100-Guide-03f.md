@@ -414,7 +414,7 @@ IOS XE device CLI.
     * `/flash` - A symlink to `/bootflash`, which is equivalent to the `bootflash:` file system on the IOS XE device 
     Guest Shell is running on.  This is particular handy for sharing files and between IOS XE and Guest Shell.
     
-    Confirm the contents of `/botoflash` in Guest Shell and `bootflash:` are identical with the `ls -la /bootflash` 
+    Confirm the contents of `/bootflash` in Guest Shell and `bootflash:` are identical with the `ls -la /bootflash` 
     and `dir bootflaash:` commands, from the Guest Shell `[guestshell@guestshell /]$` and IOS XE device privieleged 
     EXEC `csr1#` command prompt respectively, for example:
     
