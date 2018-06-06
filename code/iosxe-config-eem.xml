@@ -1,0 +1,28 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <event>
+            <manager xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-eem">
+                <applet>
+                    <name>GUESTSHELL-CONFIG-CHANGE-TATTLE-BOT</name>
+                    <event>
+                        <syslog>
+                            <pattern>%SYS-5-CONFIG_I: Configured from</pattern>
+                        </syslog>
+                    </event>
+                    <action>
+                        <name>0.0</name>
+                        <cli>
+                            <command>en</command>
+                        </cli>
+                    </action>
+                    <action>
+                        <name>1.0</name>
+                        <cli>
+                            <command>guestshell run python /bootflash/scripts/iosxe-netassistant-bot.py -t Mzk1ZTU3YzMtNDdiZi00MzU0LTkxOTItZTJiMjRiYjc5YmE0YTA5MjBhMTYtNTZl -e curtissm@cisco.com</command>
+                        </cli>
+                    </action>
+                </applet>
+            </manager>
+        </event>
+    </native>
+</config>
