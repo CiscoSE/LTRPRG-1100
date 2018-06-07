@@ -3,35 +3,32 @@
 import sys
 import cli
 
-intf= sys.argv[1:]
+intf = sys.argv[1:]
 intf = ''.join(intf[0])
 
-print "\n\n *** Configuring interface %s with 'configurep' function *** \n\n" %intf
+print("\nConfiguring interface %s with 'configurep' function...\n") % intf
 
-cli.configurep(["interface loopback55","ip address 10.55.55.55 255.255.255.0","no shut","end"])
+cli.configurep(["interface " + intf, "ip address 10.55.55.55 255.255.255.0", "no shut", "end"])
 
-print "\n\n *** Configuring interface %s with 'configure' function *** \n\n"
+print("\nConfiguring interface %s with 'configure' function...\n") % intf
 
-cmd='interface %s,logging event link-status ,end' % intf
-
+cmd = 'interface %s,logging event link-status,end' % intf
 cli.configure(cmd.split(','))
 
-print "\n\n *** Printing show cmd with 'executep' function *** \n\n"
+print("Printing show command output with 'executep' function...\n")
 
 cli.executep('show ip interface brief')
 
-print "\n\n *** Printing show cmd with 'execute' function *** \n\n"
+print("\nPrinting show command with 'execute' function...\n")
 
-output= cli.execute('show run interface %s' %intf)
+output = cli.execute('show run interface %s' % intf)
 
-print (output)
+print(output)
 
-print "\n\n *** Configuring interface %s with 'cli' function *** \n\n"
+print("\nConfiguring interface %s with 'cli' function...\n" % intf)
 
-## The following from the original fails on CSR1000V, so changed to something more generic.
-#cli.cli('config terminal; interface %s; spanning-tree portfast edge default' %intf)
-cli.cli('config terminal; interface %s; description Configured with a Python script from Guest Shell' %intf)
+cli.cli('config terminal; interface %s; description Configured with a Python script from Guest Shell' % intf)
 
-print "\n\n *** Printing show cmd with 'clip' function *** \n\n"
+print("Printing show command with 'clip' function...")
 
-cli.clip('show run interface %s' %intf)
+cli.clip('show run interface %s' % intf)
