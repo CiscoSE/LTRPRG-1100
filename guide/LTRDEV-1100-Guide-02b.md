@@ -13,10 +13,10 @@ TODO:
 ### Introducing Vagrant Up for Network Engineers
 
 [Vagrant](https://www.vagrantup.com/) is an Open Source tool for creating workflows to build and manage virtual 
-machine environments.  Vagrant is developed and maintained by the San Francisco-based company [HashiCorp](https://www
-.hashicorp.com/).  Vagrant is not just for software developers.  Developers, designers, DevOps engineers, and network
- engineers alike can use Vagrant to automatically provision consistent and disposable virtual environments that can be  
-leveraged for application or scripting design, development, and testing.
+machine environments.  Vagrant is developed and maintained by the San Francisco-based company
+[HashiCorp](https://www.hashicorp.com/).  Vagrant is not just for software developers.  Developers, designers, DevOps 
+engineers, and network engineers alike can use Vagrant to automatically provision consistent and disposable virtual 
+environments that can be leveraged for application or scripting design, development, and testing.
 
 You can use Vagrant to learn and test APIs, write and test scripts, and validate network device platform commands 
 and configuration if the system you are interested can be virtualized.  Fortunately, many Cisco devices 
@@ -36,10 +36,10 @@ The objectives for this exercise are to:
 #### Step 1: Describing Vagrant
 
 How many times have you said "It worked fine in the lab, I don't know why it won't work in production."?  Or how many 
-times when troubleshooting an appication problem you've heard someone say "It worked fine in dev, I don't know whjy 
+times when troubleshooting an application problem you've heard someone say "It worked fine in dev, I don't know why 
 it won't work in prod."?  Network engineers oftentimes test configuration on their own test switch or router.  
 Developers oftentimes develop and test code on their workstations.  But if your switch or or their workstation don't 
-match production systems or environments, testing and development won't reflect reality and unfornsee issues may 
+match production systems or environments, testing and development won't reflect reality and unforeseen issues may 
 arise.  You need a lab environment that closely reflects your production network.  Developers need a dev environment 
 that closely matches their production systems.  This is where Vagrant comes into play. 
 
@@ -47,7 +47,7 @@ Vagrant can be used to create virtual environments that closely, if not identica
 environments.  Traditionally, building test dev environments was time consuming and could not be easily reproduced 
 or replicated. With Vagrant, you can build a network programmability environment once that can create a virtual 
 machine from basic templates called [boxes](https://www.vagrantup.com/intro/getting-started/boxes.html), customize 
-the operating system, install required software, and more.  Vagrant manages virtualization platforms refered to as 
+the operating system, install required software, and more.  Vagrant manages virtualization platforms referred to as 
 [providers](https://www.vagrantup.com/intro/getting-started/providers.html).
 
 Instead of building or recreating a virtual machine from scratch every time you need a network programmability 
