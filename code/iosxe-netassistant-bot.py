@@ -1,6 +1,22 @@
 #!/usr/bin/env python
 
-from ciscosparkapi import CiscoSparkAPI
+#from ciscosparkapi import CiscoSparkAPI
+import requests
+
+def msgToPersonEmail(botkey, toEmail, msg):
+    myheaders = {
+        "content-type":"application/json",
+        "Authorization":"Bearer {}".format(botkey)
+    }
+    url = "https://api.ciscospark.com/v1/messages/"
+    payload = '''{{ 
+        "toPersonEmail": "{}",
+        "text": "{}"
+    }}'''.format(toEmail, msg)
+    response = requests.post(url, headers=myheaders, data=payload)
+    response.raise_for_status()
+    return True
+
 
 if __name__ == '__main__':
     # Use ArgParse to retrieve command line parameters
@@ -21,5 +37,7 @@ if __name__ == '__main__':
     token = args.token
     email = args.email
     message = "**Alert:** Config Changed"
-    api = CiscoSparkAPI(access_token=token)
-    api.messages.create(toPersonEmail=email, markdown=message)
+    #api = CiscoSparkAPI(access_token=token)
+    #api.messages.create(toPersonEmail=email, markdown=message)
+
+    msgToPersonEmail(token, email, message)
