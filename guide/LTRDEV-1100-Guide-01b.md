@@ -1,4 +1,4 @@
-Navigation - [Next Page](LTRDEV-1100-Guide-01a.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-01a.md)
 
 ---
 

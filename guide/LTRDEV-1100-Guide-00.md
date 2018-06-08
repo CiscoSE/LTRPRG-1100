@@ -47,6 +47,8 @@ Upon completion of this lab, you will be able to:
     4. [Using NETCONF/YANG (Continued)](LTRDEV-1100-Guide-03d.md)
     5. [Using NETCONF/YANG (Continued)](LTRDEV-1100-Guide-03e.md)
     6. [Guest Shell](LTRDEV-1100-Guide-03f.md)
+    7. [Guest Shell (Continued)](LTRDEV-1100-Guide-03g.md)
+    8. [Guest Shell (Continued)](LTRDEV-1100-Guide-03h.md)
 4. [Test Your Ninja Skills](LTRDEV-1100-Guide-04.md)
 
 ---
