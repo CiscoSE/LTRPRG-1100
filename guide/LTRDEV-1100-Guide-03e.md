@@ -196,7 +196,7 @@ command, for example:
 
 Using SSH to establish a NETCONF connection manually is not recommended and was only shown here for illustrative 
 purposes.  Doing so would require that you copy-and-paste XML encoded RPC commands by hand to manage and configure 
-your network device.  That defeats the purspose and intent of what we're teaching in this lab.  Now that we have 
+your network device.  That defeats the purpose and intent of what we're teaching in this lab.  Now that we have 
 successfully configured and tested NETCONF on IOS XE, let's see how to put Python to use to write applications for 
 model drive programmability using NETCONF.
 

@@ -10,7 +10,7 @@ TODO:
 
 ## Script a Network Programmability Assistant for Cisco Webex Teams
 
-IOS XE -> EEM script -> On-box Python in GuestSheel -> Post to Webex Teams
+IOS XE -> EEM script -> On-box Python in Guest Shell -> Post to Webex Teams
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit. Nam venenatis 
 metus quis risus aliquam mattis. Ut vitae elementum libero. Nam malesuada felis in tincidunt luctus. Aliquam ut magna

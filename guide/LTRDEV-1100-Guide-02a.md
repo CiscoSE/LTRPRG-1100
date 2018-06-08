@@ -43,7 +43,7 @@ collaborate through GitHub.
 
 1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`.
 2. On the GitHub homepage, fill out the form to [Sign up](https://github.com/join?source=header-home), choosing a 
-unique username, entering your email adress, and creating a password.  Click the `Sign up for GitHub` button.
+unique username, entering your email address, and creating a password.  Click the `Sign up for GitHub` button.
 3. Choose the personal plan `Unlimited public repositories for free.`  Optionally click to select `Send me updates on
 GitHub news, offers, and events`.  Click the `Continue` button.
 4. Tailor your GitHub experience by answering the questions.  Click the `Submit` button.
@@ -283,7 +283,7 @@ changes:
     $
     ```
     
-    You can further confirm that your local repository is in sync with your remote repository and chdeck for changes 
+    You can further confirm that your local repository is in sync with your remote repository and check for changes 
     with the `git pull` command:
     
     ```

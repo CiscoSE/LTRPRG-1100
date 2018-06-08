@@ -21,7 +21,7 @@ The benefits to utilizing API's are in the way that the information can be consu
 rate and control with which changes can be made. As an example on the information processing side, imagine that you 
 have a critical router and you want to be alerted if a certain route or set of routes change or disappear from the 
 routing table. Monitoring for this situation with traditional network management tools may prove difficult.  Using an 
-API to query the router about these routes, the specific information being sought can be retreived, parsed, and used 
+API to query the router about these routes, the specific information being sought can be retrieved, parsed, and used 
 to generate an alert.
 
 As products continue to implement API's, possibilities of cross-product or cross-system integration become ever more 
@@ -32,7 +32,7 @@ accomplished on their own.
 Many modern API's are RESTful API's, meaning that they follow HTTP methods and framework to exchange data.  While 
 Postman is a full-featured and powerful toolset, it still provides a remarkably user-friendly experience as an API 
 client. This functionality is helpful when working with products or services that offer a REST API. Postman can be a 
-great first step to prototype the API call, and then subsequently understand how the resposne looks. Using this 
+great first step to prototype the API call, and then subsequently understand how the response looks. Using this 
 information, it becomes much easier to interact with the API programmatically.
 
 ### Exercise 1: Learn Postman Basics

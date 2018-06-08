@@ -82,8 +82,8 @@ a variable name or value, click the "eye" icon immediately to the right of the a
     ![Postman request with variable](assets/postman-09.png)
     
 5. Notice that the request completed with a status of `200 OK` to the API at postman-echo.com. Also notice that if 
-you mouseover the variable in the request URL, Postman will popup a box showing the variable is an environment 
-variable as well as its value.
+you hover the mouse over the variable in the request URL, Postman will popup a box showing the variable is an 
+environment variable as well as its value.
 
 #### Step 3: Generating a Python script from Postman
 

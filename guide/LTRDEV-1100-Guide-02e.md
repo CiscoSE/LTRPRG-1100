@@ -13,7 +13,7 @@ TODO:
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
 [JetBrains](https://www.jetbrains.com/).  There is a
 [free community version](https://www.jetbrains.com/pycharm/download) available for download, but you can support the 
-application and obtain addtional features with the purchase of the 
+application and obtain additional features with the purchase of the 
 [professional version](https://www.jetbrains.com/pycharm/buy/).  JetBrains describes PyCharm as 
 an "intelligent coding assistant".
  

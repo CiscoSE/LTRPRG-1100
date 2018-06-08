@@ -24,8 +24,8 @@ network device.
 
 #### Step 1: Understanding the NETCONF Protocol Stack
 
-The NETCONF network management protocol is a client-server model using remote precudure call (RPC) over a secure 
-connection-oriented session.  The client sends the RPC encoded in XML, and the server replies with a respone encoded 
+The NETCONF network management protocol is a client-server model using remote procedure call (RPC) over a secure 
+connection-oriented session.  The client sends the RPC encoded in XML, and the server replies with a response encoded 
 in XML.  The client RPC and server response are typically YANG data models and YANG data, encoded in an XML data 
 format.  The most common transport protocol used to secure NETCONF connections is typically SSH.  The NETCONF 
 protocol stack and relationship to SSH and YANG can be represented as follows:
@@ -63,7 +63,7 @@ protocol stack and relationship to SSH and YANG can be represented as follows:
 * Messages Layer - NETCONF encodes all communication in XML sent with remote procedure call (RPC).
 * Operations Layer - NETCONF messages are sent as operations, which are specific actions to take.  NETCONF operations
     will be covered in more detail later in this lab.
-* Content Layer -  This is the configruation and operational data from the network device, YANG data, to be exact.
+* Content Layer -  This is the configuration and operational data from the network device, YANG data, to be exact.
 
 In the NETCONF protocol, the client is referred to as the `manager` and the server is referred to as the `agent`.  
 The manager is you, or your workstation or network management system.  The agent is the network device you manage.  

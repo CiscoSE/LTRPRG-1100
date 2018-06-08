@@ -15,7 +15,7 @@ TODO:
 Traditional network device management techniques, for example command line interface (CLI) and web user interface 
 (UI), were designed for human to machine interaction for configuring and accessing operational details.  They by 
 definition are not programmable.  Although attempts at automation through screen scraping or imitating interactive 
-sessions are possible, they are error prone, unrealiable, and do not scale.
+sessions are possible, they are error prone, unreliable, and do not scale.
 
 The need for reliable and scalable ways to manage network devices is not a new one.  Simple Network Management Protocol 
 (SNMP) was first introduced as a IETF Internet Standard in 1988 as a standard interface configure and retrieve 
