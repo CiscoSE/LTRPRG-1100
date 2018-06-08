@@ -4,6 +4,10 @@ Navigation - [Previous Page](LTRDEV-1100-Guide-03e.md)
 
 ## Guest Shell
 
+TODO:
+
+- [ ] @curtissmith Clean up Guest Shell introduction
+
 A powerful software feature called Guest Shell has been brought to products running Cisco IOS XE.  Originally 
 exclusively available on Nexus switching products running NX-OS, Guest Shell is now available on the Catalyst, ISR, 
 and CSR product families.
@@ -11,6 +15,27 @@ and CSR product families.
 Guest Shell is a virtualized Linux-based environment running on the network device, designed to run standard and custom 
 Linux applications, including Python, for automated management of Cisco devices.  Guest Shell provides a secure 
 environment, decoupled from the host network device, in which you can install and run scripts or software packages.
+
+* Maintain IOS-XE system integrity
+    * Isolated User Space
+    * Fault Isolation
+    * Resource Isolation
+* On-box rapid prototyping
+    * Device-level API Integration
+    * Scripting (Python)
+    * Linux Commands
+* Application Hosting
+* Integrate into your Linux workflow
+* Integrated with IOS XE
+
+Guest Shell is a decoupled execution space running within a Linux Container (LXC)
+
+* From within the Guest Shell the network-admin has the following capabilities:
+    * Access to the network over Linux network interfaces
+    * Access to bootflash
+    * AccesstoIOSCLI
+    * The ability to install and run python scripts.
+    * The ability to install and run 32-bit and 64-bit Linux applications.
 
 ### On-box vs. Off-box Network Programmability
 
