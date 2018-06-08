@@ -37,12 +37,12 @@ The objectives for this exercise are to:
 If you don't already have a Webex Teams (formerly Cisco Spark) account - then the first thing to do is sign up for 
 one. If you already have an account and are confident in your ability to log in to it, please skip to Step 2.
 
-1. Head on over to [Cisco Spark Web Login](https://web.ciscospark.com) to create your account.
+1. Head on over to [Webex Teams Web Login](https://teams.webex.com/) to create your account.
 
 2. Go ahead and type in your email address. If you have yet to activate an account, it will send an email to this 
 address with a link to activate the account. Go ahead and input your email and hit `Next`.
     
-    ![Spark login](assets/spark-01.png)
+    ![Webex login](assets/webex-01.png)
     
 3. If you do not yet have an account, it will tell you to check your email. Please do so, and click on the activation
 link that is there waiting for you.
