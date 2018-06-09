@@ -100,7 +100,7 @@ lab, for example:
     ```
     (pythonenv) $ python -m pip install --upgrade pip==10.0.1
     Cache entry deserialization failed, entry ignored
-    Collecting pip
+    Collecting pip==10.0.1
       Using cached https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390
     b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl
     Installing collected packages: pip
