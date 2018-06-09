@@ -130,7 +130,7 @@ ncclient paramiko netmiko ipaddress` to install all of these packages and their 
 (output truncated for brevity):
 
     ```
-    (pythonenv) $ pip install requests ncclient paramiko netmiko ipaddress
+    (pythonenv) $ pip install requests==2.18.4 ncclient paramiko netmiko ipaddress
     Successfully installed asn1crypto-0.24.0 bcrypt-3.1.4 certifi-2018.4.16 cffi-1.11.5 chardet-3.0.4
     cryptography-2.2.2 idna-2.6 ipaddress-1.0.22 lxml-4.2.1 ncclient-0.5.3 netmiko-2.1.1 paramiko-2.4.1 pyasn1-0.4.3 
     pycparser-2.18 pynacl-1.2.1 pyserial-3.4 pyyaml-3.12 requests-2.18.4 scp-0.11.0 six-1.11.0 textfsm-0.4.1 

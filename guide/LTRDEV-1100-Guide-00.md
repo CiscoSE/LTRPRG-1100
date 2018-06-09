@@ -1,3 +1,13 @@
+TODOs
+
+- [ ] @mgalazka Update Python content with new virtual environment instructions; Add content to upgrade pip==10.0.1;
+Add content to pip install netmiko; Add content to upgrade setuptools==39.2.0;  Add content pip install -r
+requirements.txt
+- [ ] @curtissmith Update all content to include how to open Git Bash and PuTTY
+- [ ] @curtissmith Re-structure/organize content
+- [ ] @mgalazka Update TOC/navigation
+- [ ] Create guide/README.md to include TOC
+
 # Introduction
 
 The title of this lab is "So, You want to be a Network Programmability Ninja, Now What?"  In this lab, we will help 
