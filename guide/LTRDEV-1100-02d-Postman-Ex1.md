@@ -1,4 +1,4 @@
-### Exercise 1: Learning Postman Basics
+### Exercise 1: Getting Started with Postman
 
 #### Objectives
 

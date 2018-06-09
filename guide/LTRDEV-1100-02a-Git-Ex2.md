@@ -1,4 +1,4 @@
-### Exercise 2: Introducing Git Concepts
+### Exercise 2: Introducing Git Concepts and Commands
 
 #### Objectives
 

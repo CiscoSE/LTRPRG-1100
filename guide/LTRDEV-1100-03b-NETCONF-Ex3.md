@@ -1,10 +1,6 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03e-NETCONF-Ex2.md)
+Navigation - [Previous Page](LTRDEV-1100-03b-NETCONF-Ex2.md)
 
 ---
-
-TODO:
-
-- [ ] @curtissmith Draft "Exercise 4: Exploring IOS XE NETCONF Example Use Cases" content
 
 ### Exercise 3: Exploring IOS XE YANG Data Models with NETCONF
 
@@ -292,10 +288,6 @@ lab, for example:
     (pythonenv) $
     ```
 
-### Exercise 4: Exploring IOS XE NETCONF Example Use Cases
-
-* Example scripts: https://github.com/rshoemak/DevNet2556
-
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-03g-GuestShell.md)
+Navigation - [Next Page](LTRDEV-1100-03c-GuestShell.md)

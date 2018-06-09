@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-01b-DevNet-Ex1.md)
+Navigation - [Previous Page](LTRDEV-1100-01b-DevNet-Ex1.md)
 
 ---
 
@@ -51,4 +51,4 @@ workshops, panels and more showcase how easily you can become a developer.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-02-Tools.md)
+Navigation - [Next Page](LTRDEV-1100-02-Tools.md)

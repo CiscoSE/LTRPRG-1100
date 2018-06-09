@@ -1,4 +1,4 @@
-### Exercise 1: Getting to Know Webex Teams
+### Exercise 1: Getting Started with Cisco Webex Teams
 
 #### Objectives
 
@@ -40,10 +40,12 @@ use-cases and such. How can you see this useful for you as you embark on network
 #### Step 3: Understand Webex Teams API's
 
 Later in this lab, we will spend more time deep-diving into the logic and details of API's. For now, it is important 
-to understand what kinds of API's are available and how they can help. Let's run through an overview of some important uses of the API.
+to understand what kinds of API's are available and how they can help. Let's run through an overview of some 
+important uses of the API.
 
 1. Navigate to the [Cisco Webex Teams API Quick Reference](https://developer.webex.com/quick-reference.html) page for
-a high-level overview of what interactions you can take using the API. Scroll through the page and look at the different functions that are available for the different categories.
+a high-level overview of what interactions you can take using the API. Scroll through the page and look at the 
+different functions that are available for the different categories.
 
 2. Let's understand what type of info can be gathered through the API. For instance, in the `People` section of the 
 quick reference, click on the `Get My Own Details` request.

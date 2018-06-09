@@ -1,6 +1,6 @@
 # Appendix 2
 
-## Additioanal Network Programmability Resources
+## Additional Network Programmability Resources
 
 ### Additional API Resources
 

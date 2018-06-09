@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-01-Dojo.md)
+Navigation - [Previous Page](LTRDEV-1100-01-Dojo.md)
 
 ---
 
@@ -45,4 +45,4 @@ forums on various Cisco technologies; get your questions answered; meet and gree
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-01b-DevNet-Ex1.md)
+Navigation - [Next Page](LTRDEV-1100-01b-DevNet-Ex1.md)

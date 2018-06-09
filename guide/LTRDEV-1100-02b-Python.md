@@ -20,5 +20,5 @@ and REST API's. With so many uses, it is one of the most powerful tools a Networ
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-02e-Python-Ex1.md)
+Navigation - [Next Page](LTRDEV-1100-02b-Python-Ex1.md)
 

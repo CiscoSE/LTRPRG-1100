@@ -1,8 +1,8 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03h-GuestShell-Ex1.md)
+Navigation - [Previous Page](LTRDEV-1100-03c-GuestShell-Ex1.md)
 
 ---
 
-### Exercise 2: Unleashing Network Programmability at the Network Edge with IOS XE
+### Exercise 2: Unleashing Network Programmability at the Network Edge
 
 #### Objectives
 
@@ -300,4 +300,4 @@ the network device `bootflash:`, transfer the file to the network device file sy
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-04-Test.md)
+Navigation - [Next Page](LTRDEV-1100-04-Test.md)

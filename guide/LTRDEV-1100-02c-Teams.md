@@ -2,6 +2,8 @@ Navigation - [Previous Page](LTRDEV-1100-Guide-02h.md)
 
 ---
 
+## Cisco Webex Teams
+
 ### Introducing Cisco Webex Teams
 
 TODO:
@@ -23,4 +25,4 @@ extensibility brings much to the table for a network programmability ninja.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-03-Hone.md)
+Navigation - [Next Page](LTRDEV-1100-03-Hone.md)

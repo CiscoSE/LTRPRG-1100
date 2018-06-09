@@ -1,4 +1,4 @@
-## Introducing PyCharm
+## PyCharm
 
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
 [JetBrains](https://www.jetbrains.com/).  There is a

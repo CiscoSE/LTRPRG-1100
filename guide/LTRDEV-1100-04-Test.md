@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03g-GuestShell.md)
+Navigation - [Previous Page](LTRDEV-1100-03c-GuestShell.md)
 
 ---
 
@@ -7,4 +7,3 @@ Navigation - [Previous Page](LTRDEV-1100-Guide-03g-GuestShell.md)
 TODO:
 
 - [ ] @curtissmith Draft "Test Your Ninja Skills" introduction
-

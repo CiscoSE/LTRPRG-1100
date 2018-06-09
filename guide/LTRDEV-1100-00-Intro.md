@@ -1,7 +1,40 @@
-# LTRDEV-1100 (Cisco Live US 2018) Lab Guide
+TODOs
 
-This is the Lab Guide for Cisco Live US 2018 LTRDEV-1100 - So, you want to be a Network Programmability Ninja, now 
-what?
+- [x] @mgalazka Update Python content with new virtual environment instructions; Add content to upgrade pip==10.0.1;
+Add content to pip install netmiko; Add content to upgrade setuptools==39.2.0;  Add content pip install -r
+requirements.txt
+- [ ] @curtissmith Update all content to include how to open Git Bash and PuTTY
+- [ ] @curtissmith Re-structure/organize content
+- [ ] @mgalazka Update TOC/navigation
+- [ ] Create guide/README.md to include TOC
+
+# Introduction
+
+The title of this lab is "So, You want to be a Network Programmability Ninja, Now What?"  In this lab, we will help 
+you get started with network programmability and arm you with the concepts and tools and real-world use cases needed to 
+make use of network programmability in your day-to-day work and play.
+
+We will have fun with Ninja-themed metaphors: We will introduce you to the Network Programmability Dojo; teach you 
+the Tools of the Ninja; allow you to Hone your Ninja Skills; and, finally, Test Your Ninja Skills with real-world use 
+cases at the end of this lab.
+
+We hope you have fun and learn valuable new skills!
+
+![Network Programmability Ninja Star](assets/NetworkProgrammabilityStar.jpg)
+
+# Learning Objectives
+
+Upon completion of this lab, you will be able to:
+
+* Understand what are the basic network programmability concepts
+* Learn what tools are useful for getting started with network programmability
+* Practice with the tools to develop and sharpen new network programmability skills
+* Put the concepts and tools to practice with real-world use cases
+* Put your new skills to the test
+
+# Lab Topology
+
+![Lab Topology](assets/LTRDEV-1100-Topology.png)
 
 # Table of Contents
 
@@ -45,3 +78,7 @@ what?
     3. [Vagrant Up for Network Engineers](LTRDEV-1100-05c-Vagrant.md)
         1. [Introducing Vagrant](LTRDEV-1100-05c-Vagrant-Ex1.md)
 6. [Appendix 2](LTRDEV-1100-06-Appx2.md)
+
+---
+
+Navigation - [Next Page](LTRDEV-1100-01-Dojo.md)

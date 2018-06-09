@@ -1,4 +1,4 @@
-### Exercise 2: Working in Postman
+### Exercise 1: Getting Advanced with Postman
 
 #### Objectives
 
