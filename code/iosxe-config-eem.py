@@ -12,6 +12,7 @@ netconf_payload = open("iosxe-config-eem.xml").read()
 
 if __name__ == '__main__':
 
+    # Print the NETCONF payload
     print("Configuration Payload:\n")
     print(netconf_payload)
 
@@ -24,4 +25,5 @@ if __name__ == '__main__':
         netconf_reply = m.edit_config(netconf_payload, target="running")
 
         # Print the NETCONF reply
+        print("Configuration result:\n")
         print(netconf_reply)
