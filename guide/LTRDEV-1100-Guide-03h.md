@@ -232,7 +232,7 @@ the network device `bootflash:`, transfer the file to the network device file sy
     [guestshell@guestshell ~]$
     ```
     
-    Transfer the example script with the `wget` command:
+    Transfer the example script with the `wget` command from `https://raw.githubusercontent.com/curtissmith/LTRDEV-1100/labguide/code/iosxe-cli-example.py`:
     
     ```
     [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRDEV-1100/labguide/code/iosxe-cli-example.py
