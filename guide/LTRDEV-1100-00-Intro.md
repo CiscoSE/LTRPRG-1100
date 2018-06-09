@@ -4,9 +4,10 @@ TODOs
 Add content to pip install netmiko; Add content to upgrade setuptools==39.2.0;  Add content pip install -r
 requirements.txt
 - [ ] @curtissmith Update all content to include how to open Git Bash and PuTTY
-- [ ] @curtissmith Re-structure/organize content
-- [ ] @mgalazka Update TOC/navigation
-- [ ] Create guide/README.md to include TOC
+- [x] @curtissmith Re-structure/organize content
+- [x] @curtissmith Update TOC
+- [ ] @mgalazka Update navigation
+- [x] Create guide/README.md to include TOC
 
 # Introduction
 
