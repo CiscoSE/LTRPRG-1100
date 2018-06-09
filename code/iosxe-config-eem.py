@@ -20,8 +20,8 @@ if __name__ == '__main__':
                          password=PASS,
                          hostkey_verify=False) as m:
 
-        # Send NETCONF <edit-config>
+        # Send NETCONF <edit-config> command with payload
         netconf_reply = m.edit_config(netconf_payload, target="running")
 
-        # Print the NETCONF Reply
+        # Print the NETCONF reply
         print(netconf_reply)
