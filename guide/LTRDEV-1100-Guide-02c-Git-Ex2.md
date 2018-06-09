@@ -1,69 +1,3 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-02.md)
-
----
-
-## Git and GitHub
-
-### Introducing Git and GitHub
-
-[Git](https://git-scm.com/) is a free and open source distributed version control system.  It was designed to be 
-lightweight, easy to learn, and capable to handle projects large and small alike.  Git has a small footprint and is 
-very fast.
-
-A version control system records and manages changes to files over time.  A version control system will have 
-mechanisms that allow you to see the differences between versions and revert back to earlier versions of files being 
-managed.  Generally speaking, most people's idea of version control is to create copies of files and archive them in 
-a series of directories on their file system.  This is prone to error as one file copy mistake and you could 
-lose a lot of work by mistake.  Also, this method rarely works when multiple people are modifying the same files at the
-same time.
- 
-A Git repository, or repo for short, is a group of files that are tracked as a project.  A Git repository can reside on 
-your computer, but the repository must be hosted on a server if two or more people are going to access the repository.  
-[GitHub](https://github.com/) is the largest online host of Git repositories on the Internet.  GitHub also serves as 
-a community for developers.  GitHub is free, but any repositories you create and host on GitHub with a free account must
-be public.  Private repositories are supported with a
-[paid subscription account upgrade](https://github.com/account/upgrade).
-
-### Exercise 1: Creating a GitHub Account
-
-#### Objectives
-
-The objectives for this exercise are to:
-
-* Create a GitHub account
-* Explore GitHub
-
-#### Step 1: Creating a GitHub Account
-
-Although creating a GitHub account is not required to clone Git repositories hosted on GitHub, why not join and 
-participate in one of the largest developer communities on the Internet?  Doing so gives you the opportunity to see 
-what other people are working on or are interested in, learn how software is built by following projects, and share 
-your work - no matter how small - with the community.  Cisco product teams, Cisco DevNet, and Cisco SEs all share and
-collaborate through GitHub.
-
-1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`.
-2. On the GitHub homepage, fill out the form to [Sign up](https://github.com/join?source=header-home), choosing a 
-unique username, entering your email address, and creating a password.  Click the `Sign up for GitHub` button.
-3. Choose the personal plan `Unlimited public repositories for free.`  Optionally click to select `Send me updates on
-GitHub news, offers, and events`.  Click the `Continue` button.
-4. Tailor your GitHub experience by answering the questions.  Click the `Submit` button.
-
-Congratulations, you have joined the GitHub community!
-
-#### Step 2: Exploring GitHub
-
-1. Take a few minutes to follow new and interesting people:
-    1. Search for and follow your Cisco Live lab proctors:
-    [Curtis Smith](https://github.com/curtissmith) (`curtissmith`) and
-    [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`).
-    2. Search for and follow your fellow Cisco Live lab participants.
-2. Take a few minutes to discover new repositories:
-    1. Search for and star the Cisco Live [LTRDEV-1100 session](https://github.com/curtissmith/LTRDEV-1100) repository.
-    2. Search for and bookmark the [Cisco DevNet](https://github.com/CiscoDevNet) organization where sample code from
-    Cisco DevNet is shared.
-    3. Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
-    code from Cisco SE community is shared.
-
 ### Exercise 2: Introducing Git Concepts
 
 #### Objectives
@@ -350,7 +284,3 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     ```
     
     Congratulations, you've cloned a Git repository hosted on GitHub.
-
----
-
-Navigation - [Next Page](LTRDEV-1100-Guide-02b.md)

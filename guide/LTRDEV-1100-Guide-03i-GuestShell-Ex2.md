@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03g.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-03h-GuestShell-Ex1.md)
 
 ---
 
@@ -300,4 +300,4 @@ the network device `bootflash:`, transfer the file to the network device file sy
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-04.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-04-Test.md)

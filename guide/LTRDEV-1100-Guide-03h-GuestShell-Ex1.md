@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03f.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-03g-GuestShell.md)
 
 ---
 
@@ -543,4 +543,4 @@ command `dohost`: `dohost 'foo'`.  For example, to display the IOS XE device int
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-03h.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-03i-GuestShell-Ex2.md)

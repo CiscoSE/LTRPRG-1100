@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-02c.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-02d-Python.md)
 
 ---
 
@@ -101,4 +101,4 @@ correct version.  On all operating systems and platforms, the Python interpreter
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-02e.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-02f-Python-Ex2.md)

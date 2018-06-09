@@ -1,9 +1,3 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03f.md)
-
----
-
-# Test Your Ninja Skills
-
 ## Script a Network Programmability Assistant for Cisco Webex Teams
 
 IOS XE -> EEM script -> On-box Python in Guest Shell -> Post to Webex Teams

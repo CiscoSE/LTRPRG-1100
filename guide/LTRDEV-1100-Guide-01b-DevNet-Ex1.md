@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-01a.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-01a-DevNet.md)
 
 ---
 
@@ -38,4 +38,4 @@ are ready to explore DevNet.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-01c.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-01c-DevNet-Ex2.md)

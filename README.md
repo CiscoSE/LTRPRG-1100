@@ -6,4 +6,4 @@ what?
 * [Abstract](ABSTRACT.md)
 * [Agenda](AGENDA.md)
 * [Speakers' Bio](BIO.md)
-* [Lab Guide](guide/LTRDEV-1100-Guide-00.md)
+* [Lab Guide](guide/LTRDEV-1100-Guide-00-Intro.md)

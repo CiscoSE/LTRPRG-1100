@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03d.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-03e-NETCONF-Ex2.md)
 
 ---
 
@@ -298,4 +298,4 @@ lab, for example:
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-03f.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-03g-GuestShell.md)

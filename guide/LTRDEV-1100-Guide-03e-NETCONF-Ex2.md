@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-03c.md)
+Navigation - [Previous Page](LTRDEV-1100-Guide-03d-NETCONF-Ex1.md)
 
 ---
 
@@ -122,4 +122,4 @@ datastores may be supported by the network device vendor.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-03e.md)
+Navigation - [Next Page](LTRDEV-1100-Guide-03f-NETCONF-Ex3.md)
