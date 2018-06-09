@@ -3,7 +3,7 @@
         <event>
             <manager xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-eem">
                 <applet>
-                    <name>GUESTSHELL-CONFIG-CHANGE-TATTLE-BOT</name>
+                    <name>GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT</name>
                     <event>
                         <syslog>
                             <pattern>%SYS-5-CONFIG_I: Configured from</pattern>
@@ -18,7 +18,7 @@
                     <action>
                         <name>1.0</name>
                         <cli>
-                            <command>guestshell run python /bootflash/scripts/iosxe-netassistant-bot.py -t Mzk1ZTU3YzMtNDdiZi00MzU0LTkxOTItZTJiMjRiYjc5YmE0YTA5MjBhMTYtNTZl -e curtissm@cisco.com</command>
+                            <command>guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com</command>
                         </cli>
                     </action>
                 </applet>
