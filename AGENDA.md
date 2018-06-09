@@ -4,11 +4,14 @@
     * What is Network Programmability
 2. Tools of the Ninja
     * Git and GitHub
-    * Vagrant Up for Network Engineers
     * Python for Network Programmability
-    * Other Desktop Network Programmability Tools (text editors, IDEs, Postman, Cisco Webex Teams)
+    * Cisco Webex Teams
+    * Other Desktop Network Programmability Tools
+        * Vagrant Up for Network Engineers
+        * Postman
+        * PyCharm
 3. Hone Your Ninja Skills
-    * Using APIs
+    * Introducing APIs
     * Using NETCONF/YANG
     * Guest Shell
 4. Test Your Ninja Skills
