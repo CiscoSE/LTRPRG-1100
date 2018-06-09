@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # Use ArgParse to retrieve command line parameters
     from argparse import ArgumentParser
 
-    parser = ArgumentParser("Spark Check In")
+    parser = ArgumentParser("IOS XE Network Assistant Webex Teams Bot Script")
 
     # Retrieve the Webex Teams Bot Access Token and destination email
     parser.add_argument(
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     )
 
     parser.add_argument(
-        "-e", "--email", help="Email to Send to", required=True
+        "-e", "--email", help="Email to Send Message to", required=True
     )
 
     args = parser.parse_args()

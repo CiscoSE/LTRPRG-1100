@@ -24,8 +24,7 @@ For these reasons, it is important to understand which version of Python you are
 In order to work with Python, we need to make sure that it is properly installed, able to run, and is of the 
 correct version.  On all operating systems and platforms, the Python interpreter executable is `python`.
 
-1. Open the Git Bash terminal 
-application and type the command `python` at the command prompt:
+1. Open the Git Bash terminal application and type the command `python` at the command prompt:
     
     ```
     $ python
