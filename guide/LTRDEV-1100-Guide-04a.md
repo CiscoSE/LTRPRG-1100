@@ -90,7 +90,7 @@ example:
     csr1#guestshell run bash
     [guestshell@guestshell ~]$
 
-4. Change to the `/bootflash/scripts` directory created ealier in the lab with the `cd` command from the Guest Shell 
+4. Change to the `/bootflash/scripts` directory created earlier in the lab with the `cd` command from the Guest Shell 
 `[guestshell@guestshell ~]$` prompt:
     
     ```
@@ -431,18 +431,113 @@ snippet:
     $ source pythonenv/Scripts/activate
     (pythonenv) $
     ```
+        
+    Change to the `~/lab/LTRDEV-1100/code` directory inside the Git repository for this lab.
     
-    FOO BAR
+    ```
+    (pythonenv) $ cd ~/lab/LTRDEV-1100/code
+    (pythonenv) $
+    ```
     
-    Change to the 
-    `~/lab/LTRDEV-1100/code` directory inside the Git 
-    repository for this lab.
+    There are two files of interest for this step: `iosxe-config-eem.py` and `iosxe-config-eem.xml`.  The file 
+    `iosxe-config-eem.py` is the NETCONF client Python script using the ncclient Python package.  The file 
+    `iosxe-config-eem.xml` is the XML-encoded YANG data model for the task at hand.  We will need to modify
+    `iosxe-config-eem.xml` to replace strings containing the Bot Access Token and your email address.
     
+    Open the lab folder by double clicking the Windows Explore shortcut on the lab workstation desktop:
     
+    ![Lab Shortcut](assets/WebexTeamsBot-08.png)
     
-"Now each time I make a configuration change, I receive the notification in Cisco Spark.  This is a very basic 
-implementation of the “Chat Ops” idea, but highlights how quick and easy this type of thing can be leveraged with 
-very little time, or programming skill needed."
+    Navigate to the `LTRDEV-1100` then `code` directory:
+    
+    ![Code Directory](assets/WebexTeamsBot-09.png)
+    
+    Right click the file `iosxe-config-eem.xml` and click `Edit with Notepad++`.
+    
+    ![Notepad++](assets/WebexTeamsBot-10.png)
+    
+    In line 21, replace the string after `-t` with your IOX XE Network Assistant Bot Access Token.
+    
+    In line 21, replace the string after `-e` with the email address associated with your Webex Teams account.
+    
+    Save your changes by navigating the `File` menu and clicking `Save`.  Close the Notepad++ application.
+    
+    Now return to the Git Bash terminal and run the `iosxe-config-eem.py` Python script with the `python` command, 
+    for example:
+    
+    ```
+    (pythonenv) $ python iosxe-config-eem.py
+    Configuration Payload:
+    
+    <config>
+        <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+            <event>
+                <manager xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-eem">
+                    <applet>
+                        <name>GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT</name>
+                        <event>
+                            <syslog>
+                                <pattern>%SYS-5-CONFIG_I: Configured from</pattern>
+                            </syslog>
+                        </event>
+                        <action>
+                            <name>0.0</name>
+                            <cli>
+                                <command>en</command>
+                            </cli>
+                        </action>
+                        <action>
+                            <name>1.0</name>
+                            <cli>
+                                <command>guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com</command>
+                            </cli>
+                        </action>
+                    </applet>
+                </manager>
+            </event>
+        </native>
+    </config>
+    
+    Configuration result:
+    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:
+    1a0d8b48-ac7a-4f94-912a-835a3a7b9c7e" xmlns:nc="urn:ietf:params:xml:ns:netconf:b
+    ase:1.0"><ok/></rpc-reply>
+    (pythonenv) $
+    ```
+    
+    Check your handy work from the IOS XE device CLI:
+    
+    ```
+    csr1#show running-config | section event
+    event manager applet GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT
+     event syslog pattern "%SYS-5-CONFIG_I: Configured from"
+     action 0.0 cli command "en"
+     action 1.0 cli command "guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com"
+    csr1#
+    ```
+    
+    Now let's put the whole thing to test.  Make a configuration change from the IOS XE device CLI, for example:
+    
+    ```
+    csr1#configure terminal
+    csr1(config)#interface GigabitEthernet1
+    csr1(config-if)#description WAN interface
+    csr1(config-if)#end
+    csr1#
+    ```
+    
+    And you should receive a Webex Teams message from your IOS XE Network Assistant Bot alerting you to the 
+    configuration change on the network device!
+    
+    ![Webex Teams Bot Message](assets/WebexTeamsBot-12.png)
 
-"With the power of Python, I could use ncclient and NETCONF to leverage the model drive programmability options under
-the hood as an alternative to the CLI options we looked at earlier this post."
+No each time you make a configuration change, you will receive a notification in Webex Teams.  This only just 
+scratches the surface of what is possible with ChatOps leveraging the network programmability concepts you've learned 
+in this lab.  With great ease, you were able to leverage integrate an IOS XE network device using model driven 
+programmability and APIs with a premiere cloud collaboration platform for communications.
+
+Return to the Network Programmability Dojo on a regular to pick up new tools of the Ninja, continue to further hone 
+your Ninja skills, and put your Ninja skills to work to continue to drive real benefit, save time and money, and 
+reduce human error.
