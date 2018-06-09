@@ -4,16 +4,16 @@ Navigation - [Previous Page](LTRDEV-1100-Guide-03f.md)
 
 # Test Your Ninja Skills
 
-TODO:
-
-- [ ] @curtissmith Draft "Script a Network Programmability Assistant for Cisco Webex Teams"
-
 ## Script a Network Programmability Assistant for Cisco Webex Teams
 
 IOS XE -> EEM script -> On-box Python in Guest Shell -> Post to Webex Teams
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra risus a fringilla hendrerit. Nam venenatis 
-metus quis risus aliquam mattis. Ut vitae elementum libero. Nam malesuada felis in tincidunt luctus. Aliquam ut magna
-orci. Nulla a elementum erat. Aenean facilisis, nibh at blandit feugiat, odio est tincidunt sem, eu pretium sem 
-lorem vel libero. Nullam felis nisl, eleifend interdum congue aliquam, dictum sit amet augue. Maecenas vel augue 
-justo. Quisque scelerisque tempus sapien, eu elementum nibh venenatis ac. In vel purus eu arcu elementum volutpat.
+"Use Case Example – “Are you sure nothing has changed on the network?”"
+
+"By leveraging a combination of EEM and On-Box Python the router can notify when the configuration has been modified."
+
+"ChatOps is a collaborative, conversation-centric way of working that brings people, discussions, bots, tools and 
+files together in one central location: the workplace messaging app.[1] Instead of having to track down colleagues or
+toggle between several platforms to find out what’s going on with their work and systems, ChatOps enables employees 
+to clearly and quickly see what needs to be done at any given point in time. ChatOps aims to increase transparency 
+and productivity while enhancing collaboration and employee engagement."
