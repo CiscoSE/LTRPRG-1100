@@ -12,9 +12,9 @@ The objectives for this exercise are to:
 * Learn how to verify the NETCONF configuration in IOS XE
 * Learn how to make NETCONF connections using Python
 
-Added in IOS XE Denali 16.3.1...Added support for Catalyst 9300 and 9500 series switches in IOS XE Denali 16.5.1b..
-.Added support for Catalyst 9400 series switches in IOS XE Denali 16.6.2...Added support for Catalyst 9500 High 
-Performance series switches in IOS XE 16.8.1a...
+NETCONF support was added in IOS XE Denali 16.3.1.  Support for the Catalyst 9300 and 9500 series switches was added in
+IOS XE Denali 16.5.1b.  Support for Catalyst 9400 series switches was added in IOS XE Denali 16.6.2.  Finally, 
+support for Catalyst 9500 High Performance series switches was added in IOS XE 16.8.1a.
 
 #### Step 1: Configuring NETCONF in IOS XE
 
@@ -33,6 +33,7 @@ for example:
     csr1>enable
     csr1#
     ```
+
 3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
    
     ```
@@ -49,7 +50,7 @@ for example:
     ```
     csr1(config)#username netconf privilege 15 password C1sco12345
     ```
-    
+
 5. Enable NETCONF with the `netconf-yang` command:
     
     ```
@@ -62,8 +63,8 @@ for example:
     csr1(config)#end
     csr1#
     ```
-
-That's all there is to it!  Let's test and verify NETCONF on your IOS XE device.
+    
+    That's all there is to it!  Let's test and verify NETCONF on your IOS XE device.
 
 #### Step 2: Verifying NETCONF in IOS XE
 
@@ -183,7 +184,7 @@ command, for example:
     
     Return to the NETCONF session window and type `CTL-C` to terminate the session.  Let's take a look at the screen 
     output from our first NETCONF session.
-        
+    
     When you established a secure NETCONF over SSH as a NETCONF manager (client), the IOS XE network device as the 
     agent (server) sent a list of its NETCONF capabilities in an XML encoded data format.
     
@@ -194,7 +195,7 @@ command, for example:
     Note the `<session-id>40</session-id>` corresponds with the session ID from the IOS XE CLI command
     `show netconf-yang sessions` output.
 
-Using SSH to establish a NETCONF connection manually is not recommended and was only shown here for illustrative 
+Using SSH to establish a NETCONF connection manually is not recommended and is only shown here for illustrative 
 purposes.  Doing so would require that you copy-and-paste XML encoded RPC commands by hand to manage and configure 
 your network device.  That defeats the purpose and intent of what we're teaching in this lab.  Now that we have 
 successfully configured and tested NETCONF on IOS XE, let's see how to put Python to use to write applications for 
@@ -207,9 +208,14 @@ flow, it is not the most user friendly method for using NETCONF.  Alternatively,
 [ncclient](https://github.com/ncclient/ncclient) to communicate via NETCONF with an IOS XE network device 
 programmatically.
 
-1. First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
-then change to your lab working directory and activate the Python virtual environment you created earlier in this 
-lab, for example:
+1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/Git-01.png)
+    
+    ![Git Bash Terminal](assets/Git-02.png)
+
+2.  Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
+your lab working directory and activate the Python virtual environment you created earlier in this lab:
     
     ```
     $ cd ~/lab
@@ -217,14 +223,14 @@ lab, for example:
     (pythonenv) $
     ```
 
-2. From the command line terminal, ensure that ncclient is installed using the `pip install ncclient` command (output
+3. From the command line terminal, ensure that ncclient is installed using the `pip install ncclient` command (output
  truncated for brevity):
     
     ```
     (pythonenv) $ pip install ncclient
     ```
 
-2. Invoke the Python interpreter with the `python` command:
+4. Invoke the Python interpreter with the `python` command:
     
     ```
     (pythonenv) $ python
@@ -234,7 +240,7 @@ lab, for example:
     >>>
     ```
 
-3. Import the `ncclient` Python library with the code snippet `from ncclient import manager`:
+5. Import the `ncclient` Python library with the code snippet `from ncclient import manager`:
     
     ```
     >>> from ncclient import manager
@@ -277,8 +283,8 @@ lab, for example:
     http://cisco.com/ns/cisco-xe-ietf-ip-deviation
     http://cisco.com/ns/cisco-xe-ietf-ipv4-unicast-routing-deviation
           
-    >>> 
-  
+    >>>
+    
     ```
     
     Close the NETCONF session and exit the Python interpreter with the code snippet `quit()`:
@@ -287,6 +293,10 @@ lab, for example:
     >>> quit()
     (pythonenv) $
     ```
+    
+    Congratulations, you've successfully established a NETCONF session with your network device in the lab 
+    environment.  NETCONF will be leveraged through the Python ncclient package throughout the rest of this lab.  
+    Let's take a look at a number of example uses cases in the next section of the lab.
 
 ---
 

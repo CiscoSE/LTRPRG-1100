@@ -8,7 +8,7 @@ Navigation - [Previous Page](LTRDEV-1100-03b-NETCONF.md)
 
 The objectives for this exercise are to:
 
-* Understand YANG as a language, data models, and data
+* Understand YANG as a language, YANG as a data model, and YANG data
 * Explore the anatomy of a YANG data model
 * Use pyang to explore data models
 
@@ -19,7 +19,7 @@ depending on the context, we mean YANG as a language, YANG as a data model, and 
 
 ![What is YANG](assets/YANG.png)
 
-##### Understanding YANG as a Language
+#### Step 1: Understanding YANG as a Language
 
 YANG is a modular and structured language that represents, or describes, data models in an XML tree format.  The YANG
 modeling language is protocol independent and can be converted into any encoding format such as XML or JSON - more 
@@ -44,7 +44,7 @@ module ietf-interfaces {
 }
 ```
 
-##### Understanding YANG as a Model
+#### Step 2: Understanding YANG as a Model
 
 A data model does nothing more than describe or represent data.  This is a way to agree how to describe something, 
 for example a person:
@@ -75,10 +75,11 @@ A YANG data model might describe a network device data or network service data. 
 For the purposes of getting started with model driven programmability, it is easier to focus on device data models. 
 
 YANG data models can be written by anyone, but the most frequently used models come from the IETF in the form of 
-Internet standards or from [OpenConfig](http://www.openconfig.net/) in the form of community and industry developed 
-vendor neutral models.  Vendors also write vendor and product specific data models for their products and services.
+Internet standards, or other models come from [OpenConfig](http://www.openconfig.net/) in the form of community- and 
+industry-developed vendor neutral models.  Vendors also write vendor- and product-specific data models for their 
+products and services.
 
-##### Understanding YANG Data
+#### Step 3: Understanding YANG Data
 
 Don't confuse the data model, the data format, and the data itself.  Consider the following three examples:
 
@@ -93,7 +94,7 @@ Don't confuse the data model, the data format, and the data itself.  Consider th
     --------------------------------------------------------------------------------
     Eth1/1        1       eth  fabric down    SFP not inserted            10G(D) --
     ```
-    
+
  2. XML -
     
     ```
@@ -129,7 +130,7 @@ Don't confuse the data model, the data format, and the data itself.  Consider th
     </nf:rpc-reply>
     ]]>]]>
     ```
-    
+
 3. JSON - 
     
     ```
@@ -149,34 +150,42 @@ Don't confuse the data model, the data format, and the data itself.  Consider th
     }
     ```
 
-Each of these represent the exact same data, displayed in three different common formats: human-readable text, XML, 
-and JSON.  Because the YANG data is described as a YANG data model in a structured manner using the YANG language, we
-can programmatically display the data in any format that suits our need.
+Each of these examples represent the exact same data, displayed in three different common formats: human-readable text, 
+XML, and JSON.  Because the YANG data is described as a YANG data model in a structured manner using the YANG 
+language, we can programmatically display the data in any format that suits our need.  For the rest of this lab, YANG
+data will be encoded in XML as specified in the NETCONF IETF Internet Standard discussed later in this lab.
 
-#### Step 1: Exploring the Anatomy of a YANG Data Model
+#### Step 4: Exploring the Anatomy of a YANG Data Model
 
-The YANG modeling language is used to build YANG data models using a standard syntax.  There are several 
-important constructs used in YANG.
+The YANG modeling language is used to build YANG data models using a standard syntax.  There are several important 
+constructs used in YANG:
 
 1. Every YANG data model contains a `module` which contains the name of the model, describes the data, and 
 documents the revision history of the model itself.
+
 2. YANG defines four types of nodes for data modeling:
+    
     * A `leaf` node contains a single, simple value like an integer or string, for example:
+        
         ```
         leaf host-name {
            type string;
            description "Hostname for this system";
        }
        ```
+    
     * A `leaf-list` node is a sequence of one or more `leaf` nodes, for example:
+        
         ```
         leaf-list domain-search {
          type string;
          description "List of domain names to search";
         }
         ```
+    
     * A `list` node is a sequence of  entries identified by a key value of each key leaf.  A `list` node
     can contain `leaf`, `leaf-list`, `list`, or `container` nodes.  For example,
+        
         ```
         list user {
             key "name";
@@ -191,9 +200,11 @@ documents the revision history of the model itself.
             }
         }
         ```
+    
     * A `container` node is a group of related nodes as child nodes and no value itself.  There is no
      limit to the number of child nodes within a `container` node.  A `container` node can include `leaf`, 
      `leaf-list`, `list`, or other `container` child nodes.  For example,
+        
         ```
         container system {
             container login {
@@ -206,16 +217,30 @@ documents the revision history of the model itself.
         }
         ```
 
-#### Step 2: Using pyang to Explore YANG Data Models
+#### Step 5: Using pyang to Explore YANG Data Models
 
 Now that we have a basic understanding of a YANG data model, let's take a look at an actual model.  You can obtain 
 the IETF and OpenConfig YANG data models from GitHub.
 
-1. Create a working directory and clone the IETF YANG repository:
+1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/Git-01.png)
+    
+    ![Git Bash Terminal](assets/Git-02.png)
+
+2.  Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
+your lab working directory and activate the Python virtual environment you created earlier in this lab:
     
     ```
-    $ mkdir ~/lab/ietf
-    $ cd ~/lab/ietf
+    $ cd ~/lab
+    $ source pythonenv/Scripts/activate
+    (pythonenv) $
+    ```
+
+3. Clone the YANG GitHub repository from `https://github.com/YangModels/yang`:
+    
+    ```
+    $ cd ~/lab
     $ git clone https://github.com/YangModels/yang
     Cloning into 'yang'...
     remote: Counting objects: 13445, done.
@@ -226,11 +251,19 @@ the IETF and OpenConfig YANG data models from GitHub.
     $
     ```
 
-2. Open PyCharm and the IETF YANG Git repository you just cloned by clicking the `File` menu, click `Open...`, 
-navigate to the directory `ietf`, and click the `Open` button.
+4. Let's take a look at one of the YANG models `ietf-interfaces.yang`.
     
-    In PyCharm, navigate through the project explorer to find a YANG data model, for example click to expand 
-    `standard`, `ietf`, and `RFC`.  Double click to open `ietf-interfaces.yang`.
+    Open the lab folder by double clicking the Windows Explore shortcut on the lab workstation desktop:
+    
+    ![Lab Shortcut](assets/NETCONF-01.png)
+    
+    Navigate to `yang`, `standard`, `ietf`, then `RFC` directory:
+    
+    ![Code Directory](assets/NETCONF-02.png)
+    
+    Right click the file `ietf-interfaces.yang` and click `Edit with Notepad++`.
+    
+    ![Notepad++](assets/NETCONF-03.png)
     
     As you scroll through this file representing the `module ietf-interface` data model, you will find the 
     elements we discussed earlier in this lab.  You can see the structure and nodes.  Each node should be documented 
@@ -241,9 +274,8 @@ navigate to the directory `ietf`, and click the `Open` button.
 data format that is good for programming is not necessarily good for human readability.  Fortunately, we have a tool
 that can help you called [pyang](https://github.com/mbj4668/pyang) that is a quick `pip install` away.
     
-    First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
-    then change to your lab working directory and activate the Python virtual environment you created earlier in this 
-    lab, for example:
+    Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
+    your lab working directory and activate the Python virtual environment you created earlier in this lab:
     
     ```
     $ cd ~/lab
@@ -251,10 +283,10 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     (pythonenv) $
     ```
     
-    From the command line terminal, ensure that pyang is installed with the `pip install pyang` command, for example:
+    Ensure that pyang is installed with the `pip install` command, for example:
     
     ```
-    (pythonenv) $ pip install pyang
+    (pythonenv) $ pip install pyang==1.7.5
     Collecting pyang
         Using cached https://files.pythonhosted.org/packages/d5/5d/248a83662d8ea7f1594be022e1c7017f2fa83c7e5949e9500290302aae95/pyang-1.7.5-py2.py3-none-any.whl
     Requirement already satisfied: lxml in c:\users\administrator\lab\pythonenv\lib\site-packages (from pyang) (4.2.1)
@@ -266,10 +298,10 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     Now navigate to the directory that contains the `ietf-interfaces.yang` YANG data model file:
     
     ```
-    (pythonenv) $ cd ~/lab/ietf/yang/standard/ietf/RFC
+    (pythonenv) $ cd ~/lab/yang/standard/ietf/RFC
     ```
     
-    Use pyang to display the data model in a human readable tree format:
+    Use pyang to display the data model in a human readable tree format with the `pyang` command:
     
     ```
     (pythonenv) $ pyang -f tree ietf-interfaces.yang
@@ -345,13 +377,13 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     value.  You can see the data model itself is very detailed and well structured but difficult to read if you're 
     looking for pertinent data for your application.  With the use of pyang, on the other hand, you are given just 
     the right amount of information needed to find the data you need for your application.
-            
+    
     The `ro` or `rw` next to the node name indicates whether the data is non-configuration data (`ro`) or 
     configuration data (`rw`).  A `?` after the node name indicates that the data is optional and may not be 
     present on the network device.  A `*` after the node name indicates that the node is a leaf or leaf-list.
     For more information about the symbols and conventions used by pyang in the tree format, use the command 
     `pyang --tree-help`.
-            
+    
     The second thing that you should notice is the lack of data. Remember, we are only viewing the YANG data 
     model, not YANG data from a network device. We will explore actual YANG data from an IOS XE device later in 
     this lab after we introduce NETCONF.
