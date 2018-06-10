@@ -4,18 +4,23 @@
 
 The objectives for this exercise are to:
 
-* Work with the Python interpreter
-* Run a Python script
+* Learn how to work with the Python interpreter
+* Learn how to run a Python script
 
 #### Step 1: Working with the Python Interpreter
 
-Recall that Python is an interpreted language, meaning that every command is evaluated as it is run. The Python 
-interpreter can be run interactively, allowing for real-time testing of code. This can be a great way to learn how a 
-particular function acts, or as a quick way to execute a couple of one-time use Python code.
+Recall that Python is an interpreted language, meaning that every command is evaluated as it is ran. The Python 
+interpreter can be ran interactively, allowing for real-time testing of code. This can be a great way to learn how a 
+particular function acts, or as a quick way to execute one-time use Python code.
 
-1.  First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
-then change to your lab working directory and activate the Python virtual environment you created earlier in this 
-lab, for example:
+1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/Git-01.png)
+    
+    ![Git Bash Terminal](assets/Git-02.png)
+
+2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
+your lab working directory and activate the Python virtual environment you created earlier in this lab:
     
     ```
     $ cd ~/lab
@@ -24,7 +29,7 @@ lab, for example:
     ```
 
 2.  Run the interactive interpreter by issuing the `python` command in the terminal, for example:
-
+    
     ```
     (pythonenv) $ python
     Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
@@ -35,15 +40,15 @@ lab, for example:
 
 3.  Notice that once the Python interpreter is running, the prompt changes to `>>>`. This is where you can input Python 
 code. Start with printing `Hello World!` to the screen, as shown below:
-
+    
     ```
     >>> print("Hello World!")
-    Hello World
+    Hello World!
     >>>
     ```
 
-4.  The interactive interpreter is mainly used for practicing, learning, debugging, or quick-use. As Python has many 
-built-in math and numeric functions, it can be an easy way to do quick arithmetic. For example, calculate how 
+4.  The interactive interpreter is mainly used for practicing, learning, debugging, or quick one-time use. As Python 
+has many built-in math and numeric functions, it can be an easy way to do quick arithmetic. For example, calculate how 
 much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
 
     ```
@@ -52,7 +57,7 @@ much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
     >>>
     ```
     
-    Sometimes our on-the-fly mathematics needs are directly related to our network programmability ninja skills. For 
+    Sometimes our on-the-fly mathematics needs are directly related to our Network Programmability Ninja skills. For 
     instance, you may need to convert DSCP values to ToS values. Converting DSCP to ToS for quality of service is
     done by bit-shifting by 2 bits to the left (padding a binary number with two 0s). Doing this on paper, you would
     typically write out the binary representation of the DSCP integer, then pad two 0s on the right side of this 

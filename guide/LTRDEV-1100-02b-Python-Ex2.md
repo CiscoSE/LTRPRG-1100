@@ -28,15 +28,25 @@ without inadvertently causing harm to other projects.
 Now that we know that Python v3.x is available for use, it is time to set up a virtual environment to continue working
 in.
 
-1.  First, create and enter a directory called `pythonenv` as a home for your project.
+1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/Git-01.png)
+    
+    ![Git Bash Terminal](assets/Git-02.png)
+
+2. First, create and enter a directory called `pythonenv` as a home for your project.
     
     ```
     $ cd ~/lab
     $ mkdir pythonenv
     ```
 
-2.  Next, create a Python virtual environment in this directory. By default, Virtualenv will use the current Python 3
-.x version installed on the host as its version, for example:
+3.  Next, create a Python virtual environment in this directory with the `python` command. By default, Python will 
+build a virtual environment based on the same version of the Python interpreter invoked, Python 3.x in the case of 
+the lab environment we've prepared for you.  If you need to create a virtual environment for a different version of 
+Python, then invoke the version of the Python interpreter executable,  for example `py -2 -m venv python` or
+`py -3 -m venv pythonenv` in Windows to create a Python 2.x or Python 3.x virtual environment, respectively.  To 
+create a Python 3.x virtual environment for this lab, simply use the `python` command:
 
     ```
     $ python -m venv pythonenv
@@ -44,14 +54,14 @@ in.
     $
     ```
 
-3.  Now that the virtual environment is created, go ahead and activate it so that any packages installed for your 
+4.  Now that the virtual environment is created, go ahead and activate it so that any packages installed for your 
 project will stay within this specific environment. This is done by running the `activate` command in the virtual 
-environment directory you created.  The path to the `activate` command will vary based on the platform you working.  
-For Windows, the `activate` command can be found in `Scripts` directory, for example `pythonenv/Scripts/activate`.  
+environment directory you created.  The path to the `activate` command will vary based on the platform you are working.  
+For Windows, the `activate` command can be found in the `Scripts` directory, for example `pythonenv/Scripts/activate`.  
 For macOS and Linux, the `activate` command can be found in the `bin` directory, for example `pythonenv/bin/activate`.
     
-    For the purposes of this lab in the Windows lab environment we've prepared for you, using the Git Bash terminal 
-    application, activate the Python virtual environment with the command `source pythonenv/Scripts/activate`, for example:
+    For the purposes of this lab in the Windows lab environment we've prepared for you, activate the Python virtual 
+    environment with the command `source pythonenv/Scripts/activate`:
     
     ```
     $ source pythonenv/Scripts/activate
@@ -59,16 +69,20 @@ For macOS and Linux, the `activate` command can be found in the `bin` directory,
     ```
     
     Now that the environment has been activated, notice that the prompt is now prepended with the virtual 
-    environment project name. This means that any packages that you install or remove in this terminal window will 
-    be specific to this project unless you deactivate the virtual environment or close the terminal window session.
+    environment project name in parentheses, `(pythonenv)` in the case of this lab. This means that any 
+    Python packages that you install or remove in this terminal session will be specific to this project unless you 
+    deactivate the virtual environment or exit the Git Bash terminal.
  
-4. To deactivate the Python virtual environment, simply use the `deactivate` command (do not use the `source` command)
+5. To deactivate the Python virtual environment, simply use the `deactivate` command (do not use the `source` command)
 regardless of the platform you are running, for example:
     
     ```
     (pythonenv) $ deactivate
     $
     ```
+
+    Congratulations, you now have a working Python virtual environment.  We will continue to work within this virtual
+    environment for the rest of the lab when working with Python.
 
 ---
 
