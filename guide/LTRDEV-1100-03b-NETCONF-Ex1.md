@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-03a-API.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b-NETCONF-Ex2.md)
 
 
 ---
@@ -391,5 +390,4 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
 
 ---
 
-Navigation :: [Previous Page](LTRDEV-1100-03a-API.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b-NETCONF-Ex2.md)
 

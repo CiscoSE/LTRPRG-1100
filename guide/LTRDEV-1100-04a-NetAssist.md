@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-04a-NetAssist-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05-Appx1.md)
 
 ## Script a Network Programmability Assistant for Cisco Webex Teams
 
@@ -27,5 +26,4 @@ concepts introduced and developed in this lab so far, we will create the followi
 | Config Modified |    | Trigger |    |   Python    |    |             |
 +-----------------+    +---------+    +-------------+    +-------------+
 ```
-Navigation :: [Previous Page](LTRDEV-1100-04a-NetAssist-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05-Appx1.md)
 

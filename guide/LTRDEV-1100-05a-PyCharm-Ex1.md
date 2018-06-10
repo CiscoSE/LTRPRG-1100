@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-05-Appx1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a-PyCharm-Ex2.md)
 
 ### Exercise 1: Getting Started with PyCharm
 
@@ -227,5 +226,4 @@ as opening a terminal, changing to the project directory, and running the Python
     For example, perform a directory listing with the `dir` command:
     
     ![PyCharm Terminal](assets/PyCharm-21.png)
-Navigation :: [Previous Page](LTRDEV-1100-05-Appx1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a-PyCharm-Ex2.md)
 

@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-03c-GuestShell-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-04-Test.md)
 
 
 ---
@@ -51,5 +50,4 @@ Here is a brief reference for the platforms that support Guest Shell today:
 
 ---
 
-Navigation :: [Previous Page](LTRDEV-1100-03c-GuestShell-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-04-Test.md)
 

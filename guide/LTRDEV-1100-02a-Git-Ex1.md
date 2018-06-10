@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-02-Tools.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02a-Git-Ex2.md)
 
 ### Exercise 1: Creating a GitHub Account
 
@@ -47,5 +46,4 @@ Congratulations, you have joined the GitHub community!
     
     Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
     code from Cisco SE community is shared.
-Navigation :: [Previous Page](LTRDEV-1100-02-Tools.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02a-Git-Ex2.md)
 

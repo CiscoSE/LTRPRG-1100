@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-03b-NETCONF-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03c-GuestShell-Ex1.md)
 
 
 ---
@@ -70,5 +69,4 @@ move to model driven programmability: NETCONF and YANG.
 
 ---
 
-Navigation :: [Previous Page](LTRDEV-1100-03b-NETCONF-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03c-GuestShell-Ex1.md)
 

@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-02b-Python-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python-Ex3.md)
 
 
 ---
@@ -89,5 +88,4 @@ regardless of the platform you are running, for example:
 
 
 
-Navigation :: [Previous Page](LTRDEV-1100-02b-Python-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python-Ex3.md)
 

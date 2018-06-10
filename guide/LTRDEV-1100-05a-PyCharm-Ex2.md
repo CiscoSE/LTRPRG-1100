@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-05a-PyCharm-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a-PyCharm.md)
 
 ### Exercise 2: Getting Advanced with PyCharm
 

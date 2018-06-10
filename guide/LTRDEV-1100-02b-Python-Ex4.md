@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-02b-Python-Ex3.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python.md)
 
 ### Exercise 4: Working with the Python Interpreter
 
@@ -117,5 +116,4 @@ lab, for example:
 
     By putting your Python instructions into a file, it can be called at any time by the Python interpreter. This is 
     key to reusing code.
-Navigation :: [Previous Page](LTRDEV-1100-02b-Python-Ex3.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python.md)
 

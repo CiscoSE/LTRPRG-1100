@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-03b-NETCONF-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b-NETCONF-Ex4.md)
 
 
 ---
@@ -301,5 +300,4 @@ your lab working directory and activate the Python virtual environment you creat
 
 ---
 
-Navigation :: [Previous Page](LTRDEV-1100-03b-NETCONF-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b-NETCONF-Ex4.md)
 

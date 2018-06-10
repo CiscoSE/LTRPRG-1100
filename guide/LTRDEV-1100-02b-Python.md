@@ -1,4 +1,3 @@
-Navigation :: [Previous Page](LTRDEV-1100-02b-Python-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02c-Teams-Ex1.md)
 
 
 ---
@@ -22,5 +21,4 @@ and REST APIs. With so many uses, it is one of the most powerful tools a Network
 ---
 
 
-Navigation :: [Previous Page](LTRDEV-1100-02b-Python-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02c-Teams-Ex1.md)
 
