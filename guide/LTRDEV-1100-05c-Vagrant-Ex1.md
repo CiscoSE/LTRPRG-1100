@@ -1,3 +1,4 @@
+
 ### Exercise 1: Introducing Vagrant
 
 #### Objectives
@@ -290,3 +291,4 @@ Vagrantfile is comments.
     * `end` indicates the end of the configuration.
         
     All other configuration of the environment uses the defaults from Vagrant and VirtualBox.
+

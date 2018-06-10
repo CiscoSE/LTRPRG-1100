@@ -1,3 +1,4 @@
+
 ### Exercise 1: Getting Advanced with Postman
 
 #### Objectives
@@ -101,3 +102,4 @@ code necessary to execute this API call directly from a Python script. As a matt
 Clipboard` and paste this into PyCharm to test it out.
     
     ![Postman code gen](assets/postman-11.png)
+

@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-01a-DevNet.md)
+
 
 ---
 
@@ -32,4 +32,4 @@ Let's get started with your training!
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-02a-Git.md)
+

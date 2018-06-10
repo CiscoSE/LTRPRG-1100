@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03b-NETCONF-Ex1.md)
+
 
 ---
 
@@ -58,12 +58,12 @@ protocol stack and relationship to SSH and YANG can be represented as follows:
    +--------------+  +--------------------+  +----------------------------+
 ```
 
-* Transport Layer - NETCONF uses is a secure TCP/IP transport protocol, for example SSH as detailed in
-    [RFC 6242] (https://tools.ietf.org/html/rfc6242).
+* Transport Layer - NETCONF uses a secure TCP/IP transport protocol, for example SSH as detailed in
+[RFC 6242] (https://tools.ietf.org/html/rfc6242).
 * Messages Layer - NETCONF encodes all communication in XML sent with remote procedure call (RPC).
 * Operations Layer - NETCONF messages are sent as operations, which are specific actions to take.  NETCONF operations
-    will be covered in more detail later in this lab.
-* Content Layer -  This is the configuration and operational data from the network device, YANG data, to be exact.
+will be covered in more detail later in this lab.
+* Content Layer - This is the configuration and operational data from the network device, YANG data, to be exact.
 
 In the NETCONF protocol, the client is referred to as the `manager` and the server is referred to as the `agent`.  
 The manager is you, or your workstation or network management system.  The agent is the network device you manage.  
@@ -84,26 +84,26 @@ manager and agent:
 
 #### Step 2: Understanding NETCONF Operations
 
-NETCONF protocol provides a set of actions called operations that are used to retrieve device operational 
+The NETCONF protocol provides a set of actions called operations that are used to retrieve device operational 
 information and manage device configuration.  Not all operations are supported by an agent and RPC replies should be 
 checked for errors responses.  Here is a brief introduction to the common protocol operations you should be familiar 
 with to get started:
 
-* The `<get>` NETCONF operation is used to retrieve the running configuration and operation state from a network 
+* The `<get>` NETCONF operation is used to retrieve the running configuration and operational state from a network 
 device.  
 
 * The `<get-config>` NETCONF operation is used to retrieve all or a subset of a specific configuration from a network 
 device.
 
-* The `<edit-config>` NETCONF operation is used to load or a subset of specific configuration to the target datastore
-on a network device.  The device will analyze the source and target configuration and make only the necessary 
+* The `<edit-config>` NETCONF operation is used to load all or a subset of a specific configuration to the target 
+datastore on a network device.  The device will analyze the source and target configuration and make only the necessary 
 changes to the target configuration.  The target configuration is not necessarily replaced, allowing you to make 
-configuration changes without deleting the configuration first.
+configuration changes without deleting the configuration first, effectively merging changes in configuration.
 
 * The `<copy-config>` NETCONF operation is used to create or replace the entire target configuration datastore with a
 specific source datastore.  If the target datastore exists, then the target datastore will be overwritten.
 
-* The `<delete-config>` NETCONF operation is used to delete the entire target configuration datastore (the 
+* The `<delete-config>` NETCONF operation is used to delete the entire target configuration datastore (however, the 
 `<running>` datastore cannot be deleted).
 
 * The `lock` and `unlock` NETCONF operations are used to lock or unlock a configuration datastore, preventing other 
@@ -122,4 +122,4 @@ datastores may be supported by the network device vendor.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03b-NETCONF-Ex3.md)
+

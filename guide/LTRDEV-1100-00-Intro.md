@@ -1,3 +1,4 @@
+
 TODOs
 
 - [x] @mgalazka Update Python content with new virtual environment instructions; Add content to upgrade pip==10.0.1;
@@ -21,7 +22,7 @@ cases at the end of this lab.
 
 We hope you have fun and learn valuable new skills!
 
-![Network Programmability Ninja Star](assets/NetworkProgrammabilityStar.jpg)
+![Network Programmability Ninja Star](assets/NetworkProgrammabilityNinjaStar.jpg)
 
 # Learning Objectives
 
@@ -82,4 +83,4 @@ Upon completion of this lab, you will be able to:
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-01-Dojo.md)
+

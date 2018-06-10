@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03c-GuestShell.md)
+
 
 ---
 
@@ -40,7 +40,7 @@ for example:
 
 4. IOx is a Cisco-developed end-to-end application framework that provides application hosting capabilities for
 different application types on Cisco network platforms.  Guest Shell is on such application distributed on Catalyst 
-switches.  IOx is a prerequisite for Guest Shell, so we need to turn on IOx with the `iox` command, for example:
+switches.  IOx is a prerequisite for Guest Shell, so you need to turn on IOx with the `iox` command, for example:
    
     ```
     csr1(config)#iox
@@ -91,9 +91,9 @@ switches.  IOx is a prerequisite for Guest Shell, so we need to turn on IOx with
     `Running` state, continue to the next step.  The `IOx service (HA)` service will remain in the `Not Running` 
     state since there is only one IOS XE network device in this lab.
 
-6. Before enabling Guest Shell, we have a bit of prerequisite configuration to complete first.  We must complete the 
+6. Before enabling Guest Shell, you have a bit of prerequisite configuration to complete first.  You must complete the 
 following configuration:
-
+    
     * Configure a Virtual Port Group - The Virtual Port Group is the interface the IOS XE network device uses to 
     communicate with guest shell.
     
@@ -105,34 +105,35 @@ following configuration:
     interface.
     
     Since our lab uses the CSR 1000v, create and configure a Virtual Port Group interface, for example:
-        
-        ```
-        csr1#configure terminal 
-        Enter configuration commands, one per line.  End with CNTL/Z.
-        csr1(config)#interface VirtualPortGroup 0
-        csr1(config-if)#ip address 192.168.35.1 255.255.255.0
-        csr1(config-if)#no shutdown 
-        csr1(config-if)#exit
-        csr1(config)#
+    
+    ```
+    csr1#configure terminal 
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    csr1(config)#interface VirtualPortGroup 0
+    csr1(config-if)#ip address 192.168.35.1 255.255.255.0
+    csr1(config-if)#no shutdown 
+    csr1(config-if)#exit
+    csr1(config)#
 
-        ```
+    ```
     
     Configure Network Address Translation (required on all routing and switching platforms), for example:
-        
-        ```
-        csr1(config)#interface VirtualPortGroup 0
-        csr1(config-if)#ip nat inside
-        csr1(config-if)#interface GigabitEthernet 1
-        csr1(config-if)#ip nat outside
-        csr1(config-if)#exit
-        csr1(config)#ip access-list standard NAT_ACL
-        csr1(config-std-nacl)#permit 192.168.0.0 0.0.255.255
-        csr1(config-std-nacl)#exit
-        csr1(config)#ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
-        csr1(config)#
-        ```
-        
+    
+    ```
+    csr1(config)#interface VirtualPortGroup 0
+    csr1(config-if)#ip nat inside
+    csr1(config-if)#interface GigabitEthernet 1
+    csr1(config-if)#ip nat outside
+    csr1(config-if)#exit
+    csr1(config)#ip access-list standard NAT_ACL
+    csr1(config-std-nacl)#permit 192.168.0.0 0.0.255.255
+    csr1(config-std-nacl)#exit
+    csr1(config)#ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
+    csr1(config)#
+    ```
+    
 7.  To enable Guest Shell itself, first run the following commands in config mode:
+    
     ```
     csr1(config)#app-hosting appid guestshell
     csr1(config-app-hosting)#vnic gateway1 virtualportgroup 0 guest-interface 0 guest-ipaddress 192.168.35.2 netmask 
@@ -543,4 +544,4 @@ command `dohost`: `dohost 'foo'`.  For example, to display the IOS XE device int
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03c-GuestShell-Ex2.md)
+

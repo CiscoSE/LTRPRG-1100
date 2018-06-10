@@ -1,10 +1,5 @@
+
 ## Vagrant Up for Network Engineers
-
-TODO:
-
-- [x] @curtissmith Draft "Tools of the Ninja - Vagrant Up for Network Engineers"
-- [x] Proofread
-- [ ] Add example output
 
 ### Introducing Vagrant Up for Network Engineers
 
@@ -18,3 +13,4 @@ You can use Vagrant to learn and test APIs, write and test scripts, and validate
 and configuration if the system you are interested can be virtualized.  Fortunately, many Cisco devices 
 have been virtualized: IOS XE using the CSR 1000v image, NX-OS using the Nexus 9000v image, and IOS XR using the 
 XRv image, to name a few.  Earn some developer street cred by learning how to "Vagrant Up"!
+
