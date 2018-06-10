@@ -13,11 +13,11 @@ successful.  Thank you for taking the first step with this lab at Cisco Live!
 
 Think about your own environment.  How do you manage your networks and systems?  What are the most common methods or 
 tools for deploying and managing your production environment?  Text editors; tens, hundreds, maybe 
-thousands of documents, drawings, and spreadsheets; CLI commands; copy-and-paste; free or commercial applications?  
-In recent years, there has been an incredible increase in the number of devices on your networks; number of 
-applications stressing your networks; rate of change in consumer devices and applications; and pressure on network 
-architects, engineers, and administrators or operators to support these demands and changes.  We tend to struggle 
-with keeping up with demand and make mistakes.
+thousands of documents, drawings, and spreadsheets; CLI commands; copy-and-paste; free or commercial applications?  In
+recent years, there has been an incredible increase in the number of devices on your networks; number of applications
+stressing your networks; rate of change in consumer devices and applications; and pressure on network architects, 
+engineers, and administrators or operators to support these demands and changes.  We tend to struggle with keeping up
+with demand and make mistakes.
 
 So-called DevOps (a compound of "Development" and "Operations") has become a popular practice of unifying development
 and operations into a continuous flow of automation and monitoring throughout the stages of development, 

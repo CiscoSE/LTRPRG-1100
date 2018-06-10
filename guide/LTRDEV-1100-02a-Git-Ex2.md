@@ -19,8 +19,8 @@ There is a simple flow to using Git for version control:
 +----------------+      +---------+       +----------+
 ```
 
-You start by either creating a new Git repository or cloning an existing Git repository hosted on a remote server.  In 
-doing so, you create the Git directory (also called the repository), a working directory, and a staging area (also 
+You start by either creating a new Git repository or cloning an existing Git repository hosted on a remote server.
+In doing so, you create the Git directory (also called the repository), a working directory, and a staging area (also 
 called the index).  The Git directory contains the metadata and object database and is copied from the server when 
 a repository is cloned.  The working directory contains one version of the project copied to the file system 
 from the compressed object database in the Git directory.  The staging area is a file inside the Git directory 
@@ -34,6 +34,12 @@ how to initialize and clone repositories, and modify, stage, and commit changes,
 
 Git has command line commands for managing Git repositories.  Here are the key commands and their usage you will need
 to get started to participate in projects or manage your own projects.
+
+Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+
+![Git Bash Icon](assets/Git-01.png)
+
+![Git Bash Terminal](assets/Git-02.png)
 
 1. For a complete list of Git commands, type `git help` (output truncated for brevity):
     
@@ -53,12 +59,13 @@ you make includes this information, so it is important to set this after install
 and  email address you used to register on GitHub, for example:
     
     ```
-    $ git config --global user.name "Curtis Smith"    
-    $ git config --global user.email "curtissm@cisco.com"
+    $ git config --global user.name "Your Name"    
+    $ git config --global user.email "email@example"
     ```
-    
+
 3. To create your very first Git repository, create a Git working directory and initialize the repository with the 
 command `git init`, for example:
+    
     ```
     $ mkdir -p ~/lab/clus18
     $ cd ~/lab/clus18
@@ -70,7 +77,7 @@ command `git init`, for example:
     Now take a look at the contents of the directory.  You will find a hidden directory named `.git`:
     
     ```
-    $ ls -la
+    $ cd ~/lab/clus18
     $ ls -la
     total 4
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
@@ -79,8 +86,8 @@ command `git init`, for example:
     $
     ```
     
-    The directory `~/lab/clus18` is your new Git working directory and `~/lab/clus18/.git` is your Git directory.  
-    Your working directory (and consequently your Git directory) are empty as you've not staged or committed anything
+    The directory `~/lab/clus18` is the new Git working directory and `~/lab/clus18/.git` is the Git directory.  
+    The working directory (and consequently the Git directory) are empty as you've not staged or committed anything
     to the repository yet.
     
 4. Let's confirm this is the case with the command `git status`:
@@ -94,11 +101,11 @@ command `git init`, for example:
     nothing to commit (create/copy files and use "git add" to track)
     ```
     
-    At any time you can invoke the `git status` command from inside your Git repository working directory to see 
+    At any time you can invoke the `git status` command from inside the Git repository working directory to see 
     whether there are any staged changes or whether your copy of the repository is in sync with the remote server if 
     it is hosted online.
-    
-5. Let's create a new file to track:
+
+5. Let's create a new file to track with the Linux `echo` command and redirect the output to a file names `README.md`:
     
     ```
     $ echo "# Hello World!" >> README.md
@@ -130,7 +137,7 @@ command `git init`, for example:
     $
     ```
     
-    and the check the status again:
+    and check the status again:
     
     ```
     $ git status
@@ -147,7 +154,7 @@ command `git init`, for example:
     ```
     
     You can see there is a staged file in your working directory that is uncommitted.
-    
+
 6. Let's make your first commit to your first Git repository!  Use the `git commit` command to commit your staged 
 changes:
     
@@ -172,25 +179,29 @@ changes:
     
     Congratulations, you've created your first Git repository and made your first commit to that repository!
     
-7. Let's create a remote repository on GitHub and push our repository locally to the server.
+7. Let's create a remote repository on GitHub and push your local repository to the server.
     
-    1. First, navigate to [Github](https://github.com/) `https://github.com/` and ensure you've logged in with the 
+    First, navigate to [Github](https://github.com/) `https://github.com/` and ensure you've logged in with the 
     account you created earlier.
     
-    2. At the top right of the page, click the `+` and click `New Repository`.
+    At the top right of the page, click the `+` and click `New Repository`.
     
-    3. In the box labeled `Repository name` type `clus18`.
+    ![Git New Repository](assets/Git-03.png)
     
-    4. You may add an optional `Description`, for example `My Cisco Live US 2018 Git repository`.
+    In the box labeled `Repository name` type `clus18`.
     
-    5. Click the `Create repository` button.
+    You may add an optional `Description`, for example `My Cisco Live US 2018 Git repository`.
     
-    6. Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, 
+    ![Git New Repository](assets/Git-04.png)
+    
+    Click the `Create repository` button.
+    
+    Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, 
     use the `git remote add` command to add the local repository to the remote repository (replace the URL in the 
     example below with the URL of your new remote repository):
     
     ```
-    $ git remote add origin https://github.com/curtissmith/clus18.git
+    $ git remote add origin https://github.com/username/clus18.git
     ```
     
     Second, push your local changes to the remote repository with the `git push` command:
@@ -230,6 +241,10 @@ changes:
     been synchronized in your Git directory and copied to your working directory.
     
     Navigate to your remote repository on GitHub and you should see the results of your labor!
+    
+    ![GitHub Repository](assets/Git-05.png)
+    
+    Congratulations, you've created a new Git repository on GitHub.
 
 8. The `git pull` will only work from inside a working directory that contains a Git repository in the first place.  
 Try this by moving to a directory that doesn't contain a `.git` Git directory, for example:

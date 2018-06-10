@@ -15,16 +15,22 @@ environment. The reason for this is that Python 3.0 re-wrote certain aspects of 
 compatibility with Python 2. While it is still common to find Python files (scripts) written for use with Python 2, 
 most projects are now written for use with Python 3. In this lab, Python 3 is the interpreter to use.
 
-While the two versions are different, it is entirely possible to have both Python 2 and Python 3 on the same computer. 
-It's also possible to have several different versions of each installed at the same time (i.e. Python 3.4, 3.5, 3.6). 
-For these reasons, it is important to understand which version of Python you are running.
+While the two versions are different, it is entirely possible to have both Python 2 and Python 3 on the same system. 
+It's also possible to have several different versions of each installed at the same time (i.e. Python 2.7, 3.4, 3.5,
+3.6). For these reasons, it is important to understand which version of Python you are running.
 
 #### Step 1: Running the Python Interpreter
 
 In order to work with Python, we need to make sure that it is properly installed, able to run, and is of the 
 correct version.  On all operating systems and platforms, the Python interpreter executable is `python`.
 
-1. Open the Git Bash terminal application and type the command `python` at the command prompt:
+1. Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/Git-01.png)
+    
+    ![Git Bash Terminal](assets/Git-02.png)
+    
+    Type the command `python` at the command prompt:
     
     ```
     $ python
@@ -44,8 +50,8 @@ correct version.  On all operating systems and platforms, the Python interpreter
 
 #### Step 2: Checking the Version of the Python Interpreter
 
-1.  Open a terminal, and at the command prompt, enter the command `python -V` (case-sensitive) and check the output. 
-    The output should look similar to below:
+1.  Enter the command `python -V` (case-sensitive) and check the output.  The output should look
+similar to below:
     
     ```
     $ python -V
@@ -53,14 +59,14 @@ correct version.  On all operating systems and platforms, the Python interpreter
     ```
     
     In some situations, both Python 2.x and Python 3.x are installed on the same system.  Which version of the Python
-    interpreter you invoke with the `python` command depends on which executable your operating systems shell finds 
+    interpreter you invoke with the `python` command depends on which executable your operating system shell finds 
     in the command search path environment variable.
     
-    In typical macOS and Linux installation, there are command aliases `python`, `python3` to invoke Python v2.x 
+    In typical macOS and Linux installations, there are command aliases `python` and `python3` to invoke Python v2.x 
     and 3.x, respectively.  In a typical Windows installation, the Python v3.x Windows installer will install the 
     Python version helper command `py`.
     
-    In a terminal, run the command `py -V`, for example:
+    Run the command `py -V`, for example:
     
     ```
     $ py -V

@@ -12,7 +12,7 @@ The objectives for this exercise are to:
 
 #### Step 1: Creating a Cisco DevNet Account
 
-The first step is your network programmability training is joining [Cisco DevNet](https://developer.cisco.com/).  Let's 
+The first step in your network programmability training is joining [Cisco DevNet](https://developer.cisco.com/).  Let's 
 create your DevNet account, if you don't already have one.
 
 1. Navigate to [DevNet](https://developer.cisco.com): `https://developer.cisco.com/`.

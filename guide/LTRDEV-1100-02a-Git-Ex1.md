@@ -26,14 +26,22 @@ Congratulations, you have joined the GitHub community!
 
 #### Step 2: Exploring GitHub
 
-1. Take a few minutes to follow new and interesting people:
-    1. Search for and follow your Cisco Live lab proctors:
-    [Curtis Smith](https://github.com/curtissmith) (`curtissmith`) and
-    [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`).
-    2. Search for and follow your fellow Cisco Live lab participants.
-2. Take a few minutes to discover new repositories:
-    1. Search for and star the Cisco Live [LTRDEV-1100 session](https://github.com/curtissmith/LTRDEV-1100) repository.
-    2. Search for and bookmark the [Cisco DevNet](https://github.com/CiscoDevNet) organization where sample code from
+1. Take a few minutes to follow new and interesting people.
+    
+    Search for and follow your Cisco Live lab proctors:
+    
+    * [Curtis Smith](https://github.com/curtissmith) (`curtissmith`)
+    * [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`)
+    
+    Share your GitHub username in this lab's Cisco Webex Teams space.  Search for and follow your fellow Cisco Live lab 
+    participants.
+
+2. Take a few minutes to discover new repositories:.
+    
+    Search for and star the Cisco Live [LTRDEV-1100 session](https://github.com/curtissmith/LTRDEV-1100) repository.
+    
+    Search for and bookmark the [Cisco DevNet](https://github.com/CiscoDevNet) organization where sample code from 
     Cisco DevNet is shared.
-    3. Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
+    
+    Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
     code from Cisco SE community is shared.

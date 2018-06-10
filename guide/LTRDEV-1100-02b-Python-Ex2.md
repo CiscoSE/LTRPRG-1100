@@ -10,9 +10,9 @@ The objectives for this exercise are to:
 
 * Setup a Python virtual environment for this lab
 
-Different projects using Python may have different environment requirements. For instance, one project may need Python 
-2.x interpreter, whereas others may need Python 3.x. Some projects may require many Python packages and modules to be 
-installed, and others may only use built-in modules.
+Different projects using Python may have different environment requirements. For instance, one project may need a 
+Python 2.x interpreter, whereas others may need Python 3.x. Some projects may require many Python packages and 
+modules to be installed, and others may only use built-in modules.
 
 Traditionally, installing a package for Python is a global change on a particular host. This means that if one project 
 needs access to one version of a package, and another project needs to upgrade to a different version of the same 
