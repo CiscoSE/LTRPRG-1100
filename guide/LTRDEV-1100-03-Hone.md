@@ -1,4 +1,5 @@
-Navigation - [Previous Page](LTRDEV-1100-02c-Teams.md)
+Navigation :: [Previous Page](LTRDEV-1100-02d-Postman.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a-API-Ex1.md)
+
 
 ---
 
@@ -19,4 +20,5 @@ those skills, additionally armed with new concepts that we will introduce in the
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03a-API.md)
+Navigation :: [Previous Page](LTRDEV-1100-02d-Postman.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a-API-Ex1.md)
+

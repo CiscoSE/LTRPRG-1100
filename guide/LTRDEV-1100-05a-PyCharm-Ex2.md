@@ -1,3 +1,5 @@
+Navigation :: [Previous Page](LTRDEV-1100-05a-PyCharm-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a-PyCharm.md)
+
 ### Exercise 2: Getting Advanced with PyCharm
 
 #### Objectives
@@ -181,4 +183,5 @@ Control` tab.
 Congratulations, you've cloned a remote Git repository, staged a new Python file, committed those changes, and pushed
 your changes into the remote Git repository without leaving the PyCharm application or having to go back and 
 forth between PyCharm and the command line.  PyCharm makes managing the whole project easy, including with version 
-control.
+control.Navigation :: [Previous Page](LTRDEV-1100-05a-PyCharm-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a-PyCharm.md)
+

@@ -1,4 +1,5 @@
-Navigation - [Previous Page](LTRDEV-1100-02b-Python.md)
+Navigation :: [Previous Page](LTRDEV-1100-02a-Git.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python-Ex2.md)
+
 
 ---
 
@@ -107,4 +108,5 @@ similar to below:
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-02b-Python-Ex2.md)
+Navigation :: [Previous Page](LTRDEV-1100-02a-Git.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python-Ex2.md)
+

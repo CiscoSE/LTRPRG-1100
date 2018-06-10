@@ -1,4 +1,5 @@
-Navigation - [Previous Page](LTRDEV-1100-02-Tools.md)
+Navigation :: [Previous Page](LTRDEV-1100-02a-Git-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python-Ex1.md)
+
 
 ---
 
@@ -27,4 +28,5 @@ free account must be public.  Private repositories are supported with a
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-02b.md)
+Navigation :: [Previous Page](LTRDEV-1100-02a-Git-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b-Python-Ex1.md)
+

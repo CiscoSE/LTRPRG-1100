@@ -1,4 +1,5 @@
-Navigation - [Previous Page](LTRDEV-1100-03-Hone.md)
+Navigation :: [Previous Page](LTRDEV-1100-03a-API-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b-NETCONF-Ex1.md)
+
 
 ---
 
@@ -16,4 +17,5 @@ accomplished.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03b-NETCONF.md)
+Navigation :: [Previous Page](LTRDEV-1100-03a-API-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b-NETCONF-Ex1.md)
+
