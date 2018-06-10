@@ -19,7 +19,7 @@ these functions to work.
     Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
     ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
-    
+
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
@@ -111,7 +111,7 @@ example:
          \nVirtualPortGroup0      192.168.35.1    YES manual up                    up      '
         >>>
         ```
-        
+    
     * `executep()` - This function executes a single IOS XE command and prints the resulting text to stdout
     rather than returning it.  The following is example output from a `executep()` function call:
         
@@ -132,14 +132,14 @@ example:
         ```
         
         The following is example output from a `configure()` function call:
-            
-            ```
-            >>> cli.configure(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
-            [ConfigResult(success=True, command='interface Loopback1', line=1, output='', notes=None),
-            ConfigResult(success=True, command='ip address 10.1.1.1 255.255.255.0', line=2, output='',
-            notes=None), ConfigResult(success=True, command='no shutdown', line=3, output='', notes=None)]
-            >>>
-            ```
+        
+        ```
+        >>> cli.configure(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
+        [ConfigResult(success=True, command='interface Loopback1', line=1, output='', notes=None),
+        ConfigResult(success=True, command='ip address 10.1.1.1 255.255.255.0', line=2, output='',
+        notes=None), ConfigResult(success=True, command='no shutdown', line=3, output='', notes=None)]
+        >>>
+        ```
     
     * `configurep()` - This function works exactly the same as the `configure()` function, except 
     that it prints the resulting text to stdout rather than returning it.  The following is example output from a
@@ -156,7 +156,7 @@ example:
     You can get help and display the details of each function by using the `help()` function in the Python 
     interpreter.  For example, for help with the `configurep()` function, use a function call like
     `help(cli.configurep)` in the Python interpreter:
-        
+    
     ```
     >>> help(cli.configurep)
     Help on function configurep in module cli:
