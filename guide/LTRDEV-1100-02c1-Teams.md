@@ -1,3 +1,4 @@
+Navigation :: [Previous Page](LTRDEV-1100-02b5-Python-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02c2-Teams-Ex1.md)
 
 
 ---
@@ -21,3 +22,4 @@ extensibility brings much to the table for the Network Programmability Ninja.
 ---
 
 
+Navigation :: [Previous Page](LTRDEV-1100-02b5-Python-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02c2-Teams-Ex1.md)

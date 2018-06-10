@@ -1,3 +1,4 @@
+Navigation :: [Previous Page](LTRDEV-1100-03a1-API.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b1-NETCONF.md)
 
 ### Exercise 1: Understanding and Using APIs
 
@@ -72,3 +73,4 @@ the clipboard and pasted in a file to run with the python interpreter.
     You may not know how to write this Python code snippet from the API documentation alone, but you can use Postman 
     to experiment with APIs calls and generate Python code snippets for you to practice and learn.Navigation :: [Previous Page](LTRDEV-1100-03-Hone.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a1-API.md)
 
+Navigation :: [Previous Page](LTRDEV-1100-03a1-API.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b1-NETCONF.md)
