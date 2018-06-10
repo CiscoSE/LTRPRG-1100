@@ -1,11 +1,5 @@
 ## Vagrant Up for Network Engineers
 
-TODO:
-
-- [x] @curtissmith Draft "Tools of the Ninja - Vagrant Up for Network Engineers"
-- [x] Proofread
-- [ ] Add example output
-
 ### Introducing Vagrant Up for Network Engineers
 
 [Vagrant](https://www.vagrantup.com/) is an Open Source tool for creating workflows to build and manage virtual 
