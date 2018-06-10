@@ -1,3 +1,4 @@
+
 ### Exercise 2: Introducing Git Concepts and Commands
 
 #### Objectives
@@ -299,3 +300,4 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     ```
     
     Congratulations, you've cloned a Git repository hosted on GitHub.
+

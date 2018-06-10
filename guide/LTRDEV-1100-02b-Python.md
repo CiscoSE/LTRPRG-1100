@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-02b.md)
+
 
 ---
 
@@ -20,5 +20,5 @@ and REST APIs. With so many uses, it is one of the most powerful tools a Network
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-02b-Python-Ex1.md)
+
 

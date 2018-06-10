@@ -1,3 +1,4 @@
+
 ### Exercise 4: Working with the Python Interpreter
 
 #### Objectives
@@ -115,3 +116,4 @@ lab, for example:
 
     By putting your Python instructions into a file, it can be called at any time by the Python interpreter. This is 
     key to reusing code.
+

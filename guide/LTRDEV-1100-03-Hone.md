@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-02c-Teams.md)
+
 
 ---
 
@@ -19,4 +19,4 @@ those skills, additionally armed with new concepts that we will introduce in the
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03a-API.md)
+

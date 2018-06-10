@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-Guide-02h.md)
+
 
 ---
 
@@ -20,4 +20,4 @@ extensibility brings much to the table for the Network Programmability Ninja.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03-Hone.md)
+

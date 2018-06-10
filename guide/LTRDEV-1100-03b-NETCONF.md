@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03a-API.md)
+
 
 ---
 
@@ -69,4 +69,4 @@ move to model driven programmability: NETCONF and YANG.
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03b-NETCONF-Ex1.md)
+

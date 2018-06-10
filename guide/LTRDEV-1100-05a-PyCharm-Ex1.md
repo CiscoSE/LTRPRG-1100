@@ -1,3 +1,4 @@
+
 ### Exercise 1: Getting Started with PyCharm
 
 #### Objectives
@@ -225,3 +226,4 @@ as opening a terminal, changing to the project directory, and running the Python
     For example, perform a directory listing with the `dir` command:
     
     ![PyCharm Terminal](assets/PyCharm-21.png)
+

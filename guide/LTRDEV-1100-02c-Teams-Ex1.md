@@ -1,3 +1,4 @@
+
 ### Exercise 1: Getting Started with Cisco Webex Teams
 
 #### Objectives
@@ -116,3 +117,4 @@ integrations and bots.
     
     * Integrations utilize the Webex Teams API on behalf of other users, via OAuth.
     * Bots are effectively their own users and can post their own content.
+

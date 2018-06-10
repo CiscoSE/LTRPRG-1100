@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-02b-Python-Ex2.md)
+
 
 ---
 
@@ -86,6 +86,6 @@ regardless of the platform you are running, for example:
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-Guide-02f.md)
+
 
 

@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03b-NETCONF-Ex2.md)
+
 
 ---
 
@@ -300,4 +300,4 @@ your lab working directory and activate the Python virtual environment you creat
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03c-GuestShell.md)
+

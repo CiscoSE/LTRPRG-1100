@@ -1,3 +1,4 @@
+
 ### Exercise 1: Creating a GitHub Account
 
 #### Objectives
@@ -45,3 +46,4 @@ Congratulations, you have joined the GitHub community!
     
     Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
     code from Cisco SE community is shared.
+

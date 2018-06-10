@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-02b-Python.md)
+
 
 ---
 
@@ -107,4 +107,4 @@ similar to below:
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-02b-Python-Ex2.md)
+

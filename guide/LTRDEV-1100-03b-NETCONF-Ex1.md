@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03b-NETCONF.md)
+
 
 ---
 
@@ -390,4 +390,4 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03b-NETCONF-Ex2.md)
+

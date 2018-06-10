@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03b-NETCONF-Ex3.md)
+
 
 ---
 
@@ -50,4 +50,4 @@ Here is a brief reference for the platforms that support Guest Shell today:
 
 ---
 
-Navigation - [Next Page](LTRDEV-1100-03c-GuestShell-Ex1.md)
+

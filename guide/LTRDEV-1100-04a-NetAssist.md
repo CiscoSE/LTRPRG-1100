@@ -1,3 +1,4 @@
+
 ## Script a Network Programmability Assistant for Cisco Webex Teams
 
 ### Defining the Problem
@@ -25,3 +26,4 @@ concepts introduced and developed in this lab so far, we will create the followi
 | Config Modified |    | Trigger |    |   Python    |    |             |
 +-----------------+    +---------+    +-------------+    +-------------+
 ```
+

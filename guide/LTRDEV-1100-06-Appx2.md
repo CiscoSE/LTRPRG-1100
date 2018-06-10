@@ -1,3 +1,4 @@
+
 # Appendix 2
 
 ## Additional Network Programmability Resources
@@ -37,4 +38,5 @@ and
 [Network Programmability Design and Implementation Specialist](https://learningnetwork.cisco.com/community/certifications/network-programmability/design-and-implementation).
 
 ![Net Prog Learning Network](assets/NetProgLearningNetwork.png)
+
 

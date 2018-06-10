@@ -1,3 +1,4 @@
+
 ### Example 1: ChatOps like a Network Programmability Ninja
 
 #### Objectives
@@ -555,3 +556,4 @@ reduce human error.
 Time permitting, continue on to the Appendices for additional, optional content and resources you might find valuable.
 
 Thank you for your time and commitment at Cisco Live!
+

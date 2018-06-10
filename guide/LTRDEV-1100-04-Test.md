@@ -1,4 +1,4 @@
-Navigation - [Previous Page](LTRDEV-1100-03c-GuestShell.md)
+
 
 ---
 
@@ -11,3 +11,4 @@ the test.  It is our intention to show you how to put the tools we've introduced
 those tools to wrap up this lab with an example use case.
 
 If you are up to the test, then continue on!
+
