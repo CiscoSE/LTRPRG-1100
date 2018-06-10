@@ -14,9 +14,9 @@ In order to give your network device a voice to communicate ChatOps style in Web
 to send a message.  You neither want to create a Webex Teams account for every network device, nor use your account 
 on every network device.  The solution is to create a Bot through which all of your network devices can communicate 
 and collaborate.  Think of this Bot as your Network Assistant, a virtual member of your team.  In this lab, we will 
-create a basic Notifier Bot, which typically only responds to events in an external service or system and send a 
-message in Webex Teams.  It is left as an exercise to you to use this a framework for creating a Controller or 
-full-fledged Assistant ChatBot that can interact with you.
+create a basic Notifier Bot, which typically only responds to events in an external service or system, and send a 
+message in Webex Teams through that Bot.  It is left as an exercise to you to use this a framework for creating a 
+Controller or full-fledged Assistant ChatBot that can interact with you.
 
 Creating a Webex Teams Bot is very easy.
 
@@ -46,9 +46,9 @@ Creating a Webex Teams Bot is very easy.
     Name your Bot, for example `IOS XE Network Assistant`.
     
     Choose a Bot Username, for example `iosxe-netassist`.  This must be unique and cannot be shared, so I suggest 
-    you precede the Bot Username with something like the initials for first, middle, and last name.
+    you precede the Bot Username with something like your initials.
     
-    Choose a Icon.  You can select one default icons to choose to upload an icon of your own creation.
+    Choose an Icon.  You can select one of the default icons or choose to upload an icon of your own creation.
     
     Enter a Description, for example `IOS XE Network Assistant Bot`.
     
@@ -66,8 +66,8 @@ this lab to create a Python script to be triggered with EEM.
 
 #### Step 2: Triggering On-Box Python Scripts with IOS XE Embedded Event Manager
 
-In this step, we will configure Embedded Event Manager to run a Python script residing on-box in Guest Shell in 
-response to an event.
+In this step, you will configure Embedded Event Manager to run a Python script residing on-box in Guest Shell in 
+response to a condition.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
@@ -98,7 +98,8 @@ example:
     [guestshell@guestshell scripts]$
     ```
 
-4. Transfer the Bot script with the `wget` command from `https://raw.githubusercontent.com/curtissmith/LTRDEV-1100/labguide/code/iosxe-netassist-bot.py`
+4. Transfer the Bot script with the `wget` command from
+`https://raw.githubusercontent.com/curtissmith/LTRDEV-1100/labguide/code/iosxe-netassist-bot.py`
     
     ```
     [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRDEV-1100/labguide/code/iosxe-netassist-bot.py
@@ -116,7 +117,7 @@ example:
     [guestshell@guestshell scripts]$
     ```
 
-We need to complete a few tasks to update Python and install the necessary Python packages in Guest Shell needed for 
+You need to complete a few tasks to update Python and install the necessary Python packages in Guest Shell needed for 
 our Bot script.
 
 5. The Webex Teams API uses the [Server Name Indication (SNI)](https://en.wikipedia.org/wiki/Server_Name_Indication)
@@ -193,7 +194,7 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     Is this ok [y/d/N]:
     ```
     
-    Notice that yum calculated the RPM dependencies for us and summarized the list of other RPMs that will also 
+    Notice that yum calculated the RPM dependencies for you and summarized the list of other RPMs that will also 
     need to be upgraded to upgrade Python.  When prompted with `Is this ok [y/d/N]:` answer 
     `y` and press the `Enter/Return` key:
     
@@ -218,7 +219,8 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     Is this ok [y/N]:
     ```
     
-    If prompted to import a new GPG key with the prompt `Is this OK [y/n]` answer `y` and press the `Enter/Return` key:
+    If prompted to import a new GPG key with the prompt `Is this OK [y/n]` answer `y` and press the `Enter`/`Return` 
+    key:
     
     ```
     Is this ok [y/N]: y
@@ -273,9 +275,9 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     It is safe to ignore the warnings at this time.  Ensure that the RPM package upgrades are successful with the 
     output `Complete!` before continuing with this lab.
 
-6. Next, we need to install the perquisite Python requests package needed to make the Webex Teams API calls.  You 
-could install the Python package with pip like we have on our lab workstation, however with a system under 
-package management like the CentOS Linux Guest Shell, we recommend you install the appropriate RPM instead, if 
+6. Next, you need to install the prerequisite Python requests package needed to make the Webex Teams API calls.  You 
+could install the Python package with pip like you on your lab workstation earlier in this lab, however with a system 
+under package management like the CentOS Linux Guest Shell, we recommend you install the appropriate RPM instead, if 
 available.  Use the `sudo` command to run `yum` with elevated root user privileges to install the `python-requests`
 RPM:
     
@@ -331,7 +333,7 @@ RPM:
     Is this ok [y/d/N]:
     ```
     
-    Again, notice that yum calculated the RPM dependencies for us and summarized the list of other RPMs that will also 
+    Again, notice that yum calculated the RPM dependencies for you and summarized the list of other RPMs that will also 
     need to be upgraded to install the Python requests package.  When prompted with `Is this ok [y/d/N]:` answer 
     `y` and press the `Enter/Return` key:
     
@@ -383,7 +385,7 @@ RPM:
     
     Ensure that the RPM package upgrades are successful with the output `Complete!` before continuing with this lab.
 
-    Now we can test our Bot Python script.
+    Now you can test your Python Bot script.
 
 7. The `iosxe-netassist-bot.py` Python script requires two command line arguments.  Run the script without 
 arguments for a summary:
@@ -407,10 +409,10 @@ arguments for a summary:
     
     ![Webex Teams Bot Message](assets/WebexTeamsBot-07.png)
 
-8. Finally, we need to configure an EEM applet that looks for a condition and triggers our new Python Bot script on-box
-in Guest Shell.  The trigger we are going to use in this lab is any configuration change made on our network device. 
-Normally, we might install an EEM applet via the IOS XE CLI, for example with the following IOS XE configuration 
-snippet:
+8. Finally, you need to configure an EEM applet that looks for a condition and triggers your new Python Bot script 
+on-box in Guest Shell.  The trigger we are going to use in this lab is any configuration change made on your network 
+device.  Normally, you might install an EEM applet via the IOS XE CLI, for example with the following IOS XE 
+configuration snippet:
     
     ```
     !
@@ -421,17 +423,24 @@ snippet:
     !
     ```
     
-    However, we are Network Programmability Ninjas and will use model driven programmability to configure the EEM 
-    applet on our network device.
+    However, you are a Network Programmability Ninja now and will use model driven programmability to configure the 
+    EEM applet on your network device.
     
-    Open the Git Bash terminal application.  Activate the lab Python virtual environment:
+    Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/Git-01.png)
+    
+    ![Git Bash Terminal](assets/Git-02.png)
+    
+    Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to your 
+    lab working directory and activate the Python virtual environment you created earlier in this lab:
     
     ```
     $ cd ~/lab
     $ source pythonenv/Scripts/activate
     (pythonenv) $
     ```
-        
+    
     Change to the `~/lab/LTRDEV-1100/code` directory inside the Git repository for this lab.
     
     ```
@@ -441,7 +450,7 @@ snippet:
     
     There are two files of interest for this step: `iosxe-config-eem.py` and `iosxe-config-eem.xml`.  The file 
     `iosxe-config-eem.py` is the NETCONF client Python script using the ncclient Python package.  The file 
-    `iosxe-config-eem.xml` is the XML-encoded YANG data model for the task at hand.  We will need to modify
+    `iosxe-config-eem.xml` is the XML-encoded YANG data model for the task at hand.  You will need to modify
     `iosxe-config-eem.xml` to replace strings containing the Bot Access Token and your email address.
     
     Open the lab folder by double clicking the Windows Explore shortcut on the lab workstation desktop:
@@ -460,7 +469,7 @@ snippet:
     
     In line 21, replace the string after `-e` with the email address associated with your Webex Teams account.
     
-    Save your changes by navigating the `File` menu and clicking `Save`.  Close the Notepad++ application.
+    Save your changes by navigating to the `File` menu and clicking `Save`.  Close the Notepad++ application.
     
     Now return to the Git Bash terminal and run the `iosxe-config-eem.py` Python script with the `python` command, 
     for example:
@@ -507,7 +516,7 @@ snippet:
     (pythonenv) $
     ```
     
-    Check your handy work from the IOS XE device CLI:
+    Ensure you received an `ok` embedded in the configuration result.  Check your handy work from the IOS XE device CLI:
     
     ```
     csr1#show running-config | section event
@@ -532,12 +541,17 @@ snippet:
     configuration change on the network device!
     
     ![Webex Teams Bot Message](assets/WebexTeamsBot-12.png)
+    
+    Now each time you make a configuration change, you will receive a notification in Webex Teams!
 
-No each time you make a configuration change, you will receive a notification in Webex Teams.  This only just 
-scratches the surface of what is possible with ChatOps leveraging the network programmability concepts you've learned 
-in this lab.  With great ease, you were able to leverage integrate an IOS XE network device using model driven 
-programmability and APIs with a premiere cloud collaboration platform for communications.
+This only just scratches the surface of what is possible with ChatOps leveraging the network programmability concepts
+you've learned in this lab.  With great ease, you were able to leverage integrate an IOS XE network device using 
+model driven programmability and APIs with a premiere cloud collaboration platform for communications.
 
 Return to the Network Programmability Dojo on a regular to pick up new tools of the Ninja, continue to further hone 
 your Ninja skills, and put your Ninja skills to work to continue to drive real benefit, save time and money, and 
 reduce human error.
+
+Time permitting, continue on to the Appendices for additional, optional content and resources you might find valuable.
+
+Thank you for your time and commitment at Cisco Live!

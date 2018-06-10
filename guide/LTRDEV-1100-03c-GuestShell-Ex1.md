@@ -40,7 +40,7 @@ for example:
 
 4. IOx is a Cisco-developed end-to-end application framework that provides application hosting capabilities for
 different application types on Cisco network platforms.  Guest Shell is on such application distributed on Catalyst 
-switches.  IOx is a prerequisite for Guest Shell, so we need to turn on IOx with the `iox` command, for example:
+switches.  IOx is a prerequisite for Guest Shell, so you need to turn on IOx with the `iox` command, for example:
    
     ```
     csr1(config)#iox
@@ -91,7 +91,7 @@ switches.  IOx is a prerequisite for Guest Shell, so we need to turn on IOx with
     `Running` state, continue to the next step.  The `IOx service (HA)` service will remain in the `Not Running` 
     state since there is only one IOS XE network device in this lab.
 
-6. Before enabling Guest Shell, we have a bit of prerequisite configuration to complete first.  We must complete the 
+6. Before enabling Guest Shell, you have a bit of prerequisite configuration to complete first.  You must complete the 
 following configuration:
     
     * Configure a Virtual Port Group - The Virtual Port Group is the interface the IOS XE network device uses to 

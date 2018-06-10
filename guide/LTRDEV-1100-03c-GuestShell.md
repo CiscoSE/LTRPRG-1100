@@ -17,9 +17,9 @@ while maintaining a fault and resource isolation from IOS XE.
 
 ### On-box vs. Off-box Network Programmability
 
-So far in this lab, we have been focusing on so-called off-box network programmability.  That is to say, we've been 
+So far in this lab, you have been focusing on so-called off-box network programmability.  That is to say, you've been 
 running applications on a workstation and interfacing with network devices.  The applications reside on a workstation
-and connect to a network device.  With on-box network programmability, we have the ability to host and run 
+and connect to a network device.  With on-box network programmability, you have the ability to host and run 
 applications directly on the network device itself.
 
 Off-Box network programmability is ideal for:
