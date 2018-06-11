@@ -1,25 +1,29 @@
 #!/usr/bin/env python
-#
+
 from ncclient import manager
 import sys
-import xml.dom.minidom as DOM
+import xml.dom.minidom as dom
 
-# the variables below assume the user is leveraging a
-# Vagrant Image running IOS-XE 16.7 on local device
+
 HOST = '198.18.134.11'
-# use the NETCONF port for your IOS-XE
 PORT = 830
-# use the user credentials for your IOS-XE
 USER = 'netconf'
 PASS = 'C1sco12345'
+
 # YANG filter
 NS = """
     <filter>
         <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
             <interface></interface>
         </native>
-    </filter>
-    """
+     </filter>
+     """
+
+
+class IntInfo:
+    def __init__(self, name, description):
+                self.name = name
+                self.description = description
 
 
 class IntInfo():
@@ -29,9 +33,7 @@ class IntInfo():
 
 
 def connect(xml_filter):
-    """
-    Open connection using IOS-XE Native Filter
-    """
+    # Open connection using IOS-XE Native Filter
     with manager.connect(host=HOST, port=PORT, username=USER,
                          password=PASS, hostkey_verify=False,
                          device_params={'name': 'default'},
@@ -56,7 +58,7 @@ def get_int_info(int):
 def main():
     interfaces = connect(NS)
 
-    doc = DOM.parseString(interfaces.xml)
+    doc = dom.parseString(interfaces.xml)
     node = doc.documentElement
 
     gigs = doc.getElementsByTagName("GigabitEthernet")
