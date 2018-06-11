@@ -10,11 +10,6 @@ PASS = 'C1sco12345'
 
 
 def main():
-    # Main method that prints NETCONF capabilities of remote device.
-
-
-# create a main() method
-def main():
     # Main method that prints netconf capabilities of remote device.
     
     with manager.connect(host=HOST, port=PORT, username=USER,
