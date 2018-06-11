@@ -55,21 +55,13 @@ down an environment, cleaning up an environment, and more.
     
     ```
     $ vagrant -h
-    
-    foo
-    
-    $
     ```
 
 2. For more help with a specific Vagrant command, type `vagrant <command> -h`, for example:
     
     ```
     $ vagrant box -h
-     
-    foo
-     
-    $
-    ```
+   ```
     
 3. Vagrant boxes are globally stored for the current user logged into the host system running Vagrant.  Boxes are 
 never modified; boxes are cloned from the base image provided by the box.  If you manage multiple 
@@ -80,10 +72,6 @@ a guest virtual machine in other environments.
     
     ```
     $ vagrant box list
-    
-    foo
-    
-    $
     ```
     
     To download and install a Vagrant box from [HashiCorp's Vagrant Cloud box catalog](https://app.vagrantup
@@ -92,10 +80,6 @@ a guest virtual machine in other environments.
     
     ```
     $ vagrant box add hashicorp/precise64
-    
-    foo
-    
-    $
     ```
     
     To remove a Vagrant box altogether from your system, type `vagrant box remove <box descriptor>`.  For example,
@@ -103,10 +87,6 @@ a guest virtual machine in other environments.
     
     ```
     $vagrant box remove hashicorp/precise64
-    
-    foo
-    
-    $
     ```
     
 4. Every Vagrant environment needs initialized.  To initialize a new Vagrant environment, type `vagrant init`.  This 
@@ -117,20 +97,12 @@ environment:
     ```
     $ mkdir my_first_vagrant_env
     $ vagrant init
-    
-    foo
-    
-    $
     ```
     
 5. To start up the new Vagrant environment, type `vagrant up`, for example:
     
     ```
     $ vagrant up
-    
-    foo
-    
-    $
     ```
     
 6. To connect to the virtual machine in your new environment, you have two options, depending on what is supported 
@@ -140,10 +112,6 @@ by the virtual machine cloned from the Vagrant box:
         
         ```
         $ vagrant ssh
-        
-        foo
-        
-        $
         ```
     
     2. To connect using RDP, type `vagrant rdp`.
@@ -152,10 +120,6 @@ by the virtual machine cloned from the Vagrant box:
     
     ```
     $ vagrant status
-    
-    foo
-    
-    $
     ```
     
     This will show you the current, default machine status.  If there are multiple Vagrant environments running, then
@@ -163,10 +127,6 @@ by the virtual machine cloned from the Vagrant box:
      
      ```
      $ vagrant global-status
-     
-     foo
-     
-     $
      ```
      
 8. There are several Vagrant commands to manage the state of a Vagrant environment:
@@ -196,7 +156,8 @@ peers can check out the Vagrantfile for an environment and simply `vagrant up` t
 The syntax of a Vagrantfile is the [Ruby](http://www.ruby-lang.org/en/) programming language, but it is not necessary 
 have an understanding of Ruby to edit a Vagrantfile.  Let's take a look at the default Vagrantfile that is created 
 for you when you run the command `vagrant init hashicorp/precise64`:
-
+    
+    ```
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
     
@@ -267,6 +228,7 @@ for you when you run the command `vagrant init hashicorp/precise64`:
       #   apt-get install -y apache2
       # SHELL
     end
+    ```
 
 Let's break this down; it is actually much simpler than it might appear.
 
