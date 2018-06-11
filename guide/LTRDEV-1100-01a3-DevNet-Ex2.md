@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-01a2-DevNet-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02-Tools.md)
 
-
 ---
 
 ### Exercise 2: Exploring Cisco DevNet
@@ -51,6 +50,5 @@ hands-on with APIs available for your favorite Cisco products!  Our learning lab
 workshops, panels and more showcase how easily you can become a developer.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-01a2-DevNet-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02-Tools.md)

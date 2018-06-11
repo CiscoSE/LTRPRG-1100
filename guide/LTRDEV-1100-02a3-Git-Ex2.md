@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-02a2-Git-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b1-Python.md)
 
+---
+
 ### Exercise 2: Introducing Git Concepts and Commands
 
 #### Objectives
@@ -301,5 +303,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     ```
     
     Congratulations, you've cloned a Git repository hosted on GitHub.
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-02a2-Git-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b1-Python.md)

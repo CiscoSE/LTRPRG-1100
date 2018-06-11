@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-02-Tools.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02a2-Git-Ex1.md)
 
-
 ---
 
 ## Git and GitHub
@@ -27,6 +26,5 @@ free account must be public.  Private repositories are supported with a
 
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-02-Tools.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02a2-Git-Ex1.md)

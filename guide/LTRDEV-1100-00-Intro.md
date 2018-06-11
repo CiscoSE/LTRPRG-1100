@@ -1,15 +1,6 @@
 Navigation :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01-Dojo.md)
 
-TODOs
-
-- [x] @mgalazka Update Python content with new virtual environment instructions; Add content to upgrade pip==10.0.1;
-Add content to pip install netmiko; Add content to upgrade setuptools==39.2.0;  Add content pip install -r
-requirements.txt
-- [ ] @curtissmith Update all content to include how to open Git Bash and PuTTY
-- [x] @curtissmith Re-structure/organize content
-- [x] @curtissmith Update TOC
-- [ ] @mgalazka Update navigation
-- [x] Create guide/README.md to include TOC
+---
 
 # Introduction
 
@@ -83,6 +74,5 @@ Upon completion of this lab, you will be able to:
 6. [Appendix 2](LTRDEV-1100-06-Appx2.md)
 
 ---
-
 
 Navigation :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01-Dojo.md)

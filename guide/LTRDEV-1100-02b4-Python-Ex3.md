@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-02b3-Python-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b5-Python-Ex4.md)
 
+---
+
 ### Exercise 3: Deploying Useful Python Packages
 
 #### Objectives
@@ -157,5 +159,7 @@ the remaining packages required for this lab (output truncated for brevity):
     
     Now that the virtual environment is active and has the prerequisite Python packages installed, it is a great time
     to start trying out Python.
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-02b3-Python-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b5-Python-Ex4.md)

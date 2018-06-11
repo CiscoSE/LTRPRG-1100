@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-05c2-Vagrant-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents)
 
+---
+
 # Appendix 2
 
 ## Additional Network Programmability Resources
@@ -40,5 +42,6 @@ and
 
 ![Net Prog Learning Network](assets/NetProgLearningNetwork.png)
 
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-05c2-Vagrant-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents)

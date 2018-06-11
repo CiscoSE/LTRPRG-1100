@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-03c1-GuestShell.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03c3-GuestShell-Ex2.md)
 
-
 ---
 
 ### Exercise 1: Introducing IOS XE Guest Shell
@@ -544,6 +543,5 @@ command `dohost`: `dohost 'foo'`.  For example, to display the IOS XE device int
     ```
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-03c1-GuestShell.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03c3-GuestShell-Ex2.md)

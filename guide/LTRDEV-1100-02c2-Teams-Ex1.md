@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-02c1-Teams.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02d1-Postman.md)
 
+---
+
 ### Exercise 1: Getting Started with Cisco Webex Teams
 
 #### Objectives
@@ -118,5 +120,7 @@ integrations and bots.
     
     * Integrations utilize the Webex Teams API on behalf of other users, via OAuth.
     * Bots are effectively their own users and can post their own content.
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-02c1-Teams.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02d1-Postman.md)

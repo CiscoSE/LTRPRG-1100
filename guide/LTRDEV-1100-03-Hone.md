@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-02d2-Postman-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a1-API.md)
 
-
 ---
 
 # Hone Your Ninja Skills
@@ -19,6 +18,5 @@ Now that we have introduced the essential tools of the Ninja, it is time to hone
 those skills, additionally armed with new concepts that we will introduce in the next section of this lab.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-02d2-Postman-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a1-API.md)

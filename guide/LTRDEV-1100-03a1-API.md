@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-03-Hone.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a2-API-Ex1.md)
 
-
 ---
 
 ## Application Programming Interface (API)
@@ -16,6 +15,5 @@ code to interact with software, devices, and other external components, amplifyi
 accomplished.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-03-Hone.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03a2-API-Ex1.md)

@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-03b2-NETCONF-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b4-NETCONF-Ex3.md)
 
-
 ---
 
 ### Exercise 2: Introducing NETCONF
@@ -122,6 +121,5 @@ configuration datastore is the only mandatory datastore specified by the NETCONF
 datastores may be supported by the network device vendor.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-03b2-NETCONF-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b4-NETCONF-Ex3.md)

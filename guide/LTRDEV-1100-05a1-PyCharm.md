@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-05-Appx1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a2-PyCharm-Ex1.md)
 
+---
+
 ## PyCharm
 
 [PyCharm](https://www.jetbrains.com/pycharm/) is a Python integrated development environment (IDE) developed by 
@@ -18,5 +20,7 @@ Key features of PyCharm include, but are not limited to:
  
 An IDE like PyCharm is much more than a text editor, although it is that, too.  Let's take a look at what is key to 
 getting started with PyCharm.
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-05-Appx1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05a2-PyCharm-Ex1.md)

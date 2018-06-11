@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-03b5-NETCONF-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03c2-GuestShell-Ex1.md)
 
-
 ---
 
 ## Guest Shell
@@ -50,6 +49,5 @@ Here is a brief reference for the platforms that support Guest Shell today:
 | RPM Install | No | Yes | Yes |
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-03b5-NETCONF-Ex4.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03c2-GuestShell-Ex1.md)

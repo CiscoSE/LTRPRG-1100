@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-01a1-DevNet.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01a3-DevNet-Ex2.md)
 
-
 ---
 
 ### Exercise 1: Joining Cisco DevNet
@@ -38,6 +37,5 @@ are ready to explore DevNet.
     ![DevNet Profile 2](assets/DevNet-04.png)
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-01a1-DevNet.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01a3-DevNet-Ex2.md)

@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-00-Intro.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01a1-DevNet.md)
 
-
 ---
 
 # The Network Programmability Dojo
@@ -50,6 +49,5 @@ How do you get started?  Well, this very lab is a great first step!  After compl
 armed with the Ninja training necessary to go and practice the fine art of network programmability in your job.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-00-Intro.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01a1-DevNet.md)

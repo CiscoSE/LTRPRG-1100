@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-03c2-GuestShell-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-04-Test.md)
 
-
 ---
 
 ### Exercise 2: Unleashing Network Programmability at the Network Edge
@@ -300,6 +299,5 @@ the network device `bootflash:`, transfer the file to the network device file sy
     ```
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-03c2-GuestShell-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-04-Test.md)

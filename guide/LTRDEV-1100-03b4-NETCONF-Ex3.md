@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-03b3-NETCONF-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b5-NETCONF-Ex4.md)
 
-
 ---
 
 ### Exercise 3: Exploring IOS XE YANG Data Models with NETCONF
@@ -300,6 +299,5 @@ your lab working directory and activate the Python virtual environment you creat
     Let's take a look at a number of example uses cases in the next section of the lab.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-03b3-NETCONF-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03b5-NETCONF-Ex4.md)

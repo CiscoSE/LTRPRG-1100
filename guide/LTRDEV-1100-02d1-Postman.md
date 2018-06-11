@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-02c2-Teams-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02d2-Postman-Ex1.md)
 
+---
+
 ## Postman
 
 ### Introducing Postman
@@ -27,5 +29,7 @@ Postman is a full-featured and powerful toolset, it still provides a remarkably 
 client. This functionality is helpful when working with products or services that offer a REST API. Postman can be a 
 great first step to prototype the API call, and then subsequently understand how the response looks. Using this 
 information, it becomes much easier to interact with APIs.
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-02c2-Teams-Ex1.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02d2-Postman-Ex1.md)

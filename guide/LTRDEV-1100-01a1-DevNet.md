@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-01-Dojo.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01a2-DevNet-Ex1.md)
 
-
 ---
 
 ## Cisco DevNet
@@ -45,6 +44,5 @@ Join communities of interest and participate in on-going discussions around tech
 forums on various Cisco technologies; get your questions answered; meet and greet at events around the world.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-01-Dojo.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-01a2-DevNet-Ex1.md)

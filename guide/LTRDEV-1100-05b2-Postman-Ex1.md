@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-05b1-Postman.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05c1-Vagrant.md)
 
+---
+
 ### Exercise 1: Getting Advanced with Postman
 
 #### Objectives
@@ -103,5 +105,7 @@ code necessary to execute this API call directly from a Python script. As a matt
 Clipboard` and paste this into PyCharm to test it out.
     
     ![Postman code gen](assets/postman-11.png)
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-05b1-Postman.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-05c1-Vagrant.md)

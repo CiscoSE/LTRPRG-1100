@@ -1,5 +1,7 @@
 Navigation :: [Previous Page](LTRDEV-1100-02d1-Postman.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03-Hone.md)
 
+---
+
 ### Exercise 1: Getting Started with Postman
 
 #### Objectives
@@ -70,5 +72,7 @@ instance, the header `Content-Type` specifies `application/json` as its value. T
 APIs programmatically, as JSON formatted data would be parsed differently than, say, XML formatted data.
     
     ![Postman result headers](assets/postman-03.png)
+
+---
 
 Navigation :: [Previous Page](LTRDEV-1100-02d1-Postman.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-03-Hone.md)

@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-02b1-Python.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b3-Python-Ex2.md)
 
-
 ---
 
 ### Exercise 1: Understanding How to Run Python
@@ -107,6 +106,5 @@ similar to below:
     in this lab and you can invoke the interpreter or run applications with the `python` command.
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-02b1-Python.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b3-Python-Ex2.md)

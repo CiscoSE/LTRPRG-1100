@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-01a3-DevNet-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02a1-Git.md)
 
-
 ---
 
 # Tools of the Ninja
@@ -32,6 +31,5 @@ In this lab, we highlight the following:
 Let's get started with your training!
 
 ---
-
 
 Navigation :: [Previous Page](LTRDEV-1100-01a3-DevNet-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02a1-Git.md)

@@ -1,6 +1,5 @@
 Navigation :: [Previous Page](LTRDEV-1100-02a3-Git-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b2-Python-Ex1.md)
 
-
 ---
 
 ## Python for Network Programmability
@@ -20,7 +19,5 @@ modules, Python can be used to communicate with networking devices in many ways,
 and REST APIs. With so many uses, it is one of the most powerful tools a Network Programmability Ninja can have.
 
 ---
-
-
 
 Navigation :: [Previous Page](LTRDEV-1100-02a3-Git-Ex2.md) :: [Table of Contents](LTRDEV-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRDEV-1100-02b2-Python-Ex1.md)
