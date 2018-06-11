@@ -7,12 +7,12 @@
     * Python for Network Programmability
     * Cisco Webex Teams
     * Other Desktop Network Programmability Tools
-        * Vagrant Up for Network Engineers
-        * Postman
         * PyCharm
+        * Postman
+        * Vagrant Up for Network Engineers
 3. Hone Your Ninja Skills
-    * Introducing APIs
-    * Using NETCONF/YANG
+    * Application Programming Interface (API)
+    * Model Driven Programmability (NETCONF/YANG)
     * Guest Shell
 4. Test Your Ninja Skills
     * Script a Network Programmability Assistant for Cisco Webex Teams
