@@ -4,7 +4,7 @@ Navigation :: [Previous Page](LTRDEV-1100-05a3-PyCharm-Ex2.md) :: [Table of Cont
 
 ## Postman
 
-Here in this Appendix, you will find additional, optional content for Postman to supplement the content ealier in this
+Here in this Appendix, you will find additional, optional content for Postman to supplement the content earlier in this
 lab.
 
 ---

@@ -29,7 +29,7 @@ Step 2: Obtaining Your Webex Teams API Access Token
 to complete the account activation process. Please click on the activation link that is in your email Inbox waiting 
 for you.
 
-4. Follow the instructions on screen to complete your acount signup.
+4. Follow the instructions on screen to complete your account signup.
 
 #### Step 2: Obtaining Your Webex Teams API Access Token
 

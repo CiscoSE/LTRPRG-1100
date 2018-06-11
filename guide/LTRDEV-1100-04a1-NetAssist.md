@@ -14,9 +14,9 @@ configuration changes in a convenient location where you collaborate with your p
 ChatOps is a collaborative, conversation-centric way of doing business that brings people, Bots, messaging, 
 applications, and network devices together in one platform.  Such a platform, of course, is Webex Teams.  ChatOps 
 allows you to clearly and quickly see what and where the problem is.  The goal is to increase transparency and 
-productivity through integrating through and efficient and robust collboration platform. 
+productivity through integrating through and efficient and robust collaboration platform. 
 
-### Defing the Test
+### Defining the Test
 
 By leveraging a winning combination of Embedded Event Manager (EEM) and on-box network programmability using Python 
 in Guest Shell, your network device can notify you when its configuration has changed.  Using all of the tools and 
