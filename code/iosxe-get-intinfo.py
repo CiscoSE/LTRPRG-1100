@@ -9,6 +9,8 @@ HOST = '198.18.134.11'
 PORT = 830
 USER = 'netconf'
 PASS = 'C1sco12345'
+
+# YANG filter
 NS = """
     <filter>
         <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
@@ -24,10 +26,14 @@ class IntInfo:
                 self.description = description
 
 
+class IntInfo():
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+
+
 def connect(xml_filter):
-    """
-    Open connection using IOS-XE Native Filter
-    """
+    # Open connection using IOS-XE Native Filter
     with manager.connect(host=HOST, port=PORT, username=USER,
                          password=PASS, hostkey_verify=False,
                          device_params={'name': 'default'},
