@@ -1,7 +1,34 @@
-# LTRPRG-1100 (Cisco Live US 2018) Lab Guide
+Navigation :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-01-Dojo.md)
 
-This is the Lab Guide for Cisco Live US 2018 LTRPRG-1100 - So, you want to be a Network Programmability Ninja, now 
-what?
+---
+
+# Introduction
+
+The title of this lab is "So, You want to be a Network Programmability Ninja, Now What?"  In this lab, we will help 
+you get started with network programmability and arm you with the concepts and tools and real-world use cases needed to 
+make use of network programmability in your day-to-day work and play.
+
+We will have fun with Ninja-themed metaphors: We will introduce you to the Network Programmability Dojo; teach you 
+the Tools of the Ninja; allow you to Hone your Ninja Skills; and, finally, Test Your Ninja Skills with real-world use 
+cases at the end of this lab.
+
+We hope you have fun and learn valuable new skills!
+
+![Network Programmability Ninja Star](assets/NetworkProgrammabilityNinjaStar.jpg)
+
+# Learning Objectives
+
+Upon completion of this lab, you will be able to:
+
+* Understand what are the basic network programmability concepts
+* Learn what tools are useful for getting started with network programmability
+* Practice with the tools to develop and sharpen new network programmability skills
+* Put the concepts and tools to practice with real-world use cases
+* Put your new skills to the test
+
+# Lab Topology
+
+![Lab Topology](assets/LTRPRG-1100-Topology.png)
 
 # Table of Contents
 
@@ -45,3 +72,7 @@ what?
     3. [Vagrant Up for Network Engineers](LTRPRG-1100-05c1-Vagrant.md)
         1. [Introducing Vagrant](LTRPRG-1100-05c2-Vagrant-Ex1.md)
 6. [Appendix 2](LTRPRG-1100-06-Appx2.md)
+
+---
+
+Navigation :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-01-Dojo.md)

@@ -6,7 +6,7 @@ what?
 * [Abstract](ABSTRACT.md)
 * [Agenda](AGENDA.md)
 * [Speakers' Bio](BIO.md)
-* [Lab Guide](guide/LTRDEV-1100-00-Intro.md)
+* [Lab Guide](guide/LTRPRG-1100-00-Intro.md)
 
 **TODOs:**
 
