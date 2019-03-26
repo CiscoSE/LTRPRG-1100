@@ -23,7 +23,7 @@ item.
     ![PyCharm Check out from Git](assets/PyCharm-22.png)
 
 4. In the `URL:` box, type the URL for your Git repository you created earlier in this lab.  For example, 
-`https://github.com/curtissmith/clus18`, replacing `curtissmith` with your Git username.
+`https://github.com/curtissmith/clus19`, replacing `curtissmith` with your Git username.
     
     In the `Directory:` box, type the path to a PyCharm project directory that does not already exist, for example 
     `C:\Users\Administrator\lab\PyCharmGit`.
@@ -180,7 +180,7 @@ Control` tab.
     ![PyCharm Successful Git Push](assets/PyCharm-41.png)
     
     Check your handiwork by opening a web browser and navigating to your Git repository in GitHub, for 
-    example `https://github.com/curtissmith/clus18`, replacing `curtissmith` with your own GitHub username.
+    example `https://github.com/curtissmith/clus19`, replacing `curtissmith` with your own GitHub username.
     
 Congratulations, you've cloned a remote Git repository, staged a new Python file, committed those changes, and pushed
 your changes into the remote Git repository without leaving the PyCharm application or having to go back and 

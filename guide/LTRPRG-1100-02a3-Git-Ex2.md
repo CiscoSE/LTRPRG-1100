@@ -71,17 +71,17 @@ and  email address you used to register on GitHub, for example:
 command `git init`, for example:
     
     ```
-    $ mkdir -p ~/lab/clus18
-    $ cd ~/lab/clus18
+    $ mkdir -p ~/lab/clus19
+    $ cd ~/lab/clus19
     $ git init
-    Initialized empty Git repository in C:/Users/Administrator/lab/clus18/.git/
+    Initialized empty Git repository in C:/Users/Administrator/lab/clus19/.git/
     $
     ```
     
     Now take a look at the contents of the directory.  You will find a hidden directory named `.git`:
     
     ```
-    $ cd ~/lab/clus18
+    $ cd ~/lab/clus19
     $ ls -la
     total 4
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
@@ -90,7 +90,7 @@ command `git init`, for example:
     $
     ```
     
-    The directory `~/lab/clus18` is the new Git working directory and `~/lab/clus18/.git` is the Git directory.  
+    The directory `~/lab/clus19` is the new Git working directory and `~/lab/clus19/.git` is the Git directory.  
     The working directory (and consequently the Git directory) are empty as you've not staged or committed anything
     to the repository yet.
     
@@ -192,7 +192,7 @@ changes:
     
     ![Git New Repository](assets/Git-03.png)
     
-    In the box labeled `Repository name` type `clus18`.
+    In the box labeled `Repository name` type `clus19`.
     
     You may add an optional `Description`, for example `My Cisco Live US 2018 Git repository`.
     
@@ -205,7 +205,7 @@ changes:
     example below with the URL of your new remote repository):
     
     ```
-    $ git remote add origin https://github.com/username/clus18.git
+    $ git remote add origin https://github.com/username/clus19.git
     ```
     
     Second, push your local changes to the remote repository with the `git push` command:
@@ -215,7 +215,7 @@ changes:
     Counting objects: 3, done.
     Writing objects: 100% (3/3), 234 bytes | 234.00 KiB/s, done.
     Total 3 (delta 0), reused 0 (delta 0)
-    To https://github.com/curtissmith/clus18.git
+    To https://github.com/curtissmith/clus19.git
      * [new branch]      master -> master
     Branch 'master' set up to track remote branch 'master' from 'origin'.
     $
@@ -259,7 +259,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     total 16
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ./
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
-    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus18/
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus19/
     $ git pull
     fatal: Not a git repository (or any of the parent directories): .git
     $
@@ -282,7 +282,7 @@ Try this by moving to a directory that doesn't contain a `.git` Git directory, f
     total 20
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 ./
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:16 ../
-    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus18/
+    drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:19 clus19/
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 LTRPRG-1100/
     $ cd LTRPRG-1100
     $ ls -la
