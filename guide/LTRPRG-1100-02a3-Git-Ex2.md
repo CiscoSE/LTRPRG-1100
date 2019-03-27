@@ -194,7 +194,7 @@ changes:
     
     In the box labeled `Repository name` type `clus19`.
     
-    You may add an optional `Description`, for example `My Cisco Live US 2018 Git repository`.
+    You may add an optional `Description`, for example `My Cisco Live US 2019 Git repository`.
     
     ![Git New Repository](assets/Git-04.png)
     

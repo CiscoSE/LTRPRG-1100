@@ -1,47 +1,9 @@
-# LTRPRG-1100 (Cisco Live US 2018) Lab Guide
+# LTRPRG-1100 (Cisco Live US 2019) Lab Guide
 
-This is the Lab Guide for Cisco Live US 2018 LTRPRG-1100 - So, you want to be a Network Programmability Ninja, now 
-what?
+This is the Lab Guide for Cisco Live US 2019 instructor-led lab LTRPRG-1100 - So, you want to be a Network 
+Programmability Ninja, now what?
 
-# Table of Contents
+## Getting Started
 
-1. [The Network Programmability Dojo](LTRPRG-1100-01-Dojo.md)
-    1. [Cisco DevNet](LTRPRG-1100-01a1-DevNet.md)
-        1. [Joining Cisco DevNet](LTRPRG-1100-01a2-DevNet-Ex1.md)
-        2. [Exploring Cisco DevNet](LTRPRG-1100-01a3-DevNet-Ex2.md)
-2. [Tools of the Ninja](LTRPRG-1100-02-Tools.md)
-    1. [Git and GitHub](LTRPRG-1100-02a1-Git.md)
-        1. [Creating a GitHub Account](LTRPRG-1100-02a2-Git-Ex1.md)
-        2. [Introducing Git Concepts and Commands](LTRPRG-1100-02a3-Git-Ex2.md)
-    3. [Python for Network Programmability](LTRPRG-1100-02b1-Python.md)
-        1. [Understanding How to Run Python](LTRPRG-1100-02b2-Python-Ex1.md)
-        2. [Setting up Python Virtual Environments](LTRPRG-1100-02b3-Python-Ex2.md)
-        3. [Deploying Useful Python Packages](LTRPRG-1100-02b4-Python-Ex3.md)
-        4. [Working with the Python Interpreter](LTRPRG-1100-02b5-Python-Ex4.md)
-    4. [Cisco Webex Teams](LTRPRG-1100-02c1-Teams.md)
-        1. [Getting Started with Cisco Webex Teams](LTRPRG-1100-02c2-Teams-Ex1.md)
-    5. [Postman](LTRPRG-1100-02d1-Postman.md)
-        1. [Getting Started with Postman](LTRPRG-1100-02d2-Postman-Ex1.md)
-3. [Hone Your Ninja Skills](LTRPRG-1100-03-Hone.md)
-    1. [Application Programming Interface (API)](LTRPRG-1100-03a1-API.md)
-        1. [Understanding and Using APIs](LTRPRG-1100-03a2-API-Ex1.md)
-    2. [Model Driven Programmability](LTRPRG-1100-03b1-NETCONF.md)
-        1. [Introducing YANG](LTRPRG-1100-03b2-NETCONF-Ex1.md)
-        2. [Introducing NETCONF](LTRPRG-1100-03b3-NETCONF-Ex2.md)
-        3. [Exploring IOS XE YANG Data Models with NETCONF](LTRPRG-1100-03b4-NETCONF-Ex3.md)
-        4. [Exploring IOS XE NETCONF/YANG Example Use Cases](LTRPRG-1100-03b5-NETCONF-Ex4.md)
-    6. [Guest Shell](LTRPRG-1100-03c1-GuestShell.md)
-        1. [Introducing IOS XE Guest Shell](LTRPRG-1100-03c2-GuestShell-Ex1.md)
-        2. [Unleashing Network Programmability at the Network Edge](LTRPRG-1100-03c3-GuestShell-Ex2.md)
-4. [Test Your Ninja Skills](LTRPRG-1100-04-Test.md)
-    1. [Script a Network Programmability Assistant for Cisco Webex Teams](LTRPRG-1100-04a1-NetAssist.md)
-        1. [ChatOps like a Network Programmability Ninja](LTRPRG-1100-04a2-NetAssist-Ex1.md)
-5. [Appendix 1](LTRPRG-1100-05-Appx1.md)
-    1. [PyCharm](LTRPRG-1100-05a1-PyCharm.md)
-        1. [Getting Started with PyCharm](LTRPRG-1100-05a2-PyCharm-Ex1.md)
-        2. [Getting Advanced with PyCharm](LTRPRG-1100-05a3-PyCharm-Ex2.md)
-    2. [Postman](LTRPRG-1100-05b1-Postman.md)
-        1. [Getting Advanced with Postman](LTRPRG-1100-05b2-Postman-Ex1.md)
-    3. [Vagrant Up for Network Engineers](LTRPRG-1100-05c1-Vagrant.md)
-        1. [Introducing Vagrant](LTRPRG-1100-05c2-Vagrant-Ex1.md)
-6. [Appendix 2](LTRPRG-1100-06-Appx2.md)
+To get started with this lab, start with the [Introduction](LTRPRG-1100-00-Intro.md).  You may also refer to the 
+[Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) to navigate the lab guide.

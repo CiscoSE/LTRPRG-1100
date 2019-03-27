@@ -28,6 +28,9 @@ Upon completion of this lab, you will be able to:
 
 # Lab Topology
 
+This lab uses [Cisco dCloud](https://dcloud.cisco.com/) to host a pre-built network programmability virtual workstation 
+and a Cisco IOS XE virtual network device.
+
 ![Lab Topology](assets/LTRPRG-1100-Topology.png)
 
 # Table of Contents
