@@ -1,18 +1,15 @@
 # Agenda
 
-1. The Network Programmability Dojo
+* The Network Programmability Dojo
     * What is Network Programmability
-2. Tools of the Ninja
+* Tools of the Ninja
     * Git and GitHub
     * Python for Network Programmability
-    * Cisco Webex Teams
+    * Postman
     * Other Desktop Network Programmability Tools
-        * PyCharm
-        * Postman
-        * Vagrant Up for Network Engineers
-3. Hone Your Ninja Skills
-    * Application Programming Interface (API)
-    * Model Driven Programmability (NETCONF/YANG)
+* Hone Your Ninja Skills
+    * Application Programming Interfaces (APIs)
+    * Model Driven Programmability (NETCONF/RESTCONF and YANG)
     * Guest Shell
-4. Test Your Ninja Skills
-    * Script a Network Programmability Assistant for Cisco Webex Teams
+* Test Your Ninja Skills
+    * Solve Common Networking Problems with Network Programmability
