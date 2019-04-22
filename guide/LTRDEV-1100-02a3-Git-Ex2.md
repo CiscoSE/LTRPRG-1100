@@ -203,7 +203,8 @@ changes:
     
     Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, 
     use the `git remote add` command to add the local repository to the remote repository. Make sure to modify the URL
-    in the example below before running it, replacing the `username` with your Github username:
+    in the example below to match your new repository before running it, which at a minimum will require replacing the
+    `username` with your Github username:
     
     ```
     $ git remote add origin https://github.com/username/clus18.git
