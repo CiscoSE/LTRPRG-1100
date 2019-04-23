@@ -61,7 +61,8 @@ Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
 2. For first time Git setup, you should set your name and email address with the `git config` command.  Every commit 
 you make includes this information, so it is important to set this after installing Git.  This should match the name 
 and email address you used to register on GitHub. Keep in mind that the `user.name` and `user.email` are keyword 
-parameters and must be used in the command, both immediately followed by your name or email, respectively. For example:
+parameters and must be used in the command, both immediately followed by your real name (e.g. "Curtis Smith") and email,
+respectively, For example:
     
     ```
     $ git config --global user.name "Your Name"    
