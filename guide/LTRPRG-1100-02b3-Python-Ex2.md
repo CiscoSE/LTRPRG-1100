@@ -39,6 +39,7 @@ in.
     ```
     $ cd ~/lab
     $ mkdir pythonenv
+    $
     ```
 
 3.  Next, create a Python virtual environment in this directory with the `python` command. By default, Python will 
@@ -50,7 +51,6 @@ create a Python 3.x virtual environment for this lab, simply use the `python` co
 
     ```
     $ python -m venv pythonenv
-    
     $
     ```
 

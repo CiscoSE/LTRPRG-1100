@@ -32,23 +32,32 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-3. The pip tool is a software management system to install and maintain packages in Python.  Before working with it
-in this virtual environment, it must be updated with the `python` command:
+3. The pip tool is a software management system to install and maintain packages in Python.  Before working with pip
+in this virtual environment, ensure that it is updated to the version tested when this lab was developed with the 
+`python` command: 
     
     ```
-    (pythonenv) $ python -m pip install --upgrade pip==10.0.1
-    Cache entry deserialization failed, entry ignored
-    Collecting pip==10.0.1
-      Using cached https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390
-    b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl
+    (pythonenv) $ python -m pip install --upgrade pip==19.0.3
+    Collecting pip==19.0.3
+      Using cached https://files.pythonhosted.org/packages/d8/f3/413bab4ff08e1fc4828
+      dfc59996d721917df8e8583ea85385d51125dceff/pip-19.0.3-py2.py3-none-any.whl
     Installing collected packages: pip
-      Found existing installation: pip 9.0.3
-        Uninstalling pip-9.0.3:
-          Successfully uninstalled pip-9.0.3
-    Successfully installed pip-10.0.1
-    
+      Found existing installation: pip 19.0.2
+        Uninstalling pip-19.0.2:
+          Successfully uninstalled pip-19.0.2
+    Successfully installed pip-19.0.3
     (pythonenv) $
     ```
+    
+    If the pip tool is already up-to-date with the version specified, the command output above might look something 
+    like the following:
+    
+     ```
+    (pythonenv) $ python -m pip install --upgrade pip==19.0.3
+    Requirement already up-to-date: pip==19.0.3 in c:\users\administrator\lab\python
+    env\lib\site-packages (19.0.3)    (pythonenv) $
+    ```
+
 
 4. Now that pip has been updated in this virtual environment, it can be used to manage packages and modules in 
 Python with the `pip` command.
@@ -59,9 +68,8 @@ Python with the `pip` command.
     (pythonenv) $ pip list
     Package    Version
     ---------- -------
-    pip        10.0.1
-    setuptools 39.0.1
-
+    pip        19.0.3
+    setuptools 40.8.0
     (pythonenv) $
     ```
 
@@ -90,7 +98,9 @@ for brevity):
     
     ```
     (pythonenv) $ pip install netmiko
-    Successfully installed asn1crypto-0.24.0 bcrypt-3.1.4 cffi-1.11.5 cryptography-2.2.2 idna-2.6 netmiko-2.1.1 paramiko-2.4.1 pyasn1-0.4.3 pycparser-2.18 pynacl-1.2.1 pyserial-3.4 pyyaml-3.12 scp-0.11.0 six-1.11.0 textfsm-0.4.1
+    Successfully installed asn1crypto-0.24.0 bcrypt-3.1.6 cffi-1.12.3 cryptography-2
+    .6.1 netmiko-2.3.3 paramiko-2.4.2 pyasn1-0.4.5 pycparser-2.19 pynacl-1.3.0 pyser
+    ial-3.4 pyyaml-5.1 scp-0.13.2 six-1.12.0 textfsm-0.4.1
     (pythonenv) $
     ```
 
@@ -102,15 +112,15 @@ upgrade to a specific version of the Python package.  For example, if you run th
 not that is the latest version available.  For this lab, upgrade setuptools to version 39.2.0, specifically:
         
     ```
-    (pythonenv) $ pip install -U setuptools==39.2.0
-    Collecting setuptools==39.2.0
-      Using cached https://files.pythonhosted.org/packages/7f/e1/820d941153923aac1d49d7fc37e17b6e73bfbd2904959fffbad77900cf92/setuptools-39.2.0-py2.py3-none-any.whl
+    (pythonenv) $ pip install -U setuptools==41.0.1
+    Collecting setuptools==41.0.1
+      Using cached https://files.pythonhosted.org/packages/ec/51/f45cea425fd5cb0b0380
+      f5b0f048ebc1da5b417e48d304838c02d6288a1e/setuptools-41.0.1-py2.py3-none-any.whl
     Installing collected packages: setuptools
-      Found existing installation: setuptools 39.0.1
-        Uninstalling setuptools-39.0.1:
-          Successfully uninstalled setuptools-39.0.1
-    Successfully installed setuptools-39.2.0
-
+      Found existing installation: setuptools 40.8.0
+        Uninstalling setuptools-40.8.0:
+          Successfully uninstalled setuptools-40.8.0
+    Successfully installed setuptools-41.0.1
     (pythonenv) $
     ```
 
@@ -122,6 +132,8 @@ the remaining packages required for this lab (output truncated for brevity):
     
     ```
     (pythonenv) $ pip install -r ~/lab/LTRPRG-1100/requirements.txt
+    Successfully installed certifi-2019.3.9 chardet-3.0.4 idna-2.8 lxml-4.3.3 nccli
+    ent-0.6.4 requests-2.21.0 urllib3-1.25
 
     ```
     
@@ -132,28 +144,28 @@ the remaining packages required for this lab (output truncated for brevity):
     Package      Version
     ------------ ---------
     asn1crypto   0.24.0
-    bcrypt       3.1.4
-    certifi      2018.4.16
-    cffi         1.11.5
+    bcrypt       3.1.6
+    certifi      2019.3.9
+    cffi         1.12.3
     chardet      3.0.4
-    cryptography 2.2.2
-    idna         2.6
-    lxml         4.2.1
-    ncclient     0.5.3
-    netmiko      2.1.1
-    paramiko     2.4.1
-    pip          10.0.1
-    pyasn1       0.4.3
-    pycparser    2.18
-    PyNaCl       1.2.1
+    cryptography 2.6.1
+    idna         2.8
+    lxml         4.3.3
+    ncclient     0.6.4
+    netmiko      2.3.3
+    paramiko     2.4.2
+    pip          19.0.3
+    pyasn1       0.4.5
+    pycparser    2.19
+    PyNaCl       1.3.0
     pyserial     3.4
-    PyYAML       3.12
-    requests     2.18.4
-    scp          0.11.0
-    setuptools   39.2.0
-    six          1.11.0
+    PyYAML       5.1
+    requests     2.21.0
+    scp          0.13.2
+    setuptools   41.0.1
+    six          1.12.0
     textfsm      0.4.1
-    urllib3      1.22
+    urllib3      1.25
     (pythonenv) $
     ```
     

@@ -36,14 +36,14 @@ your lab working directory and activate the Python virtual environment you creat
     
     ```
     (pythonenv) $ python
-    Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
-    l)] on win32
+    Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
+    4)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
     ```
 
 3.  Notice that once the Python interpreter is running, the prompt changes to `>>>`. This is where you can input Python 
-code. Start with printing `Hello World!` to the screen, as shown below:
+code. Start with printing `Hello World!` to the screen with the Python function `print()`, as shown below:
     
     ```
     >>> print("Hello World!")
@@ -63,7 +63,7 @@ much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
     
     Sometimes our on-the-fly mathematics needs are directly related to our Network Programmability Ninja skills. For 
     instance, you may need to convert DSCP values to ToS values. Converting DSCP to ToS for quality of service is
-    done by bit-shifting by 2 bits to the left (padding a binary number with two 0s). Doing this on paper, you would
+    done by bit-shifting by 2 bits to the left (padding a binary number with two `0`s). Doing this on paper, you would
     typically write out the binary representation of the DSCP integer, then pad two 0s on the right side of this 
     binary string, and then mentally convert that new binary string back into an integer. Python makes quick work of 
     this:
@@ -74,12 +74,12 @@ much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
     >>>
     ```
     
-    The `<<` operator executes a left bit-shift operation on the number to the left of the operator by the number of 
-    bits indicated to the right of the operator. In this example, we bit-shifted two bits to the left on DSCP 46, 
+    The Python operator `<<` executes a left bit-shift operation on the number to the left of the operator by the number
+    of bits indicated to the right of the operator. In this example, we bit-shifted two bits to the left on DSCP 46, 
     leaving us with a ToS value of 184. 
 
-5.  To exit the interpreter, type `quit()` or use the key-sequence `CTRL-D` and it will return you to the 
-    terminal prompt, for example:
+5.  To exit the interpreter, type Python function `quit()` or use the key-sequence `CTRL-D` and it will return you to 
+the terminal prompt, for example:
     
     ```
     >>> quit()

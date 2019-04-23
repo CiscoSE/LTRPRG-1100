@@ -34,8 +34,8 @@ correct version.  On all operating systems and platforms, the Python interpreter
     
     ```
     $ python
-    Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
-    l)] on win32
+    Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
+    4)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
     ```
@@ -55,7 +55,7 @@ similar to below:
     
     ```
     $ python -V
-    Python 3.6.5
+    Python 3.7.3
     ```
     
     In some situations, both Python 2.x and Python 3.x are installed on the same system.  Which version of the Python
@@ -70,7 +70,7 @@ similar to below:
     
     ```
     $ py -V
-    Python 3.6.5
+    Python 3.7.3
     $
     ```
     
@@ -78,10 +78,9 @@ similar to below:
     
     ```
     $ py -2 -V
-    Python 2.7.15
-    $
+    Python 2.7.16
     $ py -2
-    Python 2.7.15 (v2.7.15:ca079a3ea3, Apr 30 2018, 16:30:26) [MSC v.1500 64 bit (AM
+    Python 2.7.16 (v2.7.16:413a49145e, Mar  4 2019, 01:37:19) [MSC v.1500 64 bit (AM
     D64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>> quit()
@@ -94,10 +93,10 @@ similar to below:
     $ py -3 -V
     Python 3.6.5
     $ py -3
-    Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
-    l)] on win32
+    Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
+    4)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+    >>> quit()
     $
     ```
     
