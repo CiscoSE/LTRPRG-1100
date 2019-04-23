@@ -78,7 +78,7 @@ much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
     of bits indicated to the right of the operator. In this example, we bit-shifted two bits to the left on DSCP 46, 
     leaving us with a ToS value of 184. 
 
-5.  To exit the interpreter, type Python function `quit()` or use the key-sequence `CTRL-D` and it will return you to 
+5.  To exit the interpreter, type Python function `quit()` followed by a carriage return, and it will return you to 
 the terminal prompt, for example:
     
     ```
