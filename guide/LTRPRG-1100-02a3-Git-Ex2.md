@@ -60,7 +60,9 @@ Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
 2. For first time Git setup, you should set your name and email address with the `git config` command.  Every commit 
 you make includes this information, so it is important to set this after installing Git.  This should match the name 
-and  email address you used to register on GitHub, for example:
+and email address you used to register on GitHub. Keep in mind that the `user.name` and `user.email` are keyword 
+parameters and must be used in the command, both immediately followed by your real name (e.g. "Curtis Smith") and email,
+respectively, For example:
     
     ```
     $ git config --global user.name "Your Name"    
@@ -201,8 +203,9 @@ changes:
     Click the `Create repository` button.
     
     Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, 
-    use the `git remote add` command to add the local repository to the remote repository (replace the URL in the 
-    example below with the URL of your new remote repository):
+    use the `git remote add` command to add the local repository to the remote repository. Make sure to modify the URL
+    in the example below to match your new repository before running it, which at a minimum will require replacing the
+    `username` with your Github username:
     
     ```
     $ git remote add origin https://github.com/username/clus19.git
