@@ -241,13 +241,15 @@ your lab working directory and activate the Python virtual environment you creat
     
     ```
     $ cd ~/lab
-    $ git clone https://github.com/YangModels/yang
+    $ git clone https://github.com/YangModels/yang.git
     Cloning into 'yang'...
-    remote: Counting objects: 13445, done.
-    remote: Compressing objects: 100% (187/187), done.
-    remote: Total 13445 (delta 353), reused 529 (delta 353), pack-reused 12905
-    Receiving objects: 100% (13445/13445), 23.11 MiB | 581.00 KiB/s, done.
-    Resolving deltas: 100% (9076/9076), done.
+    remote: Enumerating objects: 227, done.
+    remote: Counting objects: 100% (227/227), done.
+    remote: Compressing objects: 100% (117/117), done.
+    remote: Total 25129 (delta 125), reused 207 (delta 110), pack-reused 24902
+    Receiving objects: 100% (25129/25129), 48.16 MiB | 23.75 MiB/s, done.
+    Resolving deltas: 100% (19197/19197), done.
+    Checking out files: 100% (26742/26742), done.
     $
     ```
 
@@ -286,12 +288,13 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     Ensure that pyang is installed with the `pip install` command, for example:
     
     ```
-    (pythonenv) $ pip install pyang==1.7.5
+    (pythonenv) $ pip install pyang==1.7.8
     Collecting pyang
-        Using cached https://files.pythonhosted.org/packages/d5/5d/248a83662d8ea7f1594be022e1c7017f2fa83c7e5949e9500290302aae95/pyang-1.7.5-py2.py3-none-any.whl
-    Requirement already satisfied: lxml in c:\users\administrator\lab\pythonenv\lib\site-packages (from pyang) (4.2.1)
+      Downloading https://files.pythonhosted.org/packages/43/d3/0cc5538d83db3216f4c5
+      acbfa5849a601dfe2e80e5fade872d5e6d5ee7d7/pyang-1.7.8-py2.py3-none-any.whl (447kB)
+    Requirement already satisfied: lxml in c:\users\administrator\lab\pythonenv\lib\site-packages (from pyang) (4.3.3)
     Installing collected packages: pyang
-    Successfully installed pyang-1.7.5
+    Successfully installed pyang-1.7.8
     (pythonenv) $
     ```
     

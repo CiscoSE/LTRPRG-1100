@@ -44,6 +44,7 @@ switches.  IOx is a prerequisite for Guest Shell, so you need to turn on IOx wit
    
     ```
     csr1(config)#iox
+    csr1(config)#
     ```
     
     End the global configuration mode session with the `end` command or typing `CTRL-Z`, for example:
@@ -237,7 +238,7 @@ Guest Shell, run the command `guestshell run python -V` from the IOS XE device C
     
     ```
     csr1#guestshell run uname -a
-    Linux guestshell 4.4.111 #1 SMP Wed Feb 14 22:16:42 PST 2018 x86_64 x86_64 x86_64 GNU/Linux
+    Linux guestshell 4.4.155 #1 SMP Thu Dec 6 00:09:02 PST 2018 x86_64 x86_64 x86_64 GNU/Linux
     
     csr1#
     ```
@@ -302,7 +303,7 @@ IOS XE device CLI.
     
     ```
     [guestshell@guestshell ~]$ uname -a
-    Linux guestshell 4.4.111 #1 SMP Wed Feb 14 22:16:42 PST 2018 x86_64 x86_64 x86_64 GNU/Linux
+    Linux guestshell 4.4.155 #1 SMP Thu Dec 6 00:09:02 PST 2018 x86_64 x86_64 x86_64 GNU/Linux
     [guestshell@guestshell ~]$
     ```
     

@@ -21,14 +21,7 @@ interface with your IOS XE network device with model driven programmability.
     
     ![Git Bash Terminal](assets/Git-02.png)
 
-3. Navigate to the `code` directory in the Git repository for this lab:
-    
-    ```
-    $ cd ~/lab/LTRPRG-1100
-    $
-    ```
-
-4.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
+2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
 your lab working directory and activate the Python virtual environment you created earlier in this lab:
     
     ```
@@ -37,14 +30,14 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-5. Navigate to the `code` directory in this lab's Git repository:
+3. Navigate to the `code` directory in this lab's Git repository:
     
     ```
     (pythonenv) $ cd ~/lab/LTRPRG-1100/code
     (pythonenv) $
     ```
     
-6. Run the `iosxe-get-capabilities.py` Python script with the `python` command (output truncated for brevity):
+4. Run the `iosxe-get-capabilities.py` Python script with the `python` command (output truncated for brevity):
     
     ```
     (pythonenv) $ python iosxe-get-capabilities.py
@@ -62,7 +55,7 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-7. Run the `iosxe-get-hostname.py` Python script with the `python` command (output truncated for brevity):
+5. Run the `iosxe-get-hostname.py` Python script with the `python` command (output truncated for brevity):
     
     ```
     (pythonenv) $ python iosxe-get-hostname.py
@@ -70,11 +63,11 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-8. Run the `iosxe-get-intinfo.py` Python script with the `python` command (output truncated for brevity):
+6. Run the `iosxe-get-intinfo.py` Python script with the `python` command (output truncated for brevity):
        
     ```
     (pythonenv) $ python iosxe-get-intinfo.py
-    GigabitEthernet1, description: WAN interface
+    GigabitEthernet1, description: empty
     (pythonenv) $
     ```
 

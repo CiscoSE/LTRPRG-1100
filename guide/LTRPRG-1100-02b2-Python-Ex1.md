@@ -56,6 +56,7 @@ similar to below:
     ```
     $ python -V
     Python 3.7.3
+    $
     ```
     
     In some situations, both Python 2.x and Python 3.x are installed on the same system.  Which version of the Python
@@ -91,7 +92,7 @@ similar to below:
     
     ```
     $ py -3 -V
-    Python 3.6.5
+    Python 3.7.3
     $ py -3
     Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
     4)] on win32

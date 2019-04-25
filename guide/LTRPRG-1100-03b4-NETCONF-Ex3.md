@@ -33,6 +33,8 @@ for example:
     csr1>enable
     csr1#
     ```
+    
+    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
    
@@ -40,9 +42,6 @@ for example:
     csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
     csr1(config)#
-    ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
     ```
 
 4. Create an account with privilege level 15 access with the `username` command:
@@ -192,7 +191,7 @@ command, for example:
     demonstrates that Cisco IOS XE supports industry standard YANG data models from the IETF and OpenConfig and 
     vendor specific YANG data models from Tail-F (acquired by Cisco in 2014) and Cisco.
     
-    Note the `<session-id>40</session-id>` corresponds with the session ID from the IOS XE CLI command
+    Note the `<session-id>34</session-id>` corresponds with the session ID from the IOS XE CLI command
     `show netconf-yang sessions` output.
 
 Using SSH to establish a NETCONF connection manually is not recommended and is only shown here for illustrative 
@@ -227,15 +226,15 @@ your lab working directory and activate the Python virtual environment you creat
  truncated for brevity):
     
     ```
-    (pythonenv) $ pip install ncclient
+    (pythonenv) $ pip install ncclient==0.6.4
     ```
 
 4. Invoke the Python interpreter with the `python` command:
     
     ```
     (pythonenv) $ python
-    Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Inte
-    l)] on win32
+    Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
+    4)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
     ```

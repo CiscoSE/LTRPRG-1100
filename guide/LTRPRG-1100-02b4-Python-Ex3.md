@@ -55,9 +55,9 @@ in this virtual environment, ensure that it is updated to the version tested whe
      ```
     (pythonenv) $ python -m pip install --upgrade pip==19.0.3
     Requirement already up-to-date: pip==19.0.3 in c:\users\administrator\lab\python
-    env\lib\site-packages (19.0.3)    (pythonenv) $
+    env\lib\site-packages (19.0.3)
+    (pythonenv) $
     ```
-
 
 4. Now that pip has been updated in this virtual environment, it can be used to manage packages and modules in 
 Python with the `pip` command.

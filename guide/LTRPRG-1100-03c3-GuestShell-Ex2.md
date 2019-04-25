@@ -119,7 +119,6 @@ example:
         >>> cli.executep("show ip interface brief")
         Interface              IP-Address      OK? Method Status                Protocol
         GigabitEthernet1       198.18.134.11   YES NVRAM  up                    up
-        Loopback55             10.55.55.55     YES TFTP   up                    up
         VirtualPortGroup0      192.168.35.1    YES manual up                    up
         >>>
         ```
@@ -229,13 +228,15 @@ the network device `bootflash:`, transfer the file to the network device file sy
     ```
     [guestshell@guestshell ~]$ mkdir /bootflash/scripts
     [guestshell@guestshell ~]$ cd /bootflash/scripts
-    [guestshell@guestshell ~]$
+    [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget` command from `https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-cli-example.py`:
+    Transfer the example script with the `wget` command from `https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py?token=AAATPLS6PWXOIVPRJFJ7B424ZJXKY`:
+    
+    TODO: Update URL to raw file.
     
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-cli-example.py
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py?token=AAATPLS6PWXOIVPRJFJ7B424ZJXKY
     --2018-06-08 04:50:15--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-cli-example.py
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
