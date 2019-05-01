@@ -17,7 +17,11 @@ The objectives for this exercise are to:
 
 If you don't already have a Webex Teams (formerly Cisco Spark) account, then the first thing to do is sign up for a 
 free account. If you already have an account and are confident in your ability to log in to it, then please skip to 
-Step 2: Obtaining Your Webex Teams API Access Token
+Step 2: Obtaining Your Webex Teams API Access Token.
+
+Registering for a Webex Teams is free.  However, you will need access to the email account that you register with to 
+complete the account verification steps later in this lab.  If you cannot do so, then please ask a proctor for 
+assistance and we can provide you with a temporary demo account.
 
 1. Navigate to [Webex Teams Web Login](https://teams.webex.com/): `https://teams.webex.com/` to create your account.
 
