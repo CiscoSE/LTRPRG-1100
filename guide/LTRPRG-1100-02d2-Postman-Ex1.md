@@ -40,9 +40,11 @@ response code, the time to receive a response, and details of the response inclu
 
 #### Step 2: Making an API call
 
-1. In order to make an API call, we first have to select the HTTP method. 
+1. In order to make an API call, we first have to select the HTTP method. We are using the HTTP application 
+layer protocol for API communication, but access to most APIs will be secured using SSL or TLS as indicated by 
+`https` in the API URLs.
     
-    Three of the most common methods used in API calls are `GET`, `POST`, and `PUT`:
+    Three of the most common HTTP methods used in API calls are `GET`, `POST`, and `PUT`:
     
     * A `GET` request is used when getting information from an API. A `GET` request specifies the information in 
     which it is interested via the URL, parameters, and headers.
