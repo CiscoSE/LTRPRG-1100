@@ -90,8 +90,8 @@ left-hand column under the `Webex Teams API` section (alternatively, you can cli
 6. A room in Webex Teams (referred to as a Space in the app) is a gathering place where team messaging, sharing, and 
 collaboration can take place. Name your room something interesting like `clus19 LTRPRG-1100`.  We can leave the 
 `teamId` blank. The right-hand column should update in real-time with the request structure, shown below. When you 
-are ready, click `Run` and monitor the 
-right-hand column for results. If you see a `200 / Success` then the room was created!
+are ready, click `Run` and monitor the right-hand column for results. If you see a `200 / Success` then the room was 
+created!
     
     ![Spark room created](assets/WebexTeams-08.png)
     
