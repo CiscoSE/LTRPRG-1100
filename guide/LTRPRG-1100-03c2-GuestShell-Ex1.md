@@ -400,7 +400,16 @@ IOS XE device CLI.
     drwxrwx---  2 65534         65534      4096 Mar 30 17:11 vman_fdb
     ```
     
+    Exit out of the Guest Shell Bash CLI session with the `exit` command:
+    
     ```
+    [guestshell@guestshell /]$ exit
+    csr1#
+    ```
+    
+    Compare the directory listing of the `bootflash:` from the IOS XE device privileged EXEC mode to the directory 
+    listing from the Guest Shell Bash CLI session earlier with the `dir bootflash:` command:
+    
     csr1#dir bootflash:
     Directory of bootflash:/
     
@@ -428,14 +437,22 @@ IOS XE device CLI.
     csr1#
     ```
     
-    Once within a Guest Shell Bash CLI session, you can access the IOS XE device CLI.  Let's explore how in the next 
-    step of this lab.
+    Dropping out of a Guest Shell Bash CLI session to access the IOS XE CLI is inconvenient.  Once within a Guest Shell 
+    Bash CLI session, you can access the IOS XE device CLI.  Let's explore how in the next step of this lab.
 
 #### Step 4: Running IOS XE Commands from Guest Shell
 
-1. You can run IOS XE commands from the Guest Shell CLI.  Simply precede the IOS XE command `foo` with the Guest Shell 
-command `dohost`: `dohost 'foo'`.  For example, to display the IOS XE device interface summary, run the command 
-`dohost 'show ip interface brief'` from the Guest Shell CLI:
+1. Enter a Guest Shell interactive session, with the IOS XE command `guestshell run bash`, for example:
+    
+    ```
+    csr1#guestshell run bash
+    [guestshell@guestshell ~]$
+    ```
+    
+    You can run IOS XE commands from the Guest Shell CLI.  Simply precede the IOS XE command `<IOS command>` with the
+    Guest Shell command `dohost`: `dohost '<IOS command>'`.  For example, to display the IOS XE device interface 
+    summary, run the command `dohost 'show ip interface brief'` from the Guest Shell CLI (do not forget to include 
+    the single quotes:
     
     ```
     [guestshell@guestshell ~]$ dohost 'show ip interface brief'
