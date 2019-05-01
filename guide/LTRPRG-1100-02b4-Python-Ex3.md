@@ -33,19 +33,20 @@ your lab working directory and activate the Python virtual environment you creat
     ```
 
 3. The pip tool is a software management system to install and maintain packages in Python.  Before working with pip
-in this virtual environment, ensure that it is updated to the version tested when this lab was developed with the 
+in this virtual environment, ensure that pip is updated to the version tested when this lab was developed with the 
 `python` command: 
     
     ```
-    (pythonenv) $ python -m pip install --upgrade pip==19.0.3
-    Collecting pip==19.0.3
-      Using cached https://files.pythonhosted.org/packages/d8/f3/413bab4ff08e1fc4828
-      dfc59996d721917df8e8583ea85385d51125dceff/pip-19.0.3-py2.py3-none-any.whl
+    (pythonenv) $ python -m pip install --upgrade pip==19.1
+    Collecting pip
+      Downloading https://files.pythonhosted.org/packages/f9/fb/863012b13912709c13cf
+    5cfdbfb304fa6c727659d6290438e1a88df9d848/pip-19.1-py2.py3-none-any.whl (1.4MB)
+        100%                                  1.4MB 6.6MB/s
     Installing collected packages: pip
-      Found existing installation: pip 19.0.2
-        Uninstalling pip-19.0.2:
-          Successfully uninstalled pip-19.0.2
-    Successfully installed pip-19.0.3
+      Found existing installation: pip 19.0.3
+        Uninstalling pip-19.0.3:
+          Successfully uninstalled pip-19.0.3
+    Successfully installed pip-19.1
     (pythonenv) $
     ```
     
@@ -53,9 +54,9 @@ in this virtual environment, ensure that it is updated to the version tested whe
     like the following:
     
      ```
-    (pythonenv) $ python -m pip install --upgrade pip==19.0.3
-    Requirement already up-to-date: pip==19.0.3 in c:\users\administrator\lab\python
-    env\lib\site-packages (19.0.3)
+    (pythonenv) $ python -m pip install --upgrade pip==19.1
+    Requirement already up-to-date: pip==19.1 in c:\users\administrator\lab\python
+    env\lib\site-packages (19.1)
     (pythonenv) $
     ```
 
@@ -68,7 +69,7 @@ Python with the `pip` command.
     (pythonenv) $ pip list
     Package    Version
     ---------- -------
-    pip        19.0.3
+    pip        19.1
     setuptools 40.8.0
     (pythonenv) $
     ```
@@ -154,7 +155,7 @@ the remaining packages required for this lab (output truncated for brevity):
     ncclient     0.6.4
     netmiko      2.3.3
     paramiko     2.4.2
-    pip          19.0.3
+    pip          19.1
     pyasn1       0.4.5
     pycparser    2.19
     PyNaCl       1.3.0
