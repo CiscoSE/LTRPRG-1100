@@ -175,11 +175,12 @@ interface to accomplish this:
     ```
 
 8. It is time to run the test. Even though the bash script to generate a CPU spike lives in the Guest Shell, it can be
-run without leaving the IOS-XE Exec mode.
+run without leaving the IOS-XE Exec mode. Make sure to disable debugging afterwards as best practice.
 
     ```
     csr1#guestshell run ./cpuspike.sh
     [output ommitted]
+    csr1#undebug all
     ```
 
     This bash script will generate a significant amount of output, as it is effectively pinging over 4000 hosts in a
