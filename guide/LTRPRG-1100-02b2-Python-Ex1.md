@@ -12,17 +12,19 @@ The objectives for this exercise are to:
 
 When it comes to programming in Python, it's critical to understand which Python interpreter is installed in the 
 environment. The reason for this is that Python 3.0 re-wrote certain aspects of the language, which broke backward 
-compatibility with Python 2. While it is still common to find Python files (scripts) written for use with Python 2, 
-most projects are now written for use with Python 3. In this lab, Python 3 is the interpreter to use.
+compatibility with Python 2. While it is still common to find Python code written for use with Python 2, most 
+projects are now written for use with Python 3. In this lab, Python 3 is the interpreter to use.
 
 While the two versions are different, it is entirely possible to have both Python 2 and Python 3 on the same system. 
-It's also possible to have several different versions of each installed at the same time (i.e. Python 2.7, 3.4, 3.5,
-3.6). For these reasons, it is important to understand which version of Python you are running.
+It's also possible to have several different versions of each installed at the same time (i.e. Python 2.7, 3.4, 3.6,
+3.7). For these reasons, it is important to understand which version of Python you are running.
 
 #### Step 1: Running the Python Interpreter
 
 In order to work with Python, we need to make sure that it is properly installed, able to run, and is of the 
-correct version.  On all operating systems and platforms, the Python interpreter executable is `python`.
+correct version.  There are various conventions for the command name for the Python interpreter(s) installed on a 
+system.  On all operating systems and platforms, it is common for the Python interpreter executable to be `python`.  
+However, which version of Python?  Let's show how to invoke the interpreter and see which version(s) are installed.
 
 1. Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
@@ -40,8 +42,9 @@ correct version.  On all operating systems and platforms, the Python interpreter
     >>>
     ```
     
-    You've successfully started the Python interpreter, which identifies itself as version 3.6.5.  Type `quit()` and 
-    press the `Enter`/`Return` key to exit out of the interpreter:
+    You've successfully started the Python interpreter, which identifies itself as version 3.7.3.  We'll look at 
+    how to interact with the interpreter later in this lab.  For now, type `quit()` and press the `Enter` or `Return` 
+    key to exit out of the interpreter:
     
     ```
     >>>quit()
@@ -63,9 +66,13 @@ similar to below:
     interpreter you invoke with the `python` command depends on which executable your operating system shell finds 
     in the command search path environment variable.
     
-    In typical macOS and Linux installations, there are command aliases `python` and `python3` to invoke Python v2.x 
-    and 3.x, respectively.  In a typical Windows installation, the Python v3.x Windows installer will install the 
-    Python version helper command `py`.
+    In typical macOS and Linux installations, there are command aliases `python2` and `python3` to invoke Python v2.x 
+    and 3.x, respectively.  Use the `-V` command line argument to the Python interpreter command line executable to 
+    determine which version of Python you are invoking.
+    
+2.  In a typical Windows installation, the Python v3.x Windows installer will install the Python version helper 
+command `py`.  Since we're working in a Windows developer environment in this lab, you can see how the `py` command 
+works.
     
     Run the command `py -V`, for example:
     
@@ -104,6 +111,9 @@ similar to below:
     For the purposes of this lab, we've setup the lab workstation environment to only include the Python v3.x 
     interpreter `python` command to be in the command search path.  Unless otherwise specified, we assume Python v3.x
     in this lab and you can invoke the interpreter or run applications with the `python` command.
+
+Next, let's take a look at how you can manage the Python interpreter version and Python development environment for 
+projects with Python virtual environments.
 
 ---
 

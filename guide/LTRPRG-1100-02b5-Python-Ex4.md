@@ -32,7 +32,7 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-2.  Run the interactive interpreter by issuing the `python` command in the terminal, for example:
+2.  Run the interactive Python interpreter by issuing the `python` command in the terminal, for example:
     
     ```
     (pythonenv) $ python
@@ -42,8 +42,9 @@ your lab working directory and activate the Python virtual environment you creat
     >>>
     ```
 
-3.  Notice that once the Python interpreter is running, the prompt changes to `>>>`. This is where you can input Python 
-code. Start with printing `Hello World!` to the screen with the Python function `print()`, as shown below:
+3.  Notice that once the interactive interpreter is running, the prompt changes to `>>>`. This is where you can input 
+Python code. Start with printing `Hello World!` to the screen with the Python function `print()`.  For example, type 
+the code snippet `print("Hello World")` and press the `Enter` or `Return` key in the interactive interpreter:
     
     ```
     >>> print("Hello World!")
@@ -52,8 +53,9 @@ code. Start with printing `Hello World!` to the screen with the Python function 
     ```
 
 4.  The interactive interpreter is mainly used for practicing, learning, debugging, or quick one-time use. As Python 
-has many built-in math and numeric functions, it can be an easy way to do quick arithmetic. For example, calculate how 
-much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
+has many built-in math and numeric functions, it can be an easy way to do quick arithmetic.  For example, type the 
+code snippet `50*(1.15+.06)` and press the `Enter` or `Return` key to calculate how much cash to bring for a $50 
+dinner, including 15% tip and 6% sales tax:
 
     ```
     >>> 50*(1.15+.06)
@@ -61,12 +63,12 @@ much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
     >>>
     ```
     
-    Sometimes our on-the-fly mathematics needs are directly related to our Network Programmability Ninja skills. For 
-    instance, you may need to convert DSCP values to ToS values. Converting DSCP to ToS for quality of service is
-    done by bit-shifting by 2 bits to the left (padding a binary number with two `0`s). Doing this on paper, you would
-    typically write out the binary representation of the DSCP integer, then pad two 0s on the right side of this 
-    binary string, and then mentally convert that new binary string back into an integer. Python makes quick work of 
-    this:
+5.  Sometimes our on-the-fly mathematics needs are directly related to our Network Programmability Ninja skills. For 
+instance, you may need to convert DSCP values to ToS values. Converting DSCP to ToS for quality of service is
+done by bit-shifting by 2 bits to the left (padding a binary number with two zeroes). Doing this on paper, you would
+typically write out the binary representation of the DSCP integer, then pad two zeroes on the right side of this 
+binary string, and then mentally convert that new binary string back into an integer. Python makes quick work of 
+this.  For example, type the code snippet `46 << 2` and press the `Enter` or `Return` key to make the conversion:
     
     ```
     >>> 46 << 2
@@ -78,8 +80,8 @@ much cash to bring for a $50 dinner, including 15% tip and 6% sales tax:
     of bits indicated to the right of the operator. In this example, we bit-shifted two bits to the left on DSCP 46, 
     leaving us with a ToS value of 184. 
 
-5.  To exit the interpreter, type Python function `quit()` followed by a carriage return, and it will return you to 
-the terminal prompt, for example:
+5.  To exit the interactive interpreter, type Python function `quit()` and press the `Enter` or `Return` 
+key to be returned to the terminal prompt, for example:
     
     ```
     >>> quit()
@@ -90,8 +92,7 @@ the terminal prompt, for example:
 
 While the interactive Python interpreter is useful for occasional and instructional use, the majority of work with 
 Python will be done by creating and running scripts. A Python script is a set of instructions written in a language 
-that the Python interpreter understands. The script is written in a text editor or IDE, and 
-then run against the Python interpreter.
+that the Python interpreter understands. The script is written in a text editor and run against the Python interpreter.
 
 1.  First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
 then change to your lab working directory and activate the Python virtual environment you created earlier in this 
@@ -103,13 +104,16 @@ lab, for example:
     (pythonenv) $
     ```
 
-2.  Let's create a new Python script:
+2.  Let's create a new Python script.  For example, use the command `echo 'print("Hello World!")' >> helloworld.py` 
+to create a basic Python script with the file name `helloworld.py`:
     
     ```
+    (pythonenv) $ cd ~/lab
     (pythonenv) $ echo 'print("Hello World!")' >> helloworld.py
+    (pythonenv) $
     ```
 
-3.  Run the Python script by running the command `python helloworld.py`, for example:
+3.  Run the Python script by with the command `python helloworld.py`, for example:
     
     ```
     (pythonenv) $ python helloworld.py
@@ -119,6 +123,12 @@ lab, for example:
 
     By putting your Python instructions into a file, it can be called at any time by the Python interpreter. This is 
     key to reusing code.
+
+This is a basic tutorial to introduce the concepts necessary to interact with Python and execute Python applications.
+There are countless introductory Python primers of all kinds in multiple mediums to help with the syntax of Python 
+code.  This lab contains examples of Python code for real-world use cases.
+
+Let's continue to learn more tools of the Ninja! 
 
 ---
 
