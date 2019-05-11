@@ -19,25 +19,57 @@ what other people are working on or are interested in, learn how software is bui
 your work - no matter how small - with the community.  Cisco product teams, Cisco DevNet, and Cisco Systems Engineers 
 all share and collaborate through GitHub.
 
+If you do not want to create a GitHub account, then skip to Step 2.  If you already have a GitHub account, then login
+and continue to Step 2.
+
 To create a free GitHub account, complete these steps:
 
-1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`.
-2. On the GitHub homepage, fill out the form to [Sign up](https://github.com/join?source=header-home), choosing a 
-unique username, entering your email address, and creating a password.  Click the `Sign up for GitHub` button.
-3. Choose the personal plan `Unlimited public repositories for free.`  Optionally click to select `Send me updates on
-GitHub news, offers, and events`.  Click the `Continue` button.
-4. Tailor your GitHub experience by answering the questions.  Click the `Submit` button.
+1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`:
+    
+    ![GitHub homepage](assets/GitHub-01.png)
+
+2. On the GitHub homepage, fill out the form to choose a unique username, enter your email address, and create a 
+password.
+    
+    ![Sign up for GitHub](assets/GitHub-02.png)
+    
+    Click the `Sign up for GitHub` button.
+
+3. Complete `Step 1: Set up your account` and complete the puzzle in the `Verify account` box:
+    
+    ![Join GitHub Step 1](assets/GitHub-03.png)
+    
+    Click the `Create an account` button.
+
+4. Choose the Free subscription and Optionally click to select `Send me updates on GitHub news, offers, and events`.
+    
+    ![Join GitHub Step 2](assets/GitHub-04.png)
+
+    Click the `Continue` button.
+
+4. Tailor your GitHub experience by answering the questions.
+    
+    ![Join GitHub Step 3](assets/GitHub-05.png)
+
+    Click the `Submit` button or click the link `skip this step`.
+
+You will need to verify your email address before you can contribute on GitHub.  Follow the verification instructions
+sent to your email account.  Once you've completed email verification and login to `github.com` again, you will see 
+your GitHub Dashboard:
+ 
+![GitHub Dashboard](assets/GitHub-06.png)
 
 Congratulations, you have joined the GitHub community!
 
 #### Step 2: Exploring GitHub
 
-1. Projects are stored in a repository, or repo for short.  This is where all of the project materials are 
-hosted, including documentation and source code.  If you created a GitHub account and are currently logged in to 
-github.com, you can star a repository so that you can keep track of projects that are of interest or importance to 
-you.  Starring a repository is also a way to show your support for, or appreciation of, the project and project 
-maintainers.  Take a few minutes to discover new repositories.  Click the `Star` button to the right of a repository 
-title on the project's site.
+Projects are stored in a repository, or repo for short.  This is where all of the project materials are hosted, 
+including documentation and source code.
+
+1. If you created a GitHub account and are currently logged in to `github.com`, you can star a repository so that 
+you can keep track of projects that are of interest or importance to you.  Starring a repository is also a way to 
+show your support for, or appreciation of, the project and project maintainers.  Take a few minutes to discover new 
+repositories.  Click the `Star` button to the right of a repository title on the project's site.
     
     Search for and star this Cisco Live session project repository:
     
@@ -48,6 +80,7 @@ title on the project's site.
     * [ncclient: A Python module for NETCONF clients](https://github.com/ncclient/ncclient)
     * [textfsm: A Python module for parsing semi-structured text into python tables](https://github.com/google/textfsm)
     * [requests: A Python module for HTTP requests](https://github.com/kennethreitz/requests)
+    * [netmiko: A Python module to simplify SSH connections to multi-vendor network devices](https://github.com/ktbyers/netmiko)
 
 2. You can follow people of like-mindedness or interest to you and your goals on GitHub.  This can help you 
 build a network and community of developers.  When you follow people, you will see their public activity in your GitHub 
