@@ -37,9 +37,9 @@ to get started using Git successfully.
 
 Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
 
-![Git Bash Icon](assets/Git-02.png)
+![Git Bash Icon](assets/GitHub-02.png)
 
-![Git Bash Terminal](assets/Git-03.png)
+![Git Bash Terminal](assets/GitHub-03.png)
 
 1. For a list of common Git commands, type `git help`:
     
@@ -166,8 +166,8 @@ account, then you can use any name or email address you'd like.
     
     The `git config` command to set your name looks like this: `git config user.name "<First Last>"`.  The `user.name` 
     is a keyword option and should be typed exactly as shown in the example.  You would replace `"<First Last>"` with 
-    your first and last name, for example `"Curtis Smith"`; be sure to include the double quotes.  Go ahead and set 
-    set your name with the `git config` command:
+    your first and last name, for example `"Network Programmability Ninja"`; be sure to include the double quotes.  Go 
+    ahead and set set your name with the `git config` command:
     
     ```
     $ git config --global user.name "<First Last>"
@@ -175,11 +175,11 @@ account, then you can use any name or email address you'd like.
     
     The Git `config` command to set your email address looks like this: `git config user.email "<user@example.com>"`. 
     The `user.email` is a keyword option and should be typed as shown in the example.  You would replace 
-    `"<user@example.com>"` with your email address, for example: `"curtissm@cisco.com"`; be sure to include the double 
-    quotes.  Go ahead and set your email address with the `git config` command:
+    `"<user@example.com>"` with your email address, for example: `"netprogninja@gmail.com"`; be sure to include the 
+    double quotes.  Go ahead and set your email address with the `git config` command:
     
     ```
-    $ git config --global user.email "<email@example.com>"
+    $ git config --global user.email "<user@example.com>"
     ```
     
     You only need to complete these steps once per Git installation.
@@ -310,11 +310,11 @@ Working with remote repositories allows you to store your project on a server fo
 GitHub is a hosted service in the Cloud, but organizations might choose to install GitGub Enterprise on-premise.  The 
 process is the same regardless of which hosted solution you use.
 
-1. If you created a GitHub account, let's create a remote repository on GitHub and push your local repository to the 
-server.  If you did not create a GitHub account, then you may skip this step.
-    
-    First, navigate to [Github](https://github.com/) `https://github.com/` and ensure you've logged in with the 
-    account you created earlier.
+If you created a GitHub account, let's create a remote repository on GitHub and push your local repository to the 
+server.  If you did not create a GitHub account, then you may skip ahead to the next page.
+
+1. First, navigate to [Github](https://github.com/) `https://github.com/` and ensure you've logged in with the 
+account you created earlier.
     
     At the top right of the page, click the `+` and click `New Repository`.
     
@@ -324,15 +324,20 @@ server.  If you did not create a GitHub account, then you may skip this step.
     
     You may add an optional `Description`, for example `My Cisco Live US 2019 Git repository`.
     
+    Leave the repository `Public`.  Leave the box unchecked next to `Initialize this repository with a README`; we 
+    will complete that action later in this lab.
+    
     ![Git New Repository](assets/Git-05.png)
     
     Click the `Create repository` button.
     
-    Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, 
-    use the `git remote add` command to add the local files to the remote server destination.  Make sure to replace 
-    `<username>` in the example below to match your username and `<reponame>` with the name of the remote repository 
-    you just created.  For example: `https://github.com/curtissmith>clus19.git` if your username is `curtissmith` and
-     your repository name is `clus19`.
+    ![Git New Repository](assets/Git-06.png)
+    
+2. Now let's push your existing local repository to the new remote repository you've created on GitHub.  First, use 
+the `git remote add` command to add the local files to the remote server destination.  Make sure to replace 
+`<username>` in the example below to match your username and `<reponame>` with the name of the remote repository you 
+just created.  For example: `https://github.com/netprogninja/clus19.git` if your username is `netprogninja` and your 
+repository name is `clus19`.
     
     ```
     $ git remote add origin https://github.com/<username>/<reponame>.git
@@ -345,11 +350,15 @@ server.  If you did not create a GitHub account, then you may skip this step.
     Counting objects: 3, done.
     Writing objects: 100% (3/3), 234 bytes | 234.00 KiB/s, done.
     Total 3 (delta 0), reused 0 (delta 0)
-    To https://github.com/curtissmith/clus19.git
+    To https://github.com/netprogninja/clus19.git
      * [new branch]      master -> master
     Branch 'master' set up to track remote branch 'master' from 'origin'.
     $
     ```
+    
+    Enter your GitHub username and password into the prompt and click the `Login` button:
+    
+    ![Git New Repository](assets/Git-07.png)
     
     and check the status:
     
@@ -376,14 +385,14 @@ server.  If you did not create a GitHub account, then you may skip this step.
     
     Navigate to your remote repository on GitHub and you should see the results of your labor!
     
-    ![GitHub Repository](assets/Git-06.png)
+    ![GitHub Repository](assets/Git-08.png)
     
     Congratulations, you've created a new Git repository on GitHub.
     
-2. You do not need a GitHub account to download a working copy of a remote Git repository.  The Git `clone` and 
-`pull` commands can be used download a remote repository.  The `git pull` will only work from inside a working 
-directory that contains a Git repository in the first place.  Try this by moving to a directory that doesn't contain a
- `.git` Git directory, for example:
+2. You do not need a GitHub account to download a working copy of a remote Git repository.  The `git clone` and 
+`git pull` commands can be used download a remote repository.  The `git pull` command will only work from inside a 
+working directory that contains a Git repository in the first place.  Try this by moving to a directory that doesn't 
+contain a `.git` Git directory, for example:
         
     ```
     $ cd ~/lab
