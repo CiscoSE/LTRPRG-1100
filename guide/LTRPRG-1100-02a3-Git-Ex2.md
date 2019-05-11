@@ -17,13 +17,7 @@ The objectives for this exercise are to:
 
 There is a simple flow to using Git for version control:
 
-```
-+----------------+      +---------+       +----------+
-| Initialize or  |      |  Stage  |       |  Commit  |
-|     Clone      +----->| Changes +------>|  Changes |
-| Git Repository |      |         |       |          |
-+----------------+      +---------+       +----------+
-```
+![Git Flow Chart](assets/Git-01.png)
 
 You start by either creating a new Git repository or cloning an existing Git repository hosted on a remote server.
 In doing so, you create the Git directory (also called the repository), a working directory, and a staging area (also 
@@ -43,9 +37,9 @@ to get started using Git successfully.
 
 Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
 
-![Git Bash Icon](assets/Git-01.png)
+![Git Bash Icon](assets/Git-02.png)
 
-![Git Bash Terminal](assets/Git-02.png)
+![Git Bash Terminal](assets/Git-03.png)
 
 1. For a list of common Git commands, type `git help`:
     
@@ -324,13 +318,13 @@ server.  If you did not create a GitHub account, then you may skip this step.
     
     At the top right of the page, click the `+` and click `New Repository`.
     
-    ![Git New Repository](assets/Git-03.png)
+    ![Git New Repository](assets/Git-04.png)
     
     In the box labeled `Repository name` type `clus19`.
     
     You may add an optional `Description`, for example `My Cisco Live US 2019 Git repository`.
     
-    ![Git New Repository](assets/Git-04.png)
+    ![Git New Repository](assets/Git-05.png)
     
     Click the `Create repository` button.
     
@@ -382,7 +376,7 @@ server.  If you did not create a GitHub account, then you may skip this step.
     
     Navigate to your remote repository on GitHub and you should see the results of your labor!
     
-    ![GitHub Repository](assets/Git-05.png)
+    ![GitHub Repository](assets/Git-06.png)
     
     Congratulations, you've created a new Git repository on GitHub.
     

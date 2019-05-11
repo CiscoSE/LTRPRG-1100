@@ -30,9 +30,9 @@ in.
 
 1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
-    ![Git Bash Icon](assets/Git-01.png)
+    ![Git Bash Icon](assets/Git-02.png)
     
-    ![Git Bash Terminal](assets/Git-02.png)
+    ![Git Bash Terminal](assets/Git-03.png)
 
 2. First, create and enter a directory called `pythonenv` as a home for your project.
     
