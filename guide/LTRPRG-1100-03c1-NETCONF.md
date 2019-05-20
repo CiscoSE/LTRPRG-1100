@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-03a2-API-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b2-NETCONF-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-03b2-REST-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03c2-NETCONF-Ex1.md)
 
 ---
 
@@ -69,4 +69,4 @@ move to model driven programmability: NETCONF and YANG.
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-03a2-API-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b2-NETCONF-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-03b2-REST-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03c2-NETCONF-Ex1.md)

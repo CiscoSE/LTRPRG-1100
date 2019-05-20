@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-03b1-NETCONF.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b3-NETCONF-Ex2.md)
+Navigation :: [Previous Page](LTRPRG-1100-03c1-NETCONF.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03c3-NETCONF-Ex2.md)
 
 ---
 
@@ -393,4 +393,4 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-03b1-NETCONF.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b3-NETCONF-Ex2.md)
+Navigation :: [Previous Page](LTRPRG-1100-03c1-NETCONF.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03c3-NETCONF-Ex2.md)

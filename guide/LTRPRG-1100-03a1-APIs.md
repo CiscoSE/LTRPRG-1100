@@ -1,8 +1,8 @@
-Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03a2-API-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b2-REST-Ex1.md)
 
 ---
 
-## Application Programming Interface (API)
+## Application Programming Interfaces (APIs)
 
 ### Introducing APIs
 
@@ -29,8 +29,13 @@ Many modern APIs are RESTful APIs, meaning that they follow HTTP methods and fra
 Postman is a full-featured and powerful toolset, it still provides a remarkably user-friendly experience as an API 
 client. This functionality is helpful when working with products or services that offer a REST API. Postman can be a 
 great first step to prototype the API call, and then subsequently understand how the response looks. Using this 
-information, it becomes much easier to interact with APIs.
+information, it becomes much easier to interact with APIs with Python or other programming languages.
+
+Not all APIs are RESTful or use the HTTP application protocol for communication.  We're also going to introduce 
+NETCONF...
+
+Why APIs...
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03a2-API-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b2-REST-Ex1.md)

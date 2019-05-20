@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-03a1-API.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b1-NETCONF.md)
+Navigation :: [Previous Page](LTRPRG-1100-03a1-APIs.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03c1-NETCONF.md)
 
 ---
 
@@ -77,4 +77,4 @@ the clipboard and pasted in a file to run with the python interpreter.
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-03a1-API.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b1-NETCONF.md)
+Navigation :: [Previous Page](LTRPRG-1100-03a1-APIs.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03c1-NETCONF.md)

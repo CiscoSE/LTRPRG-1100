@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-03c3-GuestShell-Ex2.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04a1-NetAssist.md)
+Navigation :: [Previous Page](LTRPRG-1100-03d3-GuestShell-Ex2.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04a1-NetAssist.md)
 
 ---
 
@@ -14,4 +14,4 @@ If you are up to the test, then continue on!
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-03c3-GuestShell-Ex2.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04a1-NetAssist.md)
+Navigation :: [Previous Page](LTRPRG-1100-03d3-GuestShell-Ex2.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04a1-NetAssist.md)
