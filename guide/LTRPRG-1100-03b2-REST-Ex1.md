@@ -2,7 +2,7 @@ Navigation :: [Previous Page](LTRPRG-1100-03a1-APIs.md) :: [Table of Contents](L
 
 ---
 
-### Exercise 1: Understanding and Using APIs
+### Exercise 1: Understanding and Using REST APIs
 
 #### Objectives
 
