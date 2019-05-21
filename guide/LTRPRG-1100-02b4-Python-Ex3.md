@@ -38,7 +38,7 @@ your lab working directory and activate the Python virtual environment you creat
 
 3. The pip tool is a software management system to install and maintain Python packages.  Before working with pip
 in this virtual environment, ensure that pip is updated to the version tested when this lab was developed 
-with the `python -m pip install --upgrade pip--19.1` command: 
+with the `python -m pip install --upgrade pip==19.1.1` command: 
     
     ```
     (pythonenv) $ python -m pip install --upgrade pip==19.1.1
