@@ -30,33 +30,7 @@ in XML.  The client RPC and server response are typically YANG data models and Y
 format.  The most common transport protocol used to secure NETCONF connections is typically SSH.  The NETCONF 
 protocol stack and relationship to SSH and YANG can be represented as follows:
 
-```
- +-----------------------------------------------------------------------------------+
- | +--------------+  +--------------------+  +---------------------------+           |
- | |              |  |   Configuration/   |  |                           |           |
- | |   Content    |  |    Operational     |  |        YANG Data          |           |
- | |              |  |       Data         |  |                           |           |
- | +------+-------+  +---------+----------+  +------------+--------------+           |
- |        |                    |                          |                          |
- | +------+-------+  +---------+----------+  +------------+--------------+           |
- | |              |  |                    |  |    <get>, <get-config>,   |           |
- | |  Operations  |  |  Actions to Take   |  |     <edit-config>, etc    |    XML    |
- | |              |  |                    |  |                           |           |
- | +------+-------+  +---------+----------+  +------------+--------------+           |
- |        |                    |                          |                          |
- | +------+-------+  +---------+----------+  +------------+--------------+           |
- | |              |  |  Remote Procedure  |  |                           |           |
- | |   Messages   |  |     Call (RCP)     |  |    <rpc>, <rpc-reply>     |           |
- | |              |  |                    |  |                           |           |
- | +------+-------+  +---------+----------+  +------------+--------------+           |
- +--------|--------------------|--------------------------|--------------------------+
-          |                    |                          |
-   +------+-------+  +---------+----------+  +------------+---------------+
-   |              |  |                    |  |                            |
-   |  Transport   |  |      TCP/IP        |  |           SSH              |
-   |              |  |                    |  |                            |
-   +--------------+  +--------------------+  +----------------------------+
-```
+![NETCONF Protocol Stack](assets/NETCONF-05.png)
 
 * Transport Layer - NETCONF uses a secure TCP/IP transport protocol, for example SSH as detailed in
 [RFC 6242] (https://tools.ietf.org/html/rfc6242).
@@ -70,17 +44,7 @@ The manager is you, or your workstation or network management system.  The agent
 Here is another way to visually represent the NETCONF protocol stack and client-server relationship of the NETCONF 
 manager and agent:
 
-```
-                     +-------------------------------------+
-                     |     +------------------------------+|
- +--------------+    |     |         +------------------+ ||    +--------------+
- |              |    |     |         |     +-----------+| ||    |              |
- |   Manager    <----> SSH | NETCONF | XML | YANG Data || |<---->    Agent     |
- |              |    |     |         |     +-----------+| ||    |              |
- +--------------+    |     |         +------------------+ ||    +--------------+
-                     |     +------------------------------+|
-                     +-------------------------------------+
-```
+![NETCONF Client Server Relationship](assets/NETCONF-06.png)
 
 #### Step 2: Understanding NETCONF Operations
 

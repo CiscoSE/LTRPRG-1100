@@ -55,7 +55,11 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-5. Run the `iosxe-get-hostname.py` Python script with the `python` command (output truncated for brevity):
+5. Run `iosxe-getconfig.py`...
+
+6. Run the `iosxe-get-hostname.py` Python script with the `python` command (output truncated
+ for 
+brevity):
     
     ```
     (pythonenv) $ python iosxe-get-hostname.py
@@ -63,7 +67,7 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-6. Run the `iosxe-get-intinfo.py` Python script with the `python` command (output truncated for brevity):
+7. Run the `iosxe-get-intinfo.py` Python script with the `python` command (output truncated for brevity):
        
     ```
     (pythonenv) $ python iosxe-get-intinfo.py
@@ -71,7 +75,11 @@ your lab working directory and activate the Python virtual environment you creat
     (pythonenv) $
     ```
 
-    These are simple examples of how to write Python scripts for model driven programmability using NETCONF and YANG.
+8. Run `iosxe-getintstate.py`...
+
+9. Run `iosxe-getintstats.py`...
+
+These are simple examples of how to write Python scripts for model driven programmability using NETCONF and YANG.
 
 ---
 

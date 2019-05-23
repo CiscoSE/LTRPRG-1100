@@ -17,7 +17,7 @@ YANG (Yet Another Next Generation) was developed by the IETF NETMOD (Network Mod
 YANG is more than just a modeling language.  It is also the data models and the data itself.  When we talk about YANG, 
 depending on the context, we mean YANG as a language, YANG as a data model, and YANG data.
 
-![What is YANG](assets/YANG.png)
+![What is YANG](assets/YANG-01.png)
 
 #### Step 1: Understanding YANG as a Language
 
@@ -257,15 +257,15 @@ your lab working directory and activate the Python virtual environment you creat
     
     Open the lab folder by double clicking the Windows Explore shortcut on the lab workstation desktop:
     
-    ![Lab Shortcut](assets/NETCONF-01.png)
+    ![Lab Shortcut](assets/NETCONF-02.png)
     
     Navigate to `yang`, `standard`, `ietf`, then `RFC` directory:
     
-    ![Code Directory](assets/NETCONF-02.png)
+    ![Code Directory](assets/NETCONF-03.png)
     
     Right click the file `ietf-interfaces.yang` and click `Edit with Notepad++`.
     
-    ![Notepad++](assets/NETCONF-03.png)
+    ![Notepad++](assets/NETCONF-04.png)
     
     As you scroll through this file representing the `module ietf-interface` data model, you will find the 
     elements we discussed earlier in this lab.  You can see the structure and nodes.  Each node should be documented 

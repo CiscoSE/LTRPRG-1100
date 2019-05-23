@@ -2,4 +2,4 @@
 
 ### Bar
 
-lorem ipsum
+Introduction to "RESTful", REST APIs, HTTP, JSON...

@@ -38,31 +38,7 @@ drawbacks posed by traditional network device management techniques.
 
 The model driven programmability stack from model to application is show below:
 
-```
-           +----------------+  +----------------+  +----------------+  Model Driven      ^
-     Apps  |   App1         |  |   App2         |  |   App3         |  Configuration     |
-           +----------------+  +----------------+  +----------------+       +            |
-                                                                            |            |
-           +--------------------------------------------------------+       |            |
-     APIs  |                   Model Driven APIs                    |       |            |
-           +--------------------------------------------------------+       |            |
-                                                                            |            |
-           +----------------+  +----------------+  +----------------+       |            |
- Protocol  |    NETCONF     |  |    RESTCONF    |  |      gRPC      |       |            |
-           +----------------+  +----------------+  +----------------+       |            |
-                                                                            |            |
-           +-------------------------+  +-----------------+  +------+       |            |
- Encoding  |           XML           |  |      JSON       |  |  GPB |       |            |
-           +-------------------------+  +-----------------+  +------+       |            |
-                                                                            |            |
-           +----------------+  +------------------------------------+       |            |
-Transport  |      SSH       |  |              HTTPS                 |       |            |
-           +----------------+  +------------------------------------+       |            |
-                                                                            |            |
-           +--------------------------------------------------------+       |            +
-   Models  |                    YANG Data Models                    |       |       Model Driven
-           +--------------------------------------------------------+       v        Telemetry
-```
+![Model Driven Programmability Stack](assets/NETCONF-01.png)
 
 To this end, the IETF went to work and created a few new Internet Standards to help address these shortcomings and 
 move to model driven programmability: NETCONF and YANG.

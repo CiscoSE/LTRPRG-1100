@@ -74,7 +74,7 @@ and a Cisco IOS XE virtual network device.
         1. [Getting Advanced with Postman](LTRPRG-1100-05b2-Postman-Ex1.md)
     3. [Vagrant Up for Network Engineers](LTRPRG-1100-05c1-Vagrant.md)
         1. [Introducing Vagrant](LTRPRG-1100-05c2-Vagrant-Ex1.md)
-6. [Appendix 2](LTRPRG-1100-06-Appx2.md)
+6. [Appendix 2](LTRPRG-1100-05-Appx.md)
 
 ---
 
