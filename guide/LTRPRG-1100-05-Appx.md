@@ -2,7 +2,7 @@ Navigation :: [Previous Page](LTRPRG-1100-04c2-NetAssist-Ex1.md) :: [Table of Co
 
 ---
 
-# Appendix 1
+# Appendix
 
 ## Additional Network Programmability Resources
 
