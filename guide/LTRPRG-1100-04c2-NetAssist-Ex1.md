@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-04c1-NetAssist.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-05-Appx.md)
+Navigation :: [Previous Page](LTRPRG-1100-04c1-NetAssist.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-06-Appx.md)
 
 ---
 
@@ -552,14 +552,6 @@ This only just scratches the surface of what is possible with ChatOps leveraging
 you've learned in this lab.  With great ease, you were able to leverage integrate an IOS XE network device using 
 model driven programmability and APIs with a premiere cloud collaboration platform for communications.
 
-Return to the Network Programmability Dojo on a regular to pick up new tools of the Ninja, continue to further hone 
-your Ninja skills, and put your Ninja skills to work to continue to drive real benefit, save time and money, and 
-reduce human error.
-
-Time permitting, continue on to the Appendices for additional, optional content and resources you might find valuable.
-
-Thank you for your time and commitment at Cisco Live!
-
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-04c1-NetAssist.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-05-Appx.md)
+Navigation :: [Previous Page](LTRPRG-1100-04c1-NetAssist.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-06-Appx.md)

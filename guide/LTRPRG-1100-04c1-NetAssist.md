@@ -23,13 +23,7 @@ By leveraging a winning combination of Embedded Event Manager (EEM) and on-box n
 in Guest Shell, your network device can notify you when its configuration has changed.  Using all of the tools and 
 concepts introduced and developed in this lab so far, we will create the following ChatOps flow:
 
-```
-+-----------------+    +---------+    +-------------+    +-------------+
-|     IOS XE      |    |  EEM    |    | Guest Shell |    | Webex Teams |
-| Network Device  +----> Applet  +---->   On-Box    +----> ChatOps Bot |
-| Config Modified |    | Trigger |    |   Python    |    |             |
-+-----------------+    +---------+    +-------------+    +-------------+
-```
+![Network Assistant Flow](assets/NetAssist-01.png)
 
 ---
 
