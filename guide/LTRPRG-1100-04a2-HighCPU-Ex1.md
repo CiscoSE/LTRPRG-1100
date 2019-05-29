@@ -3,7 +3,7 @@ Navigation :: [Previous Page](LTRPRG-1100-04a1-HighCPU.md) :: [Table of Contents
 
 ---
 
-### Example 1: Detect and Report on CPU Spikes
+### Example 1: Troubleshooting High CPU like a Network Programmability Ninja
 
 #### Objectives
 

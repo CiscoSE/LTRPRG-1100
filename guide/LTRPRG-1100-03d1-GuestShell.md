@@ -2,20 +2,7 @@ Navigation :: [Previous Page](LTRPRG-1100-03c5-NETCONF-Ex4.md) :: [Table of Cont
 
 ---
 
-## Guest Shell
-
-## Introducing Guest Shell
-
-A powerful software feature called Guest Shell has been brought to products running Cisco IOS XE.  Originally 
-exclusively available only on Nexus switching products running NX-OS, Guest Shell is now available on the Catalyst, 
-ISR, and CSR products running IOS XE.
-
-Guest Shell is a virtualized Linux-based environment running on the network device, designed to run standard and custom 
-Linux applications, including Python, for automated management of Cisco devices.  Guest Shell provides a secure 
-environment, decoupled from the host network device, in which you can install and run scripts or software packages, 
-while maintaining a fault and resource isolation from IOS XE.
-
-### On-box vs. Off-box Network Programmability
+## On-Box Network Programmability
 
 So far in this lab, you have been focusing on so-called off-box network programmability.  That is to say, you've been 
 running applications on a workstation and interfacing with network devices.  The applications reside on a workstation
@@ -33,6 +20,17 @@ On-Box network programmability is ideal for:
 * network device provisioning automation
 * IOS XE Embedded Event Manager (EEM) response automation
 * edge compute for network applications and Internet of Things (IoT)
+
+### Introducing Guest Shell
+
+A powerful software feature called Guest Shell has been brought to products running Cisco IOS XE.  Originally 
+exclusively available only on Nexus switching products running NX-OS, Guest Shell is now available on the Catalyst, 
+ISR, and CSR products running IOS XE.
+
+Guest Shell is a virtualized Linux-based environment running on the network device, designed to run standard and custom 
+Linux applications, including Python, for automated management of Cisco devices.  Guest Shell provides a secure 
+environment, decoupled from the host network device, in which you can install and run scripts or software packages, 
+while maintaining a fault and resource isolation from IOS XE.
 
 Guest Shell facilitates on-box network programmability, but with Application Hosting, Linux Containers (LXCs) can be 
 installed for custom, purpose-built applications as well on network device platforms that support it.  This lab will 

@@ -2,9 +2,9 @@ Navigation :: [Previous Page](LTRPRG-1100-03a1-APIs.md) :: [Table of Contents](L
 
 ---
 
-## Foo
+## REST APIs
 
-### Bar
+### Introducing REST APIs
 
 Introduction to "RESTful", REST APIs, HTTP, JSON...
 
