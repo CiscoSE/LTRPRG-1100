@@ -1,3 +1,8 @@
+Navigation :: [Previous Page](LTRPRG-1100-04a1-HighCPU.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: 
+[Next Page](LTRPRG-1100-04b1-PortTrack.md)
+
+---
+
 ### Example 1: Detect and Report on CPU Spikes
 
 #### Objectives
@@ -215,3 +220,8 @@ the event.
 
 This concludes our first exercise. To summarize, we utilized EEM, Guest Shell, and Python to detect, collect
 information, and report on high CPU issues, all on-router without any human interaction.
+
+---
+
+Navigation :: [Previous Page](LTRPRG-1100-04a1-HighCPU.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: 
+[Next Page](LTRPRG-1100-04b1-PortTrack.md)

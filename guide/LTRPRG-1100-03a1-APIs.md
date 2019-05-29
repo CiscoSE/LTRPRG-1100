@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b2-REST-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b1-REST.md)
 
 ---
 
@@ -42,4 +42,4 @@ different APIs relevant to Cisco products and services in your own work and play
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b2-REST-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-03-Hone.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03b1-REST.md)

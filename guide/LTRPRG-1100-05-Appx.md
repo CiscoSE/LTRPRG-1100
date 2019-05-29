@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-05c2-Vagrant-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents)
+Navigation :: [Previous Page](LTRPRG-1100-04c2-NetAssist-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents)
 
 ---
 
@@ -44,4 +44,4 @@ and
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-05c2-Vagrant-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents)
+Navigation :: [Previous Page](LTRPRG-1100-04c2-NetAssist-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents)
