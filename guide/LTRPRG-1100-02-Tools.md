@@ -25,8 +25,6 @@ In this lab, we highlight the following:
 * Python
 * Cisco Webex Teams
 * Postman
-* PyCharm
-* Vagrant
 
 Let's get started with your training!
 

@@ -91,7 +91,7 @@ a few minutes to follow new and interesting people on GitHub to start building y
     Search for and follow your Cisco Live lab proctors:
     
     * [Curtis Smith](https://github.com/curtissmith) (`curtissmith`)
-    * [Matthew Galazka](https://github.com/mgalazka) (`mgalazka`)
+    * [Matthew Galazka](https://github.com/magalazk) (`magalazk`)
     
     Share your GitHub username in this lab's Cisco Webex Teams space.  Search for and follow your fellow Cisco Live lab 
     participants!

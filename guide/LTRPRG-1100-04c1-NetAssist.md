@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-04-Test.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04a2-NetAssist-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-04-Test.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04c2-NetAssist-Ex1.md)
 
 ---
 
@@ -32,4 +32,4 @@ concepts introduced and developed in this lab so far, we will create the followi
 
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-04-Test.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04a2-NetAssist-Ex1.md)
+Navigation :: [Previous Page](LTRPRG-1100-04-Test.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-04c2-NetAssist-Ex1.md)
