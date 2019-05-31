@@ -9,93 +9,20 @@ Navigation :: [Previous Page](LTRPRG-1100-04a1-HighCPU.md) :: [Table of Contents
 
 The objectives for this exercise are to:
 
-* Create a Python script on-box in Guest Shell to evaluate potential causes for high CPU
+* Create a Python script on-box in Guest Shell to evaluate potential causes for high CPU utilzation
 * Leverage Embedded Event Manager to trigger Python script when a high CPU event occurs on a router
-* Utilize storage space on the router and Syslog capabilities to create a report and alert about it
+* Utilize storage space on the router and Syslog capabilities to create a report and alerts
 
-#### Step 1: Determine what to collect
+#### Step 1: Creating a High CPU Troubleshooting Python Script
 
-One glaring problem with troubleshooting fleeting high-CPU issues on a router, is that often by the time an
-administrator logs in to troubleshoot, the issue has passed. The goal of this exercise is to utilize skills of the
-network programmability ninja to react to a CPU spike immediately, without waiting for a person to log in to the router.
-The actions taken can be as simple as information collection, to as intricate as executing configuration changes based
-on real-time traffic observed. For this exercise, we will be collecting what is often pertinent information to help
-identify the culprit of a high-CPU event.
-
-In order to effectively triage an event for high CPU utilization, first it is important to understand what information
-is pertinent to triage the situation. 
-
-1. Recording the CPU utilization not only helps to understand the usage in 5 sec, 1 min, 5 min intervals, but also
-provides an understanding of whether the CPU has high interrupt usage. This can be gathered from a `# show proc cpu
-sorted` output.
-
-2. The same command above also lists the processes and their CPU usage, sorted to start with the heaviest load. This
-can be indicative of what is causing high CPU, as it may be tied up under a single process.
-
-3. Visualizing the CPU utilization over a time period can also be helpful to understand if this is an
-anomalous spike, or just slightly above normal operating thresholds. It can also help to show if there is a pattern to
-when a spike repeats.
-
-3. Sometimes high CPU can be attributed to something a particular user or administrator is doing, so gathering the
-active users on the router is also helpful to understand the full picture.
-
-While there are surely other pieces of information that can be helpful, this is a great starting point.
-
-#### Step 2: Create Python script to collect data
-
-Now that you've identified the information to gather when a CPU spike occurs, it is time to write a Python script that
-can collect the data on your behalf. This script will exist in the IOS-XE Guest Shell environment, where it can be run
-directly from the router.
-
-1. From the command line interface of the router, launch `bash` from the Guest Shell:
-    ```
-    csr1#guestshell run bash
-    [guestshell@guestshell ~]$
-    ```
-
-2. wget the python script from github or use vi to open iosxe-highcpu.py and paste in the following contents:
-    ```
-    import cli
-    
-    timestamp = cli.execute("show clock")
-    processes = cli.execute("show proc cpu sort")
-    histogram = cli.execute("show proc cpu hist")
-    users = cli.execute("show users")
-    
-    fp = open('/bootflash/highcpulog.txt','w')
-    fp.write("High CPU at "+timestamp+"\n\n")
-    
-    processlines = processes.splitlines()
-    fp.write("CPU and top ten processes:\n\n")
-    for x in range(0,12):
-        fp.write(processlines[x]+"\n")
-    fp.write("CPU histogram:\n\n")
-    fp.write(histogram+"\n\n")
-    fp.write("Active users:\n\n")
-    fp.write(users+"\n\n")
-    fp.close()
-    
-    topproc = processlines[2][65:]
-    cli.execute("send log 3 High CPU detected. Check /bootflash/highcpulog.txt : Top process: "+topproc)
-    ```
-
-    Note that the `cli.execute` function is used to run IOS commands, so this is the basis of the information gathering.
-    Also, the information collected is being organized and written to a file in bootflash, so it can be easily viewed
-    later. Also, note that the script generate a syslog message with details.
-
-#### Step 3: Setup IOS XE Embedded Event Manager to Launch Python Script
-
-Now that the Python script is created, it must be launched at the appropriate time. IOS-XE can utilize a feature
-called Embedded Event Manager (EEM) to initiate actions based on certain events. One such event that can trigger an EEM
-action is changing on an SNMP value, such as the OID that corresponds to current CPU utilization. EEM can execute a
-Python script out of the Guest Shell environment as an action. Therefore, EEM can be used as the tool to ensure that the
-Python script can run any time there is a high-CPU condition, regardless of whether an administrator is logged in to the
-router.
+Once you've identified the information to gather when a CPU spike occurs, it is time to write a Python script that
+can collect the data on your behalf. This script will exist in IOS XE Guest Shell environment, where it can be run 
+directly from the network device.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
     ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
-    
+
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
@@ -107,7 +34,116 @@ example:
     
     ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
-3. Next, enter the following lines to configure the EEM applet for our highcpu script:
+3. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
+    
+    ```
+    csr1#guestshell run bash
+    [guestshell@guestshell ~]$
+    ```
+
+4. There is an example Python script `iosxe-highcpu.py` in this lab's Git repository.  Let's create a directory on 
+the network device `bootflash:`, transfer the file to the network device file system, and run the script.
+    
+    To create a new directory to hold scripts on-box if one does not already exist, use the `mkdir -p /bootflash/scripts` 
+    command from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
+    
+    ```
+    [guestshell@guestshell ~]$ mkdir -p /bootflash/scripts
+    [guestshell@guestshell ~]$
+    ```
+    
+    Change to that directory with the `cd /bootflash/scripts` command, for example:
+    
+    ```
+    [guestshell@guestshell ~]$ cd /bootflash/scripts
+    [guestshell@guestshell scripts]$
+    ```
+    
+    Transfer the example script with the `wget foo` command, for example:
+    
+    TODO: Update URL to raw file.
+    
+    ```
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/clus19/code/iosxe-porttrack.py?token=AAATPLRSE2ZW5EFPFGP5FF247HOTO
+    --2019-05-31 04:15:23--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/clus19/code/iosxe-porttrack.py?token=AAATPLRSE2ZW5EFPFGP5FF247HOTO
+    Reusing existing connection to [raw.githubusercontent.com]:443.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 1615 (1.6K) [text/plain]
+    Saving to: 'iosxe-porttrack.py'
+    
+    100%[======================================>] 1,615       --.-K/s   in 0s
+    
+    2019-05-31 04:15:23 (3.97 MB/s) - 'iosxe-porttrack.py' saved [1615/1615]
+    
+    [guestshell@guestshell scripts]$
+    ```
+    
+    This Python script uses the IOS XE Python CLI module `cli.execute` function to run IOS XE EXEC mode commands from
+    Guest Shell.  This is how we gather our information pertinent to troubleshooting the issue.  The information 
+    collected is being organized and written to
+    the Guest Shell filesystem, so it can be easily referenced over time.  Also, note that the script generates a 
+    syslog message with useful details to aid in analysis.
+    
+        While you are not expected to be fluent in Python scripting, please read through the comments (signified by a `#`
+    in the Python code) and the subsequent lines of code to understand the basics of how this script operates.  You 
+    can view [this Python script](foo) in 
+    this lab's GitHub repository at `https://github.com/curtissmith/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py`.
+    
+    TODO: Update URL to this file.
+    
+5. Exit out of the Guest Shell Bash CLI session with the `exit` command:
+    
+    ```
+    [guestshell@guestshell scripts]$ exit
+    csr1#
+    ```
+
+#### Step 2: Using IOS XE Embedded Event Manager to Trigger the High CPU Troubleshooting Python Script
+
+Now that the Python script is on our network device, it must be launched at the appropriate time. IOS XE can utilize a 
+feature
+called Embedded Event Manager (EEM) to trigger actions based on certain events. One such event that can trigger an EEM
+action is a change in an SNMP value, such as the SNMP OID that corresponds to current CPU utilization. EEM can execute a
+Python script out of the Guest Shell environment as an action. Therefore, EEM can be used as the tool to ensure that the
+Python script can run any time there is a high CPU condition, regardless of whether an administrator is logged in to the
+network device or not.
+
+1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
+    
+    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+
+2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
+in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
+example:
+   
+    ```
+    csr1>enable
+    csr1#
+    ```
+    
+    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
+
+3. Enter global configuration mode with the `configure terminal` command, which will be indicated by the `csr1 
+(config)#` prompt, for example:
+   
+    ```
+    csr1#configure terminal
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    csr1(config)#
+    ```
+
+4. Run the following IOS XE commands in config mode to configure an EEM applet to create a trigger to run our 
+high CPU troubleshooting script automatically:
+    
+    ```
+    event manager applet highcpu authorization bypass
+    event snmp oid 1.3.6.1.4.1.9.2.1.56.0 get-type exact entry-op gt entry-val "40" poll-interval 1 maxrun 180 ratelimit 300
+    action 0.01 syslog msg "High CPU detected."
+    action 0.02 cli command "enable"
+    action 0.03 cli command "guestshell run python iosxe-highcpu.py"
+    ```
+    
+    For example:
 
     ```
     csr1(config)#event manager applet highcpu authorization bypass
@@ -115,15 +151,22 @@ example:
     csr1(config-applet)#action 0.01 syslog msg "High CPU detected."
     csr1(config-applet)#action 0.02 cli command "enable"
     csr1(config-applet)#action 0.03 cli command "guestshell run python iosxe-highcpu.py"
-    csr1(config-applet)#end
-
     ```
-
+   
+    End the global configuration mode session with the `end` command or typing `CTRL-Z`, for example:
+    
+    ```
+    csr1(config)#end
+    csr1#
+    ```
+    
     Note that the `entry-val` parameter specifies the percentage at which to trigger the Python script. In normal
     conditions, 40% may be lower than desired to track a high CPU issue. However, this value is set lower for this lab
-    to ensure we can repeatedly generate a high CPU event to test the script.
+    to ensure we can repeatedly generate a high CPU event to test the script for demonstration purposes.
 
-#### Step 3: Force a High CPU Event and Observe Results
+#### Step 3: Simulating a High CPU Event and Observing the Results
+
+TODO: LEFT OFF HERE
 
 In order to complete the lab, it is important to ensure that the CPU monitoring put in place actually works as expected.
 However, in a lab environment, it can be difficult to spike the CPU of a router without any peers. As noted previously,

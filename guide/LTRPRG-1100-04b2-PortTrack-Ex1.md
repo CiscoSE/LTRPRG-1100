@@ -47,8 +47,8 @@ example:
 4. There is an example Python script `iosxe-porttrack.py` in this lab's Git repository.  Let's create a directory on 
 the network device `bootflash:`, transfer the file to the network device file system, and run the script.
     
-    To create a new directory to hold scripts on-box, create a directory with the `mkdir -p /bootflash/scripts` 
-    command, if it does not already exist, from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
+    To create a new directory to hold scripts on-box if one does not already exist, use the `mkdir -p /bootflash/scripts` 
+    command from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
     
     ```
     [guestshell@guestshell ~]$ mkdir -p /bootflash/scripts
@@ -100,7 +100,7 @@ the network device `bootflash:`, transfer the file to the network device file sy
     csr1#
     ```
 
-#### Step 3: Using IOS XE Embedded Event Manager to Run the Port Tracker Python Script
+#### Step 2: Using IOS XE Embedded Event Manager to Run the Port Tracker Python Script
 
 Now that the Python script is on our network device, it must be run regularly to be useful. IOS XE can utilize a feature
 called Embedded Event Manager (EEM) to schedule scripts to be run on a regular basis.
@@ -161,7 +161,7 @@ tracker script automatically:
     example, `*/5 * * * *`) or only once per hour, 10 minutes after the hour (for example, `10 * * * *`). This format
     is standard cron format commonly found in Unix or Linux operating systems.
 
-#### Step 4: Scripting a Report of Historical Port Usage  
+#### Step 3: Scripting a Report of Historical Port Usage  
 
 The Python script running on a regular basis is reading interface states and saving historical data to a file in
 JSON format. While this, on its own, would be sufficient in a pinch to find a port, raw unformatted JSON can be 
