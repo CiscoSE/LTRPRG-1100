@@ -223,7 +223,7 @@ example:
 the network device `bootflash:`, transfer the file to the network device file system, and run the script.
 
     To create a new directory to hold scripts on-box, create a new directory with the `mkdir` command and change to 
-    that directory with the `cd` command from the Guest Shell `[guestshell@guestshell ~]$` prompt:
+    that directory with the `cd` command from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
     
     ```
     [guestshell@guestshell ~]$ mkdir /bootflash/scripts

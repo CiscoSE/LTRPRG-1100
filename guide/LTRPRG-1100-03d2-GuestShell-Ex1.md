@@ -30,7 +30,8 @@ for example:
     
     ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
-3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
+3. Enter global configuration mode with the `configure terminal` command , which will be indicated by the `csr1 
+(config)#` prompt, for example:
    
     ```
     csr1#configure terminal
