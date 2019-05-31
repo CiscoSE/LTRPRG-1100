@@ -59,21 +59,20 @@ the network device `bootflash:`, transfer the file to the network device file sy
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget foo` command, for example:
-    
-    TODO: Update URL to raw file.
-    
+    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-highcpu.py` command, for example:
+        
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/clus19/code/iosxe-porttrack.py?token=AAATPLRSE2ZW5EFPFGP5FF247HOTO
-    --2019-05-31 04:15:23--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/clus19/code/iosxe-porttrack.py?token=AAATPLRSE2ZW5EFPFGP5FF247HOTO
-    Reusing existing connection to [raw.githubusercontent.com]:443.
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-highcpu.py
+    --2019-05-31 19:48:17--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-highcpu.py
+    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
-    Length: 1615 (1.6K) [text/plain]
-    Saving to: 'iosxe-porttrack.py'
+    Length: 656 [text/plain]
+    Saving to: 'iosxe-highcpu.py'
     
-    100%[======================================>] 1,615       --.-K/s   in 0s
+    100%[======================================>] 656         --.-K/s   in 0s
     
-    2019-05-31 04:15:23 (3.97 MB/s) - 'iosxe-porttrack.py' saved [1615/1615]
+    2019-05-31 19:48:17 (72.9 MB/s) - 'iosxe-highcpu.py' saved [656/656]
     
     [guestshell@guestshell scripts]$
     ```
@@ -222,21 +221,22 @@ steps.
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget foo` command, for example:
+    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/cpuspike.sh` command, for example:
     
     TODO: Update URL to raw file.
     
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/clus19/code/iosxe-porttrack.py?token=AAATPLRSE2ZW5EFPFGP5FF247HOTO
-    --2019-05-31 04:15:23--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/clus19/code/iosxe-porttrack.py?token=AAATPLRSE2ZW5EFPFGP5FF247HOTO
-    Reusing existing connection to [raw.githubusercontent.com]:443.
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/cpuspike.sh
+    --2019-05-31 19:49:44--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/cpuspike.sh
+    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.192.133, 151.101.0.133, 151.101.64.133, ...
+    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.192.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
-    Length: 1615 (1.6K) [text/plain]
-    Saving to: 'iosxe-porttrack.py'
+    Length: 113 [text/plain]
+    Saving to: 'cpuspike.sh'
     
-    100%[======================================>] 1,615       --.-K/s   in 0s
+    100%[======================================>] 113         --.-K/s   in 0s
     
-    2019-05-31 04:15:23 (3.97 MB/s) - 'iosxe-porttrack.py' saved [1615/1615]
+    2019-05-31 19:49:44 (16.4 MB/s) - 'cpuspike.sh' saved [113/113]
     
     [guestshell@guestshell scripts]$
     ```

@@ -219,40 +219,44 @@ example:
 
     ```
 
-8. There is an example CLI Python package Python script in this lab's Git repository.  Let's create a directory on 
+8. There is an example Python script `iosxe-cli-example.py` in this lab's Git repository.  Let's create a directory on 
 the network device `bootflash:`, transfer the file to the network device file system, and run the script.
-
-    To create a new directory to hold scripts on-box, create a new directory with the `mkdir` command and change to 
-    that directory with the `cd` command from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
+    
+    To create a new directory to hold scripts on-box if one does not already exist, use the `mkdir -p /bootflash/scripts` 
+    command from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
     
     ```
-    [guestshell@guestshell ~]$ mkdir /bootflash/scripts
+    [guestshell@guestshell ~]$ mkdir -p /bootflash/scripts
+    [guestshell@guestshell ~]$
+    ```
+    
+    Change to that directory with the `cd /bootflash/scripts` command, for example:
+    
+    ```
     [guestshell@guestshell ~]$ cd /bootflash/scripts
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget` command from `https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py?token=AAATPLS6PWXOIVPRJFJ7B424ZJXKY`:
-    
-    TODO: Update URL to raw file.
-    
+    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py` command, for example:
+        
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py?token=AAATPLS6PWXOIVPRJFJ7B424ZJXKY
-    --2018-06-08 04:50:15--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-cli-example.py
-    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py
+    --2019-05-31 19:42:45--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py
+    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.64.133, 151.101.128.133, 151.101.192.133, ...
+    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.64.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
-    Length: 947 [text/plain]
+    Length: 1604 (1.6K) [text/plain]
     Saving to: 'iosxe-cli-example.py'
     
-    100%[======================================>] 947         --.-K/s   in 0s
+    100%[======================================>] 1,604       --.-K/s   in 0s
     
-    2018-06-08 04:50:15 (64.6 MB/s) - 'iosxe-cli-example.py' saved [947/947]
+    2019-05-31 19:42:45 (81.9 MB/s) - 'iosxe-cli-example.py' saved [1604/1604]
     
     [guestshell@guestshell scripts]$
     ```
     
     This example Python script requires a single mandatory argument: an interface name, for example `Loopback55`.  Run 
-    the script with the `python` command:
+    the script with the `python iosxe-cli-example.py Loopback55` command:
     
     ```
     [guestshell@guestshell scripts]$ python iosxe-cli-example.py Loopback55

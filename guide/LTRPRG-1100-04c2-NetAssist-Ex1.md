@@ -102,21 +102,20 @@ example:
     [guestshell@guestshell scripts]$
     ```
 
-4. Transfer the Bot script with the `wget` command from
-`https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-netassist-bot.py`
-    
+4. Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-porttrack.py` command, for example:
+        
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-netassist-bot.py
-    --2018-06-09 00:45:12--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/labguide/code/iosxe-netassist-bot.py
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-porttrack.py
+    --2019-05-31 19:51:49--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-porttrack.py
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
-    Length: 1128 (1.1K) [text/plain]
-    Saving to: 'iosxe-netassist-bot.py'
+    Length: 1615 (1.6K) [text/plain]
+    Saving to: 'iosxe-porttrack.py'
     
-    100%[======================================>] 1,128       --.-K/s   in 0s
+    100%[======================================>] 1,615       --.-K/s   in 0s
     
-    2018-06-09 00:45:17 (9.75 MB/s) - 'iosxe-netassist-bot.py' saved [1128/1128]
+    2019-05-31 19:51:50 (76.3 MB/s) - 'iosxe-porttrack.py' saved [1615/1615]
     
     [guestshell@guestshell scripts]$
     ```
