@@ -6,7 +6,7 @@ Navigation :: [Previous Page](LTRPRG-1100-02b5-Python-Ex4.md) :: [Table of Conte
 
 ### Introducing Cisco Webex Teams
 
-[Cisco Webex Teams](https://www.webex.com/products/teams/index.html) is a platform for teamwork, communication, and 
+Cisco [Webex Teams](https://www.webex.com/products/teams/index.html) is a platform for teamwork, communication, and 
 collaboration. It allows individuals and teams to communicate via messaging, video meetings, whiteboarding, and more.
 On the surface, it may not be obvious how it is relevant to the Network Programmability Ninja.  However, with a 
 well-developed API, Webex Teams can be integrated into your network programmability workflow.
