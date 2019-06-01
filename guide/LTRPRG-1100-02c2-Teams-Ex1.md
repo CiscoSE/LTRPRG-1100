@@ -16,16 +16,16 @@ The objectives for this exercise are to:
 If you don't already have a Webex Teams account, then the first thing to do is sign up for a free account. If you 
 already have an account and are confident in your ability to log in to it, then please skip to Step 2.
 
-Registering for a Webex Teams is free.  However, you will need access to the email account that you register with to 
+Registering for Webex Teams is free.  However, you will need access to the email account that you register with to 
 complete the account verification steps later in this lab.  If you cannot do so, then please ask a proctor for 
-assistance and we can provide you with a temporary demo account.
+assistance and we can provide you with a temporary demo account and skip to Step 2.
 
 1. Navigate to [Webex Teams Web Login](https://teams.webex.com/) at `https://teams.webex.com/` to create your account.
 
 2. Type in your email address that you want to use for your Webex Teams account and click the `Next` button.
     
     ![Webex login](assets/WebexTeams-01.png)
-    
+
 3. If you have not activated an account with this email address, then Webex Teams will send an email to this address 
 to complete the account activation process. Open the email that is in your email Inbox waiting for you and enter the 
 activation code.
