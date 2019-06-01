@@ -24,7 +24,9 @@ this data over time.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -34,8 +36,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
     
@@ -106,7 +106,9 @@ called Embedded Event Manager (EEM) to schedule scripts to be run on a regular b
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -116,8 +118,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter global configuration mode with the `configure terminal` command, which will be indicated by the `csr1 
 (config)#` prompt, for example:
@@ -169,7 +169,9 @@ down and how long it has been since they've been up.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -179,8 +181,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
     

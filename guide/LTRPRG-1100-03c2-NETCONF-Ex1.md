@@ -224,9 +224,9 @@ the IETF and OpenConfig YANG data models from GitHub.
 
 1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
-    ![Git Bash Icon](assets/Git-02.png)
+    ![Git Bash Icon](assets/GitBash-Icon.png)
     
-    ![Git Bash Terminal](assets/Git-03.png)
+    ![Git Bash Terminal](assets/GitBash-Term.png)
 
 2.  Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
 your lab working directory and activate the Python virtual environment you created earlier in this lab:
@@ -257,7 +257,7 @@ your lab working directory and activate the Python virtual environment you creat
     
     Open the lab folder by double clicking the Windows Explore shortcut on the lab workstation desktop:
     
-    ![Lab Shortcut](assets/NETCONF-02.png)
+    ![Lab Directory Shortcut](assets/LabDir-Icon.png)
     
     Navigate to `yang`, `standard`, `ietf`, then `RFC` directory:
     

@@ -28,9 +28,9 @@ However, which version of Python?  Let's show how to invoke the interpreter and 
 
 1. Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
-    ![Git Bash Icon](assets/Git-02.png)
+    ![Git Bash Icon](assets/GitBash-Icon.png)
     
-    ![Git Bash Terminal](assets/Git-03.png)
+    ![Git Bash Terminal](assets/GitBash-Term.png)
     
     Type the command `python` at the command prompt:
     

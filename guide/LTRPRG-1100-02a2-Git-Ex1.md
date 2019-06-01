@@ -24,7 +24,7 @@ and continue to Step 2.
 
 To create a free GitHub account, complete these steps:
 
-1. Open a web browser and navigate to [GitHub](https://github.com/): `https://github.com/`:
+1. Open a web browser and navigate to [GitHub](https://github.com/) at `https://github.com/`:
     
     ![GitHub homepage](assets/GitHub-01.png)
 
@@ -41,21 +41,21 @@ password.
     
     Click the `Create an account` button.
 
-4. Choose the Free subscription and Optionally click to select `Send me updates on GitHub news, offers, and events`.
+4. Choose the `Free` subscription and optionally click to select `Send me updates on GitHub news, offers, and events`.
     
     ![Join GitHub Step 2](assets/GitHub-04.png)
 
     Click the `Continue` button.
 
-4. Tailor your GitHub experience by answering the questions.
+5. Tailor your GitHub experience by answering the questions.
     
     ![Join GitHub Step 3](assets/GitHub-05.png)
 
     Click the `Submit` button or click the link `skip this step`.
 
-You will need to verify your email address before you can contribute on GitHub.  Follow the verification instructions
-sent to your email account.  Once you've completed email verification and login to `github.com` again, you will see 
-your GitHub Dashboard:
+6. You will need to verify your email address before you can contribute on GitHub.  Follow the verification instructions
+sent to your email account.  Once you've completed email verification and login to [GitHub](https://github.com/) again, 
+you will see your GitHub Dashboard:
  
 ![GitHub Dashboard](assets/GitHub-06.png)
 
@@ -66,10 +66,10 @@ Congratulations, you have joined the GitHub community!
 Projects are stored in a repository, or repo for short.  This is where all of the project materials are hosted, 
 including documentation and source code.
 
-1. If you created a GitHub account and are currently logged in to `github.com`, you can star a repository so that 
-you can keep track of projects that are of interest or importance to you.  Starring a repository is also a way to 
-show your support for, or appreciation of, the project and project maintainers.  Take a few minutes to discover new 
-repositories.  Click the `Star` button to the right of a repository title on the project's site.
+1. If you created a GitHub account and are currently logged in to [GitHub](https://github.com/), you can star a 
+repository so that you can keep track of projects that are of interest or importance to you.  Starring a repository 
+is also a way to show your support for, or appreciation of, the project and project maintainers.  Take a few minutes 
+to discover new repositories.  Click the `Star` button to the right of a repository title on the project's site.
     
     Search for and star this Cisco Live session project repository:
     
@@ -84,9 +84,9 @@ repositories.  Click the `Star` button to the right of a repository title on the
 
 2. You can follow people of like-mindedness or interest to you and your goals on GitHub.  This can help you 
 build a network and community of developers.  When you follow people, you will see their public activity in your GitHub 
-news feed after you login to GitHub.  If you created a GitHub account and are currently logged in to github.com, take
-a few minutes to follow new and interesting people on GitHub to start building your developer network.  Click the 
-`Follow` button under their profile image on their profile page.
+news feed after you login to GitHub.  If you created a GitHub account and are currently logged in to
+[GitHub](https://github.com/), take a few minutes to follow new and interesting people on GitHub to start building 
+your developer network.  Click the `Follow` button under their profile image on their profile page.
     
     Search for and follow your Cisco Live lab proctors:
     
@@ -108,6 +108,9 @@ organizations as a way to explore GitHub more.
     
     Search for and bookmark the [Cisco Systems Engineers](https://github.com/CiscoSE) organization where sample 
     code from Cisco SE community is shared.
+
+Now that we've introduced GitHub, let's introduce key Git version control concepts and commands.  You will create 
+your own Git repository and clone the repository for this lab.
 
 ---
 

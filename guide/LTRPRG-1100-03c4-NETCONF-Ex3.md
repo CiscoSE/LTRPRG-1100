@@ -23,7 +23,9 @@ network device.  To do so, complete the following steps:
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you 
 are in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, 
@@ -33,8 +35,6 @@ for example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
    
@@ -209,9 +209,9 @@ programmatically.
 
 1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
-    ![Git Bash Icon](assets/Git-02.png)
+    ![Git Bash Icon](assets/GitBash-Icon.png)
     
-    ![Git Bash Terminal](assets/Git-03.png)
+    ![Git Bash Terminal](assets/GitBash-Term.png)
 
 2.  Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
 your lab working directory and activate the Python virtual environment you created earlier in this lab:

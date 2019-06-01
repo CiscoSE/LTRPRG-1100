@@ -28,9 +28,9 @@ that contains an index of changes that are waiting to be committed.
 
 Files that are changed but not staged are considered modified.  Files that are changed and added to the staging 
 area are considered staged.  Files in the Git directory are considered committed.  In the next step, we will learn 
-how to initialize and clone repositories, and modify, stage, and commit changes, and push those changes to GitHub.
+how to initialize and clone repositories; modify, stage, and commit changes; and push those changes to GitHub.
 
-#### Step 2: Learning Git Commands
+#### Step 2: Introducing Git Commands
 
 Git has command line commands for managing Git repositories.  Here are the key commands and their usage you will need
 to get started using Git successfully.

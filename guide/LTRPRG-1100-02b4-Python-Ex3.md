@@ -23,9 +23,9 @@ installed.
 
 1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
-    ![Git Bash Icon](assets/Git-02.png)
+    ![Git Bash Icon](assets/GitBash-Icon.png)
     
-    ![Git Bash Terminal](assets/Git-03.png)
+    ![Git Bash Terminal](assets/GitBash-Term.png)
 
 2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
 your lab working directory and activate the Python virtual environment you created earlier in this lab:

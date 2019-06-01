@@ -23,7 +23,7 @@ screen real estate in the Postman application, and it is where you can build and
 
 1. Open Postman by double clicking the Postman icon on the desktop:
     
-    ![Postman Application Icon](assets/Postman-00.png)
+    ![Postman Application Icon](assets/Postman-Icon.png)
     
     ![Postman Application Screen](assets/Postman-01.png)
 
@@ -137,9 +137,9 @@ Python code to make API calls as well!
     
     Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
-    ![Git Bash Icon](assets/Git-02.png)
+    ![Git Bash Icon](assets/GitBash-Icon.png)
     
-    ![Git Bash Terminal](assets/Git-03.png)
+    ![Git Bash Terminal](assets/GitBash-Term.png)
     
     Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to your 
     lab working directory and activate the Python virtual environment you created earlier in this lab:

@@ -12,13 +12,15 @@ The objectives for this exercise are to:
 
 #### Step 1: Running IOS XE Commands with the CLI Python Package
 
-1. Cisco packages Python modules with Guest Shell that provides access to run IOS XE EXEC and configuration
-commands.  The IOS XE command `ip http server` command must be enabled in configuration mode for 
-these functions to work.
+Cisco packages Python modules with Guest Shell that provides access to run IOS XE EXEC and configuration
+commands.  We must complete a number of configuration steps on the network device for the Cisco Python API will 
+function.
+
+1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -28,8 +30,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
    

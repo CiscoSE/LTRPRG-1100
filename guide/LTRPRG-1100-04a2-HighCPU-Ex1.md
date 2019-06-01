@@ -21,7 +21,9 @@ directly from the network device.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -31,8 +33,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
     
@@ -108,7 +108,9 @@ administrator is logged in to the network device or not.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -118,8 +120,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. Enter global configuration mode with the `configure terminal` command, which will be indicated by the `csr1 
 (config)#` prompt, for example:
@@ -171,7 +171,9 @@ bring the CPU to this level to simulate a real-world scenario in the lab.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
-    ![CSR1 PuTTY Icon](assets/GuestShell-01.png)
+    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
+    
+    ![CSR1 Terminal](assets/CSR1-Term.png)
 
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
@@ -181,8 +183,6 @@ example:
     csr1>enable
     csr1#
     ```
-    
-    ![CSR1 Privileged EXEC Mode](assets/GuestShell-02.png)
 
 3. From the IOS XE device CLI, run the `show proc cpu | include CPU` command to see the current utilization, for 
 example:
