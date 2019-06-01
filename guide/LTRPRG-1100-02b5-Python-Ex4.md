@@ -23,9 +23,9 @@ how a particular function acts, or as a quick way to execute one-time use Python
     
     ![Git Bash Terminal](assets/GitBash-Term.png)
 
-2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
-your lab working directory and activate the Python virtual environment you created earlier in this lab with the
-`source ~/lab/pythonenv/Scripts/activate` command, for example:
+2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then activate 
+the Python virtual environment you created earlier in this lab with the `source ~/lab/pythonenv/Scripts/activate` 
+command, for example:
     
     ```
     $ source ~/lab/pythonenv/Scripts/activate
