@@ -43,6 +43,7 @@ and a Cisco IOS XE virtual network device.
     1. [Git and GitHub](LTRPRG-1100-02a1-Git.md)
         1. [Creating a GitHub Account](LTRPRG-1100-02a2-Git-Ex1.md)
         2. [Introducing Git Concepts and Commands](LTRPRG-1100-02a3-Git-Ex2.md)
+        3. [Cloning Remote Git Repositories](LTRPRG-1100-02a4-Git-Ex3.md)
     3. [Python for Network Programmability](LTRPRG-1100-02b1-Python.md)
         1. [Understanding How to Run Python](LTRPRG-1100-02b2-Python-Ex1.md)
         2. [Setting up Python Virtual Environments](LTRPRG-1100-02b3-Python-Ex2.md)
