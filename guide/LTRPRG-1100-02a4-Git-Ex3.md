@@ -14,7 +14,7 @@ The objectives for this exercise are to:
 
 You do not need a GitHub account to download a working copy of a remote Git repository.  The `git clone` and 
 `git pull` commands can be used to download a remote repository.  If you are only cloning and pulling 
-updates from a remote repository, then you will next have to login to the remote Git server.
+updates from a remote repository, then you will not have to login to GitHub.
 
 1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
@@ -51,8 +51,9 @@ repo name is `clus19`, the URL to my remote Git repository would be `https://git
     
     You can access this lab guide and all of the code and content for this lab from the GitHub repository
     [LTRPRG-1100](https://github.com/curtissmith/LTRPRG-1100) at `https://github.com/curtissmith/LTRPRG-1100` with a 
-    webbrowser.  Let's clone this repository to your lab workstation with Git.  Use the `cd ~/lab` command to change 
-    to the lab directory and run the `git clone https://github.com/curtissmith/LTRPRG-1100.git`
+    web browser.  Let's clone this repository to your lab workstation with Git.
+    
+    Use the `cd ~/lab` command to change to the lab directory and run the `git clone https://github.com/curtissmith/LTRPRG-1100.git`
     command to clone the lab repository, for example:
     
     ```
@@ -64,6 +65,12 @@ repo name is `clus19`, the URL to my remote Git repository would be `https://git
     remote: Total 117 (delta 51), reused 80 (delta 24), pack-reused 0
     Receiving objects: 100% (117/117), 86.75 KiB | 488.00 KiB/s, done.
     Resolving deltas: 100% (51/51), done.
+    ```
+    
+    Check the results and explore the Git repository working directory with the `ls -la` and `cd LTRPRG-1100` 
+    commands, for example:
+    
+    ```
     $ ls -la
     total 20
     drwxr-xr-x 1 Administrator 197121 0 Jun  1 01:28 ./
