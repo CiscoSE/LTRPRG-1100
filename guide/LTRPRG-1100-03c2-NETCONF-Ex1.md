@@ -228,12 +228,12 @@ the IETF and OpenConfig YANG data models from GitHub.
     
     ![Git Bash Terminal](assets/GitBash-Term.png)
 
-2.  Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
-your lab working directory and activate the Python virtual environment you created earlier in this lab:
+2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then activate 
+the Python virtual environment you created earlier in this lab with the `source ~/lab/pythonenv/Scripts/activate` 
+command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
 
@@ -276,12 +276,12 @@ your lab working directory and activate the Python virtual environment you creat
 data format that is good for programming is not necessarily good for human readability.  Fortunately, we have a tool
 that can help you called [pyang](https://github.com/mbj4668/pyang) that is a quick `pip install` away.
     
-    Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to
-    your lab working directory and activate the Python virtual environment you created earlier in this lab:
+    Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then activate 
+    the Python virtual environment you created earlier in this lab with the `source ~/lab/pythonenv/Scripts/activate`
+    command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
     

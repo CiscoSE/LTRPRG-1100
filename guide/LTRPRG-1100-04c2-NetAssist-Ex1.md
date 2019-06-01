@@ -435,12 +435,12 @@ configuration snippet:
     
     ![Git Bash Terminal](assets/GitBash-Term.png)
     
-    Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to your 
-    lab working directory and activate the Python virtual environment you created earlier in this lab:
+    Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then activate 
+    the Python virtual environment you created earlier in this lab with the `source ~/lab/pythonenv/Scripts/activate`
+    command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
     
