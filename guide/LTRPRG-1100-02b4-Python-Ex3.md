@@ -75,7 +75,7 @@ Python with the `pip` command.  Display a list of installed Python packages with
     (pythonenv) $
     ```
     
-    As you can seen here, this virtual environment is still "vanilla" with no additional Python packages installed.
+    As you can see here, this virtual environment is still "vanilla" with no additional Python packages installed.
     
 Let's install some useful network programmability Python packages.
 
@@ -131,6 +131,7 @@ and `<version>` with the specific version of the Python package.  For example, u
 command `pip install -U setuptools` to upgrade the setuptools package installed in the last step to the latest version 
 available:
     
+    ```
     (pythonenv) $ pip install -U setuptools
     Collecting setuptools
       Downloading https://files.pythonhosted.org/packages/ec/51/f45cea425fd5cb0b0380
@@ -141,8 +142,8 @@ available:
         Uninstalling setuptools-39.2.0:
           Successfully uninstalled setuptools-39.2.0
     Successfully installed setuptools-41.0.1
-
     (pythonenv) $
+    ```
 
 4. You can only install one version of a Python package within a Python virtual environment.  When developing this 
 lab, we froze the versions of the prerequisite Python packages installed to ensure that there were no 
@@ -154,7 +155,7 @@ incompatibilities and maintain consistency over time.
     will allow for a quick installation of all required packages.
     
     You install package requirements from a requirements file with the command `pip install -r <filename>`, replacing
-    `<filename>` with the requirements test file name, typically `requirements.txt`.  Use the command
+    `<filename>` with the requirements file name, typically `requirements.txt`.  Use the command
     `pip install -r ~/lab/LTRPRG-1100/requirements.txt` to install the Python package requirements for this lab, for 
     example (output truncated for brevity):
     
