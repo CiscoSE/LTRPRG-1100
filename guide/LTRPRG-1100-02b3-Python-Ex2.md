@@ -49,12 +49,12 @@ replacing `<directory>` with the path to the directory you want to create the Py
 Python will build a virtual environment based on the same version of the Python interpreter invoked, Python version 3
 in the case of the lab environment we've prepared for you.  If you need to create a virtual environment for a 
 different version of Python, then invoke the version of the Python interpreter executable, for example
-`py -2 -m venv python` or `py -3 -m venv pythonenv` in Windows to create a Python version 2 or Python version 3 virtual 
-environment, respectively.
-
-To create a Python version 3 virtual environment for this lab, simply use the `python` executable with the command 
-`python -m venv ~/lab/pythonenv`, for example:
-
+`py -2 -m venv pythonenv` or `py -3 -m venv pythonenv` in Windows to create a Python version 2 or Python version 3 
+virtual environment, respectively.
+    
+    To create a Python version 3 virtual environment for this lab, simply use the `python` executable with the command 
+    `python -m venv ~/lab/pythonenv`, for example:
+    
     ```
     $ python -m venv ~/lab/pythonenv
     $
