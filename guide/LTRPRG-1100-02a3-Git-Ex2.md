@@ -248,8 +248,8 @@ account, then you can use any name or email address you'd like for demonstration
     see whether there are any staged changes or whether your copy of the repository is in sync with the remote server
     if it is hosted remotely.
 
-3. Let's create a new file to track with a little Bash shell code snippet using the shell built-in `echo` and redirect 
-the output to a file named `README.md` with the `echo "# Hello World!" >> README.md` command, for example:
+3. Let's create a new file to track with a little Bash shell code snippet using the shell built-in `echo` command and 
+redirect the output to a file named `README.md` with the `echo "# Hello World!" >> README.md` command, for example:
     
     ```
     $ echo "# Hello World!" >> README.md

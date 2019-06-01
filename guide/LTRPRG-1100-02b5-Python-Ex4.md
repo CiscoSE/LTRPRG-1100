@@ -13,9 +13,9 @@ The objectives for this exercise are to:
 
 #### Step 1: Working with the Python Interpreter
 
-Recall that Python is an interpreted language, meaning that every command is evaluated as it is ran. The Python 
-interpreter can be ran interactively, allowing for real-time testing of code. This can be a great way to learn how a 
-particular function acts, or as a quick way to execute one-time use Python code.
+Recall that Python is an interpreted language, meaning that every command is evaluated as it is ran line-by-line. The 
+Python interpreter can be ran interactively, allowing for real-time testing of code. This can be a great way to learn
+how a particular function acts, or as a quick way to execute one-time use Python code.
 
 1.  Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     
@@ -24,11 +24,11 @@ particular function acts, or as a quick way to execute one-time use Python code.
     ![Git Bash Terminal](assets/GitBash-Term.png)
 
 2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
-your lab working directory and activate the Python virtual environment you created earlier in this lab:
+your lab working directory and activate the Python virtual environment you created earlier in this lab with the
+`source ~/lab/pythonenv/Scripts/activate` command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
 
@@ -53,16 +53,16 @@ the code snippet `print("Hello World")` and press the `Enter` or `Return` key in
     ```
 
 4.  The interactive interpreter is mainly used for practicing, learning, debugging, or quick one-time use. As Python 
-has many built-in math and numeric functions, it can be an easy way to do quick arithmetic.  For example, type the 
-code snippet `50*(1.15+.06)` and press the `Enter` or `Return` key to calculate how much cash to bring for a $50 
-dinner, including 15% tip and 6% sales tax:
-
+has many built-in math and numeric functions, it can be an easy way to do quick arithmetic.  For example, to 
+calculate how much cash to bring for a $50 dinner, including 15% tip and 6% sales tax, type the code snippet
+`50*(1.15+.06)` and press the `Enter` or `Return` key:
+    
     ```
     >>> 50*(1.15+.06)
     60.5
     >>>
     ```
-    
+
 5.  Sometimes our on-the-fly mathematics needs are directly related to our Network Programmability Ninja skills. For 
 instance, you may need to convert DSCP values to ToS values. Converting DSCP to ToS for quality of service is
 done by bit-shifting by 2 bits to the left (padding a binary number with two zeroes). Doing this on paper, you would
@@ -78,14 +78,14 @@ this.  For example, type the code snippet `46 << 2` and press the `Enter` or `Re
     
     The Python operator `<<` executes a left bit-shift operation on the number to the left of the operator by the number
     of bits indicated to the right of the operator. In this example, we bit-shifted two bits to the left on DSCP 46, 
-    leaving us with a ToS value of 184. 
+    leaving us with a ToS value of 184.
 
-5.  To exit the interactive interpreter, type Python function `quit()` and press the `Enter` or `Return` 
-key to be returned to the terminal prompt, for example:
+5.  To exit the interactive interpreter, type `quit()` and press the `Enter` or `Return` key to exit out of the 
+interpreter, for example:
     
     ```
-    >>> quit()
-    (pythonenv) $
+    >>>quit()
+    $
     ```
 
 #### Step 2: Running a Python Script
@@ -94,41 +94,43 @@ While the interactive Python interpreter is useful for occasional and instructio
 Python will be done by creating and running scripts. A Python script is a set of instructions written in a language 
 that the Python interpreter understands. The script is written in a text editor and run against the Python interpreter.
 
-1.  First make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, 
-then change to your lab working directory and activate the Python virtual environment you created earlier in this 
-lab, for example:
+1.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
+your lab working directory and activate the Python virtual environment you created earlier in this lab with the
+`source ~/lab/pythonenv/Scripts/activate` command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
 
-2.  Let's create a new Python script.  For example, use the command `echo 'print("Hello World!")' >> helloworld.py` 
-to create a basic Python script with the file name `helloworld.py`:
+2.  Let's create a Python script with a little Bash shell code snippet using the shell built-in `echo` command and 
+redirect the output to a file named `helloworld.py` with the `echo 'print("Hello World!")' >> ~/lab/helloworld.py` 
+command, for example:
+    
+    ```
+    (pythonenv) $ echo 'print("Hello World!")' >> ~/lab/helloworld.py
+    (pythonenv) $
+    ```
+
+3.  Change to the director `~/lab` with the `cd ~/lab` command and run the Python script by with the command
+`python helloworld.py`, for example:
     
     ```
     (pythonenv) $ cd ~/lab
-    (pythonenv) $ echo 'print("Hello World!")' >> helloworld.py
-    (pythonenv) $
-    ```
-
-3.  Run the Python script by with the command `python helloworld.py`, for example:
-    
-    ```
     (pythonenv) $ python helloworld.py
     Hello World!
     (pythonenv) $
     ```
 
-    By putting your Python instructions into a file, it can be called at any time by the Python interpreter. This is 
+    By putting your Python instructions into a file, it can be called at any time by the Python interpreter.  This is 
     key to reusing code.
 
 This is a basic tutorial to introduce the concepts necessary to interact with Python and execute Python applications.
 There are countless introductory Python primers of all kinds in multiple mediums to help with the syntax of Python 
-code.  This lab contains examples of Python code for real-world use cases.
+code.  This lab contains examples of Python code for real-world use cases for network programmability, but more can 
+be found in GitHub.
 
-Let's continue to learn more tools of the Ninja! 
+Let's continue to learn more tools of the Ninja!
 
 ---
 

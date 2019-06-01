@@ -144,7 +144,7 @@ available:
 
     (pythonenv) $
 
-3. You can only install one version of a Python package within a Python virtual environment.  When developing this 
+4. You can only install one version of a Python package within a Python virtual environment.  When developing this 
 lab, we froze the versions of the prerequisite Python packages installed to ensure that there were no 
 incompatibilities and maintain consistency over time.
     
