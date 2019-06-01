@@ -11,7 +11,7 @@ The objectives for this exercise are to:
 * Understand which Python packages are already installed
 * Install useful Python packages for the Network Programmability Ninja
 
-When a Python virtual enviroment is installed, it is pretty bare bones, only including a local copy of the Python 
+When a Python virtual environment is installed, it is pretty bare bones, only including a local copy of the Python 
 interpreter and a few Python packages.  You will need to update the Python packages and install new Python packages 
 for this lab.
 
@@ -28,24 +28,23 @@ installed.
     ![Git Bash Terminal](assets/GitBash-Term.png)
 
 2.  Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then change to
-your lab working directory and activate the Python virtual environment you created earlier in this lab:
+your lab working directory and activate the Python virtual environment you created earlier in this lab with the
+`source ~/lab/pythonenv/Scripts/activate` command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
 
 3. The pip tool is a software management system to install and maintain Python packages.  Before working with pip
 in this virtual environment, ensure that pip is updated to the version tested when this lab was developed 
-with the `python -m pip install --upgrade pip==19.1.1` command: 
+with the `python -m pip install --upgrade pip==19.1.1` command, for example: 
     
     ```
-    (pythonenv) $ python -m pip install --upgrade pip==19.1.1
-    Collecting pip
-      Downloading https://files.pythonhosted.org/packages/f9/fb/863012b13912709c13cf
-    5cfdbfb304fa6c727659d6290438e1a88df9d848/pip-19.1-py2.py3-none-any.whl (1.4MB)
-        100%                                  1.4MB 6.6MB/s
+    $ python -m pip install --upgrade pip==19.1.1
+    Collecting pip==19.1.1
+      Using cached https://files.pythonhosted.org/packages/5c/e0/be401c003291b56efc5
+    5aeba6a80ab790d3d4cece2778288d65323009420/pip-19.1.1-py2.py3-none-any.whl
     Installing collected packages: pip
       Found existing installation: pip 19.0.3
         Uninstalling pip-19.0.3:
@@ -58,16 +57,14 @@ with the `python -m pip install --upgrade pip==19.1.1` command:
     like the following:
     
      ```
-    (pythonenv) $ python -m pip install --upgrade pip==19.1.1
+    $ python -m pip install --upgrade pip==19.1.1
     Requirement already up-to-date: pip==19.1.1 in c:\users\administrator\lab\python
     env\lib\site-packages (19.1.1)
     (pythonenv) $
     ```
 
 4. Now that pip has been updated in this virtual environment, it can be used to manage packages and modules in 
-Python with the `pip` command.
-    
-    Display a list of installed Python packages with the `pip list` command:
+Python with the `pip` command.  Display a list of installed Python packages with the `pip list` command, for example:
     
     ```
     (pythonenv) $ pip list
@@ -77,10 +74,10 @@ Python with the `pip` command.
     setuptools 40.8.0
     (pythonenv) $
     ```
-
+    
     As you can seen here, this virtual environment is still "vanilla" with no additional Python packages installed.
     
-Let's install some useful network programmability Python packages. 
+Let's install some useful network programmability Python packages.
 
 #### Step 2: Installing Useful Python Packages
 
@@ -98,17 +95,13 @@ subnets.
 
 1. You can use the pip tool to install packages into your Python virtual environment with the 
 `pip install <package>` command, replacing `<package>` with a Python package name.  For example, use the command
-`pip install netmiko` to install the latest version of the netmiko Python package.
-    
-    The pip tool takes care of package dependencies as well, meaning that if other packages are necessary for netmiko
-    to work, they will be installed as well.  Go ahead and install the netmiko Python package with the
-    `pip install netmiko` command (output truncated for brevity):
+`pip install netmiko` to install the latest version of the netmiko Python package (output truncated for brevity):
     
     ```
     (pythonenv) $ pip install netmiko
     Successfully installed asn1crypto-0.24.0 bcrypt-3.1.6 cffi-1.12.3 cryptography-2
-    .6.1 netmiko-2.3.3 paramiko-2.4.2 pyasn1-0.4.5 pycparser-2.19 pynacl-1.3.0 pyser
-    ial-3.4 pyyaml-5.1 scp-0.13.2 six-1.12.0 textfsm-0.4.1
+    .7 netmiko-2.3.3 paramiko-2.4.2 pyasn1-0.4.5 pycparser-2.19 pynacl-1.3.0 pyseria
+    l-3.4 pyyaml-5.1 scp-0.13.2 six-1.12.0 textfsm-0.4.1
     (pythonenv) $
     ```
 
@@ -120,8 +113,8 @@ and `<version>` with the specific version of the Python package.  For example, u
     ```
     (pythonenv) $ pip install setuptools==39.2.0
     Collecting setuptools==39.2.0
-      Using cached https://files.pythonhosted
-     .org/packages/7f/e1/820d941153923aac1d49d7fc37e17b6e73bfbd2904959fffbad77900cf92/setuptools-39.2.0-py2.py3-none-any.whl
+      Using cached https://files.pythonhosted.org/packages/7f/e1/820d941153923aac1d4
+    9d7fc37e17b6e73bfbd2904959fffbad77900cf92/setuptools-39.2.0-py2.py3-none-any.whl
     Installing collected packages: setuptools
       Found existing installation: setuptools 40.8.0
         Uninstalling setuptools-40.8.0:
@@ -132,7 +125,7 @@ and `<version>` with the specific version of the Python package.  For example, u
     
     Notice that if a version of the package is already installed, then pip will uninstall the package first, then 
     install the version specified.
- 
+
 3. In addition to using pip to install new packages, you can upgrade existing packages with the
 `pip install -U <package>` command, replacing `<package>` with the Python package name.  For example, use the 
 command `pip install -U setuptools` to upgrade the setuptools package installed in the last step to the latest version 
@@ -140,15 +133,17 @@ available:
     
     (pythonenv) $ pip install -U setuptools
     Collecting setuptools
-      Using cached https://files.pythonhosted
-     .org/packages/ec/51/f45cea425fd5cb0b0380f5b0f048ebc1da5b417e48d304838c02d6288a1e/setuptools-41.0.1-py2.py3-none-any.whl
+      Downloading https://files.pythonhosted.org/packages/ec/51/f45cea425fd5cb0b0380
+    f5b0f048ebc1da5b417e48d304838c02d6288a1e/setuptools-41.0.1-py2.py3-none-any.whl
+    (575kB)
     Installing collected packages: setuptools
       Found existing installation: setuptools 39.2.0
         Uninstalling setuptools-39.2.0:
           Successfully uninstalled setuptools-39.2.0
     Successfully installed setuptools-41.0.1
+
     (pythonenv) $
-    
+
 3. You can only install one version of a Python package within a Python virtual environment.  When developing this 
 lab, we froze the versions of the prerequisite Python packages installed to ensure that there were no 
 incompatibilities and maintain consistency over time.
@@ -159,22 +154,23 @@ incompatibilities and maintain consistency over time.
     will allow for a quick installation of all required packages.
     
     You install package requirements from a requirements file with the command `pip install -r <filename>`, replacing
-     `<filename>` with the requirements test file name, typically `requirements.txt`.  Use the command
-     `pip install -r requirements.txt` to install the Python package requirements for this lab (output truncated for 
-     brevity):
+    `<filename>` with the requirements test file name, typically `requirements.txt`.  Use the command
+    `pip install -r ~/lab/LTRPRG-1100/requirements.txt` to install the Python package requirements for this lab, for 
+    example (output truncated for brevity):
     
     ```
     (pythonenv) $ pip install -r ~/lab/LTRPRG-1100/requirements.txt
-    ...
-    Successfully installed certifi-2019.3.9 chardet-3.0.4 idna-2.8 lxml-4.3.3 ncclient-0.6.4 requests-2.21.0 urllib3-1.25
+    Successfully installed certifi-2019.3.9 chardet-3.0.4 cryptography-2.6.1 idna-2.
+    8 lxml-4.3.3 ncclient-0.6.4 requests-2.22.0 urllib3-1.25.2
     ```
     
-    Now all of the correct Python packages and versions should be installed. Confirm with the `pip list` command:
+    Now all of the correct Python packages and versions should be installed. Confirm with the `pip list` command, for
+    example:
     
     ```
     (pythonenv) $ pip list
     Package      Version
-    ------------ ---------
+    ------------ --------
     asn1crypto   0.24.0
     bcrypt       3.1.6
     certifi      2019.3.9
@@ -192,15 +188,15 @@ incompatibilities and maintain consistency over time.
     PyNaCl       1.3.0
     pyserial     3.4
     PyYAML       5.1
-    requests     2.21.0
+    requests     2.22.0
     scp          0.13.2
     setuptools   41.0.1
     six          1.12.0
     textfsm      0.4.1
-    urllib3      1.25
+    urllib3      1.25.2
     (pythonenv) $
     ```
-    
+
 Now that the lab virtual environment is active and has the prerequisite Python packages installed, it is a great time
 to start trying out Python.
 
