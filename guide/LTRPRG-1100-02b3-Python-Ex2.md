@@ -11,8 +11,8 @@ The objectives for this exercise are to:
 * Setup a Python virtual environment for this lab
 
 Different projects using Python may have different environment requirements. For instance, one project may need a 
-Python 2.x interpreter, whereas others may need Python 3.x. Some projects may require many Python packages and 
-modules to be installed, and others may only use built-in modules.
+Python version 2 interpreter, whereas others may need a Python version 3 interpreter. Some projects may require many 
+Python packages and modules to be installed, and others may only use built-in modules.
 
 Traditionally, installing a package for Python is a global change on a particular developer workstation or server.  
 This means that if one project needs access to one version of a package, and another project needs to upgrade to a 
@@ -36,43 +36,45 @@ in for the rest of this lab.
     
     ![Git Bash Terminal](assets/GitBash-Term.png)
 
-2. First, create and enter a directory called `pythonenv` as a home for your project.
+2. First, create a directory called `pythonenv` as a home for your Python virtual environment with the
+`mkdir -p ~/lab/pythonenv` command, for example:
     
     ```
-    $ cd ~/lab
-    $ mkdir pythonenv
+    $ mkdir -p ~/lab/pythonenv
     $
     ```
 
-3.  Next, create a Python virtual environment in this directory with the `python` command. By default, Python will 
-build a virtual environment based on the same version of the Python interpreter invoked, Python 3.x in the case of 
-the lab environment we've prepared for you.  If you need to create a virtual environment for a different version of 
-Python, then invoke the version of the Python interpreter executable,  for example `py -2 -m venv python` or
-`py -3 -m venv pythonenv` in Windows to create a Python 2.x or Python 3.x virtual environment, respectively.  To 
-create a Python 3.x virtual environment for this lab, simply use the `python` executable with the command `python -m 
-venv <directory>`, replacing `<directory>` with the destination directory name, `pythonenv` in this example:
+3.  Next, create a Python virtual environment in this directory with the `python -m venv <dirctory>` command, 
+replacing `<directory>` with the path to the directory you want to create the Python virtual environment. By default, 
+Python will build a virtual environment based on the same version of the Python interpreter invoked, Python version 3
+in the case of the lab environment we've prepared for you.  If you need to create a virtual environment for a 
+different version of Python, then invoke the version of the Python interpreter executable, for example
+`py -2 -m venv python` or `py -3 -m venv pythonenv` in Windows to create a Python version 2 or Python version 3 virtual 
+environment, respectively.
+
+To create a Python version 3 virtual environment for this lab, simply use the `python` executable with the command 
+`python -m venv ~/lab/pythonenv`, for example:
 
     ```
-    $ cd ~/lab
-    $ python -m venv pythonenv
+    $ python -m venv ~/lab/pythonenv
     $
     ```
 
 4.  Now that the virtual environment is created, go ahead and activate it so that any packages installed for your 
-project will stay within this specific environment. This is done by running the `activate` command in the virtual 
-environment directory you created.  The path to the `activate` command will vary based on the platform you are working.  
-For Windows, the `activate` command can be found in the `Scripts` directory, for example `pythonenv/Scripts/activate`.  
-For macOS and Linux, the `activate` command can be found in the `bin` directory, for example `pythonenv/bin/activate`.
+project will stay within this specific virtual environment. This is done by running the `activate` command in the 
+virtual environment directory you created.  The path to the `activate` command will vary based on the platform you 
+are working.  For Windows, the `activate` command can be found in the `Scripts` directory, for example 
+`pythonenv/Scripts/activate`.  For macOS and Linux, the `activate` command can be found in the `bin` directory, 
+for example `pythonenv/bin/activate`.
     
-    To activate a virtual environment, use the command `source <directory>/Scripts/activate` in Windows or
-    `source <directory>/bin/activate` in macOS or Linux.
+    To activate a virtual environment, use the `source <directory>/Scripts/activate` command in Windows or
+    `source <directory>/bin/activate` command in macOS or Linux.
     
     For the purposes of this lab in the Windows lab environment we've prepared for you, activate the Python virtual 
-    environment with the command `source pythonenv/Scripts/activate`:
+    environment with the command `source ~/lab/pythonenv/Scripts/activate`:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
     
@@ -89,8 +91,8 @@ regardless of the platform you are running, for example:
     $
     ```
 
-Congratulations, you now have a working Python virtual environment.  We will continue to work within this 
-virtual environment for the rest of the lab when working with Python.
+Congratulations, you now have a working Python virtual environment.  We will continue to work within this virtual 
+environment for the rest of the lab when working with Python.
 
 ---
 
