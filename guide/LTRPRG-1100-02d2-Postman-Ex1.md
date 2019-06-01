@@ -141,20 +141,85 @@ Python code to make API calls as well!
     
     ![Git Bash Terminal](assets/GitBash-Term.png)
     
-    Make sure that your terminal shows the prepended project name `(pythonenv)`. If it does not, then change to your 
-    lab working directory and activate the Python virtual environment you created earlier in this lab:
+    Make sure that your terminal still shows the prepended project name `(pythonenv)`. If it does not, then activate 
+    the Python virtual environment you created earlier in this lab with the `source ~/lab/pythonenv/Scripts/activate`
+    command, for example:
     
     ```
-    $ cd ~/lab
-    $ source pythonenv/Scripts/activate
+    $ source ~/lab/pythonenv/Scripts/activate
     (pythonenv) $
     ```
     
-    Type the command `python` at the command prompt.
+    Type the command `python` at the command prompt, for example,
     
-    Return to Postman and click the `Copy to Clipboard` button in the code snippet window.  Paste the Python code 
-    snippet into the Python interactive interpreter running in the Git Bash window.  This should result in output 
-    similar what we saw earlier in Postman, for example:
+    ```
+    (pythonenv) $ python
+    Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
+    4)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    ```
+    
+    Return to Postman and click the `Copy to Clipboard` button in the code snippet window for copy the Python code 
+    snippet from below:
+    
+    ```
+    import requests
+    
+    url = "https://postman-echo.com/get"
+    
+    headers = {
+        'User-Agent': "PostmanRuntime/7.13.0",
+        'Accept': "*/*",
+        'Cache-Control': "no-cache",
+        'Postman-Token': "8a52182f-60d5-4283-b8ab-aec0c711ee81,a2f1cc2e-66c7-40c7-9ec4-a9e875c8e577",
+        'Host': "postman-echo.com",
+        'accept-encoding': "gzip, deflate",
+        'Connection': "keep-alive",
+        'cache-control': "no-cache"
+        }
+    
+    response = requests.request("GET", url, headers=headers)
+    
+    print(response.text)
+    ```
+    
+    Paste the Python code snippet into the Python interactive interpreter running in the Git Bash window, for 
+    example:
+    
+    ```
+    $ python
+    Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD6
+    4)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> import requests
+    >>>
+    >>> url = "https://postman-echo.com/get"
+    >>>
+    >>> headers = {
+    ...     'User-Agent': "PostmanRuntime/7.13.0",
+    ...     'Accept': "*/*",
+    ...     'Cache-Control': "no-cache",
+    ...     'Postman-Token': "8a52182f-60d5-4283-b8ab-aec0c711ee81,a2f1cc2e-66c7-40c
+    7-9ec4-a9e875c8e577",
+    ...     'Host': "postman-echo.com",
+    ...     'accept-encoding': "gzip, deflate",
+    ...     'Connection': "keep-alive",
+    ...     'cache-control': "no-cache"
+    ...     }
+    >>>
+    >>> response = requests.request("GET", url, headers=headers)
+    >>>
+    >>> print(response.text)
+    {"args":{},"headers":{"x-forwarded-proto":"https","host":"postman-echo.com","acc
+    ept":"*/*","accept-encoding":"gzip, deflate","cache-control":"no-cache","postman
+    -token":"8a52182f-60d5-4283-b8ab-aec0c711ee81,a2f1cc2e-66c7-40c7-9ec4-a9e875c8e5
+    77","user-agent":"PostmanRuntime/7.13.0","x-forwarded-port":"443"},"url":"https:
+    //postman-echo.com/get"}
+    >>>
+    ```
+      
+    This should result in output similar what we saw earlier in Postman, for example:
     
     ```
     {"args":{},"headers":{"x-forwarded-proto":"https","host":"postman-echo.com","acc
@@ -163,7 +228,15 @@ Python code to make API calls as well!
     1.0","x-forwarded-port":"443"},"url":"https://postman-echo.com/get"}
     ```
     
-    Congratulations, you've made an example API call with Python!
+    To exit the interactive interpreter, type `quit()` and press the `Enter` or `Return` key to exit out of the 
+    interpreter, for example:
+    
+    ```
+    >>>quit()
+    $
+    ```
+    
+    Congratulations, you've made an example REST API call with Python!
 
 These steps are a simple introduction to Postman and RESTful API calls.  Yet one more tool of the ninja to use in 
 your network programmability journey.
