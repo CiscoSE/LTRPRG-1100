@@ -37,9 +37,9 @@ to get started using Git successfully.
 
 Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
 
-![Git Bash Icon](assets/GitHub-02.png)
+![Git Bash Icon](assets/GitBash-Icon.png)
 
-![Git Bash Terminal](assets/GitHub-03.png)
+![Git Bash Terminal](assets/GitBash-Term.png)
 
 1. For a list of common Git commands, type `git help`:
     
