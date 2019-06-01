@@ -1,4 +1,4 @@
-Navigation :: [Previous Page](LTRPRG-1100-02a2-Git-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-02b1-Python.md)
+Navigation :: [Previous Page](LTRPRG-1100-02a2-Git-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-02a4-Git-Ex3.md)
 
 ---
 
@@ -35,13 +35,13 @@ how to initialize and clone repositories; modify, stage, and commit changes; and
 Git has command line commands for managing Git repositories.  Here are the key commands and their usage you will need
 to get started using Git successfully.
 
-Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+1. Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
+    
+    ![Git Bash Icon](assets/GitBash-Icon.png)
+    
+    ![Git Bash Terminal](assets/GitBash-Term.png)
 
-![Git Bash Icon](assets/GitBash-Icon.png)
-
-![Git Bash Terminal](assets/GitBash-Term.png)
-
-1. For a list of common Git commands, run the `git help` command, for example:
+2. For a list of common Git commands, run the `git help` command, for example:
     
     ```
     $ git help
@@ -159,7 +159,7 @@ Open the Git Bash terminal by double clicking the Git Bash icon on the desktop:
     * `git pull`
     * `git push`
     
-2. For first time Git setup, you should set your name and email address with the `git config` command.  Every commit 
+3. For first time Git setup, you should set your name and email address with the `git config` command.  Every commit 
 you make includes this information, so it is important to set this after installing Git.  If you created a GitHub 
 account, this should match the name and email address you used to register on GitHub.  If you did not create a GitHub
 account, then you can use any name or email address you'd like for demonstration purposes.
@@ -365,7 +365,7 @@ you created earlier.
     destination, replacing `<repo URL>` with the URL to the remote Git repository.  The URL of a GitHub remote 
     repository will be in the form of `https://github.com/<username>/<repo name>.git`.  For example if my 
     `<username>` is `netprogninja` and my repo name is `clus19`, the URL to my remote Git repository would be 
-    `https://github.com/netprogninha/clus19.git`.  To set your remote repository destination, use the
+    `https://github.com/netprogninja/clus19.git`.  To set your remote repository destination, use the
     `git remote add origin <repo URL>`, for example:
     
     ```
@@ -430,6 +430,9 @@ you created earlier.
     
     Congratulations, you've created a new Git repository on GitHub!
 
+Now that we've introduced key Git version control concepts and commands, let's clone the Git repository for this lab 
+to get the resources needed for exercises later in this lab.
+
 ---
 
-Navigation :: [Previous Page](LTRPRG-1100-02a2-Git-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-02b1-Python.md)
+Navigation :: [Previous Page](LTRPRG-1100-02a2-Git-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-02a4-Git-Ex3.md)
