@@ -121,8 +121,8 @@ example:
     csr1#
     ```
 
-3. Enter global configuration mode with the `configure terminal` command, which will be indicated by the `csr1 
-(config)#` prompt, for example:
+3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+`configure terminal` command, for example:
    
     ```
     csr1#configure terminal
@@ -254,8 +254,8 @@ steps.
 CPU issues on routers: enabling debugs. While we want the debugs to run, we do not want them to overrun the logging
 buffer on the router. This way, we can still observe other syslog messages that could be used for off-box alerting.
     
-    Enter global configuration mode with the `configure terminal` command, which will be indicated by the `csr1 
-    (config)#` prompt, for example:
+    Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+    `configure terminal` command, for example:
    
     ```
     csr1#configure terminal

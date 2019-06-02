@@ -33,7 +33,7 @@ protocol stack and relationship to SSH and YANG can be represented as follows:
 ![NETCONF Protocol Stack](assets/NETCONF-05.png)
 
 * Transport Layer - NETCONF uses a secure TCP/IP transport protocol, for example SSH as detailed in
-[RFC 6242] (https://tools.ietf.org/html/rfc6242).
+[RFC 6242](https://tools.ietf.org/html/rfc6242).
 * Messages Layer - NETCONF encodes all communication in XML sent with remote procedure call (RPC).
 * Operations Layer - NETCONF messages are sent as operations, which are specific actions to take.  NETCONF operations
 will be covered in more detail later in this lab.

@@ -36,15 +36,17 @@ for example:
     csr1#
     ```
 
-3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, for example:
-   
+3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+`configure terminal` command, for example:
+    
     ```
     csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
     csr1(config)#
     ```
 
-4. Create an account with privilege level 15 access with the `username` command:
+4. Create an account with privilege level 15 access with the `username netconf privilege 15 password C1sco12345` 
+command:
     
     ```
     csr1(config)#username netconf privilege 15 password C1sco12345
@@ -133,8 +135,9 @@ command, for example:
 
 5. Let's make your first NETCONF connection to your IOS XE network device.
     
-    We will establish a NETCONF connection manually using the `ssh` command from the command line terminal on your 
-    lab workstation (output truncated for brevity):
+    We will establish a NETCONF connection manually using the `ssh -p 830 netconf@198.18.134.11 -s netconf` command 
+    from the Git Bash command line terminal on your lab workstation.  Type the password `C1sco12345` when prompted.  
+    For example (output truncated for brevity):
     
     ```
     (pythonenv) $ ssh -p 830 netconf@198.18.134.11 -s netconf
@@ -286,7 +289,18 @@ command, for example:
     
     ```
     
-    Close the NETCONF session and exit the Python interpreter with the code snippet `quit()`:
+    Close the NETCONF session with the code snippet `m.close_session()`, for example:
+    
+    ```
+    >>> m.close_session()
+    <?xml version="1.0" encoding="UTF-8"?>
+    <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:
+    26c87ecf-494d-4506-a178-26882e72bf8d" xmlns:nc="urn:ietf:params:xml:ns:netconf:b
+    ase:1.0"><ok/></rpc-reply>
+    >>>
+    ```
+    
+    Exit the Python interpreter with the code snippet `quit()`:
     
     ```
     >>> quit()

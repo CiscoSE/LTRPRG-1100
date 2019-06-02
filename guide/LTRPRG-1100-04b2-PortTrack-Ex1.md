@@ -119,9 +119,9 @@ example:
     csr1#
     ```
 
-3. Enter global configuration mode with the `configure terminal` command, which will be indicated by the `csr1 
-(config)#` prompt, for example:
-   
+3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+`configure terminal` command, for example:
+    
     ```
     csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -238,8 +238,8 @@ as end users move around. We can still see the effectiveness of this script by s
 Loopback interfaces. Let's create a couple of Loopback interfaces that we can administratively shut down and enable
 at-will. This way we can simulate the behavior of periodic interface usage.
     
-    Enter global configuration mode with the `configure terminal` command , which will be indicated by the `csr1 
-    (config)#` prompt, for example:
+    Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+    `configure terminal` command, for example:
    
     ```
     csr1#configure terminal
@@ -295,9 +295,9 @@ that the Loopback2 interface is now reported in the list of "down" interfaces.
 8. Once enough time has passed, simulate a port usage change by manually configuring the newly-created Loopback3 
 interface to a down state.
     
-    Enter global configuration mode with the `configure terminal` command , which will be indicated by the `csr1 
-    (config)#` prompt, for example:
-   
+    Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+    `configure terminal` command, for example:
+    
     ```
     csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.

@@ -10,9 +10,9 @@ The objectives for this exercise are to:
 
 * Understand YANG as a language, YANG as a data model, and YANG data
 * Explore the anatomy of a YANG data model
-* Use pyang to explore data models
+* Use pyang to explore YANG data models
 
-YANG (Yet Another Next Generation) was developed by the IETF NETMOD (Network Modeling) Working Group and published as
+YANG (Yet Another Next Generation) was developed by the IETF Network Modeling (NETMOD) Working Group and published as
 [RFC 6020](https://tools.ietf.org/html/rfc6020) in 2010.  YANG has become the de facto data modeling language.  But 
 YANG is more than just a modeling language.  It is also the data models and the data itself.  When we talk about YANG, 
 depending on the context, we mean YANG as a language, YANG as a data model, and YANG data.
@@ -237,10 +237,17 @@ command, for example:
     (pythonenv) $
     ```
 
-3. Clone the YANG GitHub repository from `https://github.com/YangModels/yang`:
+3. Clone the YANG GitHub repository from `https://github.com/YangModels/yang`.
+    
+    Change to the lab directory with the `cd ~/lab` command, for example:
     
     ```
     $ cd ~/lab
+    ```
+    
+    Clong the YANG repository with the `git clone https://github.com/YangModels/yang.git` command, for example:
+    
+    ```
     $ git clone https://github.com/YangModels/yang.git
     Cloning into 'yang'...
     remote: Enumerating objects: 227, done.
@@ -259,7 +266,7 @@ command, for example:
     
     ![Lab Directory Shortcut](assets/LabDir-Icon.png)
     
-    Navigate to `yang`, `standard`, `ietf`, then `RFC` directory:
+    Navigate to the `yang` > `standard` > `ietf` > `RFC` directory:
     
     ![Code Directory](assets/NETCONF-03.png)
     
@@ -285,7 +292,7 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     (pythonenv) $
     ```
     
-    Ensure that pyang is installed with the `pip install` command, for example:
+    Ensure that pyang is installed with the `pip install pyang==1.7.8` command, for example:
     
     ```
     (pythonenv) $ pip install pyang==1.7.8
@@ -304,7 +311,8 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     (pythonenv) $ cd ~/lab/yang/standard/ietf/RFC
     ```
     
-    Use pyang to display the data model in a human readable tree format with the `pyang` command:
+    Use pyang to display the data model in a human readable tree format with the `pyang -f tree ietf-interfaces.yang`
+    command, for example:
     
     ```
     (pythonenv) $ pyang -f tree ietf-interfaces.yang

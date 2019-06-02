@@ -31,12 +31,12 @@ SNMP was found to be lacking in the following ways:
 * Lack of support for configuration retrieval or playback
 * Mismatch between SNMP data-centric view of the world versus an operator's task-oriented view of the world 
 
-The solution lies in using data models - a programmatic and standards-based way of describing how configure any 
+The solution lies in using data models - a programmatic and standards-based way of describing how to configure any 
 network device. You should move to use model driven programmability to replace the process of manual configuration.  
 Model driven programmability inherits the power of models, making it easier to configure network devices.  It overcomes 
 drawbacks posed by traditional network device management techniques.
 
-The model driven programmability stack from model to application is show below:
+The model driven programmability stack from model to application is shown below:
 
 ![Model Driven Programmability Stack](assets/NETCONF-01.png)
 
