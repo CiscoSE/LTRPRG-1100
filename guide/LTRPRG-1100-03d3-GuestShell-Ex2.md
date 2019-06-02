@@ -12,9 +12,12 @@ The objectives for this exercise are to:
 
 #### Step 1: Running IOS XE Commands with the CLI Python Package
 
-Cisco packages Python modules with Guest Shell that provides access to run IOS XE EXEC and configuration
-commands.  We must complete a number of configuration steps on the network device for the Cisco Python API will 
-function.
+Cisco packages a Python module with Guest Shell that provides access to run IOS XE EXEC and configuration commands.  
+This is called Cisco IOS XE Python API.  The name of the Python module is cli.  The cli Python module is not 
+available for use outside of IOS XE Guest Shell.
+
+In additional to configuring and enabling Guest Shell, we must complete come basic IOS XE configuration steps on the 
+network device for IOS XE Python API to function.
 
 1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
     
@@ -25,7 +28,7 @@ function.
 2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
-   
+    
     ```
     csr1>enable
     csr1#
@@ -33,7 +36,7 @@ example:
 
 3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
 `configure terminal` command, for example:
-   
+    
     ```
     csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -60,8 +63,8 @@ example:
     csr1#guestshell run bash
     [guestshell@guestshell ~]$
 
-6. The CLI Python package has six functions that can execute IOS XE CLI commands.  To use these functions, use 
-`import cli` in a Python script or the Python interpreter, for example, run the `python` command from the Guest Shell 
+6. The cli Python module has six functions that can execute IOS XE CLI commands.  To use these functions, use 
+`import cli` in a Python script or the Python interpreter.  For example, run the `python` command from the Guest Shell 
 `[guestshell@guestshell ~]$` prompt:
     
     ```
@@ -69,6 +72,12 @@ example:
     Python 2.7.5 (default, Jun 17 2014, 18:11:42)
     [GCC 4.8.2 20140120 (Red Hat 4.8.2-16)] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    ```
+    
+    Type the code snippet `import cli`, for example:
+    
+    ```
     >>> import cli
     >>>
     ```
@@ -76,16 +85,18 @@ example:
     To execute an IOS XE CLI command from a Python script or Python interpreter, enter the CLI command as an argument 
     string to one of the following six functions:
     
-    * `cli()` - This function takes an IOS XE command as an argument, runs the command through the 
-    IOSparser, and returns the resulting text.  If this command is malformed, a Python exception is raised.  The 
-    following is example output from a `cli()` function call:
-    
+    * `cli()` - This function takes an IOS XE command as an argument, runs the command through the IOSparser, and 
+    returns the resulting text.  If this command is malformed, a Python exception is raised.  Try a `cli()` function 
+    call with the code snippet `cli.cli("show ip interface brief")`, for example:
+        
         ```
         >>> cli.cli("show ip interface brief")
         '\nInterface              IP-Address      OK? Method Status                Protocol
          \nGigabitEthernet1       198.18.134.11   YES NVRAM  up                    up      
          \nVirtualPortGroup0      192.168.35.1    YES manual up                    up      \n'
         ```
+    
+    # LEFT OFF HERE
     
     * `clip()` - This function works exactly the same as the `cli()` function, except that it prints
     the resulting text to stdout rather than returning it.  The following is example output from a

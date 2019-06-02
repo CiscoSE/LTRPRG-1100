@@ -103,14 +103,32 @@ following configuration:
     NAT.
     
     A Virtual Port Group is only required on ISR and CSR IOS XE routing platforms.  On Catalyst IOS XE switching 
-    platforms, Guest Shell connectivity is bridged from the `Mgmt0` <cjs - need to validate interfance name> management 
-    interface.
+    platforms, Guest Shell connectivity is bridged from the `GigabitEthernet0/0` management interface.  More detail 
+    can be found in the [Cisco IOS XE Programmability Configuration Guide](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/168/b_168_programmability_cg/guest_shell.html).
     
-    Since our lab uses the CSR 1000v, create and configure a Virtual Port Group interface, for example:
+    Since our lab uses the CSR 1000v, you will create and configure a Virtual Port Group interface.
+    
+    Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+    `configure terminal` command, for example:
     
     ```
-    csr1#configure terminal 
+    csr1#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
+    csr1(config)#
+    ```
+    
+    Run the following IOS XE commands in config mode:
+    
+    ```
+    interface VirtualPortGroup 0
+      ip address 192.168.35.1 255.255.255.0
+      no shutdown
+    exit
+    ```
+    
+    For example:
+    
+    ```
     csr1(config)#interface VirtualPortGroup 0
     csr1(config-if)#ip address 192.168.35.1 255.255.255.0
     csr1(config-if)#no shutdown 
@@ -119,7 +137,22 @@ following configuration:
 
     ```
     
-    Configure Network Address Translation (required on all routing and switching platforms), for example:
+    Configure Network Address Translation (required on all routing and switching platforms).  Run the following IOS 
+    XE commands in config mode:
+    
+    ```
+    interface VirtualPortGroup 0
+      ip nat inside
+    interface GigabitEthernet 1
+      ip nat outside
+      exit
+    ip access-list standard NAT_ACL
+      permit 192.168.0.0 0.0.255.255
+      exit
+    ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
+    ```
+    
+    For example:
     
     ```
     csr1(config)#interface VirtualPortGroup 0
@@ -133,8 +166,18 @@ following configuration:
     csr1(config)#ip nat inside source list NAT_ACL interface GigabitEthernet1 overload
     csr1(config)#
     ```
+
+7.  To enable Guest Shell itself, first run the following commands in config mode (the `vnic` command is one line, up
+to and including the `default` keyword):
     
-7.  To enable Guest Shell itself, first run the following commands in config mode:
+    ```
+    app-hosting appid guestshell
+      vnic gateway1 virtualportgroup 0 guest-interface 0 guest-ipaddress 192.168.35.2 netmask 255.255.255.0 gateway 192.168.35.1 name-server 208.67.222.222 default
+      resource profile custom cpu 1500 memory 512
+      exit
+    ```
+    
+    For example:
     
     ```
     csr1(config)#app-hosting appid guestshell
@@ -153,7 +196,7 @@ following configuration:
     ```
     
     Run the `guestshell enable` command in privileged EXEC mode (this command may take a few moments to complete, so 
-    please be patient and wait for the `csr1#` prompt to return before continuing):
+    please be patient and wait for the `csr1#` prompt to return before continuing), for example:
     
     ```
     csr1#guestshell enable
@@ -182,7 +225,7 @@ following configuration:
     csr1#
     ```
     
-    Confirm the `VirtualPortGroup0` interface is present and configured in an `up` Status with the
+    Confirm the `VirtualPortGroup0` interface is present and configured in an `up` status with the
     `show ip interface brief` command, for example:
     
     ``` 
@@ -193,7 +236,7 @@ following configuration:
     csr1#
     ```
     
-    Test to confirm the Guest Shell vnic is active and reachable with the `ping` command, for example:
+    Test to confirm the Guest Shell vnic is active and reachable with the `ping 192.168.35.2` command, for example:
     
     ```
     csr1#ping 192.168.35.2
@@ -209,9 +252,11 @@ following configuration:
 
 #### Step 2: Running Guest Shell Commands from IOS XE
 
-1. You can run Guest Shell Linux commands from the IOS XE device CLI.  Simply precede the Linux command `foo` with the 
-IOS XE command `guestshell run`: `guestshell run foo`.  For example, to see what version of Python is installed in 
-Guest Shell, run the command `guestshell run python -V` from the IOS XE device CLI:
+1. You can run Guest Shell Linux commands from the IOS XE device CLI.  Simply precede the Linux command
+`<Linux command>` with the IOS XE command `guestshell run`, for example `guestshell run <Linux Command>`.
+    
+    To see what version of Python is installed in Guest Shell, run the command `guestshell run python -V` from the 
+    IOS XE device CLI, for example:
     
     ```
     csr1#guestshell run python -V
@@ -371,7 +416,7 @@ IOS XE device CLI.
     Guest Shell is running on.  This is particular handy for sharing files and between IOS XE and Guest Shell.
     
     Confirm the contents of `/bootflash` in Guest Shell and `bootflash:` are identical with the `ls -la /bootflash` 
-    and `dir bootflaash:` commands, from the Guest Shell `[guestshell@guestshell /]$` and IOS XE device privileged 
+    and `dir bootflash:` commands, from the Guest Shell `[guestshell@guestshell /]$` and IOS XE device privileged 
     EXEC `csr1#` command prompt respectively, for example:
     
     ```
@@ -411,6 +456,7 @@ IOS XE device CLI.
     Compare the directory listing of the `bootflash:` from the IOS XE device privileged EXEC mode to the directory 
     listing from the Guest Shell Bash CLI session earlier with the `dir bootflash:` command:
     
+    ```
     csr1#dir bootflash:
     Directory of bootflash:/
     
@@ -451,9 +497,9 @@ IOS XE device CLI.
     ```
     
     You can run IOS XE commands from the Guest Shell CLI.  Simply precede the IOS XE command `<IOS command>` with the
-    Guest Shell command `dohost`: `dohost '<IOS command>'`.  For example, to display the IOS XE device interface 
+    Guest Shell command `dohost`, for example `dohost '<IOS command>'`.  To display the IOS XE device interface 
     summary, run the command `dohost 'show ip interface brief'` from the Guest Shell CLI (do not forget to include 
-    the single quotes:
+    the single quotes):
     
     ```
     [guestshell@guestshell ~]$ dohost 'show ip interface brief'
@@ -468,8 +514,8 @@ IOS XE device CLI.
     This is limited to IOS XE privileged EXEC mode commands only; access to IOS XE global configuration mode commands
     is not possible.
     
-    Try a few more examples, `dohost 'show log'`, `dohost 'show version'`, and `dohost 'show inventory'` (output 
-    below may be truncated for brevity):
+    Try a few more examples, `dohost 'show log'`, `dohost 'show version'`, and `dohost 'show inventory'`, for example 
+    (output below may be truncated for brevity):
     
     ```
     [guestshell@guestshell ~]$ dohost 'show log'
@@ -560,6 +606,9 @@ IOS XE device CLI.
     
     [guestshell@guestshell ~]$
     ```
+
+So far, we've run interactive CLI commands like traditional network engineers.  Let's take a look at how to leverage 
+IOS XE Guest Shell in a programmable manner like a Network Programmability Ninja.
 
 ---
 
