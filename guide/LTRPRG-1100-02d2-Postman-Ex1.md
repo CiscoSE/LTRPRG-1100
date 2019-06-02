@@ -27,7 +27,6 @@ screen real estate in the Postman application, and it is where you can build and
     
     ![Postman Application Screen](assets/Postman-01.png)
 
-
 2. Locate the method dropdown at the top of the build area. This allows you to select the type of API request to 
 make, such as an HTTP GET, PUT, POST, and so on. For our introductory lesson, please select `GET` as the method.
     
@@ -56,17 +55,9 @@ response code, the time to receive a response, and details of the response, incl
 
 1. In order to make an API call, we first have to select the HTTP method. We are using the HTTP application 
 layer protocol for API communication, but access to most APIs will be secured using SSL or TLS as indicated by 
-`https` in the API URLs.
+`https` in the API URLs.  We will discuss HTTP methods in more detail later in this lab.
     
-    Three of the most common HTTP methods used in API calls are `GET`, `POST`, and `PUT`:
-    
-    * A `GET` request is used when getting information from an API. A `GET` request specifies the information in 
-    which it is interested via the URL, parameters, and headers.
-    * A `POST` request is one that is sending information to the API. This is often in the form of creating a new 
-    data entry of some sort through the API.
-    * A `PUT` request is often used to update existing information through the API.
-    
-    In our example, we will be making a `GET` request, so please make sure this is the method selected.
+    In this example, we will be making a `GET` request, so please make sure this is the method selected.
     
     ![Postman Application Screen](assets/Postman-02.png)
 

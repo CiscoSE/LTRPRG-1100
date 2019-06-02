@@ -222,8 +222,8 @@ command, for example:
     (pythonenv) $
     ```
 
-3. From the command line terminal, ensure that ncclient is installed using the `pip install ncclient` command (output
- truncated for brevity):
+3. From the command line terminal, ensure that ncclient is installed using the `pip install ncclient==0.6.4` command 
+(output truncated for brevity):
     
     ```
     (pythonenv) $ pip install ncclient==0.6.4
