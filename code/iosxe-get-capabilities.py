@@ -19,7 +19,7 @@ or implied.
 
 
 from ncclient import manager
-import sys
+#import sys
 
 m = manager.connect(host="198.18.134.11",
                     port="830",

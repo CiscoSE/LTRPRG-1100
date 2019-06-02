@@ -20,7 +20,6 @@ or implied.
 
 import requests
 
-
 def msgToPersonEmail(botkey, toEmail, msg):
     myheaders = {
         "content-type": "application/json",

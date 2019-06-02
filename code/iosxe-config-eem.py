@@ -20,28 +20,46 @@ or implied.
 
 from ncclient import manager
 
-HOST = '198.18.134.11'
-PORT = 830
-USER = 'netconf'
-PASS = 'C1sco12345'
+# NETCONF payload
+payload = """
+    <config>
+        <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+            <event>
+                <manager xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-eem">
+                    <applet>
+                        <name>GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT</name>
+                        <event>
+                            <syslog>
+                                <pattern>%SYS-5-CONFIG_I: Configured from</pattern>
+                            </syslog>
+                        </event>
+                        <action>
+                            <name>0.0</name>
+                            <cli>
+                                <command>enable</command>
+                            </cli>
+                        </action>
+                        <action>
+                            <name>1.0</name>
+                            <cli>
+                                <command>guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com</command>
+                            </cli>
+                        </action>
+                    </applet>
+                </manager>
+            </event>
+        </native>
+    </config>
+    """
 
-# NETCONF Config Template to use
-netconf_payload = open("iosxe-config-eem.xml").read()
+m = manager.connect(host="198.18.134.11",
+                    port="830",
+                    username="netconf",
+                    password="C1sco12345",
+                    hostkey_verify=False)
 
-if __name__ == '__main__':
+response = m.edit_config(payload, target="running")
 
-    # Print the NETCONF payload
-    print("Configuration Payload:\n")
-    print(netconf_payload)
+print(response)
 
-    with manager.connect(host=HOST, port=PORT,
-                         username=USER,
-                         password=PASS,
-                         hostkey_verify=False) as m:
-
-        # Send NETCONF <edit-config> command with payload
-        netconf_reply = m.edit_config(netconf_payload, target="running")
-
-        # Print the NETCONF reply
-        print("Configuration result:\n")
-        print(netconf_reply)
+m.close_session()
