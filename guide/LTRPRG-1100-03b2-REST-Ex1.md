@@ -22,61 +22,64 @@ A web browser retrieves web pages by requesting resources from a web server.  Th
 resource formatted in HTML.  This HTML-formatted data is processed by the web browser and displayed for you in the 
 web browser window.  The application protocol used is HyperText Transfer Protocol (HTTP), or HTTPS if secured with 
 SSL or TLS.  Behind the scenes, HTTP(S) uses "CRUD" - Create, Read, Update, Delete - operations to achieve this 
-request and transfer of information.  The CRUD operations the four basic functions from which a good API is designed:
+request and transfer of information.  The CRUD operations are the four basic functions from which a good API is 
+designed:
 
 * Create - A programmatic function to add something
-* Read - A programmatic function to read something
+* Read - A programmatic function to retrieve something
 * Update - A programmatic function to change something
 * Delete - A programmatic function to remove something
 
-In a RESTful API, CRUD corresponds to the HTTP methods POST, GET, PUT, and DELETE.
+In a RESTful API, CRUD corresponds to the HTTP methods POST, GET, PUT, and DELETE, respectively.
 
-A web browser is just one client used to interface with REST APIs.  Postman, as we saw earlier in this lab is
-another.  Two web services like Webex Teams and Cisco DNA Center can communicate using REST APIs. 
+A web browser is just one client used to interface with REST APIs.  Postman, as we saw earlier in this lab, is
+another interface with REST APIs.  Two web services like Webex Teams and Cisco DNA Center can also communicate using 
+REST APIs.
 
 The general flow of a REST API is shown below:
 
 ![REST API Flow](assets/REST-01.png)
 
-#### Step 2: Understand the Anatomy of a REST API Call
+#### Step 2: Understanding the Anatomy of a REST API Call
 
 We briefly introduced how to craft a REST API call earlier in the lab when we introduced Postman.  Let's dig a 
 little deeper here.
 
-1. You must choose the CRUD function as an HTTP method, for example:
+1. You must choose the CRUD operation as an HTTP method, for example:
     
-    * POST - Create something new, e.g. create a new room or space in Webex Teams
-    * GET - Retrieve something that exists, e.g. list the members of a Space in Webex Teams
-    * PUT - Update something that exists, e.g. change the name of a Space in Webex Teams
-    * DELETE - Remove something that exists, e.g. delete a space in Webex Teams
+    * POST - Create something new, e.g. create a new managed network device
+    * GET - Retrieve something that exists, e.g. list the network hosts connected to a site
+    * PUT - Update something that exists, e.g. change a configuration element of a managed network device
+    * DELETE - Remove something that exists, e.g. delete a managed network device
 
 2. You must provide the URL for the REST API service to complete the appropriate action.  A URL is formed in the 
-following example: `https://api.ciscospark.com/v1/rooms`.
+following manner: `https://api.ciscospark.com/v1/rooms`.
     
-    * `https` - Protocol, i.e. Secure HTTP
-    * `api.ciscospark.com` - REST API service server or host
-    * `/v1/rooms` - REST API path
+    * `https` - The application protocol, i.e. Secure HTTP
+    * `api.ciscospark.com` - The IP address of fully qualified domain name (FQDN) of the REST API service or network 
+    device
+    * `/v1/rooms` - The REST API path to complete the request
 
-3. You will likely have to authenticate the REST API call.  There are different HTTP authentication types, and which 
+3. You will likely have to authenticate the REST API call.  There are different HTTP authorization types, and which 
 type used varies from API service or host.  Basic (username and password), token based, and OAuth are common HTTP 
 authentication types.
 
 4. HTTP headers are used to describe the HTTP connection, for example an HTTP header `application/json` tells the the
- client or server/host to expect JSON-formatted text in the HTTP body.
+ client or server/host to expect JSON-formatted text in the HTTP body text.
  
-5. The HTTP body of an API request or response, typically formatted in JSON, is used to complete the request or 
+5. The HTTP body text of an API request or response, typically formatted in JSON, is used to complete the request or 
 respond to a request.
 
 6. The HTTP response to an API call contains an HTTP status code.  Here are common HTTP status codes for reference:
     
     * Success Codes (2xx)
         * `200 OK` - The request was fulfilled
-        * `202 Accepted` - The request was accepted for processing, but processing has not completed
+        * `202 Accepted` - The request was accepted for processing, but processing has not yet completed
         * `204 No Resoonse` - The request was received, but there was no information to send back
     * Error Codes (4xx/5xx)
-        * `400 Bad Request` - The request was malformed or had bad syntax
-        * `401 Unauthorized` - The request requires authentication
-        * `403 Forbidden` - The request authentication succeeded, but access was denied
+        * `400 Bad Request` - The request was malformed with bad syntax
+        * `401 Unauthorized` - The request requires authorization or authorization failed
+        * `403 Forbidden` - The request authorization succeeded, but access was denied
         * `404 Not Found` -  The request did not match anything, likely due to a wrong URL path
         * `500 Internal Server Error` - The server encountered an unexpected error condition
 

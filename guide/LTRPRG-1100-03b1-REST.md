@@ -16,8 +16,8 @@ or API that conforms to the REST architectural style are described as being "RES
 defining REST in his PhD dissertation "[Architectural Styles and the Design of Network-based Software 
 Architectures](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)" at UC Irvine in 2000.
 
-In this lab, we will further introduce basic RESTful concepts, using Cisco Webex Teams, Meraki Dashboard, and Cisco 
-DNA Center controller as examples relevant to the Network Programmability Ninja.
+In this lab, we will further introduce basic RESTful concepts, using Cisco DNA Center as an example relevant to the 
+Network Programmability Ninja.
 
 ---
 

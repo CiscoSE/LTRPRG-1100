@@ -2,32 +2,31 @@ Navigation :: [Previous Page](LTRPRG-1100-03b2-REST-Ex1.md) :: [Table of Content
 
 ---
 
-### Exercise 3: Exploring Cisco DNA Center REST API Example Use Cases
+### Exercise 2: Exploring Cisco DNA Center REST API Example Use Cases
 
 #### Objectives
 
 The objectives for this exercise are to:
 
-* Learn how to configure Cisco DNA Center REST API
+* Learn how to configure Cisco DNA Center REST API services
 * Explore REST API calls to Cisco DNA Center with Postman
 * Learn how to make REST API calls to Cisco DNA Center using Python
 
 [Cisco DNA Center](https://www.cisco.com/c/en/us/products/cloud-systems-management/dna-center/index.html) is the 
-network management and command center for Cisco DNA, your intent-based network for the enterprise.  With Cisco DNA 
-Center, you can provision and configure all your network devices in minutes; use advanced analytics to proactively 
+network management and command center for Cisco DNA, the intent-based network for the enterprise.  With Cisco DNA 
+Center, you can provision and configure all of your network devices in minutes; use advanced analytics to proactively 
 monitor, troubleshoot, and optimize your network; and integrate with third-party systems for improved operational 
 processes.  Third party integration, of course, is possible through APIs.
 
 Cisco DNA Center accepts REST API requests from authenticated users only.  To authenticate to Cisco DNA Center, you 
 must submit user credentials.  A successful authentication returns an authorization token that you can use to 
-issue subsequent requests.  To request a token, use the HTTP `POST` method, then subsequent requests should contain 
-the token in an HTTP `X-Auth-Token` header.  The HTTP authentication type for the token request is `Basic`, then no 
-authentication type is used for subsequent requests since the authorization token is included the HTTP header.
+make subsequent requests.  To request a token, use the HTTP `POST` method, and Cisco DNA Center will respond with an 
+authorization token.  Subsequent requests should contain the authorization token in an HTTP `X-Auth-Token` header.
 
 The [Cisco DNA Center Developer Guide](https://developer.cisco.com/docs/dna-center/) is available on the Cisco DevNet
-website.  The [Intent API](https://developer.cisco.com/site/dna-center-rest-api/?version=1.210) is also documented on
-the Cisco DevNet website.    Cisco DNA Center API documentation is also available in software by navigating to 
-`Platform` > `Developer Toolkit` from the Cisco DNA Center home page:
+website.  The Cisco DNA Center [Intent API](https://developer.cisco.com/site/dna-center-rest-api/?version=1.210) is 
+also documented on the Cisco DevNet website.  Cisco DNA Center API documentation is also available in software by 
+navigating to `Platform` > `Developer Toolkit` from the Cisco DNA Center home page:
 
 ![Cisco DNA Center Developer Toolkit](assets/DNAC-01.png)
 
@@ -39,12 +38,12 @@ For demonstration purposes for this lab, we are using the always-on
 This is a shared resource available for free to develop and test REST APIs on the Cisco DNA Center platform.  There 
 is a sample topology with three network devices and two endpoint hosts.
 
-Let's take a look at a how to configure Cisco DNA Center and a few example Cisco DNA Center REST API use cases.
+Let's take a look at a how to configure Cisco DNA Center and a few examples of Cisco DNA Center REST API use cases.
 
 #### Step 1: Configuring Cisco DNA Center REST API
 
-To configure Cisco DNA Center to enable REST API, you must configure the appropriate platform bundle `Cisco DNA 
-Center REST API`.  This bundle contains the REST API supported by Cisco DNA Center.  The full documentation is 
+To configure Cisco DNA Center to enable the REST API service, you must configure the appropriate platform bundle `Cisco 
+DNA Center REST API`.  This bundle contains the REST API supported by Cisco DNA Center.  The full documentation is 
 available in the [Cisco DNA Center Platform User Guide](https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center-platform/1-2-8/user_guide/b_dnac_platform_ug_1_2_8/b_dnac_platform_ug_1_2_8_chapter_010.html#id_93619).
 
 This has already been completed for you in the DevNet Sandbox Lab, so no action is necessary for this lab.
@@ -83,7 +82,7 @@ subsequent REST API calls.
     
     Copy the authorization token string, everything between the double quotes, but do not include the double quotes.
     
-    Now that you have an authorization token, we can make additional REST API calls  
+    Now that you have an authorization token, you can make additional REST API calls.
 
 4. Click the `Plus` button in the tab bar to open a new request tab.
 
@@ -155,7 +154,8 @@ command, for example:
     
     ```
     (pythonenv) $ pip install requests==2.22.0
-    Requirement already satisfied: requests==2.22.0 in c:\users\administrator\lab\pythonenv\lib\site-packages (2.22.0)
+    Requirement already satisfied: requests==2.22.0 in c:\users\administrator\lab\py
+    thonenv\lib\site-packages (2.22.0)
     ```
 4. Invoke the Python interpreter with the `python` command:
     
@@ -183,19 +183,20 @@ command, for example:
     n/latest/advanced-usage.html#ssl-warnings
       InsecureRequestWarning)
     <Response [401]>
+    >>>
     ```
     
-    Ignore the SSL certificate verification warning; this is a side affect of the DevNet Sandbox Lab using 
-    invalid, or what are commonly called "snake oil", SSL certificates.
+    Ignore the SSL certificate verification warning; this is a side effect of the DevNet Sandbox Lab using an
+    invalid, or what are commonly called "snake oil", SSL certificate.
     
     Do take note of the final line `<Response [401]>`.  This is the HTTP status code.  Recall that an HTTP status code
-    of 4xx is an error code.  HTTP status code 401 means that authorization failed.  How could that be?  Remember that
+    of 4xx is an error code.  HTTP status code `401` means that authorization failed.  How could that be?  Remember that
     Cisco DNA Center must authorize a user with HTTP Basic authorization and provide an authorization token.  In 
     this Python code snippet example, we didn't provide any such token in the HTTP headers.  In fact, the code 
-    snippet contains now HTTP headers at all.
+    snippet contains no HTTP headers at all.
     
     The Python code to obtain and use the authorization token necessary for successful REST API requests to Cisco DNA
-    Center are a little to complex to type manually into the Python interpreter.  We've included a few sample Python 
+    Center are a little too complex to type manually into the Python interpreter.  We've included a few sample Python 
     scripts in the lab Git repository.
 
 6. Exit the Python interpreter with the code snippet `quit()`:
@@ -213,7 +214,7 @@ example:
     (pythonenv) $
     ```
 
-8. Run the `dnac-get-devices.py` Python script with the `python dnac-get-devices.py` command:
+8. Run the `dnac-get-devices.py` Python script with the `python dnac-get-devices.py` command, for example:
     
     ```
     (pythonenv) $ python dnac-get-devices.py
@@ -305,10 +306,11 @@ example:
     That looks better!  Notice the authorization token at the beginning of the response, the JSON-formatted response 
     body text containing a list and details of network devices, and the final HTTP response status code `200 OK`.
     
-    Parsing and formatting JSON for human readability is outside the scope of this lab.
+    Parsing and formatting JSON for human readability is outside the scope of this lab, but you should get a sense of
+    the detailed data that is available to you programmatically through Cisco DNA Center.
  
-9. Run the `dnac-get-hosts.py` Python script with the `python dnac-get-hosts.py` command (output truncated for 
-brevity):
+9. Run the `dnac-get-hosts.py` Python script with the `python dnac-get-hosts.py` command, for example (output truncated 
+for brevity):
     
     ``` 
     (pythonenv) $ python dnac-get-devices.py
@@ -316,8 +318,8 @@ brevity):
     
     Note the similar results but with a list of network host endpoints.
 
-Congratulations, you've successfully established a REST API session with Cisco DNA Center in the DevNet Sandbox lab. 
-environment.  Let's move on a different kind of API: model-driven programmability with NETCONF and YANG.
+Congratulations, you've successfully established a REST API session with Cisco DNA Center in the DevNet Sandbox lab 
+environment.  Let's move on to a different kind of API: model-driven programmability with NETCONF and YANG.
 
 ---
 
