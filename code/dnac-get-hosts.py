@@ -55,3 +55,4 @@ response = requests.request("GET",
                             verify=False)
 
 print(response.text)
+print(response)
