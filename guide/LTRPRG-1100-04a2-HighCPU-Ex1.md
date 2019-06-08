@@ -86,7 +86,7 @@ the network device `bootflash:`, transfer the file to the network device file sy
     While you are not expected to be fluent in Python scripting, please read through the comments (signified by a `#`
     in the Python code) and the subsequent lines of code to understand the basics of how this script operates.  You 
     can view [this Python script](foo) in 
-    this lab's GitHub repository at `https://github.com/curtissmith/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py`.
+    this lab's GitHub repository at `https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py`.
     
     TODO: Update URL to this file.
     

@@ -87,8 +87,8 @@ the network device `bootflash:`, transfer the file to the network device file sy
     
     While you are not expected to be fluent in Python scripting, please read through the comments (signified by a `#`
     in the Python code) and the subsequent lines of code to understand the basics of how this script operates.  You 
-    can view [this Python script](https://github.com/curtissmith/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py) in 
-    this lab's GitHub repository at `https://github.com/curtissmith/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py`.
+    can view [this Python script](https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py) in 
+    this lab's GitHub repository at `https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py`.
     
     TODO: Update URL to this file.
     
@@ -211,7 +211,7 @@ the network device file system in the directory `/bootflash/scripts` created ear
     ```
     
     Review this script to gain an understanding of the Python functions used, utilizing the comments to provide
-    high-level guidance of the purpose of different segments of code.  You can view [this Python script](https://github.com/curtissmith/LTRPRG-1100/blob/clus19/code/iosxe-portreport.py) in this lab's GitHub repository at `https://github.com/curtissmith/LTRPRG-1100/blob/clus19/code/iosxe-portreport.py`.
+    high-level guidance of the purpose of different segments of code.  You can view [this Python script](https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-portreport.py) in this lab's GitHub repository at `https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-portreport.py`.
     
     TODO: Update URL to this file.
 

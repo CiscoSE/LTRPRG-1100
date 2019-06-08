@@ -73,7 +73,7 @@ to discover new repositories.  Click the `Star` button to the right of a reposit
     
     Search for and star this Cisco Live session project repository:
     
-    * [LTRPRG-1100: Cisco Live US 2019 Instructor Led Lab](https://github.com/curtissmith/LTRPRG-1100)
+    * [LTRPRG-1100: Cisco Live US 2019 Instructor Led Lab](https://github.com/CiscoSE/LTRPRG-1100)
     
     Search for and star common Python modules commonly used for network programmability:
     

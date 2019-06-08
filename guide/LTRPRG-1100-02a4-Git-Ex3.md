@@ -50,15 +50,15 @@ the form of `https://github.com/<username>/<repo name>.git`.  For example if my 
 repo name is `clus19`, the URL to my remote Git repository would be `https://github.com/netprogninja/clus19.git`.
     
     You can access this lab guide and all of the code and content for this lab from the GitHub repository
-    [LTRPRG-1100](https://github.com/curtissmith/LTRPRG-1100) at `https://github.com/curtissmith/LTRPRG-1100` with a 
+    [LTRPRG-1100](https://github.com/CiscoSE/LTRPRG-1100) at `https://github.com/CiscoSE/LTRPRG-1100` with a 
     web browser.  Let's clone this repository to your lab workstation with Git.
     
-    Use the `cd ~/lab` command to change to the lab directory and run the `git clone https://github.com/curtissmith/LTRPRG-1100.git`
+    Use the `cd ~/lab` command to change to the lab directory and run the `git clone https://github.com/CiscoSE/LTRPRG-1100.git`
     command to clone the lab repository, for example:
     
     ```
     $ cd ~/lab
-    $ git clone https://github.com/curtissmith/LTRPRG-1100.git
+    $ git clone https://github.com/CiscoSE/LTRPRG-1100.git
     Cloning into 'LTRPRG-1100'...
     remote: Counting objects: 117, done.
     remote: Compressing objects: 100% (84/84), done.
