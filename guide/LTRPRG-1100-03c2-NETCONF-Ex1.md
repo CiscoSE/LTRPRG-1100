@@ -389,7 +389,7 @@ that can help you called [pyang](https://github.com/mbj4668/pyang) that is a qui
     looking for pertinent data for your application.  With the use of pyang, on the other hand, you are given just 
     the right amount of information needed to find the data you need for your application.
     
-    The `ro` or `rw` next to the node name indicates whether the data is non-configuration data (`ro`) or 
+    The `ro` or `rw` next to the node name indicates whether the data is operational data (`ro`) or 
     configuration data (`rw`).  A `?` after the node name indicates that the data is optional and may not be 
     present on the network device.  A `*` after the node name indicates that the node is a leaf or leaf-list.
     For more information about the symbols and conventions used by pyang in the tree format, use the command 

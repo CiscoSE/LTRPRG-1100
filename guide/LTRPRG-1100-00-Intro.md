@@ -57,6 +57,7 @@ and a Cisco IOS XE virtual network device.
     1. [Application Programming Interfaces (APIs)](LTRPRG-1100-03a1-APIs.md)
     2. [REST APIs](LTRPRG-1100-03b1-REST.md)
         1. [Understanding and Using REST APIs](LTRPRG-1100-03b2-REST-Ex1.md)
+        2. [Exploring Cisco DNA Center REST API Example Use Cases](LTRPRG-1100-03b3-REST-Ex2.md)
     3. [Model Driven Programmability](LTRPRG-1100-03c1-NETCONF.md)
         1. [Introducing YANG](LTRPRG-1100-03c2-NETCONF-Ex1.md)
         2. [Introducing NETCONF](LTRPRG-1100-03c3-NETCONF-Ex2.md)
