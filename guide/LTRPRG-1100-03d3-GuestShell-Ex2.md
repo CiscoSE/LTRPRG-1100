@@ -87,20 +87,32 @@ example:
     
     * `cli()` - This function takes an IOS XE command as an argument, runs the command through the IOSparser, and 
     returns the resulting text.  If this command is malformed, a Python exception is raised.  Try a `cli()` function 
-    call with the code snippet `cli.cli("show ip interface brief")`, for example:
+    call with the following code snippet:
         
         ```
-        >>> cli.cli("show ip interface brief")
-        '\nInterface              IP-Address      OK? Method Status                Protocol
-         \nGigabitEthernet1       198.18.134.11   YES NVRAM  up                    up      
-         \nVirtualPortGroup0      192.168.35.1    YES manual up                    up      \n'
+        result=cli.cli("show ip interface brief")
+        print(result)
+        ```
+        
+        For example:
+        
+        ```
+        >>> result=cli.cli("show ip interface brief")
+        >>> print(result)
+        Interface              IP-Address      OK? Method Status                Protocol
+        GigabitEthernet1       198.18.134.11   YES NVRAM  up                    up      
+        VirtualPortGroup0      192.168.35.1    YES manual up                    up
         ```
     
-    # LEFT OFF HERE
-    
     * `clip()` - This function works exactly the same as the `cli()` function, except that it prints
-    the resulting text to stdout rather than returning it.  The following is example output from a
-    `clip()` function call:
+    the resulting text to stdout rather than returning it.  Try a `clip()` function call with the following code 
+    snippet:
+        
+        ```
+        cli.clip("show ip interface brief")
+        ```
+        
+        For example:
         
         ```
         >>> cli.clip("show ip interface brief")
@@ -113,19 +125,33 @@ example:
         ```
     
     * `execute()` - This function executes a single IOS XE EXEC mode command and returns the resulting text.  
-    You must use a Python list with a loop to execute this function more than once.  The following is example output 
-    from a `execute()` function call:
+    You must use a Python list with a loop to execute this function more than once.  Try an `execute()` function call 
+    with the following code snippet:
         
         ```
-        >>> cli.execute("show ip interface brief")
-        'Interface              IP-Address      OK? Method Status                Protocol
-         \nGigabitEthernet1       198.18.134.11   YES NVRAM  up                    up      
-         \nVirtualPortGroup0      192.168.35.1    YES manual up                    up      '
+        result=cli.execute("show ip interface brief")
+        print(result)
+        ```
+        
+        For example:
+        
+        ```
+        >>> result=cli.execute("show ip interface brief")
+        >>> print(result)
+        Interface              IP-Address      OK? Method Status                Protocol
+        GigabitEthernet1       198.18.134.11   YES NVRAM  up                    up      
+        VirtualPortGroup0      192.168.35.1    YES manual up                    up
         >>>
         ```
     
     * `executep()` - This function executes a single IOS XE command and prints the resulting text to stdout
-    rather than returning it.  The following is example output from a `executep()` function call:
+    rather than returning it.  Try an `executep()` function call with the following code snippet:
+        
+        ```
+        cli.executep("show ip interface brief")
+        ```
+        
+        For example:
         
         ```
         >>> cli.executep("show ip interface brief")
@@ -136,25 +162,37 @@ example:
         ```
     
     * `configure()` - This function configures the network device with the configuration passed to it.  It 
-    returns a list of named tuples that contains each command and its result in the general format:
+    returns a Python list of named tuples that contains each command and its result in the general format:
         
         ```
-        [Think: result = (bool(success), original_command, error_information)]
+        [ConfigResult: result = (bool(success), original_command, error_information)]
         ```
         
-        The following is example output from a `configure()` function call:
+        Try a `configure()` function call with the following code snippet:
         
         ```
-        >>> cli.configure(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
+        result=cli.configure(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
+        print(result)
+        ```
+        
+        For example:
+        
+        ```
+        >>> result=cli.configure(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
+        >>> print(result)
         [ConfigResult(success=True, command='interface Loopback1', line=1, output='', notes=None),
         ConfigResult(success=True, command='ip address 10.1.1.1 255.255.255.0', line=2, output='',
         notes=None), ConfigResult(success=True, command='no shutdown', line=3, output='', notes=None)]
         >>>
         ```
     
-    * `configurep()` - This function works exactly the same as the `configure()` function, except 
-    that it prints the resulting text to stdout rather than returning it.  The following is example output from a
-    `configurep()` function call:
+    * `configurep()` - This function works exactly the same as the `configure()` function, except that it prints the 
+    resulting text to stdout rather than returning it.  Try a `configure()` function call with the following code 
+    snippet:
+        
+        ```
+        cli.configurep(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
+        ```
         
         ```
         >>> cli.configurep(["interface Loopback1", "ip address 10.1.1.1 255.255.255.0", "no shutdown"])
@@ -166,7 +204,7 @@ example:
     
     You can get help and display the details of each function by using the `help()` function in the Python 
     interpreter.  For example, for help with the `configurep()` function, use a function call like
-    `help(cli.configurep)` in the Python interpreter:
+    `help(cli.configurep)` in the Python interpreter, for example:
     
     ```
     >>> help(cli.configurep)
@@ -191,7 +229,7 @@ example:
     ```
     
     For general help with the CLI Python package itself rather than a specific function, use the `help(cli)` function
-    call in the Python interpreter (output truncated for brevity):
+    call in the Python interpreter, for example (output truncated for brevity):
     
     ```
     >>> help(cli)
@@ -314,6 +352,12 @@ the network device `bootflash:`, transfer the file to the network device file sy
     
     [guestshell@guestshell scripts]$ 
     ```
+
+This is an introduction to the IOS XE Python API and the Python CLI library packaged with Guest Shell.  We will use 
+the power of on-box Python with Python API throughout the rest of this lab, so you will see more real-world use cases.
+
+We've armed you with the tools of the ninja and began to hone the skills of the ninja.  Now let's start putting this 
+network programmability training to test.
 
 ---
 

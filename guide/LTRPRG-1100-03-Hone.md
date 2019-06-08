@@ -17,6 +17,15 @@ share with the novice.
 Now that we have introduced the essential tools of the Ninja, it is time to hone the skills of the Ninja using 
 those tools, additionally armed with new concepts that we will introduce in the next section of this lab.
 
+In this lab, we highlight the following:
+
+* APIs, including:
+    * REST APIS
+    * NETCONF and YANG
+* IOS XE Guest Shell
+
+Let's get started with your training!
+
 ---
 
 Navigation :: [Previous Page](LTRPRG-1100-02d2-Postman-Ex1.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-03a1-APIs.md)

@@ -104,13 +104,7 @@ the network device `bootflash:`, transfer the file to the network device file sy
 Now that the Python script is on our network device, it must be run regularly to be useful. IOS XE can utilize a feature
 called Embedded Event Manager (EEM) to schedule scripts to be run on a regular basis.
 
-1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
-    
-    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
-    
-    ![CSR1 Terminal](assets/CSR1-Term.png)
-
-2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
+1. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
    
@@ -119,7 +113,7 @@ example:
     csr1#
     ```
 
-3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+2. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
 `configure terminal` command, for example:
     
     ```
@@ -128,7 +122,7 @@ example:
     csr1(config)#
     ```
 
-4. Run the following IOS XE commands in config mode to configure an EEM applet to create a cron entry to run our port 
+3. Run the following IOS XE commands in config mode to configure an EEM applet to create a cron entry to run our port 
 tracker script automatically:
     
     ```
@@ -167,13 +161,7 @@ JSON format. While this, on its own, would be sufficient in a pinch to find a po
 somewhat difficult to read. As such, it is best to provide an easy-to-run and easy-to-read report of which ports are 
 down and how long it has been since they've been up.
 
-1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
-    
-    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
-    
-    ![CSR1 Terminal](assets/CSR1-Term.png)
-
-2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
+1. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
    
@@ -182,7 +170,7 @@ example:
     csr1#
     ```
 
-3. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
+2. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
     
     ```
     csr1#guestshell run bash
@@ -209,11 +197,6 @@ the network device file system in the directory `/bootflash/scripts` created ear
     
     [guestshell@guestshell scripts]$
     ```
-    
-    Review this script to gain an understanding of the Python functions used, utilizing the comments to provide
-    high-level guidance of the purpose of different segments of code.  You can view [this Python script](https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-portreport.py) in this lab's GitHub repository at `https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-portreport.py`.
-    
-    TODO: Update URL to this file.
 
 4. Run the Python report script with the `python iosxe-portreport.py` command from the Guest Shell 
 `[guestshell@guestshell ~]$` prompt, for example:
@@ -322,7 +305,7 @@ interface to a down state.
     csr1#
     ```
 
-8. After waiting a minute or two, we should now see the Loopback3 interface in the list of down interfaces, with a 
+9. After waiting a minute or two, we should now see the Loopback3 interface in the list of down interfaces, with a 
 "last up" time within the last minute or two. 
 
     We can run the Python report script in Guest Shell from the IOS XE device privileged EXEC mode with the 

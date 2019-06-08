@@ -77,19 +77,11 @@ the network device `bootflash:`, transfer the file to the network device file sy
     [guestshell@guestshell scripts]$
     ```
     
-    This Python script uses the IOS XE Python CLI module `cli.execute` function to run IOS XE EXEC mode commands from
+    This Python script uses the IOS XE Python CLI module `execute()` function to run IOS XE EXEC mode commands from
     Guest Shell.  This is how we gather our information pertinent to troubleshooting the issue.  The information 
-    collected is being organized and written to
-    the Guest Shell filesystem, so it can be easily referenced over time.  Also, note that the script generates a 
-    syslog message with useful details to aid in analysis.
-    
-    While you are not expected to be fluent in Python scripting, please read through the comments (signified by a `#`
-    in the Python code) and the subsequent lines of code to understand the basics of how this script operates.  You 
-    can view [this Python script](foo) in 
-    this lab's GitHub repository at `https://github.com/CiscoSE/LTRPRG-1100/blob/clus19/code/iosxe-porttrack.py`.
-    
-    TODO: Update URL to this file.
-    
+    collected is being organized and written to the Guest Shell filesystem, so it can be easily referenced over time.
+    Also, note that the script generates a syslog message with useful details to aid in analysis.
+
 5. Exit out of the Guest Shell Bash CLI session with the `exit` command:
     
     ```
@@ -106,13 +98,7 @@ EEM can execute a Python script out of the Guest Shell environment as an action.
 tool to ensure that the Python script can run any time there is a high CPU condition, regardless of whether an 
 administrator is logged in to the network device or not.
 
-1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
-    
-    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
-    
-    ![CSR1 Terminal](assets/CSR1-Term.png)
-
-2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
+1. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
    
@@ -121,7 +107,7 @@ example:
     csr1#
     ```
 
-3. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
+2. Enter global configuration mode, which will be indicated by the `csr1(config)#` prompt, with the
 `configure terminal` command, for example:
    
     ```
@@ -130,7 +116,7 @@ example:
     csr1(config)#
     ```
 
-4. Run the following IOS XE commands in config mode to configure an EEM applet to create a trigger to run our high 
+3. Run the following IOS XE commands in config mode to configure an EEM applet to create a trigger to run our high 
 CPU troubleshooting script automatically:
     
     ```
@@ -169,13 +155,7 @@ However, in a lab environment, it can be difficult to spike the CPU of a router 
 we have set the high CPU threshold at a low level of 40% for demonstration purposes. Now, we must take the steps to 
 bring the CPU to this level to simulate a real-world scenario in the lab.
 
-1. Establish an SSH connection to the IOS XE device `csr1` by double clicking the CSR1 PuTTY icon on the desktop:
-    
-    ![CSR1 PuTTY Icon](assets/CSR1-Icon.png)
-    
-    ![CSR1 Terminal](assets/CSR1-Term.png)
-
-2. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
+1. From the IOS XE device CLI, ensure you are in privileged EXEC mode as indicated by the `csr1#` prompt.  If you are
 in user EXEC mode as indicated by the `csr1>` prompt, then enter privileged EXEC mode with the `enable` command, for
 example:
    
@@ -184,7 +164,7 @@ example:
     csr1#
     ```
 
-3. From the IOS XE device CLI, run the `show proc cpu | include CPU` command to see the current utilization, for 
+2. From the IOS XE device CLI, run the `show proc cpu | include CPU` command to see the current utilization, for 
 example:
     
     ```
@@ -195,14 +175,14 @@ example:
     
     It is likely to be steady at or less than 5% utilization under normal conditions in this lab.
 
-4. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
+3. Enter a Guest Shell interactive session with the IOS XE command `guestshell run bash`, for example:
     
     ```
     csr1#guestshell run bash
     [guestshell@guestshell ~]$
     ```
 
-5. There is an example BASH shell script `cpuspike.sh` in this lab's Git repository.  Let's create a directory
+4. There is an example BASH shell script `cpuspike.sh` in this lab's Git repository.  Let's create a directory
 on the network device `bootflash:` and transfer the file to the network device file system to be used in the next 
 steps.
     
@@ -328,7 +308,7 @@ interface to accomplish this.
 8. It is time to run the test to simulate high CPU load. We can run the Python test script in Guest Shell from the IOS 
 XE device privileged EXEC mode with the `guestshell run bash /bootflash/scripts/cpuspike.sh` command, for 
 example (output truncated for brevity):
-
+    
     ```
     csr1#guestshell run bash /bootflash/scripts/cpuspike.sh
     PING 10.128.0.1 (10.128.0.1) 56(84) bytes of data.

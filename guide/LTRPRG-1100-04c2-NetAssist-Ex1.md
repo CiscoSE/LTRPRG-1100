@@ -19,46 +19,43 @@ to send a message.  You neither want to create a Webex Teams account for every n
 on every network device.  The solution is to create a Bot through which all of your network devices can communicate 
 and collaborate.  Think of this Bot as your Network Assistant, a virtual member of your team.  In this lab, we will 
 create a basic Notifier Bot, which typically only responds to events in an external service or system, and send a 
-message in Webex Teams through that Bot.  It is left as an exercise to you to use this a framework for creating a 
+message in Webex Teams through that Bot.  It is left as an exercise to you to use this as a framework for creating a 
 Controller or full-fledged Assistant ChatBot that can interact with you.
 
 Creating a Webex Teams Bot is very easy.
 
-1. In a web browser, navigate to [Cisco Webex for Developers](https://developer.webex.com/):
-`https://developer.webex.com` and login with your Webex Teams account credentials you created earlier in this lab.
+1. In a web browser, navigate to [Cisco Webex for Developers](https://developer.webex.com/) at
+`https://developer.webex.com`.  Login with your Webex Teams account credentials you created earlier in this lab.  If 
+you did not create a Webex Teams account, then please ask a proctor for assistance and we can provide you with a 
+temporary demo account.
     
-    ![Webex for Developers](assets/WebexTeamsBot-01.png)
+    ![Webex for Developers](assets/NetAssist-02.png)
 
-2. Click on your profile photo at the top right corner of the webpage.
+2. Click on your profile photo at the top right corner of the webpage and click on `My Webex Teams Apps`.
     
-    ![My Webex Teams Apps](assets/WebexTeamsBot-02.png)
-    
-    Click on `My Webex Teams Apps`.
-    
-    ![My Webex Teams Apps 2](assets/WebexTeamsBot-03.png)
+    ![Webex for Developers](assets/NetAssist-03.png)
 
-3.  Click the icon with the plus sign inside a green circle to create a new Webex Teams app.
+3.  Click the `Create a New App` button.
     
-    ![Webex Teams New App](assets/WebexTeamsBot-04.png)
+    ![Webex Teams New App](assets/NetAssist-04.png)
 
-4.  Click `Create a Bot`.
-    
-    ![Webex Teams New App](assets/WebexTeamsBot-05.png)
-
-5. Fill out the form in its entirety.
+4.  Click the `Create a Bot` button.  Fill out the form in its entirety.
     
     Name your Bot, for example `IOS XE Network Assistant`.
     
-    Choose a Bot Username, for example `iosxe-netassist`.  This must be unique and cannot be shared, so I suggest 
-    you precede the Bot Username with something like your initials.
+    Choose a Bot Username, for example `iosxe-netassist-<initials>`, replacing `<initials>` with your initials or a 
+    random string.  This must be unique and cannot be shared, so we suggest you proceed the Bot Username with something 
+    like your initials.
     
     Choose an Icon.  You can select one of the default icons or choose to upload an icon of your own creation.
     
-    Enter a Description, for example `IOS XE Network Assistant Bot`.
+    Enter a Description, for example `CLUS19 LTRPRG-1100 IOS XE Network Assistant Bot`.
     
-    Click `Create Bot`.
+    ![Webex Teams New Bot](assets/NetAssist-05.png)
     
-    ![IOS XE Network Assistant Bot](assets/WebexTeamsBot-06.png)
+    Click the `Add Bot` button.
+    
+    ![IOS XE Network Assistant Bot](assets/NetAssist-06.png)
 
 6. Take extra care to note the `Bot's Access Token`.  Click `Copy` and then paste this into a text file for reference
 later in this lab.  The access token is what will be used to authenticate the Webex Teams API calls from your 
@@ -94,28 +91,42 @@ example:
     csr1#guestshell run bash
     [guestshell@guestshell ~]$
 
-4. Change to the `/bootflash/scripts` directory created earlier in the lab with the `cd` command from the Guest Shell 
-`[guestshell@guestshell ~]$` prompt:
+4. There is an example Python script `iosxe-netassist.py` in this lab's Git repository.  Let's create a directory on 
+the network device `bootflash:` and transfer the file to the network device file system.
+    
+    To create a new directory to hold scripts on-box if one does not already exist, use the `mkdir -p /bootflash/scripts` 
+    command from the Guest Shell `[guestshell@guestshell ~]$` prompt, for example:
+    
+    ```
+    [guestshell@guestshell ~]$ mkdir -p /bootflash/scripts
+    [guestshell@guestshell ~]$
+    ```
+    
+    Change to that directory with the `cd /bootflash/scripts` command, for example:
     
     ```
     [guestshell@guestshell ~]$ cd /bootflash/scripts
     [guestshell@guestshell scripts]$
     ```
-
-4. Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-netassist-bot.py` command, for example:
+    
+    Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-netassist-bot.py` command, for example:
         
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-netassist-bot.py
-    --2019-05-31 19:51:49--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-netassist-bot.py
-    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/
+    LTRPRG-1100/master/code/iosxe-netassist-bot.py
+    --2019-06-08 05:09:37--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/m
+    aster/code/iosxe-netassist-bot.py
+    Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133
+    , 151.101.128.133, ...
+    Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.13
+    3|:443... connected.
     HTTP request sent, awaiting response... 200 OK
-    Length: 1615 (1.6K) [text/plain]
+    Length: 1825 (1.8K) [text/plain]
     Saving to: 'iosxe-netassist-bot.py'
     
-    100%[======================================>] 1,615       --.-K/s   in 0s
+    100%[======================================>] 1,825       --.-K/s   in 0s
     
-    2019-05-31 19:51:50 (76.3 MB/s) - 'iosxe-netassist-bot.py' saved [1615/1615]
+    2019-06-08 05:09:37 (133 MB/s) - 'iosxe-netassist-bot.py' saved [1825/1825]
     
     [guestshell@guestshell scripts]$
     ```
@@ -143,7 +154,7 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     
     Not to worry; it is trivial to upgrade Python in Guest Shell.  To do so, we recommend you upgrade using the 
     CentOS RPM package available for upgrade with the Yellowdog Updater, Modified (yum for short) RPM package manager.
-    To upgrade Python, use the `sudo` command to run `yum` with elevated root user privileges:
+    To upgrade Python, use the `sudo -E yum upgrade python2` command with elevated root user privileges, for example:
     
     ```
     [guestshell@guestshell scripts]$ sudo -E yum upgrade python2
@@ -151,43 +162,46 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     base                                                     | 3.6 kB     00:00
     extras                                                   | 3.4 kB     00:00
     updates                                                  | 3.4 kB     00:00
-    (1/4): extras/7/x86_64/primary_db                          | 147 kB   00:00
-    (2/4): base/7/x86_64/group_gz                              | 166 kB   00:00
-    (3/4): updates/7/x86_64/primary_db                         | 2.0 MB   00:00
-    (4/4): base/7/x86_64/primary_db                            | 5.9 MB   00:01
+    (1/4): base/7/x86_64/group_gz                              | 166 kB   00:00
+    (2/4): extras/7/x86_64/primary_db                          | 200 kB   00:00
+    (3/4): updates/7/x86_64/primary_db                         | 5.0 MB   00:00
+    (4/4): base/7/x86_64/primary_db                            | 6.0 MB   00:00
     Determining fastest mirrors
-     * base: linux.cc.lehigh.edu
-     * extras: mirrors.advancedhosters.com
-     * updates: ftp.linux.ncsu.edu
+     * base: mirror.umd.edu
+     * extras: mirror.es.its.nyu.edu
+     * updates: distro.ibiblio.org
     Resolving Dependencies
     --> Running transaction check
     ---> Package python.x86_64 0:2.7.5-16.el7 will be updated
-    ---> Package python.x86_64 0:2.7.5-68.el7 will be an update
-    --> Processing Dependency: python-libs(x86-64) = 2.7.5-68.el7 for package: python-2.7.5-68.el7.x86_64
+    ---> Package python.x86_64 0:2.7.5-77.el7_6 will be an update
+    --> Processing Dependency: python-libs(x86-64) = 2.7.5-77.el7_6 for package: pyt
+    hon-2.7.5-77.el7_6.x86_64
     --> Running transaction check
     ---> Package python-libs.x86_64 0:2.7.5-16.el7 will be updated
-    ---> Package python-libs.x86_64 0:2.7.5-68.el7 will be an update
-    --> Processing Dependency: libcrypto.so.10(OPENSSL_1.0.2)(64bit) for package: python-libs-2.7.5-68.el7.x86_64
+    ---> Package python-libs.x86_64 0:2.7.5-77.el7_6 will be an update
+    --> Processing Dependency: libcrypto.so.10(OPENSSL_1.0.2)(64bit) for package: py
+    thon-libs-2.7.5-77.el7_6.x86_64
     --> Running transaction check
     ---> Package openssl-libs.x86_64 1:1.0.1e-60.el7_3.1 will be updated
-    --> Processing Dependency: openssl-libs(x86-64) = 1:1.0.1e-60.el7_3.1 for package: 1:openssl-1.0.1e-60.el7_3.1.x86_64
-    ---> Package openssl-libs.x86_64 1:1.0.2k-12.el7 will be an update
+    --> Processing Dependency: openssl-libs(x86-64) = 1:1.0.1e-60.el7_3.1 for packag
+    e: 1:openssl-1.0.1e-60.el7_3.1.x86_64
+    ---> Package openssl-libs.x86_64 1:1.0.2k-16.el7_6.1 will be an update
     --> Running transaction check
     ---> Package openssl.x86_64 1:1.0.1e-60.el7_3.1 will be updated
-    ---> Package openssl.x86_64 1:1.0.2k-12.el7 will be an update
+    ---> Package openssl.x86_64 1:1.0.2k-16.el7_6.1 will be an update
     --> Finished Dependency Resolution
     
     Dependencies Resolved
     
     ================================================================================
-     Package              Arch           Version                 Repository    Size
+     Package            Arch         Version                    Repository     Size
     ================================================================================
     Updating:
-     python               x86_64         2.7.5-68.el7            base          93 k
+     python             x86_64       2.7.5-77.el7_6             updates        94 k
     Updating for dependencies:
-     openssl              x86_64         1:1.0.2k-12.el7         base         492 k
-     openssl-libs         x86_64         1:1.0.2k-12.el7         base         1.2 M
-     python-libs          x86_64         2.7.5-68.el7            base         5.6 M
+     openssl            x86_64       1:1.0.2k-16.el7_6.1        updates       493 k
+     openssl-libs       x86_64       1:1.0.2k-16.el7_6.1        updates       1.2 M
+     python-libs        x86_64       2.7.5-77.el7_6             updates       5.6 M
     
     Transaction Summary
     ================================================================================
@@ -202,17 +216,17 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     `y` and press the `Enter/Return` key:
     
     ```
-    Is this ok [y/d/N]: y
     Downloading packages:
     Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
-    warning: /var/cache/yum/x86_64/7/base/packages/openssl-1.0.2k-12.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
-    Public key for openssl-1.0.2k-12.el7.x86_64.rpm is not installed
-    (1/4): openssl-1.0.2k-12.el7.x86_64.rpm                    | 492 kB   00:00
-    (2/4): openssl-libs-1.0.2k-12.el7.x86_64.rpm               | 1.2 MB   00:00
-    (3/4): python-2.7.5-68.el7.x86_64.rpm                      |  93 kB   00:00
-    (4/4): python-libs-2.7.5-68.el7.x86_64.rpm                 | 5.6 MB   00:00
+    warning: /var/cache/yum/x86_64/7/updates/packages/openssl-1.0.2k-16.el7_6.1.x86_
+    64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    Public key for openssl-1.0.2k-16.el7_6.1.x86_64.rpm is not installed
+    (1/4): openssl-1.0.2k-16.el7_6.1.x86_64.rpm                | 493 kB   00:00
+    (2/4): python-2.7.5-77.el7_6.x86_64.rpm                    |  94 kB   00:00
+    (3/4): openssl-libs-1.0.2k-16.el7_6.1.x86_64.rpm           | 1.2 MB   00:00
+    (4/4): python-libs-2.7.5-77.el7_6.x86_64.rpm               | 5.6 MB   00:00
     --------------------------------------------------------------------------------
-    Total                                              4.9 MB/s | 7.4 MB  00:01
+    Total                                               11 MB/s | 7.4 MB  00:00
     Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
     Importing GPG key 0xF4A80EB5:
      Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
@@ -226,50 +240,65 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
     key:
     
     ```
-    Is this ok [y/N]: y
     Running transaction check
     Running transaction test
     Transaction test succeeded
     Running transaction
-      Updating   : 1:openssl-libs-1.0.2k-12.el7.x86_64                          1/8
-      Updating   : python-libs-2.7.5-68.el7.x86_64                              2/8
-      Updating   : python-2.7.5-68.el7.x86_64                                   3/8
-      Updating   : 1:openssl-1.0.2k-12.el7.x86_64                               4/8
-      Cleanup    : 1:openssl-1.0.1e-60.el7_3.1.x86_64                           5/8
-    warning: file /usr/share/man/man1/tsget.1ssl.gz: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/ssleay.txt: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/openssl_button.html: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/openssl_button.gif: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/openssl.txt: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/c-indentation.el: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/README.FIPS: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/README: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/NEWS: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/LICENSE: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/INSTALL: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/FAQ: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e/CHANGES: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-1.0.1e: remove failed: No such file or directory
-      Cleanup    : python-2.7.5-16.el7.x86_64                                   6/8
-      Cleanup    : python-libs-2.7.5-16.el7.x86_64                              7/8
+      Updating   : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                      1/8
+      Updating   : python-libs-2.7.5-77.el7_6.x86_64                            2/8
+      Updating   : python-2.7.5-77.el7_6.x86_64                                 3/8
+      Updating   : 1:openssl-1.0.2k-16.el7_6.1.x86_64                           4/8
+      Cleanup    : python-2.7.5-16.el7.x86_64                                   5/8
+      Cleanup    : python-libs-2.7.5-16.el7.x86_64                              6/8
+      Cleanup    : 1:openssl-1.0.1e-60.el7_3.1.x86_64                           7/8
+    warning: file /usr/share/man/man1/tsget.1ssl.gz: remove failed: No such file or 
+    directory
+    warning: file /usr/share/doc/openssl-1.0.1e/ssleay.txt: remove failed: No such 
+    file or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/openssl_button.html: remove failed:
+    No such file or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/openssl_button.gif: remove failed:
+    No such file or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/openssl.txt: remove failed: No such
+     file or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/c-indentation.el: remove failed: No
+     such file or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/README.FIPS: remove failed: No such
+     file or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/README: remove failed: No such file
+     or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/NEWS: remove failed: No such file o
+    r directory
+    warning: file /usr/share/doc/openssl-1.0.1e/LICENSE: remove failed: No such fil
+    e or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/INSTALL: remove failed: No such fil
+    e or directory
+    warning: file /usr/share/doc/openssl-1.0.1e/FAQ: remove failed: No such file or
+     directory
+    warning: file /usr/share/doc/openssl-1.0.1e/CHANGES: remove failed: No such fil
+    e or directory
+    warning: file /usr/share/doc/openssl-1.0.1e: remove failed: No such file or dir
+    ectory
       Cleanup    : 1:openssl-libs-1.0.1e-60.el7_3.1.x86_64                      8/8
-    warning: file /usr/share/doc/openssl-libs-1.0.1e/LICENSE: remove failed: No such file or directory
-    warning: file /usr/share/doc/openssl-libs-1.0.1e: remove failed: No such file or directory
-      Verifying  : python-libs-2.7.5-68.el7.x86_64                              1/8
-      Verifying  : python-2.7.5-68.el7.x86_64                                   2/8
-      Verifying  : 1:openssl-1.0.2k-12.el7.x86_64                               3/8
-      Verifying  : 1:openssl-libs-1.0.2k-12.el7.x86_64                          4/8
+    warning: file /usr/share/doc/openssl-libs-1.0.1e/LICENSE: remove failed: No suc
+    h file or directory
+    warning: file /usr/share/doc/openssl-libs-1.0.1e: remove failed: No such file o
+    r directory
+      Verifying  : 1:openssl-1.0.2k-16.el7_6.1.x86_64                           1/8
+      Verifying  : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                      2/8
+      Verifying  : python-2.7.5-77.el7_6.x86_64                                 3/8
+      Verifying  : python-libs-2.7.5-77.el7_6.x86_64                            4/8
       Verifying  : 1:openssl-1.0.1e-60.el7_3.1.x86_64                           5/8
       Verifying  : python-2.7.5-16.el7.x86_64                                   6/8
       Verifying  : python-libs-2.7.5-16.el7.x86_64                              7/8
       Verifying  : 1:openssl-libs-1.0.1e-60.el7_3.1.x86_64                      8/8
     
     Updated:
-      python.x86_64 0:2.7.5-68.el7
+      python.x86_64 0:2.7.5-77.el7_6
     
     Dependency Updated:
-      openssl.x86_64 1:1.0.2k-12.el7        openssl-libs.x86_64 1:1.0.2k-12.el7
-      python-libs.x86_64 0:2.7.5-68.el7
+      openssl.x86_64 1:1.0.2k-16.el7_6.1   openssl-libs.x86_64 1:1.0.2k-16.el7_6.1
+      python-libs.x86_64 0:2.7.5-77.el7_6
     
     Complete!
     [guestshell@guestshell scripts]$
@@ -281,8 +310,7 @@ extension to TLS.  An SSL client will fail to connect to the API if it does not 
 6. Next, you need to install the prerequisite Python requests package needed to make the Webex Teams API calls.  You 
 could install the Python package with pip like you on your lab workstation earlier in this lab, however with a system 
 under package management like the CentOS Linux Guest Shell, we recommend you install the appropriate RPM instead, if 
-available.  Use the `sudo` command to run `yum` with elevated root user privileges to install the `python-requests`
-RPM:
+available.  To install the `python-requests` RPM, use the `sudo -E yum install python-requests`, for example:
     
     ```
     [guestshell@guestshell scripts]$ sudo -E yum install python-requests
@@ -294,17 +322,24 @@ RPM:
     Resolving Dependencies
     --> Running transaction check
     ---> Package python-requests.noarch 0:2.6.0-1.el7_1 will be installed
-    --> Processing Dependency: python-urllib3 >= 1.10.2-1 for package: python-requests-2.6.0-1.el7_1.noarch
-    --> Processing Dependency: python-chardet >= 2.2.1-1 for package: python-requests-2.6.0-1.el7_1.noarch
+    --> Processing Dependency: python-urllib3 >= 1.10.2-1 for package: python-request
+    s-2.6.0-1.el7_1.noarch
+    --> Processing Dependency: python-chardet >= 2.2.1-1 for package: python-requests
+    -2.6.0-1.el7_1.noarch
     --> Running transaction check
     ---> Package python-chardet.noarch 0:2.2.1-1.el7_1 will be installed
     ---> Package python-urllib3.noarch 0:1.10.2-5.el7 will be installed
-    --> Processing Dependency: python-six for package: python-urllib3-1.10.2-5.el7.noarch
-    --> Processing Dependency: python-ipaddress for package: python-urllib3-1.10.2-5.el7.noarch
-    --> Processing Dependency: python-backports-ssl_match_hostname for package: python-urllib3-1.10.2-5.el7.noarch
+    --> Processing Dependency: python-six for package: python-urllib3-1.10.2-5.el7.no
+    arch
+    --> Processing Dependency: python-ipaddress for package: python-urllib3-1.10.2-5.
+    el7.noarch
+    --> Processing Dependency: python-backports-ssl_match_hostname for package: pytho
+    n-urllib3-1.10.2-5.el7.noarch
     --> Running transaction check
-    ---> Package python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7 will be installed
-    --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch
+    ---> Package python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7 will be 
+    installed
+    --> Processing Dependency: python-backports for package: python-backports-ssl_ma
+    tch_hostname-3.5.0.1-1.el7.noarch
     ---> Package python-ipaddress.noarch 0:1.0.16-2.el7 will be installed
     ---> Package python-six.noarch 0:1.9.0-2.el7 will be installed
     --> Running transaction check
@@ -391,26 +426,28 @@ RPM:
     Now you can test your Python Bot script.
 
 7. The `iosxe-netassist-bot.py` Python script requires two command line arguments.  Run the script without 
-arguments for a summary:
+arguments for a summary with the command `python iosxe-netassist-bot.py`:
     
     ```
     [guestshell@guestshell scripts]$ python iosxe-netassist-bot.py
     usage: IOS XE Network Assistant Webex Teams Bot Script [-h] -t TOKEN -e EMAIL
-    IOS XE Network Assistant Webex Teams Bot Script: error: argument -t/--token is required
+    IOS XE Network Assistant Webex Teams Bot Script: error: argument -t/--token is r
+    equired
     [guestshell@guestshell scripts]$
     ```
     
-    Pass your Webex Teams IOS XE Network Assistant Bot's Access Token with the `-t` argument and the email address 
-    associated with your Webex Teams account, for example:
+    Run the script with the correct command line arguments with the `python iosxe-netassist-bot.py -t <Bot Access Token> -e <user@example.com>`
+    command, replacing `<Bot Access Token>` the your Bot's Access Token obtained earlier in this lab and 
+    `<user@example.com>` with the email address you've logged into Webex Teams with, for example:
     
     ```
-    [guestshell@guestshell scripts]$ python iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com
+    [guestshell@guestshell scripts]$ python iosxe-netassist-bot.py -t NzA0NmNiM2ItN2FjZC00NWMyLThiYjgtZDc5NzE1Y2Q1MTQ2NzZmNTY1MmEtNjcx_PF84_consumer -e user@example.com
     [guestshell@guestshell scripts]$
     ```
     
     If there are no errors, then you should receive a 1:1 message from your Bot similar to the following:
     
-    ![Webex Teams Bot Message](assets/WebexTeamsBot-07.png)
+    ![Webex Teams Bot Message](assets/NetAssist-07.png)
 
 8. Finally, you need to configure an EEM applet that looks for a condition and triggers your new Python Bot script 
 on-box in Guest Shell.  The trigger we are going to use in this lab is any configuration change made on your network 
@@ -418,12 +455,10 @@ device.  Normally, you might install an EEM applet via the IOS XE CLI, for examp
 configuration snippet:
     
     ```
-    !
     event manager applet GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT
-     event syslog pattern "%SYS-5-CONFIG_I: Configured from"
-     action 0.0 cli command "en"
-     action 1.0 cli command "guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e example.com"
-    !
+      event syslog pattern "%SYS-5-CONFIG_I: Configured from"
+      action 0.0 cli command "en"
+      action 1.0 cli command "guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e userexample.com"
     ```
     
     However, you are a Network Programmability Ninja now and will use model driven programmability to configure the 
@@ -444,106 +479,89 @@ configuration snippet:
     (pythonenv) $
     ```
     
-    Change to the `~/lab/LTRPRG-1100/code` directory inside the Git repository for this lab.
+    Change to the `~/lab/LTRPRG-1100/code` directory inside the Git repository for this lab with the command
+    `cd ~/lab/LTRPRG-1100/code`:
     
     ```
     (pythonenv) $ cd ~/lab/LTRPRG-1100/code
     (pythonenv) $
     ```
     
-    There are two files of interest for this step: `iosxe-config-eem.py` and `iosxe-config-eem.xml`.  The file 
-    `iosxe-config-eem.py` is the NETCONF client Python script using the ncclient Python package.  The file 
-    `iosxe-config-eem.xml` is the XML-encoded YANG data model for the task at hand.  You will need to modify
-    `iosxe-config-eem.xml` to replace strings containing the Bot Access Token and your email address.
+    The file `iosxe-config-eem.py` is the NETCONF client Python script using the ncclient Python package.  This 
+    cotained the NETCONF XML payload for the task at hand.  You will need to edit `iosxe-config-eem.py` to replace 
+    strings containing the Bot Access Token and your email address.
     
     Open the lab folder by double clicking the Windows Explore shortcut on the lab workstation desktop:
     
-    ![Lab Shortcut](assets/WebexTeamsBot-08.png)
+    ![Lab Shortcut](assets/LabDir-Icon.png)
     
-    Navigate to the `LTRPRG-1100` then `code` directory:
+    Navigate to the `LTRPRG-1100` > `code` directory:
     
-    ![Code Directory](assets/WebexTeamsBot-09.png)
+    ![Code Directory](assets/NetAssist-08.png)
     
-    Right click the file `iosxe-config-eem.xml` and click `Edit with Notepad++`.
+    Right click the file `iosxe-config-eem.py` and click `Edit with Notepad++`.
     
-    ![Notepad++](assets/WebexTeamsBot-10.png)
+    ![Notepad++ Application Window](assets/NetAssist-09.png)
     
-    In line 21, replace the string after `-t` with your IOX XE Network Assistant Bot Access Token.
+    In line 45, replace the string after `-t` with your IOX XE Network Assistant Bot Access Token.
     
-    In line 21, replace the string after `-e` with the email address associated with your Webex Teams account.
+    In line 45, replace the string after `-e` with the email address associated with your Webex Teams account.
     
     Save your changes by navigating to the `File` menu and clicking `Save`.  Close the Notepad++ application.
     
-    Now return to the Git Bash terminal and run the `iosxe-config-eem.py` Python script with the `python` command, 
-    for example:
+    Now return to the Git Bash terminal and run the `iosxe-config-eem.py` Python script with the
+    `python iosxe-config-eem.py` command, for example:
     
     ```
-    (pythonenv) $ python iosxe-config-eem.py
-    Configuration Payload:
-    
-    <config>
-        <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-            <event>
-                <manager xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-eem">
-                    <applet>
-                        <name>GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT</name>
-                        <event>
-                            <syslog>
-                                <pattern>%SYS-5-CONFIG_I: Configured from</pattern>
-                            </syslog>
-                        </event>
-                        <action>
-                            <name>0.0</name>
-                            <cli>
-                                <command>en</command>
-                            </cli>
-                        </action>
-                        <action>
-                            <name>1.0</name>
-                            <cli>
-                                <command>guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com</command>
-                            </cli>
-                        </action>
-                    </applet>
-                </manager>
-            </event>
-        </native>
-    </config>
-    
-    Configuration result:
-    
+    $ python iosxe-config-eem.py
     <?xml version="1.0" encoding="UTF-8"?>
     <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:
-    1a0d8b48-ac7a-4f94-912a-835a3a7b9c7e" xmlns:nc="urn:ietf:params:xml:ns:netconf:b
+    156f6e16-588a-43c8-b492-2b34670c07ce" xmlns:nc="urn:ietf:params:xml:ns:netconf:b
     ase:1.0"><ok/></rpc-reply>
     (pythonenv) $
     ```
     
-    Ensure you received an `ok` embedded in the configuration result.  Check your handy work from the IOS XE device CLI:
+    Check your handy work from the IOS XE device CLI with the `show running-config | section event` command, for 
+    example:
     
     ```
     csr1#show running-config | section event
     event manager applet GUESTSHELL-CONFIG-CHANGE-NETASSIST-BOT
      event syslog pattern "%SYS-5-CONFIG_I: Configured from"
      action 0.0 cli command "en"
-     action 1.0 cli command "guestshell run python /bootflash/scripts/iosxe-netassist-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e email@example.com"
+     action 1.0 cli command "guestshell run python /bootflash/scripts/iosxe-netassis
+    t-bot.py -t OWIyODVhODEtMDM0MC00NmY5LWFmYjEtOTI1ODJiZWFiNzIyODdlY2FiOGItMTQ3 -e
+    email@example.com"
     csr1#
     ```
     
-    Now let's put the whole thing to test.  Make a configuration change from the IOS XE device CLI, for example:
+    Now let's put the whole thing to test.  Make a configuration change from the IOS XE device CLI with the following
+    IOS XE commands:
+    
+    ```
+    configure terminal
+    interface GigabitEthernet1
+      description WAN interface
+      exit
+    end
+    ```
+    
+    For example:
     
     ```
     csr1#configure terminal
+    Enter configuration commands, one per line.  End with CNTL/Z.
     csr1(config)#interface GigabitEthernet1
-    csr1(config-if)#description WAN interface
-    csr1(config-if)#end
+    csr1(config-if)#  description WAN interface
+    csr1(config-if)#  exit
+    csr1(config)#end
     csr1#
     ```
     
-    And you should receive a Webex Teams message from your IOS XE Network Assistant Bot alerting you to the 
-    configuration change on the network device!
+    You should receive a Webex Teams message from your IOS XE Network Assistant Bot alerting you to the configuration
+    change on the network device!
     
-    ![Webex Teams Bot Message](assets/WebexTeamsBot-12.png)
+    ![Webex Teams Bot Message](assets/NetAssist-10.png)
     
     Now each time you make a configuration change, you will receive a notification in Webex Teams!
 
