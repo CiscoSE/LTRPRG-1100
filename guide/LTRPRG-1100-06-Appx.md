@@ -8,29 +8,22 @@ Navigation :: [Previous Page](LTRPRG-1100-05-Conclusion.md) :: [Table of Content
 
 ### Additional API Resources
 
-1. Explore the developer information available at the [Cisco Meraki Dev site](https://create.meraki.io). This 
-site contains reference documentation, code samples, and tutorials related to Cisco Meraki products. These APIs 
-allow you to programmatically utilize the Meraki wireless access points, network switches, security appliances, and 
-more.
-    
-    Click on the [Build](https://create.meraki.io/build/) menu along the top of the page. Which example sounds 
-    interesting to you? Spend a few minutes checking out the different examples. Pull up one in particular, using
-    [Meraki API with Google Forms](https://create.meraki.io/build/google-forms-with-the-dashboard-api/). As you read 
-    through this, think about what goal is being accomplished? What other ways could the API with a form like this be 
-    leveraged? Maybe a firewall rule change request?
-    
-    From the top menu, select [Learn](https://create.meraki.io/learn/) to list different tutorials available. We do not 
-    have the time to dive into any of these right now, but these types of learning exercises can help bolster your 
-    understanding of the Meraki API.
-
-2. Explore the [Postman API Docs](https://create.meraki.io/postman) for a full reference of the available API
+1. Explore the [Postman API Docs](https://create.meraki.io/postman) for a full reference of the available API
 functions. For instance, click on `Devices` and then `List the devices in a network` to see the details of this 
 particular GET call. Click to expand the example response in the right-side column. Which of these fields may be 
 interesting if you were building an inventory script?
 
-3. Many Cisco products have consolidated API information at the [Cisco DevNet](https://developer.cisco.com/) site. 
+2. Many Cisco products have consolidated API information at the [Cisco DevNet](https://developer.cisco.com/) site. 
 This web portal contains a plethora of reference documentation, tutorials, learning labs, sandbox environments, etc. 
 This is a great place to start for learning more about the topics discussed in this lab.
+
+### Additional Cisco IOS XE 16 Resources
+
+1. Download the free eBook [Cisco IOS XE Programmability, Automating Device Lifecycle Management](https://www.cisco.com/c/dam/en/us/products/collateral/enterprise-networks/nb-06-ios-xe-prog-ebook-cte-en.pdf).  
+
+2. Refer to the [Cisco IOS XE 16 Configuration Guides](https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-xe-16/products-installation-and-configuration-guides-list.html), including
+[Programmability Configuration Guide](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1611/b_1611_programmability_cg.html) and
+[Embedded Event Manager Configuration Guide](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/configuration/xe-16-11/eem-xe-16-11-book.html).
 
 ### Cisco Learning Network
 
