@@ -6,8 +6,8 @@ Navigation :: [Previous Page](LTRPRG-1100-04c2-NetAssist-Ex1.md) :: [Table of Co
 
 This concludes this Cisco Live instructor led lab.
 
-Return to the Network Programmability Dojo on a regular to pick up new tools of the Ninja, continue to further hone 
-your Ninja skills, and put your Ninja skills to work to continue to drive real benefit, save time and money, and 
+Return to the Network Programmability Dojo on a regular basis to pick up new tools of the Ninja, continue to further 
+hone your Ninja skills, and put your Ninja skills to work to continue to drive real benefit, save time and money, and 
 reduce human error.
 
 Thank you for your time and commitment at Cisco Live!

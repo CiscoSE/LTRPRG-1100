@@ -21,7 +21,7 @@ closer look at REST API communication.
 A web browser retrieves web pages by requesting resources from a web server.  The web server responds with the 
 resource formatted in HTML.  This HTML-formatted data is processed by the web browser and displayed for you in the 
 web browser window.  The application protocol used is HyperText Transfer Protocol (HTTP), or HTTPS if secured with 
-SSL or TLS.  Behind the scenes, HTTP(S) uses "CRUD" - Create, Read, Update, Delete - operations to achieve this 
+SSL or TLS.  Behind the scenes, HTTP(S) uses "CRUD" (Create, Read, Update, Delete) operations to achieve this 
 request and transfer of information.  The CRUD operations are the four basic functions from which a good API is 
 designed:
 

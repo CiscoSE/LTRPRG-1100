@@ -19,12 +19,12 @@ those tools, additionally armed with new concepts that we will introduce in the 
 
 In this lab, we highlight the following:
 
-* APIs, including:
-    * REST APIS
+* Application Programming Interfaces (APIs), including:
+    * REST APIs
     * NETCONF and YANG
 * IOS XE Guest Shell
 
-Let's get started with your training!
+Let's get started with your training and begin to hone the skills of the Network Programmability Ninja!
 
 ---
 
