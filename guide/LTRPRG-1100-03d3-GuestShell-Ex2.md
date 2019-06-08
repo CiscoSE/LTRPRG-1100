@@ -249,11 +249,11 @@ the network device `bootflash:`, transfer the file to the network device file sy
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py` command, for example:
+    Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-cli-example.py` command, for example:
         
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py
-    --2019-05-31 19:42:45--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-cli-example.py
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-cli-example.py
+    --2019-05-31 19:42:45--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-cli-example.py
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.64.133, 151.101.128.133, 151.101.192.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.64.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK

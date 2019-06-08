@@ -59,11 +59,11 @@ the network device `bootflash:`, transfer the file to the network device file sy
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-highcpu.py` command, for example:
+    Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-highcpu.py` command, for example:
         
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-highcpu.py
-    --2019-05-31 19:48:17--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-highcpu.py
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-highcpu.py
+    --2019-05-31 19:48:17--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-highcpu.py
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
@@ -221,13 +221,13 @@ steps.
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/cpuspike.sh` command, for example:
+    Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/cpuspike.sh` command, for example:
     
     TODO: Update URL to raw file.
     
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/cpuspike.sh
-    --2019-05-31 19:49:44--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/cpuspike.sh
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/cpuspike.sh
+    --2019-05-31 19:49:44--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/cpuspike.sh
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.192.133, 151.101.0.133, 151.101.64.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.192.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK

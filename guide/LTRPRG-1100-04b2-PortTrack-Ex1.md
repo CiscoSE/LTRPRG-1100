@@ -62,11 +62,11 @@ the network device `bootflash:`, transfer the file to the network device file sy
     [guestshell@guestshell scripts]$
     ```
     
-    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-porttrack.py` command, for example:
+    Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-porttrack.py` command, for example:
         
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-porttrack.py
-    --2019-05-31 19:51:49--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-porttrack.py
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-porttrack.py
+    --2019-05-31 19:51:49--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-porttrack.py
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
@@ -192,11 +192,11 @@ example:
 3. There is an example Python script `iosxe-portreport.py` in this lab's Git repository.  Let's transfer the file to 
 the network device file system in the directory `/bootflash/scripts` created earlier in this lab.
     
-    Transfer the example script with the `wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-portreport.py` command, for example:
+    Transfer the example script with the `wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-portreport.py` command, for example:
         
     ```
-    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-portreport.py
-    --2019-05-31 19:53:10--  https://raw.githubusercontent.com/curtissmith/LTRPRG-1100/master/code/iosxe-portreport.py
+    [guestshell@guestshell scripts]$ wget https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-portreport.py
+    --2019-05-31 19:53:10--  https://raw.githubusercontent.com/CiscoSE/LTRPRG-1100/master/code/iosxe-portreport.py
     Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.128.133, 151.101.192.133, 151.101.0.133, ...
     Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.128.133|:443... connected.
     HTTP request sent, awaiting response... 200 OK
