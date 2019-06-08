@@ -9,7 +9,7 @@ Navigation :: [Previous Page](LTRPRG-1100-04-Test.md) :: [Table of Contents](LTR
 
 One glaring problem with troubleshooting fleeting high-CPU issues on a router, is that often by the time an
 administrator logs in to troubleshoot, the issue has passed. The goal of this exercise is to utilize skills of the
-network programmability ninja to react to a CPU spike immediately, without waiting for a person to log in to the router.
+Network Programmability Ninja to react to a CPU spike immediately, without waiting for a person to log in to the router.
 The actions taken can be as simple as information collection, to as intricate as executing configuration changes based
 on real-time traffic observed. For this exercise, we will be collecting what is often pertinent information to help
 identify the culprit of a high-CPU event.

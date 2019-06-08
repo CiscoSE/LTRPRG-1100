@@ -45,7 +45,7 @@ forums on various Cisco technologies; get your questions answered; meet and gree
 
 ### Getting Started with Cisco DevNet
 
-Enter the network programmability ninja dojo.  Let's get started and explore Cisco DevNet next.
+Enter the Network Programmability Ninja dojo.  Let's get started and explore Cisco DevNet next.
 
 ---
 
