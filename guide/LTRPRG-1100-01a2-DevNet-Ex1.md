@@ -15,7 +15,7 @@ The objectives for this exercise are to:
 The first step in your network programmability training is joining [Cisco DevNet](https://developer.cisco.com/).  Let's 
 create your DevNet account, if you don't already have one.
 
-1. Navigate to [DevNet](https://developer.cisco.com): `https://developer.cisco.com/`.
+1. Navigate to [DevNet](https://developer.cisco.com) at `https://developer.cisco.com/`.
     
     ![DevNet Website](assets/DevNet-01.png)
 
@@ -23,18 +23,17 @@ create your DevNet account, if you don't already have one.
     
     ![DevNet Login](assets/DevNet-02.png)
     
-    You are given the choice of several single sign-on options.  We recommend using your Cisco ID, but you may 
-    choose whichever you feel is appropriate.
+    You are given the choice of several single sign-on options.  We recommend choosing to `Login with a Cisco ID`, but 
+    you may choose whichever you feel is appropriate.
 
-3. Once you've logged in, complete your DevNet account profile if this is your first time logging in and click 
-the `Complete setup` button.
+3. Once you've logged in, complete your DevNet account profile if this is your first time logging in.
     
     ![DevNet Profile 1](assets/DevNet-03.png)
     
-4. Congratulations, you've successfully joined Cisco DevNet!  Click the `Take me to my dashboard` button and you 
-are ready to explore DevNet.
-        
-    ![DevNet Profile 2](assets/DevNet-04.png)
+     Click the `Register` button.
+    
+Congratulations, you've successfully joined Cisco DevNet!  Let's explore Cisco's network programmability ninja dojo a
+bit further.
 
 ---
 

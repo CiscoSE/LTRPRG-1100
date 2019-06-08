@@ -43,6 +43,10 @@ events.
 Join communities of interest and participate in on-going discussions around technologies; participate in trending 
 forums on various Cisco technologies; get your questions answered; meet and greet at events around the world.
 
+### Getting Started with Cisco DevNet
+
+Enter the network programmability ninja dojo.  Let's get started and explore Cisco DevNet next.
+
 ---
 
 Navigation :: [Previous Page](LTRPRG-1100-01-Dojo.md) :: [Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) :: [Next Page](LTRPRG-1100-01a2-DevNet-Ex1.md)
