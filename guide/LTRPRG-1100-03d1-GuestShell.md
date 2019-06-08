@@ -21,6 +21,23 @@ On-Box network programmability is ideal for:
 * IOS XE Embedded Event Manager (EEM) response automation
 * edge compute for network applications and Internet of Things (IoT)
 
+### Introducing Embedded Event Manager (EEM)
+
+Cisco IOS-XE includes a feature-set called Embedded Event Manager (EEM) that has long been a strong toolset to allow for
+on-box programmability. The concept behind EEM is fairly simple, but do not let that take away from its effectiveness.
+EEM can be configured to trigger, or run, based on several different events. When EEM triggers, it can execute one or
+more actions. This functionality allows for quite a bit of on-box automation.
+
+There are over 20 different events that can trigger an EEM action, including syslog messages, SNMP values, IP SLA
+monitors, timers, or even CLI commands. When the EEM applet is triggered, it can then execute one or more actions.
+There are over 10 types of actions supported in EEM, so this could include executing CLI commands, invoking a script 
+written in TCL (basic programming language supported in IOS natively), or it can run a python script that lives in the 
+Guest Shell environment.
+
+While EEM is a powerful feature in IOS-XE on its own, this lab will focus more on how it can be utilized in tandem with
+Guest Shell for programmability purposes.
+
+
 ### Introducing Guest Shell
 
 A powerful software feature called Guest Shell has been brought to products running Cisco IOS XE.  Originally 
