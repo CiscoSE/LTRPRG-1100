@@ -56,11 +56,11 @@ temporary demo account.
     Click the `Add Bot` button.
     
     ![IOS XE Network Assistant Bot](assets/NetAssist-06.png)
-
-6. Take extra care to note the `Bot's Access Token`.  Click `Copy` and then paste this into a text file for reference
-later in this lab.  The access token is what will be used to authenticate the Webex Teams API calls from your 
-Python script.  Once you leave this screen, you will not be able to retrieve this access token.  This token should be
-treated like a password and kept private.
+    
+    Take extra care to note the `Bot's Access Token`.  Click `Copy` and then paste this into a text file for reference
+    later in this lab.  The access token is what will be used to authenticate the Webex Teams API calls from your 
+    Python script.  Once you leave this screen, you will not be able to retrieve this access token.  This token 
+    should be treated like a password and kept private.
 
 Congratulations, you have created a Webex Teams Bot to serve as your ChatOps IOS XE Network Assistant.  Continue with
 this lab to create a Python script to be triggered with EEM. 
