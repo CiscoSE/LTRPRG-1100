@@ -13,8 +13,8 @@ very fast.
 A version control system records and manages changes to files over time.  A version control system will have 
 mechanisms that allow you to see the differences between versions and revert back to earlier versions of files being 
 managed.  Generally speaking, most people's idea of version control is to create copies of files and archive them in 
-a series of directories on their file system.  This is prone to error as one file copy mistake and you could 
-lose a lot of work by mistake.  Also, this method rarely works when multiple people are modifying the same files at the
+a series of directories on their file system.  This is prone to error as one file copy mistake and you could lose a 
+lot of work by mistake.  Also, this method rarely works when multiple people are modifying the same files at the
 same time.
  
 A Git repository, or repo for short, is a group of files that are tracked as a common project.  A Git repository can 
