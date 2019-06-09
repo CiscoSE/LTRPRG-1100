@@ -26,11 +26,7 @@ We hope you have fun and learn valuable new skills!
 
 ## Features
 
-Include a succinct summary of the features/capabilities of your project.
-
-- Feature 1
-- Feature 2
-- Feature 3
+n/a
 
 ## Technologies & Frameworks Used
 
