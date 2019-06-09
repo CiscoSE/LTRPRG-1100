@@ -48,7 +48,7 @@ available in the [Cisco DNA Center Platform User Guide](https://www.cisco.com/c/
 
 This has already been completed for you in the DevNet Sandbox Lab, so no action is necessary for this lab.
 
-#### Step 1: Exploring Cisco DNA Center REST APIs with Postman
+#### Step 2: Exploring Cisco DNA Center REST APIs with Postman
 
 Let's take a look at how to obtain and temporarily store a Cisco DNA Center REST API authorization token and make 
 subsequent REST API calls.
@@ -89,10 +89,11 @@ subsequent REST API calls.
 5. Let's get a list of the network devices managed by Cisco DNA Center.  Configure a new REST API request in Postman 
 with the following:
     
-    * HTTP method = `GET`
-    * Request URL = `https://sandboxdnac.cisco.com/dna/intent/api/v1/network-device`
-    * Header Key = `X-Auth-Token`
-    * Header Value - Paste your authorization token obtained in the previous step.  Do not include the doubles quotes.
+    * Choose the HTTP method `GET`
+    * Copy and paste the following into the Request URL: `https://sandboxdnac.cisco.com/dna/intent/api/v1/network-device`
+    * Click the Header tab below the Request URL box and copy and paste the following:
+        * Header Key = `X-Auth-Token`
+        * Header Value - Paste your authorization token obtained in the previous step.  Do not include the doubles quotes.
     
     Do not include an Authorization type or username or password.
     
