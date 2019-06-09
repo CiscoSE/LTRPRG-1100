@@ -22,7 +22,7 @@ cases at the end of this lab.
 
 We hope you have fun and learn valuable new skills!
 
-![Network Programmability Ninja Star](assets/NetworkProgrammabilityNinjaStar.jpg)
+![Network Programmability Ninja Star](guide/assets/NetworkProgrammabilityNinjaStar.jpg)
 
 ## Features
 
