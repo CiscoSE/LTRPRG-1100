@@ -1,30 +1,28 @@
 # LTRPRG-1100 (Cisco Live US 2019)
 
-This is the repository for Cisco Live US 2019 LTRPRG-1100 - So, you want to be a Network Programmability Ninja, now 
-what?
+This is the repository for Cisco Live US 2019 instructor-led lab LTRPRG-1100 - So, you want to be a Network 
+Programmability Ninja, now what?
 
 * [Abstract](ABSTRACT.md)
 * [Agenda](AGENDA.md)
 * [Speakers' Bio](BIO.md)
 * [Lab Guide](guide/LTRPRG-1100-00-Intro.md)
 
-**TODOs:**
-
-- [ ] Consider writing your README first.  Doing so helps you clarify your intent, focuses your project, and it is much more fun to write documentation at the beginning of a project than at the end of one, see:
-    - [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
-    - [GitHub Guides: Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-- [ ] Ensure you put the [license and copyright header](./HEADER) at the top of all your source code files.
-- [ ] Be mindful of the third-party materials you use and ensure you follow Cisco's policies for creating and sharing Cisco Sample Code.
-
----
-
 ## Motivation
 
-Include a short description of the motivation behind the creation and maintenance of the project.  Explain **why** the project exists.
+This lab exists purely to answer the question, "How do I get started with network programmability?"  This project 
+simply exists to bootstrap traditional network administrators and engineers to get started down the path of effective
+network programmability. 
 
 ## Show Me!
 
-What visual, if shown, clearly articulates the impact of what you have created?  In as concise a visualization as possible (code sample, CLI output, animated GIF, or screenshot) show what your project makes possible.
+We will have fun with Ninja-themed metaphors: We will introduce you to the Network Programmability Dojo; teach you 
+the Tools of the Ninja; allow you to Hone your Ninja Skills; and, finally, Test Your Ninja Skills with real-world use 
+cases at the end of this lab.
+
+We hope you have fun and learn valuable new skills!
+
+![Network Programmability Ninja Star](assets/NetworkProgrammabilityNinjaStar.jpg)
 
 ## Features
 
@@ -36,43 +34,44 @@ Include a succinct summary of the features/capabilities of your project.
 
 ## Technologies & Frameworks Used
 
-This is Cisco Sample Code!  What Cisco and third-party technologies are you working with?  Are you using a coding framework or software stack?  A simple list will set the context for your project.
+This lab uses the following:
 
-**Cisco Products & Services:**
-
-- Product
-- Service
-
-**Third-Party Products & Services:**
-
-- Product
-- Service
-
-**Tools & Frameworks:**
-
-- Framework 1
-- Automation Tool 2
+* Git and GitHub
+* Python version 3, including a number of Python libraries, including:
+    * ncclient
+    * requests
+    * pyang
+* Cisco Webex Teams
+* Postman
+* REST APIs
+* NETCONF and YANG
+* IOS Embedded Event Manager
+* IOS XE Guest Shell
 
 ## Usage
 
-If people like your project, they will want to use it.  Show them how.
+To get started with this lab, start with the [Introduction](LTRPRG-1100-00-Intro.md).  You may also refer to the 
+[Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) to navigate the lab guide.
 
 ## Installation
 
-Provide a step-by-step series of examples and explanations for how to install your project and its dependencies.
+n/a
 
 ## Authors & Maintainers
 
 Smart people responsible for the creation and maintenance of this project:
 
-- Matthew Galazka <magalazk@cisco.com>
-- Curtis Smith <curtissm@cisco.com>
+* Matthew Galazka <magalazk@cisco.com>
+* Curtis Smith <curtissm@cisco.com>
 
 ## Credits
 
-Give proper credit.  Inspired by another project or article?  Was your work made easier by a tutorial?  Include links to the people, projects, and resources that were influential in the creation of this project.
+Additional credit is due to the following:
+
+* Hank Preston <hapresto@cisco.com> and Bryan Byrne <brybyrne@cisco.com> for general inspiration, NETCONF and YANG
+sample code, and Webex Teams ChatOps sample code.
+* Shashank Singh <shashasi@cisco.com> for high CPU inspiration and sample code.
 
 ## License
 
-This project is licensed to you under the terms of the [Cisco Sample
-Code License](./LICENSE).
+This project is licensed to you under the terms of the [Cisco Sample Code License](./LICENSE).
