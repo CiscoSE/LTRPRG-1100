@@ -46,8 +46,8 @@ This lab uses the following:
 
 ## Usage
 
-To get started with this lab, start with the [Introduction](LTRPRG-1100-00-Intro.md).  You may also refer to the 
-[Table of Contents](LTRPRG-1100-00-Intro.md#table-of-contents) to navigate the lab guide.
+To get started with this lab, start with the [Introduction](guide/LTRPRG-1100-00-Intro.md).  You may also refer to the 
+[Table of Contents](guide/LTRPRG-1100-00-Intro.md#table-of-contents) to navigate the lab guide.
 
 ## Installation
 
