@@ -75,7 +75,7 @@ respond to a request.
     * Success Codes (2xx)
         * `200 OK` - The request was fulfilled
         * `202 Accepted` - The request was accepted for processing, but processing has not yet completed
-        * `204 No Resoonse` - The request was received, but there was no information to send back
+        * `204 No Response` - The request was received, but there was no information to send back
     * Error Codes (4xx/5xx)
         * `400 Bad Request` - The request was malformed with bad syntax
         * `401 Unauthorized` - The request requires authorization or authorization failed
