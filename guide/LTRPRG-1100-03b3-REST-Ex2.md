@@ -314,7 +314,7 @@ example:
 for brevity):
     
     ``` 
-    (pythonenv) $ python dnac-get-devices.py
+    (pythonenv) $ python dnac-get-hosts.py
     ```
     
     Note the similar results but with a list of network host endpoints.
